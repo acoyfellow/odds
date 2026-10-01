@@ -1,0 +1,37 @@
+{
+  "state": "iterating",
+  "iteration": 2,
+  "northStar": "Frontier agents delegate per-item judgment to typed decision models inside codemode instead of reading every item.",
+  "constraint": "Private: calls go only through the owner's authenticated AI Gateway with a scoped keychain token; no public model surface.",
+  "falsifiable": "On real queues, a Clef-in-codemode script reaches the same top-k decisions as the frontier model reading every item, at under 10% of the cost.",
+  "proven": [
+    {
+      "claim": "Pi models.classify reaches odds/clef through the default AI Gateway and returns schema-valid answers",
+      "receipt": "receipts/001-pi-classify-clef.json"
+    },
+    {
+      "claim": "The authenticated gateway rejects anonymous and forged calls and accepts only the scoped keychain token",
+      "receipt": "receipts/002-auth-scoped-token.json"
+    },
+    {
+      "claim": "odds.coey.dev is static documentation with no bindings and no model access",
+      "receipt": "receipts/006-docs-static.json"
+    }
+  ],
+  "unproven": [
+    "Clef as an in-session gate: screen untrusted text, rank a real queue, verify a child receipt (receipts 003-005)",
+    "Clef's top-k matches a frontier model's top-k on a real 250-item queue"
+  ],
+  "disproven": [],
+  "negative": [
+    {
+      "finding": "typesafe/jev has no route through the default gateway on account 31b9\u2026; odds ships Clef only",
+      "receipt": "findings.md#iteration-1"
+    },
+    {
+      "finding": "A public $5/day playground was built and retired: a public model surface conflicts with the private auth story",
+      "receipt": "receipts/retired/002-site-live-and-capped.json"
+    }
+  ],
+  "openQuestions": ["Is clef-flash accurate enough for screening at 37% of Clef's price?"]
+}

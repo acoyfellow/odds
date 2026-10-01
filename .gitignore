@@ -1,0 +1,9 @@
+node_modules
+site/build
+site/.wrangler
+.wrangler
+.dev.vars
+*.log
+site/.guardrail
+site/src/bundles.generated.ts
+.guardrail

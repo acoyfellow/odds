@@ -1,0 +1,10 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "odds-docs",
+  "account_id": "bfcb6ac5b3ceaf42a09607f6f7925823",
+  "main": "build/worker.bundled.mjs",
+  "compatibility_date": "2026-09-01",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [{ "pattern": "odds.coey.dev", "custom_domain": true }]
+}

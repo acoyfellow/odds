@@ -1,0 +1,75 @@
+{
+  "kind": "odds.receipt/v0",
+  "claim": "Pi codemode models.classify reaches odds/clef through the default AI Gateway",
+  "verdict": "observed",
+  "observed": {
+    "provider": "odds",
+    "model": "clef",
+    "api": "odds-gateway-system-one",
+    "calls": 3,
+    "failures": [],
+    "sanityHighBeforeCalm": true,
+    "answers": [
+      {
+        "id": "A-1",
+        "answers": {
+          "frustration": {
+            "type": "choice",
+            "choice": "high",
+            "probabilities": {
+              "none": 0.0099,
+              "mild": 0.07,
+              "high": 0.9201
+            },
+            "confidence": 0.7774
+          },
+          "urgent": {
+            "type": "bool",
+            "probability": 0.9672
+          }
+        }
+      },
+      {
+        "id": "A-2",
+        "answers": {
+          "frustration": {
+            "type": "choice",
+            "choice": "none",
+            "probabilities": {
+              "none": 0.9577,
+              "mild": 0.0319,
+              "high": 0.0104
+            },
+            "confidence": 0.8773
+          },
+          "urgent": {
+            "type": "bool",
+            "probability": 0.0076
+          }
+        }
+      },
+      {
+        "id": "A-3",
+        "answers": {
+          "frustration": {
+            "type": "choice",
+            "choice": "none",
+            "probabilities": {
+              "none": 0.9809,
+              "mild": 0.0094,
+              "high": 0.0097
+            },
+            "confidence": 0.9435
+          },
+          "urgent": {
+            "type": "bool",
+            "probability": 0.0062
+          }
+        }
+      }
+    ],
+    "costUsd": 0.00018312,
+    "elapsedMs": 4557
+  },
+  "at": "2026-10-01T20:14:05.834Z"
+}

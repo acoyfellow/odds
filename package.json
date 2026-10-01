@@ -1,0 +1,34 @@
+{
+  "name": "odds",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Ask for odds, not prose. Clef decision models in Pi through your Cloudflare AI Gateway.",
+  "license": "MIT",
+  "type": "module",
+  "pi": {
+    "extensions": [
+      "./pi/index.ts"
+    ]
+  },
+  "scripts": {
+    "check": "tsc --noEmit",
+    "lint": "biome check .",
+    "test": "bun test",
+    "verify": "bun run check && bun run lint && bun test",
+    "prove:pi": "bun scripts/prove-pi.ts",
+    "site:build": "cd site && bun build.ts",
+    "site:deploy": "cd site && bun build.ts && wrangler deploy",
+    "prove:auth": "bun scripts/prove-auth.ts",
+    "prove:docs": "bun scripts/prove-docs.ts"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.0",
+    "@earendil-works/pi-coding-agent": "1.0.0",
+    "@types/bun": "^1.3.14",
+    "esbuild-svelte": "^0.9.5",
+    "hono": "^4.12.19",
+    "svelte": "^5.45.0",
+    "svelte-hono": "0.1.2",
+    "typescript": "^5.9.3"
+  }
+}

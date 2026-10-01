@@ -1,0 +1,83 @@
+{
+  "kind": "odds.receipt/v0",
+  "claim": "odds.coey.dev serves the demo, answers with real Clef, and fails closed at its cap",
+  "verdict": "observed",
+  "observed": {
+    "checks": [
+      {
+        "name": "site serves the hero",
+        "pass": true,
+        "detail": {
+          "url": "https://odds.coy.workers.dev",
+          "status": 200,
+          "bytes": 20841
+        }
+      },
+      {
+        "name": "playground returns a real, schema-valid Clef answer",
+        "pass": true,
+        "detail": {
+          "status": 200,
+          "body": {
+            "ok": true,
+            "model": "clef",
+            "answers": {
+              "urgent": {
+                "type": "bool",
+                "probability": 0.9853
+              },
+              "team": {
+                "type": "choice",
+                "choice": "technical",
+                "probabilities": {
+                  "billing": 0.2278,
+                  "technical": 0.7722
+                },
+                "confidence": 0.2965
+              }
+            },
+            "usage": {
+              "inputTokens": 222,
+              "costUsd": 0.00005328
+            }
+          }
+        }
+      },
+      {
+        "name": "zero cap returns 429 with daily_cap_reached",
+        "pass": true,
+        "detail": {
+          "url": "https://odds-capcheck.coy.workers.dev",
+          "status": 429,
+          "retryAfter": "14006",
+          "body": {
+            "ok": false,
+            "error": "daily_cap_reached",
+            "message": "The public playground spent its $0.00 budget for 2026-10-01 (UTC). It resets at 2026-10-02T00:00:00.000Z. Install odds-pi to run Clef on your own gateway.",
+            "budget": {
+              "day": "2026-10-01",
+              "spentUsd": 0.00005,
+              "capUsd": 0,
+              "remainingUsd": 0,
+              "exhausted": true,
+              "resetsAt": "2026-10-02T00:00:00.000Z"
+            }
+          }
+        }
+      },
+      {
+        "name": "live budget is $5/day and tracking spend",
+        "pass": true,
+        "detail": {
+          "day": "2026-10-01",
+          "spentUsd": 0.000104,
+          "capUsd": 5,
+          "remainingUsd": 4.999896,
+          "exhausted": false,
+          "resetsAt": "2026-10-02T00:00:00.000Z"
+        }
+      }
+    ]
+  },
+  "at": "2026-10-01T20:06:34.941Z"
+}

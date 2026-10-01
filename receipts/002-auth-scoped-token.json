@@ -1,0 +1,56 @@
+{
+  "kind": "odds.receipt/v0",
+  "claim": "odds reaches Clef only with a scoped keychain token; anonymous and forged calls fail",
+  "verdict": "observed",
+  "observed": {
+    "gateway": "default",
+    "checks": [
+      {
+        "name": "gateway rejects a call with no token",
+        "pass": true,
+        "detail": {
+          "status": 401,
+          "success": false
+        }
+      },
+      {
+        "name": "gateway rejects a forged token",
+        "pass": true,
+        "detail": {
+          "status": 401,
+          "success": false
+        }
+      },
+      {
+        "name": "scoped token from the keychain gets a schema-valid Clef answer",
+        "pass": true,
+        "detail": {
+          "source": "keychain",
+          "ok": true,
+          "answers": {
+            "greeting": {
+              "type": "bool",
+              "probability": 0.9933
+            }
+          }
+        }
+      },
+      {
+        "name": "no wrangler OAuth fallback in the credential path",
+        "pass": true,
+        "detail": {
+          "file": "src/credentials.ts"
+        }
+      },
+      {
+        "name": "token is an active, dedicated API token",
+        "pass": true,
+        "detail": {
+          "status": "active",
+          "expiresOn": null
+        }
+      }
+    ]
+  },
+  "at": "2026-10-01T20:54:05.754Z"
+}
