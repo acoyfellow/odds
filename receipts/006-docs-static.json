@@ -1,0 +1,56 @@
+{
+  "kind": "odds.receipt/v0",
+  "claim": "odds.coey.dev is static documentation with no bindings and no model access",
+  "verdict": "observed",
+  "observed": {
+    "checks": [
+      {
+        "name": "docs site serves 200 with the docs content",
+        "pass": true,
+        "detail": {
+          "url": "https://odds.coey.dev",
+          "status": 200,
+          "bytes": 23325
+        }
+      },
+      {
+        "name": "docs page forbids network calls from the browser",
+        "pass": true,
+        "detail": {
+          "csp": "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; connect-src 'none'; frame-ancestors 'none'"
+        }
+      },
+      {
+        "name": "there is no model API on the docs site",
+        "pass": true,
+        "detail": {
+          "status": 404
+        }
+      },
+      {
+        "name": "wrangler config declares no bindings",
+        "pass": true,
+        "detail": {
+          "name": "odds-docs",
+          "forbiddenPresent": [],
+          "workers_dev": false
+        }
+      },
+      {
+        "name": "retired public playground workers are gone",
+        "pass": true,
+        "detail": [
+          {
+            "name": "odds",
+            "live": false
+          },
+          {
+            "name": "odds-capcheck",
+            "live": false
+          }
+        ]
+      }
+    ]
+  },
+  "at": "2026-10-01T20:55:44.406Z"
+}
