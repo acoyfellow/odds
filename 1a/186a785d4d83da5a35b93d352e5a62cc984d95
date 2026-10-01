@@ -1,0 +1,81 @@
+.gitignore
+  s_5f86db03525984::t_c699984342e400 1-9
+CONTRIBUTING.md
+  s_5f86db03525984::t_540938547b3ec0 1-3
+LICENSE
+  s_5f86db03525984::t_4a5d880dc5031e 1-21
+README.md
+  s_fc002e6ac2c2f5::t_ba5f354be63d21 1-109
+SECURITY.md
+  s_fc002e6ac2c2f5::t_ab7dc909739113 1-12
+biome.json
+  s_5f86db03525984::t_932b4c58d93b14 1-21
+bun.lock
+  s_5f86db03525984::t_5214fbde907254 1-488
+findings.md
+  s_5f86db03525984::t_85687389fe2602 1-33
+package.json
+  s_5f86db03525984::t_580a9a0882e8b7 1-34
+pi/index.ts
+  s_5f86db03525984::t_9ff9f158bed3c4 1-96
+receipts/001-pi-classify-clef.json
+  s_5f86db03525984::t_89cb133463e1c8 1-75
+receipts/002-auth-scoped-token.json
+  s_fc002e6ac2c2f5::t_c210e699441f5a 1-56
+receipts/retired/002-site-live-and-capped.json
+  s_5f86db03525984::t_ff87abb8710ebe 1-83
+scripts/prove-auth.ts
+  s_5f86db03525984::t_2268121b459ab3 1-111
+scripts/prove-docs.ts
+  s_5f86db03525984::t_94e1e55ffbce27 1-93
+scripts/prove-pi.ts
+  s_5f86db03525984::t_527d5808182e32 1-99
+site/build.ts
+  s_5f86db03525984::t_00ea3b7cb4388c 1-14
+site/src/Docs.svelte
+  s_fc002e6ac2c2f5::t_cfdb953ab73069 1-317
+site/src/demo-data.ts
+  s_5f86db03525984::t_3142545c6d716a 1-415
+site/src/demo-types.ts
+  s_5f86db03525984::t_d34dffa58fc776 1-18
+site/src/svelte.d.ts
+  s_5f86db03525984::t_f79cfd3a6e6885 1-4
+site/src/worker.ts
+  s_5f86db03525984::t_f3c130ca18a8b7 1-43
+src/client.ts
+  s_5f86db03525984::t_285e2336821cdd 1-261
+status.json
+  s_5f86db03525984::t_ab9948281c1730 1-37
+test/client.test.ts
+  s_5f86db03525984::t_9c4fa17206fea9 1-123
+test/credentials.test.ts
+  s_5f86db03525984::t_71afb75cd772f0 1-53
+test/pi.test.ts
+  s_5f86db03525984::t_12696068938b2d 1-54
+tsconfig.json
+  s_5f86db03525984::t_18ec241856aa45 1-13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "1a186a785d4d83da5a35b93d352e5a62cc984d95",
+  "prompts": {},
+  "sessions": {
+    "s_5f86db03525984": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a0f8ed-6d1c-75dc-a1fe-8dce6a49abbc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jordan Coeyman <jcoeyman@cloudflare.com>"
+    },
+    "s_fc002e6ac2c2f5": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a0aab9-f490-72e1-8d73-920246e8faec",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jordan Coeyman <jcoeyman@cloudflare.com>"
+    }
+  }
+}
