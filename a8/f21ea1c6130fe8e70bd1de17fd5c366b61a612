@@ -1,0 +1,21 @@
+findings.md
+  s_5f86db03525984::t_f4a90017524e30 76-85
+status.json
+  s_5f86db03525984::t_536cb2d4476cf9 3,57-62
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "a8f21ea1c6130fe8e70bd1de17fd5c366b61a612",
+  "prompts": {},
+  "sessions": {
+    "s_5f86db03525984": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a0f8ed-6d1c-75dc-a1fe-8dce6a49abbc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jordan Coeyman <jcoeyman@cloudflare.com>"
+    }
+  }
+}
