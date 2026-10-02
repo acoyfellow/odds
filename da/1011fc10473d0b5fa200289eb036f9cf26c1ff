@@ -1,0 +1,83 @@
+.gitmodules
+  s_5f86db03525984::t_ff2db1ed2c321b 1-3
+biome.json
+  s_5f86db03525984::t_0f54706e039d9e 14-16
+bun.lock
+  s_5f86db03525984::t_0938d3e62298c6 7-9,12,14,20,170-209,530-531,628-629
+evals/datasets.ts
+  s_5f86db03525984::t_7578b2c99b2bd3 5,26,29-32,34,59-60,87-88,109-110,119,125,127,137,140,145,147,155-163,167
+evals/metrics.ts
+  s_5ddfc8f4108175::t_921cd26d7747c5 16,28,32,35,42,49,52,59,65,69,75,85,91,101,108
+evals/report.ts
+  s_5ddfc8f4108175::t_887fc3bc2fc2c4 5,12,14,16,21,23,25,30,48,57,69,77,80,82
+evals/run.ts
+  s_5f86db03525984::t_14fc251411428b 17-33,50,60,66,84-85,96,110,113,117,132
+evals/runners.ts
+  s_5f86db03525984::t_89b2f08cd9df33 1,5-18,41-50,74,82,103-105,109-122,124,126,143,150,159,162,174,183,195,197-199,206,224
+evals/summarize.ts
+  s_5f86db03525984::t_d8deed9239de12 37,41,43,57,71,76,78-81,87,89-92,98
+oxlint.config.ts
+  s_5f86db03525984::t_c40c3853639b48 1-40
+package.json
+  s_5f86db03525984::t_49f8f679bd294c 15-17,28,30,36,42-44
+pi/index.ts
+  s_5f86db03525984::t_34098d4e165fa2 1,3,9,22-31,33-66,69-70,86
+pnpm-lock.yaml
+  s_5f86db03525984::t_05d3b30ed6f628 1-3107
+pnpm-workspace.yaml
+  s_5f86db03525984::t_237e045ff68218 1-9
+scripts/prove-auth.ts
+  s_5f86db03525984::t_e522fa03861986 3,10-15,39-42,49,89,99-100,108,116,118,123,125
+scripts/prove-docs.ts
+  s_5f86db03525984::t_34c9ec19bc8624 3,8,10,20,29-39,41-42,48,88,96,104,107,109
+scripts/prove-pi.ts
+  s_5ddfc8f4108175::t_0c228066a080aa 48,50,55,59,62,66,68,73,76,81,99,104
+site/build.ts
+  s_5ddfc8f4108175::t_a7e644cb7eac6d 6,8,10,23,25
+site/highlight.ts
+  s_5ddfc8f4108175::t_af7c1bbea18b58 33,36
+site/src/Docs.svelte
+  s_5ddfc8f4108175::t_997919e5e0a7c9 7,11,13,15,17,19,25,48,50,52
+site/src/snippets.ts
+  s_5f86db03525984::t_ec337bfb6c35e1 18-34
+site/src/worker.ts
+  s_5ddfc8f4108175::t_e666ca1170439a 10,32
+src/client.ts
+  s_5f86db03525984::t_d8625d042eedd6 1-2,15-16,18,27-28,37,42,44,55,57,59,61,64-65,68,81,85-93,96-103,106-111,114-149,153,156,159,161-164,166,168,172,176,188,190,194,197-204,207-223,225-226,229-246,250-257,262,267,279-285,309,312,317,325,327,329-331,334-336,341,345,348-355
+src/credentials.ts
+  s_5f86db03525984::t_59fa408bd1c12f 5,8,10,12,14,22-25,47,49,53,56,58,64,71,81,84,97,100,103,116
+test/client.test.ts
+  s_5f86db03525984::t_508011f2165ed9 2,29-34,39,41,43,47,53,56,70-71,76,82,88,110,123
+test/evals.test.ts
+  s_5f86db03525984::t_dab29fdacad26c 6,8,36-47
+test/metrics.test.ts
+  s_5ddfc8f4108175::t_e708c7b092a5c8 20,51,65
+test/pi.test.ts
+  s_5f86db03525984::t_a8c4f5fdfc1c15 2-15,18,29-30,34-42,52-53,55,62-70
+tools/anti-slop
+  s_5f86db03525984::t_95a74903792eb1 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "da1011fc10473d0b5fa200289eb036f9cf26c1ff",
+  "prompts": {},
+  "sessions": {
+    "s_5ddfc8f4108175": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a0fc06-d951-77a8-8358-cd5dae6891bd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jordan Coeyman <jcoeyman@cloudflare.com>"
+    },
+    "s_5f86db03525984": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a0f8ed-6d1c-75dc-a1fe-8dce6a49abbc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jordan Coeyman <jcoeyman@cloudflare.com>"
+    }
+  }
+}
