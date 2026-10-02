@@ -1,0 +1,27 @@
+biome.json
+  s_5f86db03525984::t_8042880e0abfae 13-14,17-21,23-33,35-39
+site/build.ts
+  s_5f86db03525984::t_46f492a1f66afb 22-24
+site/highlight.ts
+  s_5f86db03525984::t_6bc1040bb3e607 10-13,16-23,29-34
+site/src/app.css
+  s_5f86db03525984::t_93d291bf401063 1-2,20-22,28,32-37,41-131,134-149,153-161
+site/src/worker.ts
+  s_5f86db03525984::t_a76a84897cff21 4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "581cf8272d7177c36ac0427d8d05f4a687a301ab",
+  "prompts": {},
+  "sessions": {
+    "s_5f86db03525984": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a0f8ed-6d1c-75dc-a1fe-8dce6a49abbc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jordan Coeyman <jcoeyman@cloudflare.com>"
+    }
+  }
+}
