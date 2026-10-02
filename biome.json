@@ -10,12 +10,31 @@
       "!site/src/bundles.generated.ts",
       "!receipts",
       "!site/.guardrail",
-      "!.guardrail"
+      "!.guardrail",
+      "!site/src/assets.generated.ts"
     ]
   },
-  "formatter": { "indentStyle": "space", "indentWidth": 2, "lineWidth": 100 },
-  "javascript": {
-    "formatter": { "quoteStyle": "single", "trailingCommas": "all", "semicolons": "always" }
+  "formatter": {
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100
   },
-  "linter": { "enabled": true, "rules": { "preset": "none" } }
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "trailingCommas": "all",
+      "semicolons": "always"
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "preset": "none"
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  }
 }

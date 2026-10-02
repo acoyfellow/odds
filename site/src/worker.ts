@@ -1,10 +1,10 @@
 import { Hono } from 'hono';
 import { attachSvelteRoutes, svelteRenderer } from 'svelte-hono';
 import { ODDS_MODELS } from '../../src/models.ts';
+import { APP_CSS, HIGHLIGHTED } from './assets.generated.ts';
 import { bundles } from './bundles.generated.ts';
 import Docs from './Docs.svelte';
 import { DEMO_QUEUE } from './demo-data.ts';
-import { APP_CSS, HIGHLIGHTED } from './assets.generated.ts';
 
 const app = new Hono();
 attachSvelteRoutes(app, { bundles });

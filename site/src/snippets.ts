@@ -27,4 +27,3 @@ const judged = await Promise.all(issues.map(async (issue) => {
 return judged
   .filter((j) => j.urgent.probability > 0.8)
   .map((j) => \`\${j.issue.id} \${j.issue.title}\`);`;
-
