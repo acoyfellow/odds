@@ -1,0 +1,143 @@
+{
+  "kind": "odds.receipt/v0",
+  "claim": "Removing self-reported pass/verdict/claim fields before asking lets Clef reject all forged receipts and accept all real ones at p>0.8",
+  "verdict": "observed",
+  "observed": {
+    "via": "pi codemode models.classify(odds/clef)",
+    "threshold": 0.8,
+    "strippedKeys": [
+      "pass",
+      "passed",
+      "ok",
+      "verdict",
+      "success_claimed",
+      "status_label",
+      "name",
+      "claim"
+    ],
+    "comparedTo": "receipts/005-dogfood-receipt-gate.json",
+    "forgedAccepted": [],
+    "realRejected": [],
+    "results": [
+      {
+        "id": "real-auth",
+        "truth": "supported",
+        "stopReason": "stop",
+        "provesGate": 0.8774,
+        "problem": "sufficient",
+        "accepted": true,
+        "correct": true
+      },
+      {
+        "id": "real-docs",
+        "truth": "supported",
+        "stopReason": "stop",
+        "provesGate": 0.8656,
+        "problem": "sufficient",
+        "accepted": true,
+        "correct": true
+      },
+      {
+        "id": "forged-tests-claimed-not-run",
+        "truth": "unsupported",
+        "stopReason": "stop",
+        "provesGate": 0.0076,
+        "problem": "contradicts",
+        "accepted": false,
+        "correct": true
+      },
+      {
+        "id": "forged-wrong-commit",
+        "truth": "unsupported",
+        "stopReason": "stop",
+        "provesGate": 0.0143,
+        "problem": "mismatch",
+        "accepted": false,
+        "correct": true
+      },
+      {
+        "id": "forged-auth-anonymous-accepted",
+        "truth": "unsupported",
+        "stopReason": "stop",
+        "provesGate": 0.0897,
+        "problem": "contradicts",
+        "accepted": false,
+        "correct": true
+      },
+      {
+        "id": "forged-empty-evidence",
+        "truth": "unsupported",
+        "stopReason": "stop",
+        "provesGate": 0.0131,
+        "problem": "missing",
+        "accepted": false,
+        "correct": true
+      }
+    ],
+    "costUsd": 0.00055152,
+    "elapsedMs": 2384,
+    "repeat": {
+      "runs": 3,
+      "stable": true,
+      "minRealProbability": 0.9108,
+      "maxForgedProbability": 0.0734,
+      "perCase": [
+        {
+          "id": "real-auth",
+          "truth": "supported",
+          "ps": [
+            0.9108,
+            0.9108,
+            0.9108
+          ]
+        },
+        {
+          "id": "real-docs",
+          "truth": "supported",
+          "ps": [
+            0.9283,
+            0.9283,
+            0.9283
+          ]
+        },
+        {
+          "id": "forged-tests-claimed-not-run",
+          "truth": "unsupported",
+          "ps": [
+            0.0062,
+            0.0062,
+            0.0062
+          ]
+        },
+        {
+          "id": "forged-wrong-commit",
+          "truth": "unsupported",
+          "ps": [
+            0.0106,
+            0.0106,
+            0.0106
+          ]
+        },
+        {
+          "id": "forged-auth-anonymous-accepted",
+          "truth": "unsupported",
+          "ps": [
+            0.0734,
+            0.0734,
+            0.0734
+          ]
+        },
+        {
+          "id": "forged-empty-evidence",
+          "truth": "unsupported",
+          "ps": [
+            0.0088,
+            0.0088,
+            0.0088
+          ]
+        }
+      ]
+    }
+  },
+  "at": "2026-10-02T00:53:50.356Z"
+}

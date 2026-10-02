@@ -58,3 +58,18 @@ after `/reload`.
 - **Wording:** the README, docs and SECURITY file now claim only what `prove:auth` checks.
   The token is required on the gateway route. The gateway's own authentication setting was
   never checked.
+
+## Iteration 4: label-blind receipt gate
+
+- **Removing self-reported fields fixes the hole from 005.** I removed the keys `pass`,
+  `passed`, `ok`, `verdict`, `name`, `claim` and the claim text before asking. Clef then
+  accepted both real receipts and rejected all four forgeries, including the
+  `pass: true` / HTTP 200 forgery (0.93 down to 0.07). Receipt: 007.
+- **Repeatable.** Three repeat runs gave identical scores. Real receipts scored at least 0.91
+  and forgeries at most 0.07.
+- **Question wording moves scores.** Asking for `proves_gate` together with a `problem` choice
+  scored the real receipts at 0.87 and 0.87. Asking for `proves_gate` alone scored them 0.91
+  and 0.93. Keep gate questions minimal, and set thresholds from repeat runs.
+- **Rule for using odds as a gate:** give Clef the gate and the raw evidence only, never the
+  agent's own verdict. Keep an independent verifier as the final authority.
+- **Limit:** six planted cases are a sample, not a benchmark.
