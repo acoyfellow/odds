@@ -21,7 +21,9 @@
     "prove:auth": "bun scripts/prove-auth.ts",
     "prove:docs": "bun scripts/prove-docs.ts",
     "eval": "bun evals/run.ts",
-    "eval:report": "bun evals/report.ts"
+    "eval:report": "bun evals/report.ts",
+    "eval:northstar": "bun evals/northstar/run.ts",
+    "eval:northstar:gate": "bun evals/northstar/gate.ts"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.0",

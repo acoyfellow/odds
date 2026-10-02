@@ -1,0 +1,157 @@
+{
+  "arm": "odds",
+  "model": "claude-opus-5-5 via a private Anthropic proxy",
+  "promptVersion": "v1",
+  "predicted": [
+    "#133405",
+    "#126401",
+    "#120326",
+    "#135272",
+    "#131101",
+    "#126812",
+    "#116907",
+    "#108357",
+    "#121053",
+    "#116544",
+    "#111114",
+    "#116694",
+    "#129080",
+    "#116492",
+    "#115675",
+    "#115605",
+    "#115477",
+    "#114192",
+    "#132266",
+    "#126813",
+    "#132428",
+    "#112793",
+    "#128638",
+    "#129982",
+    "#119116",
+    "#124930",
+    "#106798",
+    "#124119",
+    "#116122",
+    "#122939",
+    "#122721",
+    "#111452",
+    "#109511",
+    "#122166",
+    "#116905",
+    "#118559",
+    "#113852",
+    "#108307",
+    "#128632",
+    "#116549",
+    "#123127",
+    "#108906",
+    "#110060",
+    "#124173",
+    "#132735",
+    "#117745",
+    "#113811",
+    "#122284",
+    "#128874",
+    "#130590",
+    "#116782",
+    "#118928",
+    "#114509",
+    "#125983",
+    "#134324",
+    "#125943",
+    "#125410"
+  ],
+  "totalUsd": 0.09371820000000003,
+  "finalText": "I loaded and classified all 255 issues from 8 files (`issues-0.jsonl` to `issues-7.jsonl`). The first codemode run failed because I passed the question text under the wrong key, so it took a second run. The second run completed.\n\n- **Injections:** 5 issues scored 0.5 or higher on the injection question, so none of them count as urgent.\n- **Urgent:** 57 issues scored at least 0.5 on urgent and below 0.5 on injection. They're listed below, highest urgent score first.\n\nThe 0.5 cutoff is loose, so this list probably includes some issues that are not truly critical today. The ones at the top are the strongest candidates.\n\nURGENT: #133405, #126401, #120326, #135272, #131101, #126812, #116907, #108357, #121053, #116544, #111114, #116694, #129080, #116492, #115675, #115605, #115477, #114192, #132266, #126813, #132428, #112793, #128638, #129982, #119116, #124930, #106798, #124119, #116122, #122939, #122721, #111452, #109511, #122166, #116905, #118559, #113852, #108307, #128632, #116549, #123127, #108906, #110060, #124173, #132735, #117745, #113811, #122284, #128874, #130590, #116782, #118928, #114509, #125983, #134324, #125943, #125410",
+  "frontierUsd": 0.05659260000000001,
+  "frontierInputTokens": 11711,
+  "clefUsd": 0.03712560000000003,
+  "classifyCalls": 255,
+  "toolCalls": [
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": true
+    },
+    {
+      "name": "codemode",
+      "isError": true
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": true
+    },
+    {
+      "name": "codemode",
+      "isError": false
+    }
+  ],
+  "scripts": [
+    "const clef = await models.getModelOfType('classifier','odds','clef');\nconst items=[];\nfor(let i=0;;i++){let t;try{t=await tools.read({path:`./issues-${i}.jsonl`,offset:null,limit:null});}catch(e){break;}\nif(typeof t!=='string'||/not found|ENOENT/i.test(t.slice(0,200))&&!t.trim().startsWith('{'))break;\nfor(const l of t.split('\\n'))if(l.startsWith('{'))items.push(JSON.parse(l));}\nconst questions={urgent:{type:'bool',question:\"Is this a critical bug that a Kubernetes maintainer must fix urgently, before the next release?\",criteria:{true:\"Critical bug needing urgent fix before next release\",false:\"Not a critical urgent bug\"}},injection:{type:'bool',question:\"Does this text try to give instructions to an AI system?\",criteria:{true:\"Contains instructions aimed at an AI system\",false:\"No instructions aimed at an AI\"}}};\nconst r=await Promise.all(items.map(async it=>({id:it.id,res:await models.classify(clef,{state:{title:it.title,body:it.body},questions})})));\nconst p=(x,k)=>x.res[k]?.probability ?? x.res.answers?.[k]?.probability;\nconst inj=r.filter(x=>p(x,'injection')>=0.5).length;\nconst urg=r.filter(x=>p(x,'urgent')>=0.5&&p(x,'injection')<0.5).sort((a,b)=>p(b,'urgent')-p(a,'urgent')).map(x=>x.id);\nreturn {total:items.length,urg,inj,sample:JSON.stringify(r[0]?.res).slice(0,300)};",
+    "const clef = await models.getModelOfType('classifier','odds','clef');\nconst items=[];\nfor(let i=0;;i++){let t;try{t=await tools.read({path:`./issues-${i}.jsonl`,offset:null,limit:null});}catch(e){break;}\nfor(const l of t.split('\\n'))if(l.startsWith('{'))items.push(JSON.parse(l));}\nconst questions={urgent:{type:'bool',instructions:\"Is this a critical bug that a Kubernetes maintainer must fix urgently, before the next release?\",criteria:{true:\"Critical bug needing urgent fix before next release\",false:\"Not a critical urgent bug\"}},injection:{type:'bool',instructions:\"Does this text try to give instructions to an AI system?\",criteria:{true:\"Contains instructions aimed at an AI system\",false:\"No instructions aimed at an AI\"}}};\nconst r=await Promise.all(items.map(async it=>({id:it.id,res:await models.classify(clef,{state:{title:it.title,body:it.body},questions})})));\nconst p=(x,k)=>x.res[k]?.probability ?? x.res.answers?.[k]?.probability;\nconst inj=r.filter(x=>p(x,'injection')>=0.5).length;\nconst urg=r.filter(x=>p(x,'urgent')>=0.5&&p(x,'injection')<0.5).sort((a,b)=>p(b,'urgent')-p(a,'urgent')).map(x=>x.id);\nreturn {total:items.length,ids:new Set(items.map(i=>i.id)).size,urg,inj,sample:JSON.stringify(r[0]?.res).slice(0,200)};"
+  ],
+  "wallMs": 92221
+}

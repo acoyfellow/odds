@@ -1,0 +1,1009 @@
+{
+  "kind": "odds.northstar.dataset/v0",
+  "repo": "kubernetes/kubernetes",
+  "frozenBefore": "2026-01-01",
+  "rule": "125 newest issues created before 2026-01-01 labelled priority/critical-urgent (not backlog), and 125 labelled priority/backlog (not critical-urgent or important-soon). Pull requests excluded. Labels read at freeze time.",
+  "frozenAt": "2026-10-02T16:47:49.650Z",
+  "issues": [
+    {
+      "number": 106798,
+      "truth": "urgent"
+    },
+    {
+      "number": 107690,
+      "truth": "urgent"
+    },
+    {
+      "number": 107857,
+      "truth": "urgent"
+    },
+    {
+      "number": 108040,
+      "truth": "urgent"
+    },
+    {
+      "number": 108307,
+      "truth": "urgent"
+    },
+    {
+      "number": 108357,
+      "truth": "urgent"
+    },
+    {
+      "number": 108358,
+      "truth": "urgent"
+    },
+    {
+      "number": 108906,
+      "truth": "urgent"
+    },
+    {
+      "number": 109082,
+      "truth": "urgent"
+    },
+    {
+      "number": 109511,
+      "truth": "urgent"
+    },
+    {
+      "number": 109799,
+      "truth": "urgent"
+    },
+    {
+      "number": 110060,
+      "truth": "urgent"
+    },
+    {
+      "number": 110239,
+      "truth": "urgent"
+    },
+    {
+      "number": 110339,
+      "truth": "urgent"
+    },
+    {
+      "number": 110697,
+      "truth": "urgent"
+    },
+    {
+      "number": 111086,
+      "truth": "urgent"
+    },
+    {
+      "number": 111114,
+      "truth": "urgent"
+    },
+    {
+      "number": 111452,
+      "truth": "urgent"
+    },
+    {
+      "number": 111928,
+      "truth": "urgent"
+    },
+    {
+      "number": 112465,
+      "truth": "urgent"
+    },
+    {
+      "number": 112524,
+      "truth": "urgent"
+    },
+    {
+      "number": 112793,
+      "truth": "urgent"
+    },
+    {
+      "number": 112836,
+      "truth": "urgent"
+    },
+    {
+      "number": 113811,
+      "truth": "urgent"
+    },
+    {
+      "number": 113852,
+      "truth": "urgent"
+    },
+    {
+      "number": 113945,
+      "truth": "urgent"
+    },
+    {
+      "number": 114192,
+      "truth": "urgent"
+    },
+    {
+      "number": 114509,
+      "truth": "urgent"
+    },
+    {
+      "number": 115477,
+      "truth": "urgent"
+    },
+    {
+      "number": 115605,
+      "truth": "urgent"
+    },
+    {
+      "number": 115612,
+      "truth": "urgent"
+    },
+    {
+      "number": 115675,
+      "truth": "urgent"
+    },
+    {
+      "number": 116122,
+      "truth": "urgent"
+    },
+    {
+      "number": 116262,
+      "truth": "urgent"
+    },
+    {
+      "number": 116492,
+      "truth": "urgent"
+    },
+    {
+      "number": 116544,
+      "truth": "urgent"
+    },
+    {
+      "number": 116549,
+      "truth": "urgent"
+    },
+    {
+      "number": 116694,
+      "truth": "urgent"
+    },
+    {
+      "number": 116782,
+      "truth": "urgent"
+    },
+    {
+      "number": 116905,
+      "truth": "urgent"
+    },
+    {
+      "number": 116907,
+      "truth": "urgent"
+    },
+    {
+      "number": 117260,
+      "truth": "urgent"
+    },
+    {
+      "number": 117745,
+      "truth": "urgent"
+    },
+    {
+      "number": 118103,
+      "truth": "urgent"
+    },
+    {
+      "number": 118261,
+      "truth": "urgent"
+    },
+    {
+      "number": 118300,
+      "truth": "urgent"
+    },
+    {
+      "number": 118554,
+      "truth": "urgent"
+    },
+    {
+      "number": 118559,
+      "truth": "urgent"
+    },
+    {
+      "number": 118928,
+      "truth": "urgent"
+    },
+    {
+      "number": 118993,
+      "truth": "urgent"
+    },
+    {
+      "number": 119116,
+      "truth": "urgent"
+    },
+    {
+      "number": 119400,
+      "truth": "urgent"
+    },
+    {
+      "number": 119440,
+      "truth": "urgent"
+    },
+    {
+      "number": 119493,
+      "truth": "urgent"
+    },
+    {
+      "number": 119787,
+      "truth": "urgent"
+    },
+    {
+      "number": 120247,
+      "truth": "urgent"
+    },
+    {
+      "number": 120326,
+      "truth": "urgent"
+    },
+    {
+      "number": 120478,
+      "truth": "urgent"
+    },
+    {
+      "number": 120700,
+      "truth": "urgent"
+    },
+    {
+      "number": 120739,
+      "truth": "urgent"
+    },
+    {
+      "number": 120886,
+      "truth": "urgent"
+    },
+    {
+      "number": 121053,
+      "truth": "urgent"
+    },
+    {
+      "number": 121320,
+      "truth": "urgent"
+    },
+    {
+      "number": 121587,
+      "truth": "urgent"
+    },
+    {
+      "number": 121617,
+      "truth": "urgent"
+    },
+    {
+      "number": 121926,
+      "truth": "urgent"
+    },
+    {
+      "number": 122166,
+      "truth": "urgent"
+    },
+    {
+      "number": 122284,
+      "truth": "urgent"
+    },
+    {
+      "number": 122721,
+      "truth": "urgent"
+    },
+    {
+      "number": 122939,
+      "truth": "urgent"
+    },
+    {
+      "number": 123127,
+      "truth": "urgent"
+    },
+    {
+      "number": 123203,
+      "truth": "urgent"
+    },
+    {
+      "number": 123632,
+      "truth": "urgent"
+    },
+    {
+      "number": 123643,
+      "truth": "urgent"
+    },
+    {
+      "number": 123829,
+      "truth": "urgent"
+    },
+    {
+      "number": 123852,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 123853,
+      "truth": "urgent"
+    },
+    {
+      "number": 123906,
+      "truth": "urgent"
+    },
+    {
+      "number": 123924,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 123971,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 124024,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 124076,
+      "truth": "urgent"
+    },
+    {
+      "number": 124119,
+      "truth": "urgent"
+    },
+    {
+      "number": 124122,
+      "truth": "urgent"
+    },
+    {
+      "number": 124155,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 124173,
+      "truth": "urgent"
+    },
+    {
+      "number": 124176,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 124264,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 124277,
+      "truth": "urgent"
+    },
+    {
+      "number": 124337,
+      "truth": "urgent"
+    },
+    {
+      "number": 124448,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 124586,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 124648,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 124701,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 124716,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 124797,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 124868,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 124930,
+      "truth": "urgent"
+    },
+    {
+      "number": 124936,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 124937,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 124938,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 125050,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 125211,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 125332,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 125410,
+      "truth": "urgent"
+    },
+    {
+      "number": 125542,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 125599,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 125606,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 125700,
+      "truth": "urgent"
+    },
+    {
+      "number": 125720,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 125785,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 125792,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 125815,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 125852,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 125943,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 125983,
+      "truth": "urgent"
+    },
+    {
+      "number": 126170,
+      "truth": "urgent"
+    },
+    {
+      "number": 126256,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 126314,
+      "truth": "urgent"
+    },
+    {
+      "number": 126366,
+      "truth": "urgent"
+    },
+    {
+      "number": 126369,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 126401,
+      "truth": "urgent"
+    },
+    {
+      "number": 126440,
+      "truth": "urgent"
+    },
+    {
+      "number": 126542,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 126546,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 126615,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 126650,
+      "truth": "urgent"
+    },
+    {
+      "number": 126659,
+      "truth": "urgent"
+    },
+    {
+      "number": 126812,
+      "truth": "urgent"
+    },
+    {
+      "number": 126813,
+      "truth": "urgent"
+    },
+    {
+      "number": 126831,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 126887,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 126943,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 126965,
+      "truth": "urgent"
+    },
+    {
+      "number": 127276,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 127312,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 127460,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 127548,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 127596,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 127623,
+      "truth": "urgent"
+    },
+    {
+      "number": 127642,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 127803,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 128043,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 128114,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 128167,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 128284,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 128339,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 128365,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 128384,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 128544,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 128620,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 128632,
+      "truth": "urgent"
+    },
+    {
+      "number": 128638,
+      "truth": "urgent"
+    },
+    {
+      "number": 128655,
+      "truth": "urgent"
+    },
+    {
+      "number": 128656,
+      "truth": "urgent"
+    },
+    {
+      "number": 128669,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 128696,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 128704,
+      "truth": "urgent"
+    },
+    {
+      "number": 128709,
+      "truth": "urgent"
+    },
+    {
+      "number": 128716,
+      "truth": "urgent"
+    },
+    {
+      "number": 128783,
+      "truth": "urgent"
+    },
+    {
+      "number": 128820,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 128854,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 128860,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 128874,
+      "truth": "urgent"
+    },
+    {
+      "number": 129056,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 129080,
+      "truth": "urgent"
+    },
+    {
+      "number": 129187,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 129402,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 129403,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 129453,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 129463,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 129531,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 129548,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 129552,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 129645,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 129648,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 129663,
+      "truth": "urgent"
+    },
+    {
+      "number": 129787,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 129827,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 129880,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 129884,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 129982,
+      "truth": "urgent"
+    },
+    {
+      "number": 129989,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 130018,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 130142,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 130288,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 130296,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 130409,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 130490,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 130585,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 130590,
+      "truth": "urgent"
+    },
+    {
+      "number": 130856,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 130900,
+      "truth": "urgent"
+    },
+    {
+      "number": 131013,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 131038,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 131101,
+      "truth": "urgent"
+    },
+    {
+      "number": 131132,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 131253,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 131261,
+      "truth": "urgent"
+    },
+    {
+      "number": 131336,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 131380,
+      "truth": "urgent"
+    },
+    {
+      "number": 131589,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 131651,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 131703,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 131733,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 131948,
+      "truth": "urgent"
+    },
+    {
+      "number": 131982,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 132030,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 132195,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 132266,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 132372,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 132428,
+      "truth": "urgent"
+    },
+    {
+      "number": 132735,
+      "truth": "urgent"
+    },
+    {
+      "number": 132946,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 132974,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 133133,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 133148,
+      "truth": "urgent"
+    },
+    {
+      "number": 133175,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 133314,
+      "truth": "urgent"
+    },
+    {
+      "number": 133341,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 133382,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 133405,
+      "truth": "urgent"
+    },
+    {
+      "number": 133537,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 133538,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 133539,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 133629,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 133713,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 133733,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 133927,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 134025,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 134049,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 134083,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 134108,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 134131,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 134232,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 134324,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 134460,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 134563,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 134673,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 134799,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 134939,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 134954,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 135107,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 135260,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 135272,
+      "truth": "urgent"
+    },
+    {
+      "number": 135333,
+      "truth": "urgent"
+    },
+    {
+      "number": 135652,
+      "truth": "urgent"
+    },
+    {
+      "number": 135662,
+      "truth": "not-urgent"
+    },
+    {
+      "number": 135713,
+      "truth": "urgent"
+    }
+  ]
+}
