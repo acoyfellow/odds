@@ -82,7 +82,7 @@ return judged
   const authRows = [
     ['Token', 'A dedicated Cloudflare API token: AI Gateway Run + Workers AI Read, one account. Never your wrangler login.'],
     ['Storage', 'macOS Keychain service odds-gateway. Fallback: ~/.config/odds/token, refused unless chmod 600. ODDS_TOKEN for CI.'],
-    ['Gateway', 'Authenticated AI Gateway. Calls without the token, or with a forged one, are rejected.'],
+    ['Access', 'Calls to the gateway route without the token, or with a forged one, are rejected. prove:auth checks this.'],
     ['Exposure', 'Read at request time, sent only as a bearer header to gateway.ai.cloudflare.com, redacted from every error and receipt.'],
     ['This site', 'Static documentation. No AI binding, no storage, no API, connect-src none. It cannot call Clef.'],
   ];
@@ -187,8 +187,7 @@ return judged
     <h2>Two minutes, then <span class="mono">/reload</span>.</h2>
     <p class="muted narrow">
       Create a Cloudflare API token with <span class="mono">AI Gateway: Run</span> and
-      <span class="mono">Workers AI: Read</span> on the account that owns the gateway. Turn on
-      authentication for the gateway. Turn on codemode in Pi with
+      <span class="mono">Workers AI: Read</span> on the account that owns the gateway. Turn on codemode in Pi with
       <span class="mono">"defaultTools": ["+codemode"]</span>.
     </p>
     <div class="code">

@@ -8,7 +8,7 @@ import {
 } from '@earendil-works/pi-coding-agent';
 import odds, { ODDS_PROVIDER } from '../pi/index.ts';
 
-const RECEIPTS_DIR = join(import.meta.dir, '..', 'receipts');
+const PROOF_RUNS_DIR = join(import.meta.dir, '..', 'proof-runs');
 
 const issues = [
   {
@@ -86,8 +86,8 @@ async function main(): Promise<void> {
       },
       at: new Date().toISOString(),
     };
-    mkdirSync(RECEIPTS_DIR, { recursive: true });
-    const path = join(RECEIPTS_DIR, '001-pi-classify-clef.json');
+    mkdirSync(PROOF_RUNS_DIR, { recursive: true });
+    const path = join(PROOF_RUNS_DIR, 'pi-classify-clef.json');
     writeFileSync(path, `${JSON.stringify(receipt, null, 2)}\n`);
     console.log(JSON.stringify(receipt, null, 2));
     if (receipt.verdict !== 'observed') process.exit(1);

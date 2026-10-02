@@ -7,8 +7,7 @@ child agent's receipt proves its gate does it by reading every item into a front
 is slow and costly, it fills the context window, and the judgment changes from item to item.
 
 **Promise:** `odds` is a Pi extension. It registers Cloudflare's Clef decision models as Pi
-classifier models and sends every call through your own authenticated AI Gateway with a scoped
-token. A codemode script asks a typed question about every item. It gets back a probability
+classifier models and sends every call through your own AI Gateway with a scoped token. A codemode script asks a typed question about every item. It gets back a probability
 for each allowed answer and returns only the result to the frontier model.
 
 Docs: <https://odds.coey.dev>. The site is static. It has no bindings and cannot call Clef.
@@ -17,8 +16,7 @@ Docs: <https://odds.coey.dev>. The site is static. It has no bindings and cannot
 
 1. Create a Cloudflare API token with **AI Gateway: Run** and **Workers AI: Read**, limited
    to the account that owns the gateway.
-2. Turn on authentication for that gateway.
-3. Install and configure:
+2. Install and configure:
 
 ```bash
 pi install git:github.com/acoyfellow/odds
@@ -28,7 +26,7 @@ chmod 600 ~/.config/odds/config.json
 security add-generic-password -a "$USER" -s odds-gateway -w
 ```
 
-4. Turn on codemode with `"defaultTools": ["+codemode"]` in Pi settings, then run `/reload`.
+3. Turn on codemode with `"defaultTools": ["+codemode"]` in Pi settings, then run `/reload`.
 
 Then, in a codemode script:
 
@@ -56,7 +54,7 @@ r.answers.urgent.probability;
 | --- | --- |
 | Token | A dedicated API token: AI Gateway Run plus Workers AI Read, one account. odds never uses your wrangler login. |
 | Lookup order | `ODDS_TOKEN` (for CI), then the macOS Keychain service `odds-gateway`, then `~/.config/odds/token`. The token file is refused unless it is chmod 600. |
-| Gateway | Authenticated. Calls with no token or a forged token are rejected. |
+| Access | Calls to the gateway route with no token or a forged token are rejected (HTTP 401). `prove:auth` checks this. odds does not check the gateway's own authentication setting. |
 | Exposure | The token is read at request time and sent only as a bearer header to `gateway.ai.cloudflare.com`. It is redacted from every error and receipt. |
 
 ## How it works
@@ -66,7 +64,7 @@ codemode script
   -> models.classify(odds/clef, { state, questions })
     -> odds: validate input          (reject before any network call)
     -> resolve scoped token          (env | keychain | chmod-600 file)
-    -> authenticated AI Gateway      (your account: logs, caching, rate limits)
+    -> AI Gateway, bearer token      (your account: logs, caching, rate limits)
       -> Workers AI @cf/cloudflare/clef
     -> odds: validate answers        (known labels, argmax, sum = 1, score in range, [0,1])
   <- answers, or stopReason "error" with a redacted message
@@ -85,8 +83,9 @@ bun run prove:pi    # real Pi session -> models.classify -> odds/clef
 bun run prove:docs  # odds.coey.dev is static: 200, connect-src 'none', no API, no bindings
 ```
 
-Receipts are in `receipts/`. The claim ledger is in `status.json`. Receipts 003 and later
-come from real dogfood: Clef calls made from inside a Pi session on real work.
+Receipts are in `receipts/`. The claim ledger is in `status.json`. Receipts 003 to 005
+come from real dogfood: Clef calls made from inside an interactive Pi session on real work.
+The `prove:*` scripts write fresh results to `proof-runs/`, which git ignores.
 
 ## Limits
 

@@ -1,6 +1,8 @@
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
+const PROOF_RUNS_DIR = join(import.meta.dir, '..', 'proof-runs');
+
 const SITE = process.env.ODDS_DOCS_URL ?? 'https://odds.coey.dev';
 const ROOT = join(import.meta.dir, '..');
 const FORBIDDEN_BINDINGS = [
@@ -81,11 +83,8 @@ async function main(): Promise<void> {
     observed: { checks },
     at: new Date().toISOString(),
   };
-  mkdirSync(join(ROOT, 'receipts'), { recursive: true });
-  writeFileSync(
-    join(ROOT, 'receipts', '006-docs-static.json'),
-    `${JSON.stringify(receipt, null, 2)}\n`,
-  );
+  mkdirSync(PROOF_RUNS_DIR, { recursive: true });
+  writeFileSync(join(PROOF_RUNS_DIR, 'docs-static.json'), `${JSON.stringify(receipt, null, 2)}\n`);
   for (const check of checks) console.log(`${check.pass ? 'PASS' : 'FAIL'} ${check.name}`);
   if (!passed) process.exit(1);
 }

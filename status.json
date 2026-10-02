@@ -1,6 +1,6 @@
 {
   "state": "iterating",
-  "iteration": 2,
+  "iteration": 3,
   "northStar": "Frontier agents delegate per-item judgment to typed decision models inside codemode instead of reading every item.",
   "constraint": "Private: calls go only through the owner's authenticated AI Gateway with a scoped keychain token; no public model surface.",
   "falsifiable": "On real queues, a Clef-in-codemode script reaches the same top-k decisions as the frontier model reading every item, at under 10% of the cost.",
@@ -16,13 +16,27 @@
     {
       "claim": "odds.coey.dev is static documentation with no bindings and no model access",
       "receipt": "receipts/006-docs-static.json"
+    },
+    {
+      "claim": "Clef from this Pi session's codemode flags a planted injection (0.99) and passes 4 real fetched documents (all <0.02)",
+      "receipt": "receipts/003-dogfood-injection-screen.json"
+    },
+    {
+      "claim": "Clef from codemode triages 100 coey.dev domains; controls pass, but at p>0.5 it over-retires (56/100), misreading Access-gated 302/401 as broken",
+      "receipt": "receipts/004-dogfood-domain-triage.json"
     }
   ],
   "unproven": [
-    "Clef as an in-session gate: screen untrusted text, rank a real queue, verify a child receipt (receipts 003-005)",
-    "Clef's top-k matches a frontier model's top-k on a real 250-item queue"
+    "Clef's top-k matches a frontier model's top-k on a real 250-item queue",
+    "A pass-label-blind question (strip pass/verdict fields before asking) closes the receipt-gate hole"
   ],
-  "disproven": [],
+  "disproven": [
+    {
+      "claim": "Clef at p>0.8 is a safe standalone receipt gate",
+      "receipt": "receipts/005-dogfood-receipt-gate.json",
+      "detail": "It caught 3 of 4 forgeries but accepted a receipt labelled pass:true whose detail showed status 200 for an anonymous call (p=0.93). It trusts a pass label over contradicting detail."
+    }
+  ],
   "negative": [
     {
       "finding": "typesafe/jev has no route through the default gateway on account 31b9\u2026; odds ships Clef only",
@@ -33,5 +47,8 @@
       "receipt": "receipts/retired/002-site-live-and-capped.json"
     }
   ],
-  "openQuestions": ["Is clef-flash accurate enough for screening at 37% of Clef's price?"]
+  "openQuestions": [
+    "Is clef-flash accurate enough for screening at 37% of Clef's price?",
+    "Does the gateway's own authentication setting need to be on, given Workers AI already requires the token?"
+  ]
 }

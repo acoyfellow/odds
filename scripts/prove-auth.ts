@@ -4,6 +4,8 @@ import { askOdds, gatewayUrl } from '../src/client.ts';
 import { readConfig, redact, resolveToken } from '../src/credentials.ts';
 import { findOddsModel } from '../src/models.ts';
 
+const PROOF_RUNS_DIR = join(import.meta.dir, '..', 'proof-runs');
+
 const probe = {
   state: 'Hello there!',
   questions: { greeting: { type: 'bool' as const, instructions: 'Is this a greeting?' } },
@@ -101,9 +103,8 @@ async function main(): Promise<void> {
   const serialized = `${JSON.stringify(receipt, null, 2)}\n`;
   if (serialized.includes(token))
     throw new Error('refusing to write a receipt that contains the token');
-  const dir = join(import.meta.dir, '..', 'receipts');
-  mkdirSync(dir, { recursive: true });
-  writeFileSync(join(dir, '002-auth-scoped-token.json'), serialized);
+  mkdirSync(PROOF_RUNS_DIR, { recursive: true });
+  writeFileSync(join(PROOF_RUNS_DIR, 'auth-scoped-token.json'), serialized);
   for (const check of checks) console.log(`${check.pass ? 'PASS' : 'FAIL'} ${check.name}`);
   if (!passed) process.exit(1);
 }

@@ -1,0 +1,547 @@
+{
+  "kind": "odds.receipt/v0",
+  "claim": "Clef, called from this Pi session codemode, ranks the 100 coey.dev custom domains by retire-likelihood with sane controls",
+  "verdict": "observed",
+  "observed": {
+    "via": "pi codemode models.classify(odds/clef)",
+    "domains": 100,
+    "failures": [],
+    "controls": {
+      "keepOdds": true,
+      "keepPantry": true,
+      "retireCinder404": true
+    },
+    "retireCandidates": [
+      {
+        "subdomain": "call",
+        "http": "404",
+        "workerLastChanged": "2025-09-24",
+        "stars": null,
+        "junk": 0.9859,
+        "state": "broken"
+      },
+      {
+        "subdomain": "wake",
+        "http": "401",
+        "workerLastChanged": "2026-05-21",
+        "stars": 0,
+        "junk": 0.981,
+        "state": "broken"
+      },
+      {
+        "subdomain": "cinder",
+        "http": "404",
+        "workerLastChanged": "2026-03-09",
+        "stars": 1,
+        "junk": 0.9801,
+        "state": "broken"
+      },
+      {
+        "subdomain": "ralphwiggums-api",
+        "http": "404",
+        "workerLastChanged": "2026-01-30",
+        "stars": 8,
+        "junk": 0.9731,
+        "state": "broken"
+      },
+      {
+        "subdomain": "webmcp-proof",
+        "http": "401",
+        "workerLastChanged": "2026-08-27",
+        "stars": 0,
+        "junk": 0.971,
+        "state": "broken"
+      },
+      {
+        "subdomain": "userdo",
+        "http": "404",
+        "workerLastChanged": "2025-08-04",
+        "stars": 138,
+        "junk": 0.9702,
+        "state": "broken"
+      },
+      {
+        "subdomain": "tiny",
+        "http": "200",
+        "workerLastChanged": "2025-09-21",
+        "stars": 1,
+        "junk": 0.962,
+        "state": "stale"
+      },
+      {
+        "subdomain": "repo-audit",
+        "http": "200",
+        "workerLastChanged": "2026-03-09",
+        "stars": 3,
+        "junk": 0.9554,
+        "state": "stale"
+      },
+      {
+        "subdomain": "effect-first",
+        "http": "200",
+        "workerLastChanged": "2026-03-07",
+        "stars": 1,
+        "junk": 0.9486,
+        "state": "stale"
+      },
+      {
+        "subdomain": "airlock-swarm",
+        "http": "404",
+        "workerLastChanged": "2026-07-05",
+        "stars": 1,
+        "junk": 0.9463,
+        "state": "broken"
+      },
+      {
+        "subdomain": "tax-agent",
+        "http": "200",
+        "workerLastChanged": "2026-02-14",
+        "stars": 1,
+        "junk": 0.9441,
+        "state": "stale"
+      },
+      {
+        "subdomain": "greenlight",
+        "http": "200",
+        "workerLastChanged": "2026-03-23",
+        "stars": 1,
+        "junk": 0.9423,
+        "state": "stale"
+      },
+      {
+        "subdomain": "airlock-checkrunner",
+        "http": "404",
+        "workerLastChanged": "2026-07-05",
+        "stars": 1,
+        "junk": 0.9358,
+        "state": "broken"
+      },
+      {
+        "subdomain": "self",
+        "http": "200",
+        "workerLastChanged": "2026-03-06",
+        "stars": 0,
+        "junk": 0.9289,
+        "state": "stale"
+      },
+      {
+        "subdomain": "workflow-live",
+        "http": "200",
+        "workerLastChanged": "2025-02-11",
+        "stars": 67,
+        "junk": 0.9236,
+        "state": "stale"
+      },
+      {
+        "subdomain": "cache-sync",
+        "http": "200",
+        "workerLastChanged": "2025-02-23",
+        "stars": 28,
+        "junk": 0.9203,
+        "state": "stale"
+      },
+      {
+        "subdomain": "agent-patterns",
+        "http": "200",
+        "workerLastChanged": "2026-06-20",
+        "stars": 2,
+        "junk": 0.9123,
+        "state": "stale"
+      },
+      {
+        "subdomain": "parley",
+        "http": "200",
+        "workerLastChanged": "2026-02-05",
+        "stars": 2,
+        "junk": 0.9043,
+        "state": "stale"
+      },
+      {
+        "subdomain": "termlab",
+        "http": "200",
+        "workerLastChanged": "2026-04-21",
+        "stars": 1,
+        "junk": 0.9028,
+        "state": "stale"
+      },
+      {
+        "subdomain": "chomp",
+        "http": "200",
+        "workerLastChanged": "2026-02-15",
+        "stars": 4,
+        "junk": 0.8955,
+        "state": "stale"
+      },
+      {
+        "subdomain": "executor",
+        "http": "302",
+        "workerLastChanged": "2026-06-26",
+        "stars": null,
+        "junk": 0.8955,
+        "state": "broken"
+      },
+      {
+        "subdomain": "sidequesting-backwards",
+        "http": "200",
+        "workerLastChanged": "2026-07-14",
+        "stars": null,
+        "junk": 0.8807,
+        "state": "stale"
+      },
+      {
+        "subdomain": "edgescribe",
+        "http": "200",
+        "workerLastChanged": "2025-07-20",
+        "stars": null,
+        "junk": 0.8595,
+        "state": "stale"
+      },
+      {
+        "subdomain": "invoices",
+        "http": "302",
+        "workerLastChanged": "2025-06-20",
+        "stars": 0,
+        "junk": 0.8576,
+        "state": "broken"
+      },
+      {
+        "subdomain": "memvid",
+        "http": "200",
+        "workerLastChanged": "2025-06-06",
+        "stars": null,
+        "junk": 0.8567,
+        "state": "stale"
+      },
+      {
+        "subdomain": "manyface",
+        "http": "200",
+        "workerLastChanged": "2026-07-07",
+        "stars": null,
+        "junk": 0.8526,
+        "state": "stale"
+      },
+      {
+        "subdomain": "orbit",
+        "http": "200",
+        "workerLastChanged": "2026-06-22",
+        "stars": 2,
+        "junk": 0.8521,
+        "state": "stale"
+      },
+      {
+        "subdomain": "hold",
+        "http": "302",
+        "workerLastChanged": "2026-08-16",
+        "stars": 0,
+        "junk": 0.8461,
+        "state": "broken"
+      },
+      {
+        "subdomain": "ascii-smuggler",
+        "http": "200",
+        "workerLastChanged": "2026-02-17",
+        "stars": 1,
+        "junk": 0.8408,
+        "state": "stale"
+      },
+      {
+        "subdomain": "kumo-astro-demo",
+        "http": "200",
+        "workerLastChanged": "2026-07-14",
+        "stars": 1,
+        "junk": 0.8403,
+        "state": "stale"
+      },
+      {
+        "subdomain": "cloudshell-api",
+        "http": "404",
+        "workerLastChanged": "2026-05-06",
+        "stars": 25,
+        "junk": 0.839,
+        "state": "broken"
+      },
+      {
+        "subdomain": "foursight",
+        "http": "200",
+        "workerLastChanged": "2026-07-30",
+        "stars": null,
+        "junk": 0.82,
+        "state": "stale"
+      },
+      {
+        "subdomain": "swarm",
+        "http": "200",
+        "workerLastChanged": "2026-05-25",
+        "stars": 4,
+        "junk": 0.8105,
+        "state": "stale"
+      },
+      {
+        "subdomain": "snaptool",
+        "http": "200",
+        "workerLastChanged": "2025-10-01",
+        "stars": 0,
+        "junk": 0.7925,
+        "state": "stale"
+      },
+      {
+        "subdomain": "think",
+        "http": "200",
+        "workerLastChanged": "2026-06-24",
+        "stars": null,
+        "junk": 0.7858,
+        "state": "stale"
+      },
+      {
+        "subdomain": "aigent",
+        "http": "200",
+        "workerLastChanged": "2025-07-29",
+        "stars": 0,
+        "junk": 0.7834,
+        "state": "stale"
+      },
+      {
+        "subdomain": "bot",
+        "http": "200",
+        "workerLastChanged": "2025-07-22",
+        "stars": 15,
+        "junk": 0.7741,
+        "state": "stale"
+      },
+      {
+        "subdomain": "backwards",
+        "http": "200",
+        "workerLastChanged": "2026-07-07",
+        "stars": null,
+        "junk": 0.7666,
+        "state": "stale"
+      },
+      {
+        "subdomain": "deja-shared",
+        "http": "404",
+        "workerLastChanged": "2026-07-07",
+        "stars": 7,
+        "junk": 0.7567,
+        "state": "broken"
+      },
+      {
+        "subdomain": "agent-adversary",
+        "http": "200",
+        "workerLastChanged": "2026-08-26",
+        "stars": 0,
+        "junk": 0.7398,
+        "state": "stale"
+      },
+      {
+        "subdomain": "effect-agents",
+        "http": "200",
+        "workerLastChanged": "2026-05-28",
+        "stars": 5,
+        "junk": 0.7297,
+        "state": "stale"
+      },
+      {
+        "subdomain": "molt",
+        "http": "200",
+        "workerLastChanged": "2026-06-26",
+        "stars": 3,
+        "junk": 0.7284,
+        "state": "stale"
+      },
+      {
+        "subdomain": "ffmpeg",
+        "http": "200",
+        "workerLastChanged": "2026-05-15",
+        "stars": null,
+        "junk": 0.7116,
+        "state": "stale"
+      },
+      {
+        "subdomain": "up",
+        "http": "302",
+        "workerLastChanged": "2026-06-24",
+        "stars": 5,
+        "junk": 0.7083,
+        "state": "broken"
+      },
+      {
+        "subdomain": "room",
+        "http": "302",
+        "workerLastChanged": "2026-08-14",
+        "stars": 1,
+        "junk": 0.6831,
+        "state": "broken"
+      },
+      {
+        "subdomain": "ref",
+        "http": "200",
+        "workerLastChanged": "2026-07-11",
+        "stars": null,
+        "junk": 0.67,
+        "state": "stale"
+      },
+      {
+        "subdomain": "payments-deck",
+        "http": "200",
+        "workerLastChanged": "2026-09-30",
+        "stars": null,
+        "junk": 0.6609,
+        "state": "stale"
+      },
+      {
+        "subdomain": "me",
+        "http": "302",
+        "workerLastChanged": "2026-08-14",
+        "stars": 0,
+        "junk": 0.5978,
+        "state": "broken"
+      },
+      {
+        "subdomain": "glance-demo",
+        "http": "200",
+        "workerLastChanged": "2026-07-24",
+        "stars": 3,
+        "junk": 0.5952,
+        "state": "stale"
+      },
+      {
+        "subdomain": "vidframes",
+        "http": "200",
+        "workerLastChanged": "2026-06-23",
+        "stars": 1,
+        "junk": 0.5949,
+        "state": "stale"
+      },
+      {
+        "subdomain": "anvil",
+        "http": "200",
+        "workerLastChanged": "2026-06-10",
+        "stars": null,
+        "junk": 0.5936,
+        "state": "stale"
+      },
+      {
+        "subdomain": "airdesk",
+        "http": "200",
+        "workerLastChanged": "2026-07-07",
+        "stars": null,
+        "junk": 0.587,
+        "state": "stale"
+      },
+      {
+        "subdomain": "glance",
+        "http": "302",
+        "workerLastChanged": "2026-07-28",
+        "stars": 3,
+        "junk": 0.5805,
+        "state": "broken"
+      },
+      {
+        "subdomain": "loopmachine",
+        "http": "200",
+        "workerLastChanged": "2026-07-08",
+        "stars": null,
+        "junk": 0.5791,
+        "state": "stale"
+      },
+      {
+        "subdomain": "unsurf",
+        "http": "200",
+        "workerLastChanged": "2026-06-17",
+        "stars": 21,
+        "junk": 0.537,
+        "state": "stale"
+      },
+      {
+        "subdomain": "airlock",
+        "http": "200",
+        "workerLastChanged": "2026-08-18",
+        "stars": 1,
+        "junk": 0.5109,
+        "state": "active"
+      }
+    ],
+    "keepSample": [
+      {
+        "subdomain": "tuiport",
+        "http": "200",
+        "workerLastChanged": "2026-06-13",
+        "stars": 28,
+        "junk": 0.1124,
+        "state": "active"
+      },
+      {
+        "subdomain": "cloudbox",
+        "http": "200",
+        "workerLastChanged": "2026-08-19",
+        "stars": 55,
+        "junk": 0.1032,
+        "state": "active"
+      },
+      {
+        "subdomain": "pantry",
+        "http": "200",
+        "workerLastChanged": "2026-07-01",
+        "stars": 8,
+        "junk": 0.0935,
+        "state": "active"
+      },
+      {
+        "subdomain": "cloudshell",
+        "http": "200",
+        "workerLastChanged": "2026-05-06",
+        "stars": 25,
+        "junk": 0.0884,
+        "state": "active"
+      },
+      {
+        "subdomain": "echo",
+        "http": "200",
+        "workerLastChanged": "2026-09-12",
+        "stars": 7,
+        "junk": 0.0763,
+        "state": "active"
+      }
+    ],
+    "costUsd": 0.009486959999999997,
+    "elapsedMs": 22273,
+    "review": {
+      "retireCount": 56,
+      "falsePositiveRisk": {
+        "authGatedReadAsBroken": [
+          "wake",
+          "webmcp-proof",
+          "executor",
+          "invoices",
+          "hold",
+          "up",
+          "room",
+          "me",
+          "glance"
+        ],
+        "popularRepos": [
+          "userdo",
+          "workflow-live",
+          "cache-sync",
+          "cloudshell-api",
+          "unsurf"
+        ],
+        "changedInLast7Weeks": [
+          "webmcp-proof",
+          "hold",
+          "agent-adversary",
+          "payments-deck",
+          "airlock"
+        ]
+      },
+      "finding": "Controls passed but the threshold is too loose: 302/401 behind Cloudflare Access were scored broken, and starred or recently deployed projects were scored stale. Use p>0.95 plus http 404/5xx for a safe shortlist.",
+      "safeShortlist": [
+        "call",
+        "cinder",
+        "ralphwiggums-api",
+        "userdo"
+      ]
+    }
+  },
+  "at": "2026-10-02T00:13:31.924Z"
+}

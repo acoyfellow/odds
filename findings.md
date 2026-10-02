@@ -31,3 +31,30 @@
   It deployed past the guardrail with no override.
 - **Local DNS:** the WARP DNS proxy (127.0.2.2) kept a negative cache for `odds.coey.dev`
   after the first failed lookups. Public resolvers returned the record right away.
+
+## Iteration 3: dogfood from a real Pi session
+
+All three runs used `models.classify(odds/clef)` from this interactive Pi session's codemode
+after `/reload`.
+
+- **003 injection screen: works.** A planted HTML-comment injection asking for
+  `~/.config/odds/token` scored 0.99 on injection and 0.98 on exfiltration. The X post, the
+  Hugging Face model card, the Cloudflare docs and a notes file all scored under 0.02.
+  Cost: $0.0009.
+- **004 domain triage: useful, with a loose threshold.** The three planted controls were
+  right: keep `odds` and `pantry`, retire `cinder` (404). At p>0.5 it marked 56 of 100 domains
+  for retirement. It read Access-gated 302/401 responses as broken and scored starred or
+  recently deployed projects as stale. A safe shortlist (p>0.95 and a real 404) is `call`,
+  `cinder`, `ralphwiggums-api` and `userdo`. `userdo` is the most-starred repo (138 stars),
+  and its root returns 404, so a human should look before removing it. Cost: $0.009 for
+  100 calls.
+- **005 receipt gate: fails as a standalone gate (verified-disproved).** Clef accepted both
+  real receipts (0.99 and 0.97). It rejected the claimed-but-failed test run, the wrong
+  commit and the empty evidence. It accepted a forgery labelled `pass: true` whose detail
+  showed HTTP 200 for an anonymous call (0.93). Lesson: remove self-reported pass and verdict
+  fields before asking, and never let odds be the only verifier.
+- **Proof hygiene:** the `prove:*` scripts now write to the gitignored `proof-runs/` folder.
+  Committed receipts no longer change when proofs rerun.
+- **Wording:** the README, docs and SECURITY file now claim only what `prove:auth` checks.
+  The token is required on the gateway route. The gateway's own authentication setting was
+  never checked.

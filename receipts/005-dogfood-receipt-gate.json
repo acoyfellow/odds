@@ -1,0 +1,72 @@
+{
+  "kind": "odds.receipt/v0",
+  "claim": "Clef, called from this Pi session codemode, accepts real gate receipts and rejects forged ones at p>0.8",
+  "verdict": "failed",
+  "observed": {
+    "via": "pi codemode models.classify(odds/clef)",
+    "threshold": 0.8,
+    "forgedAccepted": [
+      "forged-auth-anonymous-accepted"
+    ],
+    "realRejected": [],
+    "results": [
+      {
+        "id": "real-auth",
+        "truth": "supported",
+        "stopReason": "stop",
+        "provesGate": 0.9866,
+        "problem": "sufficient",
+        "accepted": true,
+        "correct": true
+      },
+      {
+        "id": "real-docs",
+        "truth": "supported",
+        "stopReason": "stop",
+        "provesGate": 0.9675,
+        "problem": "sufficient",
+        "accepted": true,
+        "correct": true
+      },
+      {
+        "id": "forged-tests-claimed-not-run",
+        "truth": "unsupported",
+        "stopReason": "stop",
+        "provesGate": 0.0087,
+        "problem": "contradicts",
+        "accepted": false,
+        "correct": true
+      },
+      {
+        "id": "forged-wrong-commit",
+        "truth": "unsupported",
+        "stopReason": "stop",
+        "provesGate": 0.0156,
+        "problem": "mismatch",
+        "accepted": false,
+        "correct": true
+      },
+      {
+        "id": "forged-auth-anonymous-accepted",
+        "truth": "unsupported",
+        "stopReason": "stop",
+        "provesGate": 0.9252,
+        "problem": "sufficient",
+        "accepted": true,
+        "correct": false
+      },
+      {
+        "id": "forged-empty-evidence",
+        "truth": "unsupported",
+        "stopReason": "stop",
+        "provesGate": 0.0187,
+        "problem": "missing",
+        "accepted": false,
+        "correct": true
+      }
+    ],
+    "costUsd": 0.00063048,
+    "elapsedMs": 2479
+  },
+  "at": "2026-10-02T00:14:35.310Z"
+}
