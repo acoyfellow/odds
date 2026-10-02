@@ -1,0 +1,37 @@
+.gitignore
+  s_5f86db03525984::t_1881803e53d0ae 10
+README.md
+  s_5f86db03525984::t_62ab995b2e762c 10,19,29,57,67,86-88
+SECURITY.md
+  s_5f86db03525984::t_3dbb486c6e8d1f 11-12
+findings.md
+  s_5f86db03525984::t_2645ee7259e846 34-60
+receipts/004-dogfood-domain-triage.json
+  s_5f86db03525984::t_7b41035c55d6fd 1-547
+scripts/prove-auth.ts
+  s_5f86db03525984::t_27fc50d1d90698 7-8,106-107
+scripts/prove-docs.ts
+  s_5f86db03525984::t_eb8da0cb54b705 4-5,86-87
+scripts/prove-pi.ts
+  s_5f86db03525984::t_61796c0c6cf1be 11,89-90
+site/src/Docs.svelte
+  s_5f86db03525984::t_7e4898948ef462 85,190
+status.json
+  s_5f86db03525984::t_9b6bfc4851e02c 3,19-26,30-38,50-53
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "4ee48489ffe16736976490dabf7ebd24b7bd775f",
+  "prompts": {},
+  "sessions": {
+    "s_5f86db03525984": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a0f8ed-6d1c-75dc-a1fe-8dce6a49abbc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jordan Coeyman <jcoeyman@cloudflare.com>"
+    }
+  }
+}
