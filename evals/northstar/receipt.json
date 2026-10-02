@@ -1,0 +1,17 @@
+{
+  "kind": "odds.northstar.receipt/v0",
+  "verdict": "pending",
+  "runs": ["2026-10-02T17-13-48"],
+  "fixAttempts": [
+    {
+      "change": "v2: both arms answer the identical urgency question; ids-only answer line.",
+      "runs": ["2026-10-02T17-13-48"]
+    }
+  ],
+  "failingCriterion": null,
+  "notes": [
+    "Run 2026-10-02T17-06-22 (v1 wording differed between arms): odds F1 0.593, cost $0.094, 92 s, 0 injections.",
+    "Run 2026-10-02T17-13-48 (v2 shared question): baseline F1 0.415 $0.639 19.5 s; odds F1 0.593 $0.175 152.8 s; the odds agent ran its classify script twice (510 calls), doubling cost and time.",
+    "Speed looks structurally out of reach at n=250: Pi caps classify at 4 concurrent calls, so 255 calls take >=30-40 s while the baseline reads ~73k tokens in ~16-20 s."
+  ]
+}

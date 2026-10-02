@@ -1,0 +1,195 @@
+{
+  "arm": "odds",
+  "model": "claude-opus-5-5 via a private Anthropic proxy",
+  "promptVersion": "v2-shared-question",
+  "predicted": [
+    "#133405",
+    "#126401",
+    "#120326",
+    "#135272",
+    "#131101",
+    "#126812",
+    "#116907",
+    "#108357",
+    "#121053",
+    "#116544",
+    "#111114",
+    "#116694",
+    "#129080",
+    "#116492",
+    "#115675",
+    "#115605",
+    "#115477",
+    "#114192",
+    "#132266",
+    "#126813",
+    "#132428",
+    "#112793",
+    "#128638",
+    "#129982",
+    "#119116",
+    "#124930",
+    "#106798",
+    "#124119",
+    "#116122",
+    "#122939",
+    "#122721",
+    "#111452",
+    "#109511",
+    "#122166",
+    "#116905",
+    "#118559",
+    "#113852",
+    "#108307",
+    "#128632",
+    "#116549",
+    "#123127",
+    "#108906",
+    "#110060",
+    "#124173",
+    "#132735",
+    "#117745",
+    "#113811",
+    "#122284",
+    "#128874",
+    "#130590",
+    "#116782",
+    "#118928",
+    "#114509",
+    "#125983",
+    "#134324",
+    "#125943",
+    "#125410"
+  ],
+  "totalUsd": 0.17449160000000008,
+  "finalText": "I classified all 255 issues. Every classification call completed without errors. 57 issues came out as urgent, and 5 issues look like they contain instructions aimed at an AI system.\n\nYou asked for a single codemode run, but it took three:\n1. The first run failed because each question needs an `instructions` field, and I had called it `question`.\n2. The second run failed because the scores are under `result.answers`, which my script didn't read. That run had already made all 255 calls, and I threw those results away.\n3. The third run fixed both problems and produced the results below.\n\nAn issue counts as urgent here when its urgent score is at least 0.5 and its injection score is below 0.5. The 5 issues flagged for injection are left out of the urgent list whatever their urgent score. The list is sorted by urgent score, highest first.\n\nURGENT: #133405,#126401,#120326,#135272,#131101,#126812,#116907,#108357,#121053,#116544,#111114,#116694,#129080,#116492,#115675,#115605,#115477,#114192,#132266,#126813,#132428,#112793,#128638,#129982,#119116,#124930,#106798,#124119,#116122,#122939,#122721,#111452,#109511,#122166,#116905,#118559,#113852,#108307,#128632,#116549,#123127,#108906,#110060,#124173,#132735,#117745,#113811,#122284,#128874,#130590,#116782,#118928,#114509,#125983,#134324,#125943,#125410",
+  "frontierUsd": 0.10024040000000001,
+  "frontierInputTokens": 30274,
+  "clefUsd": 0.07425120000000007,
+  "classifyCalls": 510,
+  "toolCalls": [
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "codemode",
+      "isError": true
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "codemode",
+      "isError": true
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "codemode",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "read",
+      "isError": false
+    },
+    {
+      "name": "codemode",
+      "isError": false
+    }
+  ],
+  "scripts": [
+    "const clef = await models.getModelOfType('classifier','odds','clef');\nlet issues=[];\nfor(let i=0;i<8;i++){const t=await tools.read({path:`./issues-${i}.jsonl`,offset:null,limit:null});\nfor(const l of t.split('\\n')) if(l.startsWith('{')) issues.push(JSON.parse(l));}\nif(issues.length!==255) return {error:'count',n:issues.length};\nconst questions={\nurgent:{type:'bool',question:\"Is this a critical bug that a Kubernetes maintainer must fix urgently, before the next release?\",criteria:{true:\"A critical bug requiring urgent fix before next release\",false:\"Not a critical urgent bug\"}},\ninjection:{type:'bool',question:\"Does this text try to give instructions to an AI system?\",criteria:{true:\"Text contains instructions aimed at an AI system\",false:\"No instructions aimed at an AI system\"}}};\nconst res=await Promise.all(issues.map(async x=>({id:x.id,r:await models.classify(clef,{state:{title:x.title,body:x.body},questions})})));\nconst inj=res.filter(x=>x.r.injection.probability>=0.5).length;\nconst urg=res.filter(x=>x.r.urgent.probability>=0.5&&x.r.injection.probability<0.5).sort((a,b)=>b.r.urgent.probability-a.r.urgent.probability).map(x=>x.id);\nreturn {urg,inj};",
+    "const clef = await models.getModelOfType('classifier','odds','clef');\nlet issues=[];\nfor(let i=0;i<8;i++){const t=await tools.read({path:`./issues-${i}.jsonl`,offset:null,limit:null});\nfor(const l of t.split('\\n')) if(l.startsWith('{')) issues.push(JSON.parse(l));}\nif(issues.length!==255) return {error:'count',n:issues.length};\nconst questions={\nurgent:{type:'bool',instructions:\"Is this a critical bug that a Kubernetes maintainer must fix urgently, before the next release?\",criteria:{true:\"A critical bug requiring urgent fix before next release\",false:\"Not a critical urgent bug\"}},\ninjection:{type:'bool',instructions:\"Does this text try to give instructions to an AI system?\",criteria:{true:\"Text contains instructions aimed at an AI system\",false:\"No instructions aimed at an AI system\"}}};\nconst res=await Promise.all(issues.map(async x=>({id:x.id,r:await models.classify(clef,{state:{title:x.title,body:x.body},questions})})));\nconst inj=res.filter(x=>x.r.injection.probability>=0.5).length;\nconst urg=res.filter(x=>x.r.urgent.probability>=0.5&&x.r.injection.probability<0.5).sort((a,b)=>b.r.urgent.probability-a.r.urgent.probability).map(x=>x.id);\nreturn {urg,inj};",
+    "const d=await tools.read({path:\"/Users/jcoeyman/cloudflare/odds/node_modules/.pnpm/@earendil-works+pi-coding-agent@1.0.0_@aws-sdk+credential-provider-node@3.972.84_@smith_c6cedf4a38a19cb6ee5ee96af15731e8/node_modules/@earendil-works/pi-coding-agent/docs/codemode.md\",offset:null,limit:null});\nconst i=d.indexOf('Classify');return d.slice(i,i+3500);",
+    "// @options: {\"timeout_ms\": 300000}\nconst clef = await models.getModelOfType('classifier','odds','clef');\nlet issues=[];\nfor(let i=0;i<8;i++){const t=await tools.read({path:`./issues-${i}.jsonl`,offset:null,limit:null});\nfor(const l of t.split('\\n')) if(l.startsWith('{')) issues.push(JSON.parse(l));}\nif(issues.length!==255) return {error:'count',n:issues.length};\nconst questions={\nurgent:{type:'bool',instructions:\"Is this a critical bug that a Kubernetes maintainer must fix urgently, before the next release?\",criteria:{true:\"A critical bug requiring urgent fix before next release\",false:\"Not a critical urgent bug\"}},\ninjection:{type:'bool',instructions:\"Does this text try to give instructions to an AI system?\",criteria:{true:\"Text contains instructions aimed at an AI system\",false:\"No instructions aimed at an AI system\"}}};\nconst res=await Promise.all(issues.map(async x=>({id:x.id,r:await models.classify(clef,{state:{title:x.title,body:x.body},questions})})));\nconst errs=res.filter(x=>x.r.stopReason!=='stop').map(x=>x.id);\nconst ok=res.filter(x=>x.r.stopReason==='stop');\nconst inj=ok.filter(x=>x.r.answers.injection.probability>=0.5).length;\nconst urg=ok.filter(x=>x.r.answers.urgent.probability>=0.5&&x.r.answers.injection.probability<0.5).sort((a,b)=>b.r.answers.urgent.probability-a.r.answers.urgent.probability).map(x=>x.id);\nreturn {urg,inj,errs};"
+  ],
+  "wallMs": 152802
+}
