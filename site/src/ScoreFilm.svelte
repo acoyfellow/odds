@@ -1,5 +1,5 @@
 <script>
-  import { onMount } from 'svelte';
+  import { onMount, tick } from 'svelte';
   import {
     captionOpacity,
     FILM_CAPTIONS,
@@ -12,17 +12,26 @@
     RIGHT,
     STAFF_BOTTOM,
     STAFF_TOP,
+    crossedChimes,
     scrollProgress,
+    stageFrame,
     staffFrame,
     titleFrame,
     wavePath,
   } from './film.ts';
+  import { createChimes, pitchForY } from './chime.ts';
 
-  let { queue, notes, returned, focus = $bindable(null) } = $props();
+  let { queue, notes, returned, focus = $bindable(null), children } = $props();
 
   let stage;
 
-  let t = $state(FILM_END);
+  let t = $state(0);
+
+  let open = $state(0);
+
+  let sound = $state(false);
+
+  let playChime = null;
 
   let reduced = $state(true);
 
@@ -66,11 +75,22 @@
 
     const update = () => {
       const box = stage.getBoundingClientRect();
+      const stageTop = box.top + window.scrollY;
+      const frame = stageFrame(scrollProgress(window.scrollY, stageTop, box.height, window.innerHeight));
 
-      t = scrollProgress(box.top, box.height, window.innerHeight) * FILM_END;
+      if (sound && playChime) {
+        for (const index of crossedChimes(notes.length, t, frame.t)) {
+          const note = notes[index];
+
+          playChime({ frequency: pitchForY(note.y), bright: note.tone !== 'none', muted: note.rest });
+        }
+      }
+
+      open = frame.open;
+      t = frame.t;
     };
 
-    update();
+    tick().then(update);
     window.addEventListener('scroll', update, { passive: true });
     window.addEventListener('resize', update);
 
@@ -81,15 +101,23 @@
   });
 </script>
 
-<div bind:this={stage} class="relative" class:h-[420vh]={!reduced} data-film-t={Math.round(t)}>
+<div bind:this={stage} class="relative" class:h-[300vh]={!reduced} data-film-t={Math.round(t)} data-film-open={open.toFixed(2)}>
   <figure
-    class="m-0 flex flex-col justify-center"
+    class="m-0 flex flex-col items-stretch justify-center overflow-hidden"
     class:sticky={!reduced}
-    class:top-0={!reduced}
-    class:h-screen={!reduced}
+    style={reduced ? '' : `top:${(1 - open) * 25}vh;height:${50 + open * 50}vh`}
     aria-label="Sixteen support tickets judged by Clef, drawn as notes on a staff"
   >
-    <svg class="score-svg h-auto w-full overflow-visible" viewBox="0 0 1500 330" role="img">
+    <button
+      class="absolute right-0 top-2 z-10 cursor-pointer border-0 bg-transparent font-serif text-base italic text-seal hover:underline"
+      class:hidden={reduced}
+      aria-pressed={sound}
+      onclick={() => {
+        playChime ??= createChimes();
+        sound = !sound;
+      }}
+    >{sound ? 'sound on' : 'sound off'}</button>
+    <svg class="score-svg h-auto max-h-[40vh] w-full overflow-visible" viewBox="0 0 1500 330" role="img">
       <text class="fill-ink font-serif text-[22px] font-semibold italic" opacity={staff.headingOpacity} x="20" y="28">
         Example: {queue.rows.length} support tickets, one question each: “does this need an engineer today?”
       </text>
@@ -193,3 +221,4 @@
     </div>
   </figure>
 </div>
+

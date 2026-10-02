@@ -216,8 +216,8 @@ export function titleFrame(index: number, t: number): TitleFrame {
   return {
     x: 560,
     y: lerp(rowY, MID_Y, squeeze),
-    opacity: 0.55 * segment(t, 300 + index * 90, 600 + index * 90) * (1 - squeeze),
-    waveOpacity: 0.4 * segment(t, 1_200, 1_600) * (1 - squeeze),
+    opacity: 0.55 * (1 - squeeze),
+    waveOpacity: 0.4 * (1 - squeeze),
   };
 }
 
@@ -242,7 +242,7 @@ export interface FilmCaption {
 }
 
 export const FILM_CAPTIONS: readonly FilmCaption[] = [
-  { text: 'To a large model, many messages sound the same.', from: 2_600, to: 4_600 },
+  { text: 'To a large model, many messages sound the same.', from: -300, to: 4_600 },
   { text: 'Clef listens to each message first.', from: 5_200, to: 7_000 },
   {
     text: 'Clef gives each one a number. High notes need an engineer today.',
@@ -276,10 +276,49 @@ export function wavePath(
   return `M${points.join(' L')}`;
 }
 
-export function scrollProgress(top: number, height: number, viewport: number): number {
-  const travel = height - viewport;
+export function scrollProgress(
+  scrollY: number,
+  stageTop: number,
+  stageHeight: number,
+  viewport: number,
+): number {
+  const end = stageTop + stageHeight - viewport;
 
-  if (travel <= 0) return 1;
+  if (end <= 0) return 1;
 
-  return Math.min(1, Math.max(0, -top / travel));
+  return Math.min(1, Math.max(0, scrollY / end));
+}
+
+export const OPEN_UNTIL = 0.12;
+
+export const CLOSE_FROM = 0.88;
+
+export interface StageFrame {
+  open: number;
+  t: number;
+}
+
+export function stageFrame(progress: number): StageFrame {
+  return {
+    open: segment(progress, 0, OPEN_UNTIL, easeInOut) - segment(progress, CLOSE_FROM, 1, easeInOut),
+    t: segment(progress, OPEN_UNTIL, CLOSE_FROM, linear) * FILM_END,
+  };
+}
+
+export function chimeTime(index: number): number {
+  return noteStart(index) + 200;
+}
+
+export function crossedChimes(count: number, from: number, to: number): number[] {
+  const low = Math.min(from, to);
+  const high = Math.max(from, to);
+  const crossed: number[] = [];
+
+  for (let index = 0; index < count; index += 1) {
+    const at = chimeTime(index);
+
+    if (at > low && at <= high) crossed.push(index);
+  }
+
+  return to >= from ? crossed : crossed.reverse();
 }

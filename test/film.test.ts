@@ -4,11 +4,11 @@ import { FILM_END, MID_Y, noteFrame, scrollProgress, staffFrame } from '../site/
 const note = { index: 3, x: 500, y: 80, filled: true, rest: false, returned: true };
 
 describe('scroll-driven score film', () => {
-  test('scroll progress maps the sticky travel to 0..1 and clamps', () => {
-    expect(scrollProgress(0, 4000, 1000)).toBe(0);
-    expect(scrollProgress(-1500, 4000, 1000)).toBe(0.5);
-    expect(scrollProgress(-9000, 4000, 1000)).toBe(1);
-    expect(scrollProgress(200, 4000, 1000)).toBe(0);
+  test('progress runs from scroll 0 to the point where the stage bottom meets the viewport bottom', () => {
+    expect(scrollProgress(0, 300, 3000, 1000)).toBe(0);
+    expect(scrollProgress(1150, 300, 3000, 1000)).toBe(0.5);
+    expect(scrollProgress(2300, 300, 3000, 1000)).toBe(1);
+    expect(scrollProgress(9000, 300, 3000, 1000)).toBe(1);
   });
 
   test('frames are a pure function of t, so scrolling back replays them exactly', () => {
