@@ -73,3 +73,13 @@ after `/reload`.
 - **Rule for using odds as a gate:** give Clef the gate and the raw evidence only, never the
   agent's own verdict. Keep an independent verifier as the final authority.
 - **Limit:** six planted cases are a sample, not a benchmark.
+
+## Iteration 5: first consumer
+
+- **terraloop-mode now uses odds.** `action=gate` runs the contract's proof. On exit 0, it
+  also asks `odds/clef` whether the raw output shows the gate holds, with self-reported fields
+  and PASS/FAIL prefixes removed first. The screen is advisory: below p=0.8 it warns but never
+  blocks or overrides the exit code. Commit `acoyfellow/terraloop-mode@2db5b3f`.
+- Against real Clef, the shipped module's key list and prompt classify all six 005/007 cases
+  correctly (real at 0.93, forgeries at 0.09 or lower).
+- This is the first realized leverage: another repo now imports the odds pattern.

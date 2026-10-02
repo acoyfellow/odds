@@ -1,6 +1,6 @@
 {
   "state": "iterating",
-  "iteration": 4,
+  "iteration": 5,
   "northStar": "Frontier agents delegate per-item judgment to typed decision models inside codemode instead of reading every item.",
   "constraint": "Private: calls go only through the owner's authenticated AI Gateway with a scoped keychain token; no public model surface.",
   "falsifiable": "On real queues, a Clef-in-codemode script reaches the same top-k decisions as the frontier model reading every item, at under 10% of the cost.",
@@ -54,5 +54,11 @@
   "openQuestions": [
     "Is clef-flash accurate enough for screening at 37% of Clef's price?",
     "Does the gateway's own authentication setting need to be on, given Workers AI already requires the token?"
+  ],
+  "realized": [
+    {
+      "what": "terraloop-mode gate runs an advisory label-blind odds/clef evidence screen",
+      "ref": "acoyfellow/terraloop-mode@2db5b3f"
+    }
   ]
 }
