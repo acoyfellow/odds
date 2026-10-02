@@ -1,0 +1,35 @@
+evals/northstar/gate.ts
+  s_5f86db03525984::t_6653041c80e2cf 1
+evals/northstar/heldout.json
+  s_5f86db03525984::t_6914460518f6a3 1-411
+evals/northstar/heldout.ts
+  s_5f86db03525984::t_16403bd6c70cc8 1-143
+evals/northstar/receipt.json
+  s_5f86db03525984::t_4867ee893dd6ab 3-4,13-16,19,24-27
+evals/northstar/run.ts
+  s_5f86db03525984::t_5e81463d343a81 49-51,85
+evals/northstar/runs/2026-10-02T17-26-13/baseline.json
+  s_5f86db03525984::t_143303a47310c6 1-54
+evals/northstar/runs/2026-10-02T17-26-13/odds.json
+  s_5f86db03525984::t_31d611cb772d03 1-273
+evals/northstar/runs/2026-10-02T17-26-13/truth.json
+  s_5f86db03525984::t_c560ef288d53ed 1-1277
+evals/northstar/spend.json
+  s_5f86db03525984::t_ae27f496b76463 2,43-52
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "0a1f53d772d9a1961ecd65d6d2a6682236884964",
+  "prompts": {},
+  "sessions": {
+    "s_5f86db03525984": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a0f8ed-6d1c-75dc-a1fe-8dce6a49abbc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jordan Coeyman <jcoeyman@cloudflare.com>"
+    }
+  }
+}
