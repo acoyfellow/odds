@@ -1,0 +1,5782 @@
+{
+  "task": "emotion",
+  "model": "clef-flash",
+  "summary": {
+    "n": 300,
+    "answered": 300,
+    "errors": 0,
+    "headline": {
+      "name": "macroF1",
+      "value": 0.5246216512201981
+    },
+    "accuracy": 0.57,
+    "confusion": {
+      "sadness": {
+        "sadness": 57,
+        "joy": 6,
+        "love": 6,
+        "anger": 4,
+        "fear": 11,
+        "surprise": 1,
+        "none": 0
+      },
+      "joy": {
+        "sadness": 10,
+        "joy": 63,
+        "love": 26,
+        "anger": 6,
+        "fear": 10,
+        "surprise": 0,
+        "none": 0
+      },
+      "love": {
+        "sadness": 8,
+        "joy": 4,
+        "love": 10,
+        "anger": 1,
+        "fear": 1,
+        "surprise": 1,
+        "none": 0
+      },
+      "anger": {
+        "sadness": 10,
+        "joy": 2,
+        "love": 1,
+        "anger": 18,
+        "fear": 5,
+        "surprise": 1,
+        "none": 0
+      },
+      "fear": {
+        "sadness": 8,
+        "joy": 1,
+        "love": 2,
+        "anger": 0,
+        "fear": 19,
+        "surprise": 0,
+        "none": 0
+      },
+      "surprise": {
+        "sadness": 1,
+        "joy": 2,
+        "love": 0,
+        "anger": 0,
+        "fear": 1,
+        "surprise": 4,
+        "none": 0
+      }
+    },
+    "latency": {
+      "p50Ms": 403,
+      "p95Ms": 563,
+      "wallMs": 31163
+    },
+    "inputTokens": 66795,
+    "outputTokens": 0,
+    "costUsd": 0.006011549999999999,
+    "costPer1kUsd": 0.020038499999999997,
+    "macroF1": 0.5246216512201981
+  },
+  "predictions": [
+    {
+      "id": "emotion-0",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.9207,
+      "probabilities": {
+        "sadness": 0.9207,
+        "joy": 0.0135,
+        "love": 0.0141,
+        "anger": 0.0191,
+        "fear": 0.0218,
+        "surprise": 0.0108
+      },
+      "latencyMs": 487,
+      "inputTokens": 213,
+      "outputTokens": 0,
+      "costUsd": 0.000019169999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-6",
+      "truth": "anger",
+      "predicted": "anger",
+      "probability": 0.9765,
+      "probabilities": {
+        "sadness": 0.0041,
+        "joy": 0.0053,
+        "love": 0.0059,
+        "anger": 0.9765,
+        "fear": 0.0045,
+        "surprise": 0.0037
+      },
+      "latencyMs": 462,
+      "inputTokens": 213,
+      "outputTokens": 0,
+      "costUsd": 0.000019169999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-13",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.6461,
+      "probabilities": {
+        "sadness": 0.0016,
+        "joy": 0.6461,
+        "love": 0.3464,
+        "anger": 0.0018,
+        "fear": 0.0025,
+        "surprise": 0.0016
+      },
+      "latencyMs": 477,
+      "inputTokens": 220,
+      "outputTokens": 0,
+      "costUsd": 0.0000198,
+      "error": null
+    },
+    {
+      "id": "emotion-20",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.6398,
+      "probabilities": {
+        "sadness": 0.6398,
+        "joy": 0.0757,
+        "love": 0.2437,
+        "anger": 0.0115,
+        "fear": 0.0195,
+        "surprise": 0.0098
+      },
+      "latencyMs": 361,
+      "inputTokens": 244,
+      "outputTokens": 0,
+      "costUsd": 0.00002196,
+      "error": null
+    },
+    {
+      "id": "emotion-26",
+      "truth": "anger",
+      "predicted": "anger",
+      "probability": 0.9608,
+      "probabilities": {
+        "sadness": 0.009,
+        "joy": 0.008,
+        "love": 0.0075,
+        "anger": 0.9608,
+        "fear": 0.0078,
+        "surprise": 0.0069
+      },
+      "latencyMs": 392,
+      "inputTokens": 209,
+      "outputTokens": 0,
+      "costUsd": 0.00001881,
+      "error": null
+    },
+    {
+      "id": "emotion-33",
+      "truth": "anger",
+      "predicted": "sadness",
+      "probability": 0.8978,
+      "probabilities": {
+        "sadness": 0.8978,
+        "joy": 0.0041,
+        "love": 0.0043,
+        "anger": 0.0086,
+        "fear": 0.0783,
+        "surprise": 0.0069
+      },
+      "latencyMs": 483,
+      "inputTokens": 211,
+      "outputTokens": 0,
+      "costUsd": 0.00001899,
+      "error": null
+    },
+    {
+      "id": "emotion-40",
+      "truth": "anger",
+      "predicted": "anger",
+      "probability": 0.9461,
+      "probabilities": {
+        "sadness": 0.0086,
+        "joy": 0.0095,
+        "love": 0.0176,
+        "anger": 0.9461,
+        "fear": 0.0105,
+        "surprise": 0.0077
+      },
+      "latencyMs": 461,
+      "inputTokens": 229,
+      "outputTokens": 0,
+      "costUsd": 0.00002061,
+      "error": null
+    },
+    {
+      "id": "emotion-46",
+      "truth": "joy",
+      "predicted": "love",
+      "probability": 0.9627,
+      "probabilities": {
+        "sadness": 0.0055,
+        "joy": 0.011,
+        "love": 0.9627,
+        "anger": 0.0076,
+        "fear": 0.0077,
+        "surprise": 0.0055
+      },
+      "latencyMs": 432,
+      "inputTokens": 216,
+      "outputTokens": 0,
+      "costUsd": 0.00001944,
+      "error": null
+    },
+    {
+      "id": "emotion-53",
+      "truth": "sadness",
+      "predicted": "fear",
+      "probability": 0.9315,
+      "probabilities": {
+        "sadness": 0.0303,
+        "joy": 0.0088,
+        "love": 0.0106,
+        "anger": 0.0108,
+        "fear": 0.9315,
+        "surprise": 0.008
+      },
+      "latencyMs": 327,
+      "inputTokens": 220,
+      "outputTokens": 0,
+      "costUsd": 0.0000198,
+      "error": null
+    },
+    {
+      "id": "emotion-60",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.9278,
+      "probabilities": {
+        "sadness": 0.9278,
+        "joy": 0.0149,
+        "love": 0.0143,
+        "anger": 0.0133,
+        "fear": 0.019,
+        "surprise": 0.0107
+      },
+      "latencyMs": 459,
+      "inputTokens": 212,
+      "outputTokens": 0,
+      "costUsd": 0.00001908,
+      "error": null
+    },
+    {
+      "id": "emotion-66",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.8782,
+      "probabilities": {
+        "sadness": 0.8782,
+        "joy": 0.0112,
+        "love": 0.0693,
+        "anger": 0.0141,
+        "fear": 0.019,
+        "surprise": 0.0082
+      },
+      "latencyMs": 431,
+      "inputTokens": 215,
+      "outputTokens": 0,
+      "costUsd": 0.00001935,
+      "error": null
+    },
+    {
+      "id": "emotion-73",
+      "truth": "joy",
+      "predicted": "love",
+      "probability": 0.9,
+      "probabilities": {
+        "sadness": 0.006,
+        "joy": 0.0886,
+        "love": 0.9,
+        "anger": 0.0017,
+        "fear": 0.0023,
+        "surprise": 0.0014
+      },
+      "latencyMs": 347,
+      "inputTokens": 215,
+      "outputTokens": 0,
+      "costUsd": 0.00001935,
+      "error": null
+    },
+    {
+      "id": "emotion-80",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.8924,
+      "probabilities": {
+        "sadness": 0.0108,
+        "joy": 0.8924,
+        "love": 0.0853,
+        "anger": 0.004,
+        "fear": 0.0035,
+        "surprise": 0.004
+      },
+      "latencyMs": 345,
+      "inputTokens": 208,
+      "outputTokens": 0,
+      "costUsd": 0.000018719999999999997,
+      "error": null
+    },
+    {
+      "id": "emotion-86",
+      "truth": "joy",
+      "predicted": "love",
+      "probability": 0.9346,
+      "probabilities": {
+        "sadness": 0.0045,
+        "joy": 0.047,
+        "love": 0.9346,
+        "anger": 0.0051,
+        "fear": 0.0053,
+        "surprise": 0.0035
+      },
+      "latencyMs": 314,
+      "inputTokens": 225,
+      "outputTokens": 0,
+      "costUsd": 0.000020249999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-93",
+      "truth": "fear",
+      "predicted": "fear",
+      "probability": 0.7533,
+      "probabilities": {
+        "sadness": 0.1224,
+        "joy": 0.0125,
+        "love": 0.0045,
+        "anger": 0.0086,
+        "fear": 0.7533,
+        "surprise": 0.0987
+      },
+      "latencyMs": 476,
+      "inputTokens": 222,
+      "outputTokens": 0,
+      "costUsd": 0.00001998,
+      "error": null
+    },
+    {
+      "id": "emotion-100",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.7497,
+      "probabilities": {
+        "sadness": 0.7497,
+        "joy": 0.0856,
+        "love": 0.0869,
+        "anger": 0.0374,
+        "fear": 0.0337,
+        "surprise": 0.0067
+      },
+      "latencyMs": 403,
+      "inputTokens": 226,
+      "outputTokens": 0,
+      "costUsd": 0.00002034,
+      "error": null
+    },
+    {
+      "id": "emotion-106",
+      "truth": "joy",
+      "predicted": "anger",
+      "probability": 0.8851,
+      "probabilities": {
+        "sadness": 0.063,
+        "joy": 0.0123,
+        "love": 0.0177,
+        "anger": 0.8851,
+        "fear": 0.0132,
+        "surprise": 0.0087
+      },
+      "latencyMs": 382,
+      "inputTokens": 234,
+      "outputTokens": 0,
+      "costUsd": 0.000021059999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-113",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.7915,
+      "probabilities": {
+        "sadness": 0.1767,
+        "joy": 0.7915,
+        "love": 0.0058,
+        "anger": 0.0067,
+        "fear": 0.0135,
+        "surprise": 0.0058
+      },
+      "latencyMs": 444,
+      "inputTokens": 211,
+      "outputTokens": 0,
+      "costUsd": 0.00001899,
+      "error": null
+    },
+    {
+      "id": "emotion-120",
+      "truth": "sadness",
+      "predicted": "joy",
+      "probability": 0.9378,
+      "probabilities": {
+        "sadness": 0.0389,
+        "joy": 0.9378,
+        "love": 0.0033,
+        "anger": 0.0154,
+        "fear": 0.0022,
+        "surprise": 0.0024
+      },
+      "latencyMs": 549,
+      "inputTokens": 218,
+      "outputTokens": 0,
+      "costUsd": 0.000019620000000000002,
+      "error": null
+    },
+    {
+      "id": "emotion-126",
+      "truth": "sadness",
+      "predicted": "fear",
+      "probability": 0.6649,
+      "probabilities": {
+        "sadness": 0.3014,
+        "joy": 0.0052,
+        "love": 0.0049,
+        "anger": 0.0187,
+        "fear": 0.6649,
+        "surprise": 0.0049
+      },
+      "latencyMs": 500,
+      "inputTokens": 210,
+      "outputTokens": 0,
+      "costUsd": 0.0000189,
+      "error": null
+    },
+    {
+      "id": "emotion-133",
+      "truth": "anger",
+      "predicted": "sadness",
+      "probability": 0.5506,
+      "probabilities": {
+        "sadness": 0.5506,
+        "joy": 0.0036,
+        "love": 0.0088,
+        "anger": 0.3604,
+        "fear": 0.0705,
+        "surprise": 0.0061
+      },
+      "latencyMs": 294,
+      "inputTokens": 226,
+      "outputTokens": 0,
+      "costUsd": 0.00002034,
+      "error": null
+    },
+    {
+      "id": "emotion-140",
+      "truth": "joy",
+      "predicted": "love",
+      "probability": 0.5844,
+      "probabilities": {
+        "sadness": 0.231,
+        "joy": 0.1259,
+        "love": 0.5844,
+        "anger": 0.0076,
+        "fear": 0.0061,
+        "surprise": 0.045
+      },
+      "latencyMs": 440,
+      "inputTokens": 214,
+      "outputTokens": 0,
+      "costUsd": 0.00001926,
+      "error": null
+    },
+    {
+      "id": "emotion-146",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9403,
+      "probabilities": {
+        "sadness": 0.0029,
+        "joy": 0.9403,
+        "love": 0.0044,
+        "anger": 0.0049,
+        "fear": 0.0055,
+        "surprise": 0.042
+      },
+      "latencyMs": 300,
+      "inputTokens": 237,
+      "outputTokens": 0,
+      "costUsd": 0.000021329999999999997,
+      "error": null
+    },
+    {
+      "id": "emotion-153",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.9359,
+      "probabilities": {
+        "sadness": 0.9359,
+        "joy": 0.0125,
+        "love": 0.0121,
+        "anger": 0.0112,
+        "fear": 0.0179,
+        "surprise": 0.0104
+      },
+      "latencyMs": 286,
+      "inputTokens": 208,
+      "outputTokens": 0,
+      "costUsd": 0.000018719999999999997,
+      "error": null
+    },
+    {
+      "id": "emotion-160",
+      "truth": "anger",
+      "predicted": "fear",
+      "probability": 0.4783,
+      "probabilities": {
+        "sadness": 0.4213,
+        "joy": 0.0069,
+        "love": 0.0074,
+        "anger": 0.0761,
+        "fear": 0.4783,
+        "surprise": 0.01
+      },
+      "latencyMs": 498,
+      "inputTokens": 208,
+      "outputTokens": 0,
+      "costUsd": 0.000018719999999999997,
+      "error": null
+    },
+    {
+      "id": "emotion-166",
+      "truth": "love",
+      "predicted": "love",
+      "probability": 0.8339,
+      "probabilities": {
+        "sadness": 0.009,
+        "joy": 0.143,
+        "love": 0.8339,
+        "anger": 0.0044,
+        "fear": 0.0058,
+        "surprise": 0.0039
+      },
+      "latencyMs": 496,
+      "inputTokens": 210,
+      "outputTokens": 0,
+      "costUsd": 0.0000189,
+      "error": null
+    },
+    {
+      "id": "emotion-173",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9289,
+      "probabilities": {
+        "sadness": 0.0031,
+        "joy": 0.9289,
+        "love": 0.0035,
+        "anger": 0.0429,
+        "fear": 0.0036,
+        "surprise": 0.018
+      },
+      "latencyMs": 526,
+      "inputTokens": 251,
+      "outputTokens": 0,
+      "costUsd": 0.000022589999999999995,
+      "error": null
+    },
+    {
+      "id": "emotion-180",
+      "truth": "fear",
+      "predicted": "sadness",
+      "probability": 0.3029,
+      "probabilities": {
+        "sadness": 0.3029,
+        "joy": 0.2138,
+        "love": 0.052,
+        "anger": 0.0034,
+        "fear": 0.1391,
+        "surprise": 0.2888
+      },
+      "latencyMs": 278,
+      "inputTokens": 231,
+      "outputTokens": 0,
+      "costUsd": 0.00002079,
+      "error": null
+    },
+    {
+      "id": "emotion-186",
+      "truth": "joy",
+      "predicted": "anger",
+      "probability": 0.6609,
+      "probabilities": {
+        "sadness": 0.0919,
+        "joy": 0.1003,
+        "love": 0.098,
+        "anger": 0.6609,
+        "fear": 0.0288,
+        "surprise": 0.0201
+      },
+      "latencyMs": 550,
+      "inputTokens": 213,
+      "outputTokens": 0,
+      "costUsd": 0.000019169999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-193",
+      "truth": "anger",
+      "predicted": "anger",
+      "probability": 0.869,
+      "probabilities": {
+        "sadness": 0.0388,
+        "joy": 0.0096,
+        "love": 0.0167,
+        "anger": 0.869,
+        "fear": 0.0576,
+        "surprise": 0.0083
+      },
+      "latencyMs": 508,
+      "inputTokens": 228,
+      "outputTokens": 0,
+      "costUsd": 0.00002052,
+      "error": null
+    },
+    {
+      "id": "emotion-200",
+      "truth": "joy",
+      "predicted": "love",
+      "probability": 0.8663,
+      "probabilities": {
+        "sadness": 0.0066,
+        "joy": 0.0956,
+        "love": 0.8663,
+        "anger": 0.0122,
+        "fear": 0.0097,
+        "surprise": 0.0096
+      },
+      "latencyMs": 443,
+      "inputTokens": 221,
+      "outputTokens": 0,
+      "costUsd": 0.00001989,
+      "error": null
+    },
+    {
+      "id": "emotion-206",
+      "truth": "love",
+      "predicted": "anger",
+      "probability": 0.7392,
+      "probabilities": {
+        "sadness": 0.0929,
+        "joy": 0.0046,
+        "love": 0.0103,
+        "anger": 0.7392,
+        "fear": 0.143,
+        "surprise": 0.01
+      },
+      "latencyMs": 451,
+      "inputTokens": 250,
+      "outputTokens": 0,
+      "costUsd": 0.000022499999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-213",
+      "truth": "fear",
+      "predicted": "fear",
+      "probability": 0.8438,
+      "probabilities": {
+        "sadness": 0.0291,
+        "joy": 0.0152,
+        "love": 0.0109,
+        "anger": 0.0381,
+        "fear": 0.8438,
+        "surprise": 0.0629
+      },
+      "latencyMs": 521,
+      "inputTokens": 210,
+      "outputTokens": 0,
+      "costUsd": 0.0000189,
+      "error": null
+    },
+    {
+      "id": "emotion-220",
+      "truth": "joy",
+      "predicted": "fear",
+      "probability": 0.5711,
+      "probabilities": {
+        "sadness": 0.0665,
+        "joy": 0.2732,
+        "love": 0.0258,
+        "anger": 0.0295,
+        "fear": 0.5711,
+        "surprise": 0.0339
+      },
+      "latencyMs": 521,
+      "inputTokens": 219,
+      "outputTokens": 0,
+      "costUsd": 0.00001971,
+      "error": null
+    },
+    {
+      "id": "emotion-226",
+      "truth": "anger",
+      "predicted": "anger",
+      "probability": 0.9637,
+      "probabilities": {
+        "sadness": 0.0069,
+        "joy": 0.0082,
+        "love": 0.0076,
+        "anger": 0.9637,
+        "fear": 0.0071,
+        "surprise": 0.0065
+      },
+      "latencyMs": 306,
+      "inputTokens": 222,
+      "outputTokens": 0,
+      "costUsd": 0.00001998,
+      "error": null
+    },
+    {
+      "id": "emotion-233",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9716,
+      "probabilities": {
+        "sadness": 0.0021,
+        "joy": 0.9716,
+        "love": 0.0027,
+        "anger": 0.0022,
+        "fear": 0.0021,
+        "surprise": 0.0193
+      },
+      "latencyMs": 488,
+      "inputTokens": 215,
+      "outputTokens": 0,
+      "costUsd": 0.00001935,
+      "error": null
+    },
+    {
+      "id": "emotion-240",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.7334,
+      "probabilities": {
+        "sadness": 0.7334,
+        "joy": 0.0024,
+        "love": 0.0022,
+        "anger": 0.0063,
+        "fear": 0.2534,
+        "surprise": 0.0023
+      },
+      "latencyMs": 486,
+      "inputTokens": 211,
+      "outputTokens": 0,
+      "costUsd": 0.00001899,
+      "error": null
+    },
+    {
+      "id": "emotion-246",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.8341,
+      "probabilities": {
+        "sadness": 0.8341,
+        "joy": 0.0096,
+        "love": 0.0099,
+        "anger": 0.1215,
+        "fear": 0.017,
+        "surprise": 0.0079
+      },
+      "latencyMs": 502,
+      "inputTokens": 222,
+      "outputTokens": 0,
+      "costUsd": 0.00001998,
+      "error": null
+    },
+    {
+      "id": "emotion-253",
+      "truth": "anger",
+      "predicted": "anger",
+      "probability": 0.8501,
+      "probabilities": {
+        "sadness": 0.0975,
+        "joy": 0.0086,
+        "love": 0.0093,
+        "anger": 0.8501,
+        "fear": 0.0263,
+        "surprise": 0.0082
+      },
+      "latencyMs": 523,
+      "inputTokens": 234,
+      "outputTokens": 0,
+      "costUsd": 0.000021059999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-260",
+      "truth": "anger",
+      "predicted": "fear",
+      "probability": 0.508,
+      "probabilities": {
+        "sadness": 0.3167,
+        "joy": 0.0112,
+        "love": 0.0063,
+        "anger": 0.1427,
+        "fear": 0.508,
+        "surprise": 0.0151
+      },
+      "latencyMs": 247,
+      "inputTokens": 244,
+      "outputTokens": 0,
+      "costUsd": 0.00002196,
+      "error": null
+    },
+    {
+      "id": "emotion-266",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.584,
+      "probabilities": {
+        "sadness": 0.0048,
+        "joy": 0.584,
+        "love": 0.2002,
+        "anger": 0.0035,
+        "fear": 0.1293,
+        "surprise": 0.0782
+      },
+      "latencyMs": 347,
+      "inputTokens": 212,
+      "outputTokens": 0,
+      "costUsd": 0.00001908,
+      "error": null
+    },
+    {
+      "id": "emotion-273",
+      "truth": "sadness",
+      "predicted": "anger",
+      "probability": 0.5154,
+      "probabilities": {
+        "sadness": 0.4414,
+        "joy": 0.0095,
+        "love": 0.0105,
+        "anger": 0.5154,
+        "fear": 0.0156,
+        "surprise": 0.0076
+      },
+      "latencyMs": 438,
+      "inputTokens": 207,
+      "outputTokens": 0,
+      "costUsd": 0.00001863,
+      "error": null
+    },
+    {
+      "id": "emotion-280",
+      "truth": "joy",
+      "predicted": "fear",
+      "probability": 0.8746,
+      "probabilities": {
+        "sadness": 0.0213,
+        "joy": 0.0248,
+        "love": 0.047,
+        "anger": 0.0111,
+        "fear": 0.8746,
+        "surprise": 0.0212
+      },
+      "latencyMs": 549,
+      "inputTokens": 238,
+      "outputTokens": 0,
+      "costUsd": 0.00002142,
+      "error": null
+    },
+    {
+      "id": "emotion-286",
+      "truth": "love",
+      "predicted": "sadness",
+      "probability": 0.7005,
+      "probabilities": {
+        "sadness": 0.7005,
+        "joy": 0.0061,
+        "love": 0.1686,
+        "anger": 0.1026,
+        "fear": 0.0202,
+        "surprise": 0.002
+      },
+      "latencyMs": 339,
+      "inputTokens": 222,
+      "outputTokens": 0,
+      "costUsd": 0.00001998,
+      "error": null
+    },
+    {
+      "id": "emotion-293",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.9105,
+      "probabilities": {
+        "sadness": 0.9105,
+        "joy": 0.01,
+        "love": 0.0292,
+        "anger": 0.0219,
+        "fear": 0.0206,
+        "surprise": 0.0078
+      },
+      "latencyMs": 294,
+      "inputTokens": 214,
+      "outputTokens": 0,
+      "costUsd": 0.00001926,
+      "error": null
+    },
+    {
+      "id": "emotion-300",
+      "truth": "joy",
+      "predicted": "love",
+      "probability": 0.8788,
+      "probabilities": {
+        "sadness": 0.0011,
+        "joy": 0.1169,
+        "love": 0.8788,
+        "anger": 0.0011,
+        "fear": 0.0012,
+        "surprise": 0.0009
+      },
+      "latencyMs": 326,
+      "inputTokens": 228,
+      "outputTokens": 0,
+      "costUsd": 0.00002052,
+      "error": null
+    },
+    {
+      "id": "emotion-306",
+      "truth": "anger",
+      "predicted": "anger",
+      "probability": 0.8821,
+      "probabilities": {
+        "sadness": 0.0393,
+        "joy": 0.0111,
+        "love": 0.0123,
+        "anger": 0.8821,
+        "fear": 0.0301,
+        "surprise": 0.0251
+      },
+      "latencyMs": 286,
+      "inputTokens": 222,
+      "outputTokens": 0,
+      "costUsd": 0.00001998,
+      "error": null
+    },
+    {
+      "id": "emotion-313",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9397,
+      "probabilities": {
+        "sadness": 0.0067,
+        "joy": 0.9397,
+        "love": 0.0348,
+        "anger": 0.0063,
+        "fear": 0.0065,
+        "surprise": 0.006
+      },
+      "latencyMs": 513,
+      "inputTokens": 216,
+      "outputTokens": 0,
+      "costUsd": 0.00001944,
+      "error": null
+    },
+    {
+      "id": "emotion-320",
+      "truth": "sadness",
+      "predicted": "joy",
+      "probability": 0.5209,
+      "probabilities": {
+        "sadness": 0.0572,
+        "joy": 0.5209,
+        "love": 0.0288,
+        "anger": 0.0826,
+        "fear": 0.0603,
+        "surprise": 0.2502
+      },
+      "latencyMs": 521,
+      "inputTokens": 228,
+      "outputTokens": 0,
+      "costUsd": 0.00002052,
+      "error": null
+    },
+    {
+      "id": "emotion-326",
+      "truth": "love",
+      "predicted": "sadness",
+      "probability": 0.9308,
+      "probabilities": {
+        "sadness": 0.9308,
+        "joy": 0.0095,
+        "love": 0.0092,
+        "anger": 0.0237,
+        "fear": 0.0197,
+        "surprise": 0.0071
+      },
+      "latencyMs": 329,
+      "inputTokens": 208,
+      "outputTokens": 0,
+      "costUsd": 0.000018719999999999997,
+      "error": null
+    },
+    {
+      "id": "emotion-333",
+      "truth": "love",
+      "predicted": "love",
+      "probability": 0.9312,
+      "probabilities": {
+        "sadness": 0.0049,
+        "joy": 0.0419,
+        "love": 0.9312,
+        "anger": 0.0048,
+        "fear": 0.006,
+        "surprise": 0.0112
+      },
+      "latencyMs": 533,
+      "inputTokens": 220,
+      "outputTokens": 0,
+      "costUsd": 0.0000198,
+      "error": null
+    },
+    {
+      "id": "emotion-340",
+      "truth": "anger",
+      "predicted": "sadness",
+      "probability": 0.6616,
+      "probabilities": {
+        "sadness": 0.6616,
+        "joy": 0.0201,
+        "love": 0.0128,
+        "anger": 0.145,
+        "fear": 0.1459,
+        "surprise": 0.0146
+      },
+      "latencyMs": 516,
+      "inputTokens": 214,
+      "outputTokens": 0,
+      "costUsd": 0.00001926,
+      "error": null
+    },
+    {
+      "id": "emotion-346",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.465,
+      "probabilities": {
+        "sadness": 0.2403,
+        "joy": 0.465,
+        "love": 0.2733,
+        "anger": 0.0046,
+        "fear": 0.0133,
+        "surprise": 0.0035
+      },
+      "latencyMs": 532,
+      "inputTokens": 216,
+      "outputTokens": 0,
+      "costUsd": 0.00001944,
+      "error": null
+    },
+    {
+      "id": "emotion-353",
+      "truth": "joy",
+      "predicted": "love",
+      "probability": 0.8611,
+      "probabilities": {
+        "sadness": 0.0111,
+        "joy": 0.0827,
+        "love": 0.8611,
+        "anger": 0.0127,
+        "fear": 0.0148,
+        "surprise": 0.0176
+      },
+      "latencyMs": 297,
+      "inputTokens": 216,
+      "outputTokens": 0,
+      "costUsd": 0.00001944,
+      "error": null
+    },
+    {
+      "id": "emotion-360",
+      "truth": "anger",
+      "predicted": "sadness",
+      "probability": 0.6463,
+      "probabilities": {
+        "sadness": 0.6463,
+        "joy": 0.0609,
+        "love": 0.0137,
+        "anger": 0.1169,
+        "fear": 0.0962,
+        "surprise": 0.066
+      },
+      "latencyMs": 418,
+      "inputTokens": 222,
+      "outputTokens": 0,
+      "costUsd": 0.00001998,
+      "error": null
+    },
+    {
+      "id": "emotion-366",
+      "truth": "love",
+      "predicted": "love",
+      "probability": 0.6935,
+      "probabilities": {
+        "sadness": 0.1929,
+        "joy": 0.0027,
+        "love": 0.6935,
+        "anger": 0.0443,
+        "fear": 0.0638,
+        "surprise": 0.0028
+      },
+      "latencyMs": 246,
+      "inputTokens": 231,
+      "outputTokens": 0,
+      "costUsd": 0.00002079,
+      "error": null
+    },
+    {
+      "id": "emotion-373",
+      "truth": "anger",
+      "predicted": "anger",
+      "probability": 0.382,
+      "probabilities": {
+        "sadness": 0.0884,
+        "joy": 0.0959,
+        "love": 0.2293,
+        "anger": 0.382,
+        "fear": 0.0137,
+        "surprise": 0.1907
+      },
+      "latencyMs": 350,
+      "inputTokens": 229,
+      "outputTokens": 0,
+      "costUsd": 0.00002061,
+      "error": null
+    },
+    {
+      "id": "emotion-380",
+      "truth": "fear",
+      "predicted": "fear",
+      "probability": 0.9696,
+      "probabilities": {
+        "sadness": 0.0046,
+        "joy": 0.0073,
+        "love": 0.0077,
+        "anger": 0.0055,
+        "fear": 0.9696,
+        "surprise": 0.0053
+      },
+      "latencyMs": 467,
+      "inputTokens": 210,
+      "outputTokens": 0,
+      "costUsd": 0.0000189,
+      "error": null
+    },
+    {
+      "id": "emotion-386",
+      "truth": "anger",
+      "predicted": "anger",
+      "probability": 0.8604,
+      "probabilities": {
+        "sadness": 0.0396,
+        "joy": 0.0055,
+        "love": 0.0292,
+        "anger": 0.8604,
+        "fear": 0.0609,
+        "surprise": 0.0044
+      },
+      "latencyMs": 329,
+      "inputTokens": 211,
+      "outputTokens": 0,
+      "costUsd": 0.00001899,
+      "error": null
+    },
+    {
+      "id": "emotion-393",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.6105,
+      "probabilities": {
+        "sadness": 0.6105,
+        "joy": 0.0036,
+        "love": 0.0023,
+        "anger": 0.2431,
+        "fear": 0.1367,
+        "surprise": 0.0038
+      },
+      "latencyMs": 505,
+      "inputTokens": 208,
+      "outputTokens": 0,
+      "costUsd": 0.000018719999999999997,
+      "error": null
+    },
+    {
+      "id": "emotion-400",
+      "truth": "fear",
+      "predicted": "love",
+      "probability": 0.429,
+      "probabilities": {
+        "sadness": 0.0305,
+        "joy": 0.4042,
+        "love": 0.429,
+        "anger": 0.0052,
+        "fear": 0.0211,
+        "surprise": 0.11
+      },
+      "latencyMs": 361,
+      "inputTokens": 218,
+      "outputTokens": 0,
+      "costUsd": 0.000019620000000000002,
+      "error": null
+    },
+    {
+      "id": "emotion-406",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.8923,
+      "probabilities": {
+        "sadness": 0.0029,
+        "joy": 0.8923,
+        "love": 0.0494,
+        "anger": 0.0026,
+        "fear": 0.0027,
+        "surprise": 0.0501
+      },
+      "latencyMs": 294,
+      "inputTokens": 232,
+      "outputTokens": 0,
+      "costUsd": 0.00002088,
+      "error": null
+    },
+    {
+      "id": "emotion-413",
+      "truth": "joy",
+      "predicted": "love",
+      "probability": 0.7586,
+      "probabilities": {
+        "sadness": 0.0025,
+        "joy": 0.2345,
+        "love": 0.7586,
+        "anger": 0.0016,
+        "fear": 0.0016,
+        "surprise": 0.0012
+      },
+      "latencyMs": 429,
+      "inputTokens": 218,
+      "outputTokens": 0,
+      "costUsd": 0.000019620000000000002,
+      "error": null
+    },
+    {
+      "id": "emotion-420",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9015,
+      "probabilities": {
+        "sadness": 0.0032,
+        "joy": 0.9015,
+        "love": 0.0848,
+        "anger": 0.0033,
+        "fear": 0.003,
+        "surprise": 0.0042
+      },
+      "latencyMs": 530,
+      "inputTokens": 218,
+      "outputTokens": 0,
+      "costUsd": 0.000019620000000000002,
+      "error": null
+    },
+    {
+      "id": "emotion-426",
+      "truth": "sadness",
+      "predicted": "fear",
+      "probability": 0.9019,
+      "probabilities": {
+        "sadness": 0.0488,
+        "joy": 0.0022,
+        "love": 0.0024,
+        "anger": 0.0409,
+        "fear": 0.9019,
+        "surprise": 0.0038
+      },
+      "latencyMs": 260,
+      "inputTokens": 216,
+      "outputTokens": 0,
+      "costUsd": 0.00001944,
+      "error": null
+    },
+    {
+      "id": "emotion-433",
+      "truth": "fear",
+      "predicted": "sadness",
+      "probability": 0.7501,
+      "probabilities": {
+        "sadness": 0.7501,
+        "joy": 0.0109,
+        "love": 0.0111,
+        "anger": 0.1023,
+        "fear": 0.1171,
+        "surprise": 0.0085
+      },
+      "latencyMs": 407,
+      "inputTokens": 229,
+      "outputTokens": 0,
+      "costUsd": 0.00002061,
+      "error": null
+    },
+    {
+      "id": "emotion-440",
+      "truth": "joy",
+      "predicted": "sadness",
+      "probability": 0.9488,
+      "probabilities": {
+        "sadness": 0.9488,
+        "joy": 0.0071,
+        "love": 0.0077,
+        "anger": 0.0061,
+        "fear": 0.0254,
+        "surprise": 0.0049
+      },
+      "latencyMs": 335,
+      "inputTokens": 248,
+      "outputTokens": 0,
+      "costUsd": 0.00002232,
+      "error": null
+    },
+    {
+      "id": "emotion-446",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.9189,
+      "probabilities": {
+        "sadness": 0.9189,
+        "joy": 0.0048,
+        "love": 0.0112,
+        "anger": 0.0133,
+        "fear": 0.0479,
+        "surprise": 0.0039
+      },
+      "latencyMs": 469,
+      "inputTokens": 230,
+      "outputTokens": 0,
+      "costUsd": 0.0000207,
+      "error": null
+    },
+    {
+      "id": "emotion-453",
+      "truth": "sadness",
+      "predicted": "surprise",
+      "probability": 0.9381,
+      "probabilities": {
+        "sadness": 0.0183,
+        "joy": 0.0093,
+        "love": 0.0132,
+        "anger": 0.0121,
+        "fear": 0.009,
+        "surprise": 0.9381
+      },
+      "latencyMs": 341,
+      "inputTokens": 226,
+      "outputTokens": 0,
+      "costUsd": 0.00002034,
+      "error": null
+    },
+    {
+      "id": "emotion-460",
+      "truth": "fear",
+      "predicted": "sadness",
+      "probability": 0.8964,
+      "probabilities": {
+        "sadness": 0.8964,
+        "joy": 0.0144,
+        "love": 0.0145,
+        "anger": 0.0149,
+        "fear": 0.0488,
+        "surprise": 0.011
+      },
+      "latencyMs": 348,
+      "inputTokens": 218,
+      "outputTokens": 0,
+      "costUsd": 0.000019620000000000002,
+      "error": null
+    },
+    {
+      "id": "emotion-466",
+      "truth": "love",
+      "predicted": "love",
+      "probability": 0.8864,
+      "probabilities": {
+        "sadness": 0.0189,
+        "joy": 0.0407,
+        "love": 0.8864,
+        "anger": 0.0106,
+        "fear": 0.0363,
+        "surprise": 0.0071
+      },
+      "latencyMs": 456,
+      "inputTokens": 211,
+      "outputTokens": 0,
+      "costUsd": 0.00001899,
+      "error": null
+    },
+    {
+      "id": "emotion-473",
+      "truth": "joy",
+      "predicted": "fear",
+      "probability": 0.8713,
+      "probabilities": {
+        "sadness": 0.0036,
+        "joy": 0.1097,
+        "love": 0.007,
+        "anger": 0.0045,
+        "fear": 0.8713,
+        "surprise": 0.0039
+      },
+      "latencyMs": 330,
+      "inputTokens": 213,
+      "outputTokens": 0,
+      "costUsd": 0.000019169999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-480",
+      "truth": "sadness",
+      "predicted": "joy",
+      "probability": 0.6424,
+      "probabilities": {
+        "sadness": 0.2421,
+        "joy": 0.6424,
+        "love": 0.0893,
+        "anger": 0.0057,
+        "fear": 0.0148,
+        "surprise": 0.0057
+      },
+      "latencyMs": 446,
+      "inputTokens": 228,
+      "outputTokens": 0,
+      "costUsd": 0.00002052,
+      "error": null
+    },
+    {
+      "id": "emotion-486",
+      "truth": "fear",
+      "predicted": "sadness",
+      "probability": 0.717,
+      "probabilities": {
+        "sadness": 0.717,
+        "joy": 0.0141,
+        "love": 0.0099,
+        "anger": 0.013,
+        "fear": 0.2371,
+        "surprise": 0.0089
+      },
+      "latencyMs": 313,
+      "inputTokens": 234,
+      "outputTokens": 0,
+      "costUsd": 0.000021059999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-493",
+      "truth": "fear",
+      "predicted": "fear",
+      "probability": 0.965,
+      "probabilities": {
+        "sadness": 0.0086,
+        "joy": 0.0055,
+        "love": 0.0072,
+        "anger": 0.0097,
+        "fear": 0.965,
+        "surprise": 0.004
+      },
+      "latencyMs": 310,
+      "inputTokens": 242,
+      "outputTokens": 0,
+      "costUsd": 0.000021779999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-500",
+      "truth": "anger",
+      "predicted": "fear",
+      "probability": 0.9555,
+      "probabilities": {
+        "sadness": 0.0102,
+        "joy": 0.0062,
+        "love": 0.0076,
+        "anger": 0.0144,
+        "fear": 0.9555,
+        "surprise": 0.0061
+      },
+      "latencyMs": 492,
+      "inputTokens": 221,
+      "outputTokens": 0,
+      "costUsd": 0.00001989,
+      "error": null
+    },
+    {
+      "id": "emotion-506",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.8786,
+      "probabilities": {
+        "sadness": 0.8786,
+        "joy": 0.0074,
+        "love": 0.0037,
+        "anger": 0.0114,
+        "fear": 0.0946,
+        "surprise": 0.0043
+      },
+      "latencyMs": 250,
+      "inputTokens": 209,
+      "outputTokens": 0,
+      "costUsd": 0.00001881,
+      "error": null
+    },
+    {
+      "id": "emotion-513",
+      "truth": "love",
+      "predicted": "love",
+      "probability": 0.6623,
+      "probabilities": {
+        "sadness": 0.2992,
+        "joy": 0.0064,
+        "love": 0.6623,
+        "anger": 0.0069,
+        "fear": 0.0204,
+        "surprise": 0.0048
+      },
+      "latencyMs": 286,
+      "inputTokens": 208,
+      "outputTokens": 0,
+      "costUsd": 0.000018719999999999997,
+      "error": null
+    },
+    {
+      "id": "emotion-520",
+      "truth": "love",
+      "predicted": "sadness",
+      "probability": 0.9361,
+      "probabilities": {
+        "sadness": 0.9361,
+        "joy": 0.0044,
+        "love": 0.0067,
+        "anger": 0.0336,
+        "fear": 0.0145,
+        "surprise": 0.0047
+      },
+      "latencyMs": 448,
+      "inputTokens": 224,
+      "outputTokens": 0,
+      "costUsd": 0.00002016,
+      "error": null
+    },
+    {
+      "id": "emotion-526",
+      "truth": "fear",
+      "predicted": "fear",
+      "probability": 0.4958,
+      "probabilities": {
+        "sadness": 0.2107,
+        "joy": 0.0088,
+        "love": 0.0223,
+        "anger": 0.2518,
+        "fear": 0.4958,
+        "surprise": 0.0106
+      },
+      "latencyMs": 464,
+      "inputTokens": 236,
+      "outputTokens": 0,
+      "costUsd": 0.00002124,
+      "error": null
+    },
+    {
+      "id": "emotion-533",
+      "truth": "joy",
+      "predicted": "sadness",
+      "probability": 0.4166,
+      "probabilities": {
+        "sadness": 0.4166,
+        "joy": 0.3079,
+        "love": 0.005,
+        "anger": 0.0472,
+        "fear": 0.0427,
+        "surprise": 0.1806
+      },
+      "latencyMs": 329,
+      "inputTokens": 215,
+      "outputTokens": 0,
+      "costUsd": 0.00001935,
+      "error": null
+    },
+    {
+      "id": "emotion-540",
+      "truth": "joy",
+      "predicted": "sadness",
+      "probability": 0.776,
+      "probabilities": {
+        "sadness": 0.776,
+        "joy": 0.0146,
+        "love": 0.0048,
+        "anger": 0.0785,
+        "fear": 0.1157,
+        "surprise": 0.0104
+      },
+      "latencyMs": 582,
+      "inputTokens": 219,
+      "outputTokens": 0,
+      "costUsd": 0.00001971,
+      "error": null
+    },
+    {
+      "id": "emotion-546",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.8705,
+      "probabilities": {
+        "sadness": 0.0078,
+        "joy": 0.8705,
+        "love": 0.1011,
+        "anger": 0.0062,
+        "fear": 0.0069,
+        "surprise": 0.0075
+      },
+      "latencyMs": 317,
+      "inputTokens": 215,
+      "outputTokens": 0,
+      "costUsd": 0.00001935,
+      "error": null
+    },
+    {
+      "id": "emotion-553",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.9215,
+      "probabilities": {
+        "sadness": 0.9215,
+        "joy": 0.0129,
+        "love": 0.0124,
+        "anger": 0.0156,
+        "fear": 0.0274,
+        "surprise": 0.0102
+      },
+      "latencyMs": 434,
+      "inputTokens": 210,
+      "outputTokens": 0,
+      "costUsd": 0.0000189,
+      "error": null
+    },
+    {
+      "id": "emotion-560",
+      "truth": "joy",
+      "predicted": "love",
+      "probability": 0.9109,
+      "probabilities": {
+        "sadness": 0.0074,
+        "joy": 0.0507,
+        "love": 0.9109,
+        "anger": 0.0126,
+        "fear": 0.0121,
+        "surprise": 0.0063
+      },
+      "latencyMs": 447,
+      "inputTokens": 223,
+      "outputTokens": 0,
+      "costUsd": 0.00002007,
+      "error": null
+    },
+    {
+      "id": "emotion-566",
+      "truth": "sadness",
+      "predicted": "love",
+      "probability": 0.5982,
+      "probabilities": {
+        "sadness": 0.2363,
+        "joy": 0.1077,
+        "love": 0.5982,
+        "anger": 0.0105,
+        "fear": 0.0362,
+        "surprise": 0.0111
+      },
+      "latencyMs": 253,
+      "inputTokens": 231,
+      "outputTokens": 0,
+      "costUsd": 0.00002079,
+      "error": null
+    },
+    {
+      "id": "emotion-573",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.9182,
+      "probabilities": {
+        "sadness": 0.9182,
+        "joy": 0.0081,
+        "love": 0.0085,
+        "anger": 0.01,
+        "fear": 0.0226,
+        "surprise": 0.0326
+      },
+      "latencyMs": 465,
+      "inputTokens": 214,
+      "outputTokens": 0,
+      "costUsd": 0.00001926,
+      "error": null
+    },
+    {
+      "id": "emotion-580",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.8446,
+      "probabilities": {
+        "sadness": 0.009,
+        "joy": 0.8446,
+        "love": 0.1264,
+        "anger": 0.0037,
+        "fear": 0.004,
+        "surprise": 0.0123
+      },
+      "latencyMs": 378,
+      "inputTokens": 210,
+      "outputTokens": 0,
+      "costUsd": 0.0000189,
+      "error": null
+    },
+    {
+      "id": "emotion-586",
+      "truth": "sadness",
+      "predicted": "fear",
+      "probability": 0.5612,
+      "probabilities": {
+        "sadness": 0.227,
+        "joy": 0.0117,
+        "love": 0.034,
+        "anger": 0.156,
+        "fear": 0.5612,
+        "surprise": 0.0101
+      },
+      "latencyMs": 345,
+      "inputTokens": 214,
+      "outputTokens": 0,
+      "costUsd": 0.00001926,
+      "error": null
+    },
+    {
+      "id": "emotion-593",
+      "truth": "love",
+      "predicted": "love",
+      "probability": 0.7223,
+      "probabilities": {
+        "sadness": 0.2202,
+        "joy": 0.0141,
+        "love": 0.7223,
+        "anger": 0.0144,
+        "fear": 0.0249,
+        "surprise": 0.0041
+      },
+      "latencyMs": 453,
+      "inputTokens": 238,
+      "outputTokens": 0,
+      "costUsd": 0.00002142,
+      "error": null
+    },
+    {
+      "id": "emotion-600",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.8304,
+      "probabilities": {
+        "sadness": 0.8304,
+        "joy": 0.0048,
+        "love": 0.0183,
+        "anger": 0.0432,
+        "fear": 0.092,
+        "surprise": 0.0113
+      },
+      "latencyMs": 523,
+      "inputTokens": 250,
+      "outputTokens": 0,
+      "costUsd": 0.000022499999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-606",
+      "truth": "joy",
+      "predicted": "anger",
+      "probability": 0.4691,
+      "probabilities": {
+        "sadness": 0.0375,
+        "joy": 0.0097,
+        "love": 0.0083,
+        "anger": 0.4691,
+        "fear": 0.4664,
+        "surprise": 0.009
+      },
+      "latencyMs": 336,
+      "inputTokens": 224,
+      "outputTokens": 0,
+      "costUsd": 0.00002016,
+      "error": null
+    },
+    {
+      "id": "emotion-613",
+      "truth": "surprise",
+      "predicted": "surprise",
+      "probability": 0.5376,
+      "probabilities": {
+        "sadness": 0.0034,
+        "joy": 0.3387,
+        "love": 0.1096,
+        "anger": 0.0045,
+        "fear": 0.0062,
+        "surprise": 0.5376
+      },
+      "latencyMs": 450,
+      "inputTokens": 224,
+      "outputTokens": 0,
+      "costUsd": 0.00002016,
+      "error": null
+    },
+    {
+      "id": "emotion-620",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.933,
+      "probabilities": {
+        "sadness": 0.933,
+        "joy": 0.0103,
+        "love": 0.0278,
+        "anger": 0.0097,
+        "fear": 0.0111,
+        "surprise": 0.0081
+      },
+      "latencyMs": 557,
+      "inputTokens": 212,
+      "outputTokens": 0,
+      "costUsd": 0.00001908,
+      "error": null
+    },
+    {
+      "id": "emotion-626",
+      "truth": "fear",
+      "predicted": "fear",
+      "probability": 0.982,
+      "probabilities": {
+        "sadness": 0.0041,
+        "joy": 0.003,
+        "love": 0.0037,
+        "anger": 0.0034,
+        "fear": 0.982,
+        "surprise": 0.0038
+      },
+      "latencyMs": 620,
+      "inputTokens": 217,
+      "outputTokens": 0,
+      "costUsd": 0.000019529999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-633",
+      "truth": "joy",
+      "predicted": "love",
+      "probability": 0.9613,
+      "probabilities": {
+        "sadness": 0.0045,
+        "joy": 0.0202,
+        "love": 0.9613,
+        "anger": 0.005,
+        "fear": 0.0051,
+        "surprise": 0.0039
+      },
+      "latencyMs": 539,
+      "inputTokens": 217,
+      "outputTokens": 0,
+      "costUsd": 0.000019529999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-640",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9766,
+      "probabilities": {
+        "sadness": 0.0056,
+        "joy": 0.9766,
+        "love": 0.0055,
+        "anger": 0.0027,
+        "fear": 0.0057,
+        "surprise": 0.0039
+      },
+      "latencyMs": 404,
+      "inputTokens": 210,
+      "outputTokens": 0,
+      "costUsd": 0.0000189,
+      "error": null
+    },
+    {
+      "id": "emotion-646",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.8279,
+      "probabilities": {
+        "sadness": 0.0027,
+        "joy": 0.8279,
+        "love": 0.1595,
+        "anger": 0.0032,
+        "fear": 0.0028,
+        "surprise": 0.0039
+      },
+      "latencyMs": 458,
+      "inputTokens": 252,
+      "outputTokens": 0,
+      "costUsd": 0.00002268,
+      "error": null
+    },
+    {
+      "id": "emotion-653",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9026,
+      "probabilities": {
+        "sadness": 0.0033,
+        "joy": 0.9026,
+        "love": 0.0787,
+        "anger": 0.0034,
+        "fear": 0.0039,
+        "surprise": 0.0081
+      },
+      "latencyMs": 482,
+      "inputTokens": 233,
+      "outputTokens": 0,
+      "costUsd": 0.000020969999999999997,
+      "error": null
+    },
+    {
+      "id": "emotion-660",
+      "truth": "anger",
+      "predicted": "surprise",
+      "probability": 0.2994,
+      "probabilities": {
+        "sadness": 0.1937,
+        "joy": 0.2885,
+        "love": 0.0058,
+        "anger": 0.1848,
+        "fear": 0.0278,
+        "surprise": 0.2994
+      },
+      "latencyMs": 547,
+      "inputTokens": 220,
+      "outputTokens": 0,
+      "costUsd": 0.0000198,
+      "error": null
+    },
+    {
+      "id": "emotion-666",
+      "truth": "fear",
+      "predicted": "fear",
+      "probability": 0.9154,
+      "probabilities": {
+        "sadness": 0.0303,
+        "joy": 0.0138,
+        "love": 0.0129,
+        "anger": 0.0137,
+        "fear": 0.9154,
+        "surprise": 0.0139
+      },
+      "latencyMs": 624,
+      "inputTokens": 223,
+      "outputTokens": 0,
+      "costUsd": 0.00002007,
+      "error": null
+    },
+    {
+      "id": "emotion-673",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.6876,
+      "probabilities": {
+        "sadness": 0.0062,
+        "joy": 0.6876,
+        "love": 0.2893,
+        "anger": 0.0046,
+        "fear": 0.0085,
+        "surprise": 0.0038
+      },
+      "latencyMs": 372,
+      "inputTokens": 215,
+      "outputTokens": 0,
+      "costUsd": 0.00001935,
+      "error": null
+    },
+    {
+      "id": "emotion-680",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.8536,
+      "probabilities": {
+        "sadness": 0.8536,
+        "joy": 0.0124,
+        "love": 0.0311,
+        "anger": 0.0358,
+        "fear": 0.0577,
+        "surprise": 0.0094
+      },
+      "latencyMs": 493,
+      "inputTokens": 232,
+      "outputTokens": 0,
+      "costUsd": 0.00002088,
+      "error": null
+    },
+    {
+      "id": "emotion-686",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.9197,
+      "probabilities": {
+        "sadness": 0.9197,
+        "joy": 0.011,
+        "love": 0.0101,
+        "anger": 0.0342,
+        "fear": 0.017,
+        "surprise": 0.008
+      },
+      "latencyMs": 534,
+      "inputTokens": 212,
+      "outputTokens": 0,
+      "costUsd": 0.00001908,
+      "error": null
+    },
+    {
+      "id": "emotion-693",
+      "truth": "sadness",
+      "predicted": "joy",
+      "probability": 0.9235,
+      "probabilities": {
+        "sadness": 0.0161,
+        "joy": 0.9235,
+        "love": 0.0203,
+        "anger": 0.0249,
+        "fear": 0.0088,
+        "surprise": 0.0064
+      },
+      "latencyMs": 330,
+      "inputTokens": 240,
+      "outputTokens": 0,
+      "costUsd": 0.0000216,
+      "error": null
+    },
+    {
+      "id": "emotion-700",
+      "truth": "anger",
+      "predicted": "love",
+      "probability": 0.9295,
+      "probabilities": {
+        "sadness": 0.0039,
+        "joy": 0.0501,
+        "love": 0.9295,
+        "anger": 0.0058,
+        "fear": 0.0033,
+        "surprise": 0.0074
+      },
+      "latencyMs": 440,
+      "inputTokens": 235,
+      "outputTokens": 0,
+      "costUsd": 0.00002115,
+      "error": null
+    },
+    {
+      "id": "emotion-706",
+      "truth": "joy",
+      "predicted": "love",
+      "probability": 0.7845,
+      "probabilities": {
+        "sadness": 0.1774,
+        "joy": 0.0071,
+        "love": 0.7845,
+        "anger": 0.003,
+        "fear": 0.0264,
+        "surprise": 0.0016
+      },
+      "latencyMs": 380,
+      "inputTokens": 210,
+      "outputTokens": 0,
+      "costUsd": 0.0000189,
+      "error": null
+    },
+    {
+      "id": "emotion-713",
+      "truth": "love",
+      "predicted": "joy",
+      "probability": 0.9112,
+      "probabilities": {
+        "sadness": 0.0083,
+        "joy": 0.9112,
+        "love": 0.0588,
+        "anger": 0.0074,
+        "fear": 0.0085,
+        "surprise": 0.0058
+      },
+      "latencyMs": 480,
+      "inputTokens": 252,
+      "outputTokens": 0,
+      "costUsd": 0.00002268,
+      "error": null
+    },
+    {
+      "id": "emotion-720",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.8809,
+      "probabilities": {
+        "sadness": 0.006,
+        "joy": 0.8809,
+        "love": 0.0939,
+        "anger": 0.0062,
+        "fear": 0.0082,
+        "surprise": 0.0048
+      },
+      "latencyMs": 385,
+      "inputTokens": 252,
+      "outputTokens": 0,
+      "costUsd": 0.00002268,
+      "error": null
+    },
+    {
+      "id": "emotion-726",
+      "truth": "fear",
+      "predicted": "sadness",
+      "probability": 0.693,
+      "probabilities": {
+        "sadness": 0.693,
+        "joy": 0.0083,
+        "love": 0.0077,
+        "anger": 0.023,
+        "fear": 0.2615,
+        "surprise": 0.0065
+      },
+      "latencyMs": 550,
+      "inputTokens": 233,
+      "outputTokens": 0,
+      "costUsd": 0.000020969999999999997,
+      "error": null
+    },
+    {
+      "id": "emotion-733",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9892,
+      "probabilities": {
+        "sadness": 0.0016,
+        "joy": 0.9892,
+        "love": 0.0029,
+        "anger": 0.0018,
+        "fear": 0.0018,
+        "surprise": 0.0027
+      },
+      "latencyMs": 338,
+      "inputTokens": 211,
+      "outputTokens": 0,
+      "costUsd": 0.00001899,
+      "error": null
+    },
+    {
+      "id": "emotion-740",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9131,
+      "probabilities": {
+        "sadness": 0.0156,
+        "joy": 0.9131,
+        "love": 0.0296,
+        "anger": 0.0131,
+        "fear": 0.0125,
+        "surprise": 0.0161
+      },
+      "latencyMs": 516,
+      "inputTokens": 207,
+      "outputTokens": 0,
+      "costUsd": 0.00001863,
+      "error": null
+    },
+    {
+      "id": "emotion-746",
+      "truth": "love",
+      "predicted": "sadness",
+      "probability": 0.6171,
+      "probabilities": {
+        "sadness": 0.6171,
+        "joy": 0.2682,
+        "love": 0.0073,
+        "anger": 0.0182,
+        "fear": 0.08,
+        "surprise": 0.0092
+      },
+      "latencyMs": 454,
+      "inputTokens": 226,
+      "outputTokens": 0,
+      "costUsd": 0.00002034,
+      "error": null
+    },
+    {
+      "id": "emotion-753",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.8262,
+      "probabilities": {
+        "sadness": 0.8262,
+        "joy": 0.0797,
+        "love": 0.0396,
+        "anger": 0.0406,
+        "fear": 0.0097,
+        "surprise": 0.0042
+      },
+      "latencyMs": 588,
+      "inputTokens": 215,
+      "outputTokens": 0,
+      "costUsd": 0.00001935,
+      "error": null
+    },
+    {
+      "id": "emotion-760",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.7962,
+      "probabilities": {
+        "sadness": 0.0967,
+        "joy": 0.7962,
+        "love": 0.014,
+        "anger": 0.0289,
+        "fear": 0.006,
+        "surprise": 0.0582
+      },
+      "latencyMs": 528,
+      "inputTokens": 235,
+      "outputTokens": 0,
+      "costUsd": 0.00002115,
+      "error": null
+    },
+    {
+      "id": "emotion-766",
+      "truth": "love",
+      "predicted": "love",
+      "probability": 0.967,
+      "probabilities": {
+        "sadness": 0.0054,
+        "joy": 0.0107,
+        "love": 0.967,
+        "anger": 0.0058,
+        "fear": 0.0066,
+        "surprise": 0.0045
+      },
+      "latencyMs": 598,
+      "inputTokens": 221,
+      "outputTokens": 0,
+      "costUsd": 0.00001989,
+      "error": null
+    },
+    {
+      "id": "emotion-773",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.725,
+      "probabilities": {
+        "sadness": 0.0075,
+        "joy": 0.725,
+        "love": 0.0755,
+        "anger": 0.0086,
+        "fear": 0.0106,
+        "surprise": 0.1728
+      },
+      "latencyMs": 371,
+      "inputTokens": 241,
+      "outputTokens": 0,
+      "costUsd": 0.00002169,
+      "error": null
+    },
+    {
+      "id": "emotion-780",
+      "truth": "fear",
+      "predicted": "fear",
+      "probability": 0.881,
+      "probabilities": {
+        "sadness": 0.0821,
+        "joy": 0.0078,
+        "love": 0.0066,
+        "anger": 0.0126,
+        "fear": 0.881,
+        "surprise": 0.0099
+      },
+      "latencyMs": 660,
+      "inputTokens": 224,
+      "outputTokens": 0,
+      "costUsd": 0.00002016,
+      "error": null
+    },
+    {
+      "id": "emotion-786",
+      "truth": "joy",
+      "predicted": "fear",
+      "probability": 0.7965,
+      "probabilities": {
+        "sadness": 0.0018,
+        "joy": 0.1921,
+        "love": 0.0026,
+        "anger": 0.0042,
+        "fear": 0.7965,
+        "surprise": 0.0028
+      },
+      "latencyMs": 331,
+      "inputTokens": 207,
+      "outputTokens": 0,
+      "costUsd": 0.00001863,
+      "error": null
+    },
+    {
+      "id": "emotion-793",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9155,
+      "probabilities": {
+        "sadness": 0.0328,
+        "joy": 0.9155,
+        "love": 0.0054,
+        "anger": 0.0061,
+        "fear": 0.032,
+        "surprise": 0.0082
+      },
+      "latencyMs": 451,
+      "inputTokens": 246,
+      "outputTokens": 0,
+      "costUsd": 0.00002214,
+      "error": null
+    },
+    {
+      "id": "emotion-800",
+      "truth": "joy",
+      "predicted": "anger",
+      "probability": 0.894,
+      "probabilities": {
+        "sadness": 0.0312,
+        "joy": 0.0018,
+        "love": 0.0019,
+        "anger": 0.894,
+        "fear": 0.0675,
+        "surprise": 0.0036
+      },
+      "latencyMs": 338,
+      "inputTokens": 233,
+      "outputTokens": 0,
+      "costUsd": 0.000020969999999999997,
+      "error": null
+    },
+    {
+      "id": "emotion-806",
+      "truth": "sadness",
+      "predicted": "love",
+      "probability": 0.414,
+      "probabilities": {
+        "sadness": 0.0677,
+        "joy": 0.2133,
+        "love": 0.414,
+        "anger": 0.0204,
+        "fear": 0.1805,
+        "surprise": 0.1041
+      },
+      "latencyMs": 419,
+      "inputTokens": 229,
+      "outputTokens": 0,
+      "costUsd": 0.00002061,
+      "error": null
+    },
+    {
+      "id": "emotion-813",
+      "truth": "surprise",
+      "predicted": "surprise",
+      "probability": 0.9189,
+      "probabilities": {
+        "sadness": 0.011,
+        "joy": 0.006,
+        "love": 0.0066,
+        "anger": 0.0187,
+        "fear": 0.0388,
+        "surprise": 0.9189
+      },
+      "latencyMs": 239,
+      "inputTokens": 211,
+      "outputTokens": 0,
+      "costUsd": 0.00001899,
+      "error": null
+    },
+    {
+      "id": "emotion-820",
+      "truth": "surprise",
+      "predicted": "fear",
+      "probability": 0.7301,
+      "probabilities": {
+        "sadness": 0.2449,
+        "joy": 0.0041,
+        "love": 0.0039,
+        "anger": 0.0079,
+        "fear": 0.7301,
+        "surprise": 0.0091
+      },
+      "latencyMs": 744,
+      "inputTokens": 209,
+      "outputTokens": 0,
+      "costUsd": 0.00001881,
+      "error": null
+    },
+    {
+      "id": "emotion-826",
+      "truth": "sadness",
+      "predicted": "fear",
+      "probability": 0.6476,
+      "probabilities": {
+        "sadness": 0.3178,
+        "joy": 0.0036,
+        "love": 0.0037,
+        "anger": 0.0231,
+        "fear": 0.6476,
+        "surprise": 0.0042
+      },
+      "latencyMs": 332,
+      "inputTokens": 212,
+      "outputTokens": 0,
+      "costUsd": 0.00001908,
+      "error": null
+    },
+    {
+      "id": "emotion-833",
+      "truth": "love",
+      "predicted": "joy",
+      "probability": 0.9068,
+      "probabilities": {
+        "sadness": 0.0037,
+        "joy": 0.9068,
+        "love": 0.0766,
+        "anger": 0.0047,
+        "fear": 0.005,
+        "surprise": 0.0032
+      },
+      "latencyMs": 292,
+      "inputTokens": 213,
+      "outputTokens": 0,
+      "costUsd": 0.000019169999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-840",
+      "truth": "joy",
+      "predicted": "love",
+      "probability": 0.6272,
+      "probabilities": {
+        "sadness": 0.0054,
+        "joy": 0.1065,
+        "love": 0.6272,
+        "anger": 0.0072,
+        "fear": 0.0169,
+        "surprise": 0.2368
+      },
+      "latencyMs": 498,
+      "inputTokens": 231,
+      "outputTokens": 0,
+      "costUsd": 0.00002079,
+      "error": null
+    },
+    {
+      "id": "emotion-846",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.8804,
+      "probabilities": {
+        "sadness": 0.8804,
+        "joy": 0.0158,
+        "love": 0.0151,
+        "anger": 0.0102,
+        "fear": 0.0738,
+        "surprise": 0.0047
+      },
+      "latencyMs": 306,
+      "inputTokens": 216,
+      "outputTokens": 0,
+      "costUsd": 0.00001944,
+      "error": null
+    },
+    {
+      "id": "emotion-853",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.8557,
+      "probabilities": {
+        "sadness": 0.0036,
+        "joy": 0.8557,
+        "love": 0.0544,
+        "anger": 0.0028,
+        "fear": 0.0034,
+        "surprise": 0.0801
+      },
+      "latencyMs": 445,
+      "inputTokens": 210,
+      "outputTokens": 0,
+      "costUsd": 0.0000189,
+      "error": null
+    },
+    {
+      "id": "emotion-860",
+      "truth": "sadness",
+      "predicted": "anger",
+      "probability": 0.5624,
+      "probabilities": {
+        "sadness": 0.3893,
+        "joy": 0.008,
+        "love": 0.0122,
+        "anger": 0.5624,
+        "fear": 0.0217,
+        "surprise": 0.0064
+      },
+      "latencyMs": 523,
+      "inputTokens": 235,
+      "outputTokens": 0,
+      "costUsd": 0.00002115,
+      "error": null
+    },
+    {
+      "id": "emotion-866",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.8915,
+      "probabilities": {
+        "sadness": 0.8915,
+        "joy": 0.0369,
+        "love": 0.0243,
+        "anger": 0.0131,
+        "fear": 0.0241,
+        "surprise": 0.0101
+      },
+      "latencyMs": 523,
+      "inputTokens": 230,
+      "outputTokens": 0,
+      "costUsd": 0.0000207,
+      "error": null
+    },
+    {
+      "id": "emotion-873",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.9448,
+      "probabilities": {
+        "sadness": 0.9448,
+        "joy": 0.0115,
+        "love": 0.0122,
+        "anger": 0.0099,
+        "fear": 0.0134,
+        "surprise": 0.0082
+      },
+      "latencyMs": 447,
+      "inputTokens": 206,
+      "outputTokens": 0,
+      "costUsd": 0.00001854,
+      "error": null
+    },
+    {
+      "id": "emotion-880",
+      "truth": "fear",
+      "predicted": "fear",
+      "probability": 0.9091,
+      "probabilities": {
+        "sadness": 0.0617,
+        "joy": 0.007,
+        "love": 0.0071,
+        "anger": 0.0072,
+        "fear": 0.9091,
+        "surprise": 0.0079
+      },
+      "latencyMs": 953,
+      "inputTokens": 220,
+      "outputTokens": 0,
+      "costUsd": 0.0000198,
+      "error": null
+    },
+    {
+      "id": "emotion-886",
+      "truth": "love",
+      "predicted": "love",
+      "probability": 0.9286,
+      "probabilities": {
+        "sadness": 0.0123,
+        "joy": 0.0412,
+        "love": 0.9286,
+        "anger": 0.006,
+        "fear": 0.007,
+        "surprise": 0.0049
+      },
+      "latencyMs": 536,
+      "inputTokens": 217,
+      "outputTokens": 0,
+      "costUsd": 0.000019529999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-893",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9042,
+      "probabilities": {
+        "sadness": 0.0041,
+        "joy": 0.9042,
+        "love": 0.0794,
+        "anger": 0.0035,
+        "fear": 0.0043,
+        "surprise": 0.0045
+      },
+      "latencyMs": 375,
+      "inputTokens": 214,
+      "outputTokens": 0,
+      "costUsd": 0.00001926,
+      "error": null
+    },
+    {
+      "id": "emotion-900",
+      "truth": "anger",
+      "predicted": "joy",
+      "probability": 0.675,
+      "probabilities": {
+        "sadness": 0.01,
+        "joy": 0.675,
+        "love": 0.0272,
+        "anger": 0.0996,
+        "fear": 0.0355,
+        "surprise": 0.1527
+      },
+      "latencyMs": 506,
+      "inputTokens": 222,
+      "outputTokens": 0,
+      "costUsd": 0.00001998,
+      "error": null
+    },
+    {
+      "id": "emotion-906",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.9135,
+      "probabilities": {
+        "sadness": 0.9135,
+        "joy": 0.0123,
+        "love": 0.0102,
+        "anger": 0.0153,
+        "fear": 0.0397,
+        "surprise": 0.009
+      },
+      "latencyMs": 371,
+      "inputTokens": 209,
+      "outputTokens": 0,
+      "costUsd": 0.00001881,
+      "error": null
+    },
+    {
+      "id": "emotion-913",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9507,
+      "probabilities": {
+        "sadness": 0.0109,
+        "joy": 0.9507,
+        "love": 0.0126,
+        "anger": 0.0091,
+        "fear": 0.0095,
+        "surprise": 0.0072
+      },
+      "latencyMs": 262,
+      "inputTokens": 208,
+      "outputTokens": 0,
+      "costUsd": 0.000018719999999999997,
+      "error": null
+    },
+    {
+      "id": "emotion-920",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.7734,
+      "probabilities": {
+        "sadness": 0.0096,
+        "joy": 0.7734,
+        "love": 0.0197,
+        "anger": 0.0093,
+        "fear": 0.0095,
+        "surprise": 0.1785
+      },
+      "latencyMs": 557,
+      "inputTokens": 214,
+      "outputTokens": 0,
+      "costUsd": 0.00001926,
+      "error": null
+    },
+    {
+      "id": "emotion-926",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.4953,
+      "probabilities": {
+        "sadness": 0.4953,
+        "joy": 0.003,
+        "love": 0.0033,
+        "anger": 0.0289,
+        "fear": 0.2315,
+        "surprise": 0.238
+      },
+      "latencyMs": 645,
+      "inputTokens": 236,
+      "outputTokens": 0,
+      "costUsd": 0.00002124,
+      "error": null
+    },
+    {
+      "id": "emotion-933",
+      "truth": "anger",
+      "predicted": "anger",
+      "probability": 0.8012,
+      "probabilities": {
+        "sadness": 0.0579,
+        "joy": 0.0124,
+        "love": 0.011,
+        "anger": 0.8012,
+        "fear": 0.0902,
+        "surprise": 0.0273
+      },
+      "latencyMs": 348,
+      "inputTokens": 227,
+      "outputTokens": 0,
+      "costUsd": 0.00002043,
+      "error": null
+    },
+    {
+      "id": "emotion-940",
+      "truth": "joy",
+      "predicted": "sadness",
+      "probability": 0.6661,
+      "probabilities": {
+        "sadness": 0.6661,
+        "joy": 0.0179,
+        "love": 0.014,
+        "anger": 0.0151,
+        "fear": 0.1799,
+        "surprise": 0.107
+      },
+      "latencyMs": 499,
+      "inputTokens": 217,
+      "outputTokens": 0,
+      "costUsd": 0.000019529999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-946",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.9209,
+      "probabilities": {
+        "sadness": 0.9209,
+        "joy": 0.0114,
+        "love": 0.0098,
+        "anger": 0.0259,
+        "fear": 0.0246,
+        "surprise": 0.0074
+      },
+      "latencyMs": 477,
+      "inputTokens": 213,
+      "outputTokens": 0,
+      "costUsd": 0.000019169999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-953",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.7033,
+      "probabilities": {
+        "sadness": 0.7033,
+        "joy": 0.0141,
+        "love": 0.0091,
+        "anger": 0.0139,
+        "fear": 0.254,
+        "surprise": 0.0056
+      },
+      "latencyMs": 372,
+      "inputTokens": 256,
+      "outputTokens": 0,
+      "costUsd": 0.00002304,
+      "error": null
+    },
+    {
+      "id": "emotion-960",
+      "truth": "love",
+      "predicted": "surprise",
+      "probability": 0.6987,
+      "probabilities": {
+        "sadness": 0.0074,
+        "joy": 0.1178,
+        "love": 0.1593,
+        "anger": 0.0084,
+        "fear": 0.0084,
+        "surprise": 0.6987
+      },
+      "latencyMs": 332,
+      "inputTokens": 229,
+      "outputTokens": 0,
+      "costUsd": 0.00002061,
+      "error": null
+    },
+    {
+      "id": "emotion-966",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9359,
+      "probabilities": {
+        "sadness": 0.0098,
+        "joy": 0.9359,
+        "love": 0.0325,
+        "anger": 0.0078,
+        "fear": 0.0079,
+        "surprise": 0.0061
+      },
+      "latencyMs": 383,
+      "inputTokens": 261,
+      "outputTokens": 0,
+      "costUsd": 0.00002349,
+      "error": null
+    },
+    {
+      "id": "emotion-973",
+      "truth": "anger",
+      "predicted": "sadness",
+      "probability": 0.6435,
+      "probabilities": {
+        "sadness": 0.6435,
+        "joy": 0.0041,
+        "love": 0.0038,
+        "anger": 0.3313,
+        "fear": 0.0139,
+        "surprise": 0.0034
+      },
+      "latencyMs": 329,
+      "inputTokens": 228,
+      "outputTokens": 0,
+      "costUsd": 0.00002052,
+      "error": null
+    },
+    {
+      "id": "emotion-980",
+      "truth": "joy",
+      "predicted": "fear",
+      "probability": 0.3792,
+      "probabilities": {
+        "sadness": 0.0578,
+        "joy": 0.1725,
+        "love": 0.3569,
+        "anger": 0.0105,
+        "fear": 0.3792,
+        "surprise": 0.0231
+      },
+      "latencyMs": 362,
+      "inputTokens": 234,
+      "outputTokens": 0,
+      "costUsd": 0.000021059999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-986",
+      "truth": "joy",
+      "predicted": "sadness",
+      "probability": 0.5282,
+      "probabilities": {
+        "sadness": 0.5282,
+        "joy": 0.3863,
+        "love": 0.0166,
+        "anger": 0.027,
+        "fear": 0.031,
+        "surprise": 0.0109
+      },
+      "latencyMs": 358,
+      "inputTokens": 207,
+      "outputTokens": 0,
+      "costUsd": 0.00001863,
+      "error": null
+    },
+    {
+      "id": "emotion-993",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9473,
+      "probabilities": {
+        "sadness": 0.0027,
+        "joy": 0.9473,
+        "love": 0.0304,
+        "anger": 0.0029,
+        "fear": 0.003,
+        "surprise": 0.0137
+      },
+      "latencyMs": 467,
+      "inputTokens": 219,
+      "outputTokens": 0,
+      "costUsd": 0.00001971,
+      "error": null
+    },
+    {
+      "id": "emotion-1000",
+      "truth": "joy",
+      "predicted": "love",
+      "probability": 0.9597,
+      "probabilities": {
+        "sadness": 0.0044,
+        "joy": 0.019,
+        "love": 0.9597,
+        "anger": 0.0055,
+        "fear": 0.0054,
+        "surprise": 0.006
+      },
+      "latencyMs": 519,
+      "inputTokens": 231,
+      "outputTokens": 0,
+      "costUsd": 0.00002079,
+      "error": null
+    },
+    {
+      "id": "emotion-1006",
+      "truth": "fear",
+      "predicted": "fear",
+      "probability": 0.7636,
+      "probabilities": {
+        "sadness": 0.0578,
+        "joy": 0.0023,
+        "love": 0.0033,
+        "anger": 0.1706,
+        "fear": 0.7636,
+        "surprise": 0.0024
+      },
+      "latencyMs": 381,
+      "inputTokens": 234,
+      "outputTokens": 0,
+      "costUsd": 0.000021059999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-1013",
+      "truth": "love",
+      "predicted": "joy",
+      "probability": 0.5299,
+      "probabilities": {
+        "sadness": 0.0174,
+        "joy": 0.5299,
+        "love": 0.3659,
+        "anger": 0.0318,
+        "fear": 0.0265,
+        "surprise": 0.0285
+      },
+      "latencyMs": 332,
+      "inputTokens": 229,
+      "outputTokens": 0,
+      "costUsd": 0.00002061,
+      "error": null
+    },
+    {
+      "id": "emotion-1020",
+      "truth": "sadness",
+      "predicted": "love",
+      "probability": 0.861,
+      "probabilities": {
+        "sadness": 0.0106,
+        "joy": 0.0533,
+        "love": 0.861,
+        "anger": 0.0648,
+        "fear": 0.0061,
+        "surprise": 0.0042
+      },
+      "latencyMs": 309,
+      "inputTokens": 234,
+      "outputTokens": 0,
+      "costUsd": 0.000021059999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-1026",
+      "truth": "sadness",
+      "predicted": "fear",
+      "probability": 0.4516,
+      "probabilities": {
+        "sadness": 0.099,
+        "joy": 0.0071,
+        "love": 0.0087,
+        "anger": 0.4231,
+        "fear": 0.4516,
+        "surprise": 0.0105
+      },
+      "latencyMs": 525,
+      "inputTokens": 247,
+      "outputTokens": 0,
+      "costUsd": 0.00002223,
+      "error": null
+    },
+    {
+      "id": "emotion-1033",
+      "truth": "anger",
+      "predicted": "anger",
+      "probability": 0.9494,
+      "probabilities": {
+        "sadness": 0.0105,
+        "joy": 0.0104,
+        "love": 0.0111,
+        "anger": 0.9494,
+        "fear": 0.0101,
+        "surprise": 0.0085
+      },
+      "latencyMs": 529,
+      "inputTokens": 211,
+      "outputTokens": 0,
+      "costUsd": 0.00001899,
+      "error": null
+    },
+    {
+      "id": "emotion-1040",
+      "truth": "fear",
+      "predicted": "fear",
+      "probability": 0.9616,
+      "probabilities": {
+        "sadness": 0.0124,
+        "joy": 0.0064,
+        "love": 0.0079,
+        "anger": 0.0065,
+        "fear": 0.9616,
+        "surprise": 0.0052
+      },
+      "latencyMs": 310,
+      "inputTokens": 214,
+      "outputTokens": 0,
+      "costUsd": 0.00001926,
+      "error": null
+    },
+    {
+      "id": "emotion-1046",
+      "truth": "anger",
+      "predicted": "anger",
+      "probability": 0.8535,
+      "probabilities": {
+        "sadness": 0.0231,
+        "joy": 0.0909,
+        "love": 0.0099,
+        "anger": 0.8535,
+        "fear": 0.0129,
+        "surprise": 0.0097
+      },
+      "latencyMs": 430,
+      "inputTokens": 228,
+      "outputTokens": 0,
+      "costUsd": 0.00002052,
+      "error": null
+    },
+    {
+      "id": "emotion-1053",
+      "truth": "anger",
+      "predicted": "anger",
+      "probability": 0.9486,
+      "probabilities": {
+        "sadness": 0.0201,
+        "joy": 0.0085,
+        "love": 0.0076,
+        "anger": 0.9486,
+        "fear": 0.0088,
+        "surprise": 0.0064
+      },
+      "latencyMs": 233,
+      "inputTokens": 207,
+      "outputTokens": 0,
+      "costUsd": 0.00001863,
+      "error": null
+    },
+    {
+      "id": "emotion-1060",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.8419,
+      "probabilities": {
+        "sadness": 0.8419,
+        "joy": 0.0544,
+        "love": 0.0109,
+        "anger": 0.0135,
+        "fear": 0.069,
+        "surprise": 0.0103
+      },
+      "latencyMs": 281,
+      "inputTokens": 229,
+      "outputTokens": 0,
+      "costUsd": 0.00002061,
+      "error": null
+    },
+    {
+      "id": "emotion-1066",
+      "truth": "joy",
+      "predicted": "love",
+      "probability": 0.9617,
+      "probabilities": {
+        "sadness": 0.0047,
+        "joy": 0.0188,
+        "love": 0.9617,
+        "anger": 0.0044,
+        "fear": 0.0056,
+        "surprise": 0.0048
+      },
+      "latencyMs": 494,
+      "inputTokens": 244,
+      "outputTokens": 0,
+      "costUsd": 0.00002196,
+      "error": null
+    },
+    {
+      "id": "emotion-1073",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9431,
+      "probabilities": {
+        "sadness": 0.0031,
+        "joy": 0.9431,
+        "love": 0.0445,
+        "anger": 0.0031,
+        "fear": 0.0035,
+        "surprise": 0.0027
+      },
+      "latencyMs": 333,
+      "inputTokens": 228,
+      "outputTokens": 0,
+      "costUsd": 0.00002052,
+      "error": null
+    },
+    {
+      "id": "emotion-1080",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.8205,
+      "probabilities": {
+        "sadness": 0.8205,
+        "joy": 0.011,
+        "love": 0.0105,
+        "anger": 0.0568,
+        "fear": 0.076,
+        "surprise": 0.0252
+      },
+      "latencyMs": 587,
+      "inputTokens": 212,
+      "outputTokens": 0,
+      "costUsd": 0.00001908,
+      "error": null
+    },
+    {
+      "id": "emotion-1086",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.8748,
+      "probabilities": {
+        "sadness": 0.8748,
+        "joy": 0.0093,
+        "love": 0.0175,
+        "anger": 0.0652,
+        "fear": 0.0263,
+        "surprise": 0.0069
+      },
+      "latencyMs": 474,
+      "inputTokens": 230,
+      "outputTokens": 0,
+      "costUsd": 0.0000207,
+      "error": null
+    },
+    {
+      "id": "emotion-1093",
+      "truth": "sadness",
+      "predicted": "love",
+      "probability": 0.5467,
+      "probabilities": {
+        "sadness": 0.01,
+        "joy": 0.3888,
+        "love": 0.5467,
+        "anger": 0.0022,
+        "fear": 0.0503,
+        "surprise": 0.002
+      },
+      "latencyMs": 447,
+      "inputTokens": 238,
+      "outputTokens": 0,
+      "costUsd": 0.00002142,
+      "error": null
+    },
+    {
+      "id": "emotion-1100",
+      "truth": "surprise",
+      "predicted": "surprise",
+      "probability": 0.8208,
+      "probabilities": {
+        "sadness": 0.0102,
+        "joy": 0.1175,
+        "love": 0.0327,
+        "anger": 0.0084,
+        "fear": 0.0104,
+        "surprise": 0.8208
+      },
+      "latencyMs": 403,
+      "inputTokens": 223,
+      "outputTokens": 0,
+      "costUsd": 0.00002007,
+      "error": null
+    },
+    {
+      "id": "emotion-1106",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.5035,
+      "probabilities": {
+        "sadness": 0.5035,
+        "joy": 0.0074,
+        "love": 0.0082,
+        "anger": 0.0133,
+        "fear": 0.4611,
+        "surprise": 0.0065
+      },
+      "latencyMs": 448,
+      "inputTokens": 223,
+      "outputTokens": 0,
+      "costUsd": 0.00002007,
+      "error": null
+    },
+    {
+      "id": "emotion-1113",
+      "truth": "anger",
+      "predicted": "sadness",
+      "probability": 0.818,
+      "probabilities": {
+        "sadness": 0.818,
+        "joy": 0.0046,
+        "love": 0.0047,
+        "anger": 0.082,
+        "fear": 0.0868,
+        "surprise": 0.0039
+      },
+      "latencyMs": 321,
+      "inputTokens": 210,
+      "outputTokens": 0,
+      "costUsd": 0.0000189,
+      "error": null
+    },
+    {
+      "id": "emotion-1120",
+      "truth": "sadness",
+      "predicted": "anger",
+      "probability": 0.5221,
+      "probabilities": {
+        "sadness": 0.1756,
+        "joy": 0.0581,
+        "love": 0.1296,
+        "anger": 0.5221,
+        "fear": 0.0669,
+        "surprise": 0.0477
+      },
+      "latencyMs": 434,
+      "inputTokens": 231,
+      "outputTokens": 0,
+      "costUsd": 0.00002079,
+      "error": null
+    },
+    {
+      "id": "emotion-1126",
+      "truth": "joy",
+      "predicted": "love",
+      "probability": 0.9648,
+      "probabilities": {
+        "sadness": 0.0055,
+        "joy": 0.0144,
+        "love": 0.9648,
+        "anger": 0.0051,
+        "fear": 0.006,
+        "surprise": 0.0042
+      },
+      "latencyMs": 424,
+      "inputTokens": 253,
+      "outputTokens": 0,
+      "costUsd": 0.00002277,
+      "error": null
+    },
+    {
+      "id": "emotion-1133",
+      "truth": "fear",
+      "predicted": "fear",
+      "probability": 0.7295,
+      "probabilities": {
+        "sadness": 0.1714,
+        "joy": 0.0019,
+        "love": 0.0918,
+        "anger": 0.0039,
+        "fear": 0.7295,
+        "surprise": 0.0015
+      },
+      "latencyMs": 296,
+      "inputTokens": 228,
+      "outputTokens": 0,
+      "costUsd": 0.00002052,
+      "error": null
+    },
+    {
+      "id": "emotion-1140",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9663,
+      "probabilities": {
+        "sadness": 0.0049,
+        "joy": 0.9663,
+        "love": 0.003,
+        "anger": 0.0027,
+        "fear": 0.0028,
+        "surprise": 0.0203
+      },
+      "latencyMs": 369,
+      "inputTokens": 221,
+      "outputTokens": 0,
+      "costUsd": 0.00001989,
+      "error": null
+    },
+    {
+      "id": "emotion-1146",
+      "truth": "love",
+      "predicted": "joy",
+      "probability": 0.6746,
+      "probabilities": {
+        "sadness": 0.027,
+        "joy": 0.6746,
+        "love": 0.1996,
+        "anger": 0.0028,
+        "fear": 0.0938,
+        "surprise": 0.0022
+      },
+      "latencyMs": 364,
+      "inputTokens": 219,
+      "outputTokens": 0,
+      "costUsd": 0.00001971,
+      "error": null
+    },
+    {
+      "id": "emotion-1153",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.9008,
+      "probabilities": {
+        "sadness": 0.9008,
+        "joy": 0.0115,
+        "love": 0.0103,
+        "anger": 0.0126,
+        "fear": 0.0562,
+        "surprise": 0.0086
+      },
+      "latencyMs": 425,
+      "inputTokens": 209,
+      "outputTokens": 0,
+      "costUsd": 0.00001881,
+      "error": null
+    },
+    {
+      "id": "emotion-1160",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9071,
+      "probabilities": {
+        "sadness": 0.0043,
+        "joy": 0.9071,
+        "love": 0.0715,
+        "anger": 0.006,
+        "fear": 0.0058,
+        "surprise": 0.0053
+      },
+      "latencyMs": 498,
+      "inputTokens": 228,
+      "outputTokens": 0,
+      "costUsd": 0.00002052,
+      "error": null
+    },
+    {
+      "id": "emotion-1166",
+      "truth": "sadness",
+      "predicted": "joy",
+      "probability": 0.9505,
+      "probabilities": {
+        "sadness": 0.0148,
+        "joy": 0.9505,
+        "love": 0.0098,
+        "anger": 0.0095,
+        "fear": 0.0088,
+        "surprise": 0.0066
+      },
+      "latencyMs": 333,
+      "inputTokens": 210,
+      "outputTokens": 0,
+      "costUsd": 0.0000189,
+      "error": null
+    },
+    {
+      "id": "emotion-1173",
+      "truth": "fear",
+      "predicted": "fear",
+      "probability": 0.6688,
+      "probabilities": {
+        "sadness": 0.2751,
+        "joy": 0.0024,
+        "love": 0.0017,
+        "anger": 0.0499,
+        "fear": 0.6688,
+        "surprise": 0.0021
+      },
+      "latencyMs": 501,
+      "inputTokens": 206,
+      "outputTokens": 0,
+      "costUsd": 0.00001854,
+      "error": null
+    },
+    {
+      "id": "emotion-1180",
+      "truth": "fear",
+      "predicted": "fear",
+      "probability": 0.5743,
+      "probabilities": {
+        "sadness": 0.3912,
+        "joy": 0.0162,
+        "love": 0.0019,
+        "anger": 0.0075,
+        "fear": 0.5743,
+        "surprise": 0.0089
+      },
+      "latencyMs": 439,
+      "inputTokens": 210,
+      "outputTokens": 0,
+      "costUsd": 0.0000189,
+      "error": null
+    },
+    {
+      "id": "emotion-1186",
+      "truth": "sadness",
+      "predicted": "fear",
+      "probability": 0.548,
+      "probabilities": {
+        "sadness": 0.4082,
+        "joy": 0.0017,
+        "love": 0.0019,
+        "anger": 0.0378,
+        "fear": 0.548,
+        "surprise": 0.0024
+      },
+      "latencyMs": 451,
+      "inputTokens": 221,
+      "outputTokens": 0,
+      "costUsd": 0.00001989,
+      "error": null
+    },
+    {
+      "id": "emotion-1193",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.788,
+      "probabilities": {
+        "sadness": 0.788,
+        "joy": 0.0187,
+        "love": 0.0036,
+        "anger": 0.1305,
+        "fear": 0.0541,
+        "surprise": 0.0051
+      },
+      "latencyMs": 267,
+      "inputTokens": 226,
+      "outputTokens": 0,
+      "costUsd": 0.00002034,
+      "error": null
+    },
+    {
+      "id": "emotion-1200",
+      "truth": "anger",
+      "predicted": "sadness",
+      "probability": 0.9116,
+      "probabilities": {
+        "sadness": 0.9116,
+        "joy": 0.0139,
+        "love": 0.0236,
+        "anger": 0.0231,
+        "fear": 0.0168,
+        "surprise": 0.011
+      },
+      "latencyMs": 353,
+      "inputTokens": 211,
+      "outputTokens": 0,
+      "costUsd": 0.00001899,
+      "error": null
+    },
+    {
+      "id": "emotion-1206",
+      "truth": "joy",
+      "predicted": "love",
+      "probability": 0.9583,
+      "probabilities": {
+        "sadness": 0.0118,
+        "joy": 0.0165,
+        "love": 0.9583,
+        "anger": 0.0042,
+        "fear": 0.0043,
+        "surprise": 0.0049
+      },
+      "latencyMs": 312,
+      "inputTokens": 219,
+      "outputTokens": 0,
+      "costUsd": 0.00001971,
+      "error": null
+    },
+    {
+      "id": "emotion-1213",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.5179,
+      "probabilities": {
+        "sadness": 0.5179,
+        "joy": 0.0041,
+        "love": 0.0044,
+        "anger": 0.1578,
+        "fear": 0.3114,
+        "surprise": 0.0044
+      },
+      "latencyMs": 514,
+      "inputTokens": 249,
+      "outputTokens": 0,
+      "costUsd": 0.000022409999999999997,
+      "error": null
+    },
+    {
+      "id": "emotion-1220",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9419,
+      "probabilities": {
+        "sadness": 0.0081,
+        "joy": 0.9419,
+        "love": 0.0087,
+        "anger": 0.0084,
+        "fear": 0.0094,
+        "surprise": 0.0235
+      },
+      "latencyMs": 425,
+      "inputTokens": 223,
+      "outputTokens": 0,
+      "costUsd": 0.00002007,
+      "error": null
+    },
+    {
+      "id": "emotion-1226",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9502,
+      "probabilities": {
+        "sadness": 0.0101,
+        "joy": 0.9502,
+        "love": 0.0106,
+        "anger": 0.0097,
+        "fear": 0.0091,
+        "surprise": 0.0103
+      },
+      "latencyMs": 322,
+      "inputTokens": 214,
+      "outputTokens": 0,
+      "costUsd": 0.00001926,
+      "error": null
+    },
+    {
+      "id": "emotion-1233",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9443,
+      "probabilities": {
+        "sadness": 0.0032,
+        "joy": 0.9443,
+        "love": 0.0394,
+        "anger": 0.0032,
+        "fear": 0.0032,
+        "surprise": 0.0067
+      },
+      "latencyMs": 372,
+      "inputTokens": 217,
+      "outputTokens": 0,
+      "costUsd": 0.000019529999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-1240",
+      "truth": "surprise",
+      "predicted": "sadness",
+      "probability": 0.8986,
+      "probabilities": {
+        "sadness": 0.8986,
+        "joy": 0.0326,
+        "love": 0.0089,
+        "anger": 0.0109,
+        "fear": 0.0407,
+        "surprise": 0.0083
+      },
+      "latencyMs": 264,
+      "inputTokens": 235,
+      "outputTokens": 0,
+      "costUsd": 0.00002115,
+      "error": null
+    },
+    {
+      "id": "emotion-1246",
+      "truth": "sadness",
+      "predicted": "fear",
+      "probability": 0.8585,
+      "probabilities": {
+        "sadness": 0.0746,
+        "joy": 0.0153,
+        "love": 0.0142,
+        "anger": 0.0172,
+        "fear": 0.8585,
+        "surprise": 0.0202
+      },
+      "latencyMs": 418,
+      "inputTokens": 216,
+      "outputTokens": 0,
+      "costUsd": 0.00001944,
+      "error": null
+    },
+    {
+      "id": "emotion-1253",
+      "truth": "surprise",
+      "predicted": "surprise",
+      "probability": 0.9577,
+      "probabilities": {
+        "sadness": 0.0075,
+        "joy": 0.0053,
+        "love": 0.0064,
+        "anger": 0.0171,
+        "fear": 0.006,
+        "surprise": 0.9577
+      },
+      "latencyMs": 714,
+      "inputTokens": 232,
+      "outputTokens": 0,
+      "costUsd": 0.00002088,
+      "error": null
+    },
+    {
+      "id": "emotion-1260",
+      "truth": "joy",
+      "predicted": "fear",
+      "probability": 0.4945,
+      "probabilities": {
+        "sadness": 0.0177,
+        "joy": 0.2421,
+        "love": 0.0544,
+        "anger": 0.1348,
+        "fear": 0.4945,
+        "surprise": 0.0565
+      },
+      "latencyMs": 422,
+      "inputTokens": 237,
+      "outputTokens": 0,
+      "costUsd": 0.000021329999999999997,
+      "error": null
+    },
+    {
+      "id": "emotion-1266",
+      "truth": "fear",
+      "predicted": "fear",
+      "probability": 0.8708,
+      "probabilities": {
+        "sadness": 0.0829,
+        "joy": 0.0118,
+        "love": 0.0119,
+        "anger": 0.0127,
+        "fear": 0.8708,
+        "surprise": 0.0099
+      },
+      "latencyMs": 338,
+      "inputTokens": 209,
+      "outputTokens": 0,
+      "costUsd": 0.00001881,
+      "error": null
+    },
+    {
+      "id": "emotion-1273",
+      "truth": "surprise",
+      "predicted": "joy",
+      "probability": 0.8307,
+      "probabilities": {
+        "sadness": 0.0041,
+        "joy": 0.8307,
+        "love": 0.0042,
+        "anger": 0.0041,
+        "fear": 0.0058,
+        "surprise": 0.1511
+      },
+      "latencyMs": 550,
+      "inputTokens": 209,
+      "outputTokens": 0,
+      "costUsd": 0.00001881,
+      "error": null
+    },
+    {
+      "id": "emotion-1280",
+      "truth": "joy",
+      "predicted": "fear",
+      "probability": 0.8327,
+      "probabilities": {
+        "sadness": 0.0751,
+        "joy": 0.0068,
+        "love": 0.0057,
+        "anger": 0.0595,
+        "fear": 0.8327,
+        "surprise": 0.0202
+      },
+      "latencyMs": 498,
+      "inputTokens": 230,
+      "outputTokens": 0,
+      "costUsd": 0.0000207,
+      "error": null
+    },
+    {
+      "id": "emotion-1286",
+      "truth": "joy",
+      "predicted": "love",
+      "probability": 0.9494,
+      "probabilities": {
+        "sadness": 0.0078,
+        "joy": 0.0224,
+        "love": 0.9494,
+        "anger": 0.0059,
+        "fear": 0.0057,
+        "surprise": 0.0088
+      },
+      "latencyMs": 567,
+      "inputTokens": 233,
+      "outputTokens": 0,
+      "costUsd": 0.000020969999999999997,
+      "error": null
+    },
+    {
+      "id": "emotion-1293",
+      "truth": "sadness",
+      "predicted": "fear",
+      "probability": 0.4955,
+      "probabilities": {
+        "sadness": 0.3932,
+        "joy": 0.0039,
+        "love": 0.0029,
+        "anger": 0.0852,
+        "fear": 0.4955,
+        "surprise": 0.0193
+      },
+      "latencyMs": 321,
+      "inputTokens": 210,
+      "outputTokens": 0,
+      "costUsd": 0.0000189,
+      "error": null
+    },
+    {
+      "id": "emotion-1300",
+      "truth": "anger",
+      "predicted": "anger",
+      "probability": 0.8759,
+      "probabilities": {
+        "sadness": 0.046,
+        "joy": 0.0091,
+        "love": 0.0096,
+        "anger": 0.8759,
+        "fear": 0.0503,
+        "surprise": 0.0091
+      },
+      "latencyMs": 309,
+      "inputTokens": 215,
+      "outputTokens": 0,
+      "costUsd": 0.00001935,
+      "error": null
+    },
+    {
+      "id": "emotion-1306",
+      "truth": "surprise",
+      "predicted": "joy",
+      "probability": 0.4809,
+      "probabilities": {
+        "sadness": 0.0076,
+        "joy": 0.4809,
+        "love": 0.3406,
+        "anger": 0.0187,
+        "fear": 0.0943,
+        "surprise": 0.0579
+      },
+      "latencyMs": 322,
+      "inputTokens": 229,
+      "outputTokens": 0,
+      "costUsd": 0.00002061,
+      "error": null
+    },
+    {
+      "id": "emotion-1313",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.5211,
+      "probabilities": {
+        "sadness": 0.4456,
+        "joy": 0.5211,
+        "love": 0.0181,
+        "anger": 0.0044,
+        "fear": 0.0075,
+        "surprise": 0.0033
+      },
+      "latencyMs": 288,
+      "inputTokens": 228,
+      "outputTokens": 0,
+      "costUsd": 0.00002052,
+      "error": null
+    },
+    {
+      "id": "emotion-1320",
+      "truth": "anger",
+      "predicted": "joy",
+      "probability": 0.8994,
+      "probabilities": {
+        "sadness": 0.0128,
+        "joy": 0.8994,
+        "love": 0.0295,
+        "anger": 0.0322,
+        "fear": 0.0141,
+        "surprise": 0.012
+      },
+      "latencyMs": 495,
+      "inputTokens": 236,
+      "outputTokens": 0,
+      "costUsd": 0.00002124,
+      "error": null
+    },
+    {
+      "id": "emotion-1326",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.9472,
+      "probabilities": {
+        "sadness": 0.9472,
+        "joy": 0.0085,
+        "love": 0.018,
+        "anger": 0.0086,
+        "fear": 0.0114,
+        "surprise": 0.0063
+      },
+      "latencyMs": 345,
+      "inputTokens": 218,
+      "outputTokens": 0,
+      "costUsd": 0.000019620000000000002,
+      "error": null
+    },
+    {
+      "id": "emotion-1333",
+      "truth": "love",
+      "predicted": "love",
+      "probability": 0.9657,
+      "probabilities": {
+        "sadness": 0.0159,
+        "joy": 0.0064,
+        "love": 0.9657,
+        "anger": 0.0039,
+        "fear": 0.0042,
+        "surprise": 0.0039
+      },
+      "latencyMs": 348,
+      "inputTokens": 210,
+      "outputTokens": 0,
+      "costUsd": 0.0000189,
+      "error": null
+    },
+    {
+      "id": "emotion-1340",
+      "truth": "love",
+      "predicted": "sadness",
+      "probability": 0.7578,
+      "probabilities": {
+        "sadness": 0.7578,
+        "joy": 0.0143,
+        "love": 0.0074,
+        "anger": 0.0113,
+        "fear": 0.1923,
+        "surprise": 0.0169
+      },
+      "latencyMs": 498,
+      "inputTokens": 227,
+      "outputTokens": 0,
+      "costUsd": 0.00002043,
+      "error": null
+    },
+    {
+      "id": "emotion-1346",
+      "truth": "love",
+      "predicted": "sadness",
+      "probability": 0.8444,
+      "probabilities": {
+        "sadness": 0.8444,
+        "joy": 0.0092,
+        "love": 0.0661,
+        "anger": 0.017,
+        "fear": 0.0561,
+        "surprise": 0.0072
+      },
+      "latencyMs": 415,
+      "inputTokens": 214,
+      "outputTokens": 0,
+      "costUsd": 0.00001926,
+      "error": null
+    },
+    {
+      "id": "emotion-1353",
+      "truth": "joy",
+      "predicted": "love",
+      "probability": 0.8935,
+      "probabilities": {
+        "sadness": 0.0062,
+        "joy": 0.0822,
+        "love": 0.8935,
+        "anger": 0.0037,
+        "fear": 0.0122,
+        "surprise": 0.0022
+      },
+      "latencyMs": 407,
+      "inputTokens": 264,
+      "outputTokens": 0,
+      "costUsd": 0.00002376,
+      "error": null
+    },
+    {
+      "id": "emotion-1360",
+      "truth": "joy",
+      "predicted": "love",
+      "probability": 0.9236,
+      "probabilities": {
+        "sadness": 0.0055,
+        "joy": 0.0534,
+        "love": 0.9236,
+        "anger": 0.0061,
+        "fear": 0.0072,
+        "surprise": 0.0042
+      },
+      "latencyMs": 469,
+      "inputTokens": 215,
+      "outputTokens": 0,
+      "costUsd": 0.00001935,
+      "error": null
+    },
+    {
+      "id": "emotion-1366",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.6153,
+      "probabilities": {
+        "sadness": 0.6153,
+        "joy": 0.0587,
+        "love": 0.0339,
+        "anger": 0.2089,
+        "fear": 0.0491,
+        "surprise": 0.0341
+      },
+      "latencyMs": 301,
+      "inputTokens": 211,
+      "outputTokens": 0,
+      "costUsd": 0.00001899,
+      "error": null
+    },
+    {
+      "id": "emotion-1373",
+      "truth": "joy",
+      "predicted": "fear",
+      "probability": 0.5091,
+      "probabilities": {
+        "sadness": 0.1009,
+        "joy": 0.0285,
+        "love": 0.0179,
+        "anger": 0.0188,
+        "fear": 0.5091,
+        "surprise": 0.3248
+      },
+      "latencyMs": 518,
+      "inputTokens": 235,
+      "outputTokens": 0,
+      "costUsd": 0.00002115,
+      "error": null
+    },
+    {
+      "id": "emotion-1380",
+      "truth": "joy",
+      "predicted": "love",
+      "probability": 0.7742,
+      "probabilities": {
+        "sadness": 0.0671,
+        "joy": 0.1488,
+        "love": 0.7742,
+        "anger": 0.0027,
+        "fear": 0.0034,
+        "surprise": 0.0038
+      },
+      "latencyMs": 506,
+      "inputTokens": 209,
+      "outputTokens": 0,
+      "costUsd": 0.00001881,
+      "error": null
+    },
+    {
+      "id": "emotion-1386",
+      "truth": "love",
+      "predicted": "fear",
+      "probability": 0.7876,
+      "probabilities": {
+        "sadness": 0.1223,
+        "joy": 0.0106,
+        "love": 0.0644,
+        "anger": 0.01,
+        "fear": 0.7876,
+        "surprise": 0.0051
+      },
+      "latencyMs": 419,
+      "inputTokens": 222,
+      "outputTokens": 0,
+      "costUsd": 0.00001998,
+      "error": null
+    },
+    {
+      "id": "emotion-1393",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.9138,
+      "probabilities": {
+        "sadness": 0.9138,
+        "joy": 0.0421,
+        "love": 0.0118,
+        "anger": 0.0142,
+        "fear": 0.0115,
+        "surprise": 0.0066
+      },
+      "latencyMs": 523,
+      "inputTokens": 215,
+      "outputTokens": 0,
+      "costUsd": 0.00001935,
+      "error": null
+    },
+    {
+      "id": "emotion-1400",
+      "truth": "joy",
+      "predicted": "love",
+      "probability": 0.8671,
+      "probabilities": {
+        "sadness": 0.0158,
+        "joy": 0.0999,
+        "love": 0.8671,
+        "anger": 0.0045,
+        "fear": 0.0055,
+        "surprise": 0.0072
+      },
+      "latencyMs": 543,
+      "inputTokens": 230,
+      "outputTokens": 0,
+      "costUsd": 0.0000207,
+      "error": null
+    },
+    {
+      "id": "emotion-1406",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9352,
+      "probabilities": {
+        "sadness": 0.0019,
+        "joy": 0.9352,
+        "love": 0.0157,
+        "anger": 0.0023,
+        "fear": 0.0024,
+        "surprise": 0.0425
+      },
+      "latencyMs": 313,
+      "inputTokens": 212,
+      "outputTokens": 0,
+      "costUsd": 0.00001908,
+      "error": null
+    },
+    {
+      "id": "emotion-1413",
+      "truth": "anger",
+      "predicted": "fear",
+      "probability": 0.4484,
+      "probabilities": {
+        "sadness": 0.3759,
+        "joy": 0.0061,
+        "love": 0.006,
+        "anger": 0.154,
+        "fear": 0.4484,
+        "surprise": 0.0096
+      },
+      "latencyMs": 523,
+      "inputTokens": 211,
+      "outputTokens": 0,
+      "costUsd": 0.00001899,
+      "error": null
+    },
+    {
+      "id": "emotion-1420",
+      "truth": "fear",
+      "predicted": "sadness",
+      "probability": 0.8491,
+      "probabilities": {
+        "sadness": 0.8491,
+        "joy": 0.0101,
+        "love": 0.0199,
+        "anger": 0.0151,
+        "fear": 0.092,
+        "surprise": 0.0138
+      },
+      "latencyMs": 515,
+      "inputTokens": 233,
+      "outputTokens": 0,
+      "costUsd": 0.000020969999999999997,
+      "error": null
+    },
+    {
+      "id": "emotion-1426",
+      "truth": "anger",
+      "predicted": "fear",
+      "probability": 0.9722,
+      "probabilities": {
+        "sadness": 0.0052,
+        "joy": 0.0051,
+        "love": 0.0057,
+        "anger": 0.0063,
+        "fear": 0.9722,
+        "surprise": 0.0055
+      },
+      "latencyMs": 334,
+      "inputTokens": 211,
+      "outputTokens": 0,
+      "costUsd": 0.00001899,
+      "error": null
+    },
+    {
+      "id": "emotion-1433",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.5408,
+      "probabilities": {
+        "sadness": 0.5408,
+        "joy": 0.2603,
+        "love": 0.0375,
+        "anger": 0.113,
+        "fear": 0.0235,
+        "surprise": 0.0249
+      },
+      "latencyMs": 506,
+      "inputTokens": 216,
+      "outputTokens": 0,
+      "costUsd": 0.00001944,
+      "error": null
+    },
+    {
+      "id": "emotion-1440",
+      "truth": "joy",
+      "predicted": "fear",
+      "probability": 0.9659,
+      "probabilities": {
+        "sadness": 0.0097,
+        "joy": 0.006,
+        "love": 0.0075,
+        "anger": 0.0061,
+        "fear": 0.9659,
+        "surprise": 0.0048
+      },
+      "latencyMs": 482,
+      "inputTokens": 232,
+      "outputTokens": 0,
+      "costUsd": 0.00002088,
+      "error": null
+    },
+    {
+      "id": "emotion-1446",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.9322,
+      "probabilities": {
+        "sadness": 0.9322,
+        "joy": 0.0105,
+        "love": 0.0096,
+        "anger": 0.0246,
+        "fear": 0.0153,
+        "surprise": 0.0078
+      },
+      "latencyMs": 382,
+      "inputTokens": 213,
+      "outputTokens": 0,
+      "costUsd": 0.000019169999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-1453",
+      "truth": "sadness",
+      "predicted": "love",
+      "probability": 0.9813,
+      "probabilities": {
+        "sadness": 0.0054,
+        "joy": 0.0044,
+        "love": 0.9813,
+        "anger": 0.003,
+        "fear": 0.0029,
+        "surprise": 0.003
+      },
+      "latencyMs": 613,
+      "inputTokens": 225,
+      "outputTokens": 0,
+      "costUsd": 0.000020249999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-1460",
+      "truth": "joy",
+      "predicted": "anger",
+      "probability": 0.6444,
+      "probabilities": {
+        "sadness": 0.0792,
+        "joy": 0.0031,
+        "love": 0.0028,
+        "anger": 0.6444,
+        "fear": 0.2542,
+        "surprise": 0.0163
+      },
+      "latencyMs": 386,
+      "inputTokens": 246,
+      "outputTokens": 0,
+      "costUsd": 0.00002214,
+      "error": null
+    },
+    {
+      "id": "emotion-1466",
+      "truth": "joy",
+      "predicted": "fear",
+      "probability": 0.3888,
+      "probabilities": {
+        "sadness": 0.1555,
+        "joy": 0.1284,
+        "love": 0.2762,
+        "anger": 0.0271,
+        "fear": 0.3888,
+        "surprise": 0.024
+      },
+      "latencyMs": 562,
+      "inputTokens": 220,
+      "outputTokens": 0,
+      "costUsd": 0.0000198,
+      "error": null
+    },
+    {
+      "id": "emotion-1473",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9765,
+      "probabilities": {
+        "sadness": 0.0033,
+        "joy": 0.9765,
+        "love": 0.009,
+        "anger": 0.0034,
+        "fear": 0.0037,
+        "surprise": 0.0041
+      },
+      "latencyMs": 526,
+      "inputTokens": 215,
+      "outputTokens": 0,
+      "costUsd": 0.00001935,
+      "error": null
+    },
+    {
+      "id": "emotion-1480",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.7609,
+      "probabilities": {
+        "sadness": 0.0707,
+        "joy": 0.7609,
+        "love": 0.1395,
+        "anger": 0.0066,
+        "fear": 0.0136,
+        "surprise": 0.0087
+      },
+      "latencyMs": 325,
+      "inputTokens": 220,
+      "outputTokens": 0,
+      "costUsd": 0.0000198,
+      "error": null
+    },
+    {
+      "id": "emotion-1486",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.8849,
+      "probabilities": {
+        "sadness": 0.0193,
+        "joy": 0.8849,
+        "love": 0.0271,
+        "anger": 0.0246,
+        "fear": 0.0262,
+        "surprise": 0.0179
+      },
+      "latencyMs": 563,
+      "inputTokens": 222,
+      "outputTokens": 0,
+      "costUsd": 0.00001998,
+      "error": null
+    },
+    {
+      "id": "emotion-1493",
+      "truth": "joy",
+      "predicted": "sadness",
+      "probability": 0.9369,
+      "probabilities": {
+        "sadness": 0.9369,
+        "joy": 0.0024,
+        "love": 0.0023,
+        "anger": 0.0029,
+        "fear": 0.053,
+        "surprise": 0.0025
+      },
+      "latencyMs": 548,
+      "inputTokens": 211,
+      "outputTokens": 0,
+      "costUsd": 0.00001899,
+      "error": null
+    },
+    {
+      "id": "emotion-1500",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9787,
+      "probabilities": {
+        "sadness": 0.0028,
+        "joy": 0.9787,
+        "love": 0.0085,
+        "anger": 0.0029,
+        "fear": 0.0029,
+        "surprise": 0.0042
+      },
+      "latencyMs": 492,
+      "inputTokens": 208,
+      "outputTokens": 0,
+      "costUsd": 0.000018719999999999997,
+      "error": null
+    },
+    {
+      "id": "emotion-1506",
+      "truth": "joy",
+      "predicted": "sadness",
+      "probability": 0.6735,
+      "probabilities": {
+        "sadness": 0.6735,
+        "joy": 0.0032,
+        "love": 0.0202,
+        "anger": 0.1263,
+        "fear": 0.174,
+        "surprise": 0.0028
+      },
+      "latencyMs": 490,
+      "inputTokens": 225,
+      "outputTokens": 0,
+      "costUsd": 0.000020249999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-1513",
+      "truth": "love",
+      "predicted": "sadness",
+      "probability": 0.4844,
+      "probabilities": {
+        "sadness": 0.4844,
+        "joy": 0.0458,
+        "love": 0.1771,
+        "anger": 0.1106,
+        "fear": 0.171,
+        "surprise": 0.0111
+      },
+      "latencyMs": 374,
+      "inputTokens": 233,
+      "outputTokens": 0,
+      "costUsd": 0.000020969999999999997,
+      "error": null
+    },
+    {
+      "id": "emotion-1520",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9587,
+      "probabilities": {
+        "sadness": 0.0067,
+        "joy": 0.9587,
+        "love": 0.0064,
+        "anger": 0.0081,
+        "fear": 0.0071,
+        "surprise": 0.013
+      },
+      "latencyMs": 303,
+      "inputTokens": 210,
+      "outputTokens": 0,
+      "costUsd": 0.0000189,
+      "error": null
+    },
+    {
+      "id": "emotion-1526",
+      "truth": "joy",
+      "predicted": "sadness",
+      "probability": 0.8164,
+      "probabilities": {
+        "sadness": 0.8164,
+        "joy": 0.0566,
+        "love": 0.0462,
+        "anger": 0.0278,
+        "fear": 0.0452,
+        "surprise": 0.0078
+      },
+      "latencyMs": 525,
+      "inputTokens": 218,
+      "outputTokens": 0,
+      "costUsd": 0.000019620000000000002,
+      "error": null
+    },
+    {
+      "id": "emotion-1533",
+      "truth": "anger",
+      "predicted": "sadness",
+      "probability": 0.5094,
+      "probabilities": {
+        "sadness": 0.5094,
+        "joy": 0.0154,
+        "love": 0.004,
+        "anger": 0.2798,
+        "fear": 0.1857,
+        "surprise": 0.0057
+      },
+      "latencyMs": 554,
+      "inputTokens": 254,
+      "outputTokens": 0,
+      "costUsd": 0.000022859999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-1540",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.9134,
+      "probabilities": {
+        "sadness": 0.9134,
+        "joy": 0.0161,
+        "love": 0.0248,
+        "anger": 0.0091,
+        "fear": 0.0282,
+        "surprise": 0.0084
+      },
+      "latencyMs": 345,
+      "inputTokens": 234,
+      "outputTokens": 0,
+      "costUsd": 0.000021059999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-1546",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.8747,
+      "probabilities": {
+        "sadness": 0.8747,
+        "joy": 0.0122,
+        "love": 0.0054,
+        "anger": 0.0779,
+        "fear": 0.0231,
+        "surprise": 0.0067
+      },
+      "latencyMs": 477,
+      "inputTokens": 214,
+      "outputTokens": 0,
+      "costUsd": 0.00001926,
+      "error": null
+    },
+    {
+      "id": "emotion-1553",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9475,
+      "probabilities": {
+        "sadness": 0.0079,
+        "joy": 0.9475,
+        "love": 0.0211,
+        "anger": 0.0049,
+        "fear": 0.0148,
+        "surprise": 0.0038
+      },
+      "latencyMs": 525,
+      "inputTokens": 221,
+      "outputTokens": 0,
+      "costUsd": 0.00001989,
+      "error": null
+    },
+    {
+      "id": "emotion-1560",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.628,
+      "probabilities": {
+        "sadness": 0.628,
+        "joy": 0.0027,
+        "love": 0.0026,
+        "anger": 0.0071,
+        "fear": 0.3575,
+        "surprise": 0.0021
+      },
+      "latencyMs": 329,
+      "inputTokens": 210,
+      "outputTokens": 0,
+      "costUsd": 0.0000189,
+      "error": null
+    },
+    {
+      "id": "emotion-1566",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.5516,
+      "probabilities": {
+        "sadness": 0.0024,
+        "joy": 0.5516,
+        "love": 0.416,
+        "anger": 0.0022,
+        "fear": 0.0021,
+        "surprise": 0.0257
+      },
+      "latencyMs": 453,
+      "inputTokens": 246,
+      "outputTokens": 0,
+      "costUsd": 0.00002214,
+      "error": null
+    },
+    {
+      "id": "emotion-1573",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.6001,
+      "probabilities": {
+        "sadness": 0.0046,
+        "joy": 0.6001,
+        "love": 0.3486,
+        "anger": 0.0034,
+        "fear": 0.0036,
+        "surprise": 0.0397
+      },
+      "latencyMs": 270,
+      "inputTokens": 215,
+      "outputTokens": 0,
+      "costUsd": 0.00001935,
+      "error": null
+    },
+    {
+      "id": "emotion-1580",
+      "truth": "sadness",
+      "predicted": "fear",
+      "probability": 0.5635,
+      "probabilities": {
+        "sadness": 0.2718,
+        "joy": 0.0046,
+        "love": 0.004,
+        "anger": 0.0124,
+        "fear": 0.5635,
+        "surprise": 0.1437
+      },
+      "latencyMs": 367,
+      "inputTokens": 239,
+      "outputTokens": 0,
+      "costUsd": 0.00002151,
+      "error": null
+    },
+    {
+      "id": "emotion-1586",
+      "truth": "anger",
+      "predicted": "anger",
+      "probability": 0.6796,
+      "probabilities": {
+        "sadness": 0.1886,
+        "joy": 0.0054,
+        "love": 0.0094,
+        "anger": 0.6796,
+        "fear": 0.1129,
+        "surprise": 0.0041
+      },
+      "latencyMs": 351,
+      "inputTokens": 219,
+      "outputTokens": 0,
+      "costUsd": 0.00001971,
+      "error": null
+    },
+    {
+      "id": "emotion-1593",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.7553,
+      "probabilities": {
+        "sadness": 0.7553,
+        "joy": 0.009,
+        "love": 0.047,
+        "anger": 0.0067,
+        "fear": 0.1759,
+        "surprise": 0.0061
+      },
+      "latencyMs": 351,
+      "inputTokens": 228,
+      "outputTokens": 0,
+      "costUsd": 0.00002052,
+      "error": null
+    },
+    {
+      "id": "emotion-1600",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.7286,
+      "probabilities": {
+        "sadness": 0.7286,
+        "joy": 0.004,
+        "love": 0.0045,
+        "anger": 0.1049,
+        "fear": 0.1504,
+        "surprise": 0.0076
+      },
+      "latencyMs": 522,
+      "inputTokens": 226,
+      "outputTokens": 0,
+      "costUsd": 0.00002034,
+      "error": null
+    },
+    {
+      "id": "emotion-1606",
+      "truth": "fear",
+      "predicted": "sadness",
+      "probability": 0.738,
+      "probabilities": {
+        "sadness": 0.738,
+        "joy": 0.0232,
+        "love": 0.0058,
+        "anger": 0.0477,
+        "fear": 0.1795,
+        "surprise": 0.0058
+      },
+      "latencyMs": 361,
+      "inputTokens": 209,
+      "outputTokens": 0,
+      "costUsd": 0.00001881,
+      "error": null
+    },
+    {
+      "id": "emotion-1613",
+      "truth": "joy",
+      "predicted": "anger",
+      "probability": 0.6553,
+      "probabilities": {
+        "sadness": 0.3356,
+        "joy": 0.0017,
+        "love": 0.0018,
+        "anger": 0.6553,
+        "fear": 0.0036,
+        "surprise": 0.002
+      },
+      "latencyMs": 324,
+      "inputTokens": 225,
+      "outputTokens": 0,
+      "costUsd": 0.000020249999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-1620",
+      "truth": "joy",
+      "predicted": "love",
+      "probability": 0.7094,
+      "probabilities": {
+        "sadness": 0.0032,
+        "joy": 0.2114,
+        "love": 0.7094,
+        "anger": 0.0185,
+        "fear": 0.042,
+        "surprise": 0.0155
+      },
+      "latencyMs": 255,
+      "inputTokens": 228,
+      "outputTokens": 0,
+      "costUsd": 0.00002052,
+      "error": null
+    },
+    {
+      "id": "emotion-1626",
+      "truth": "anger",
+      "predicted": "anger",
+      "probability": 0.8913,
+      "probabilities": {
+        "sadness": 0.0379,
+        "joy": 0.0176,
+        "love": 0.0202,
+        "anger": 0.8913,
+        "fear": 0.0178,
+        "surprise": 0.0152
+      },
+      "latencyMs": 502,
+      "inputTokens": 224,
+      "outputTokens": 0,
+      "costUsd": 0.00002016,
+      "error": null
+    },
+    {
+      "id": "emotion-1633",
+      "truth": "fear",
+      "predicted": "joy",
+      "probability": 0.6682,
+      "probabilities": {
+        "sadness": 0.0024,
+        "joy": 0.6682,
+        "love": 0.0031,
+        "anger": 0.0026,
+        "fear": 0.318,
+        "surprise": 0.0057
+      },
+      "latencyMs": 253,
+      "inputTokens": 216,
+      "outputTokens": 0,
+      "costUsd": 0.00001944,
+      "error": null
+    },
+    {
+      "id": "emotion-1640",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.6515,
+      "probabilities": {
+        "sadness": 0.0073,
+        "joy": 0.6515,
+        "love": 0.3136,
+        "anger": 0.0112,
+        "fear": 0.0071,
+        "surprise": 0.0093
+      },
+      "latencyMs": 311,
+      "inputTokens": 213,
+      "outputTokens": 0,
+      "costUsd": 0.000019169999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-1646",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.6141,
+      "probabilities": {
+        "sadness": 0.0042,
+        "joy": 0.6141,
+        "love": 0.3525,
+        "anger": 0.0047,
+        "fear": 0.0032,
+        "surprise": 0.0213
+      },
+      "latencyMs": 369,
+      "inputTokens": 212,
+      "outputTokens": 0,
+      "costUsd": 0.00001908,
+      "error": null
+    },
+    {
+      "id": "emotion-1653",
+      "truth": "fear",
+      "predicted": "sadness",
+      "probability": 0.7655,
+      "probabilities": {
+        "sadness": 0.7655,
+        "joy": 0.0048,
+        "love": 0.0035,
+        "anger": 0.0375,
+        "fear": 0.1847,
+        "surprise": 0.004
+      },
+      "latencyMs": 360,
+      "inputTokens": 209,
+      "outputTokens": 0,
+      "costUsd": 0.00001881,
+      "error": null
+    },
+    {
+      "id": "emotion-1660",
+      "truth": "sadness",
+      "predicted": "love",
+      "probability": 0.8623,
+      "probabilities": {
+        "sadness": 0.0483,
+        "joy": 0.0473,
+        "love": 0.8623,
+        "anger": 0.0026,
+        "fear": 0.0382,
+        "surprise": 0.0013
+      },
+      "latencyMs": 364,
+      "inputTokens": 236,
+      "outputTokens": 0,
+      "costUsd": 0.00002124,
+      "error": null
+    },
+    {
+      "id": "emotion-1666",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.9554,
+      "probabilities": {
+        "sadness": 0.9554,
+        "joy": 0.0106,
+        "love": 0.0076,
+        "anger": 0.0088,
+        "fear": 0.0116,
+        "surprise": 0.006
+      },
+      "latencyMs": 258,
+      "inputTokens": 227,
+      "outputTokens": 0,
+      "costUsd": 0.00002043,
+      "error": null
+    },
+    {
+      "id": "emotion-1673",
+      "truth": "fear",
+      "predicted": "fear",
+      "probability": 0.526,
+      "probabilities": {
+        "sadness": 0.4325,
+        "joy": 0.0021,
+        "love": 0.0023,
+        "anger": 0.0343,
+        "fear": 0.526,
+        "surprise": 0.0028
+      },
+      "latencyMs": 544,
+      "inputTokens": 249,
+      "outputTokens": 0,
+      "costUsd": 0.000022409999999999997,
+      "error": null
+    },
+    {
+      "id": "emotion-1680",
+      "truth": "love",
+      "predicted": "love",
+      "probability": 0.8153,
+      "probabilities": {
+        "sadness": 0.0066,
+        "joy": 0.1673,
+        "love": 0.8153,
+        "anger": 0.0038,
+        "fear": 0.0037,
+        "surprise": 0.0033
+      },
+      "latencyMs": 383,
+      "inputTokens": 215,
+      "outputTokens": 0,
+      "costUsd": 0.00001935,
+      "error": null
+    },
+    {
+      "id": "emotion-1686",
+      "truth": "joy",
+      "predicted": "sadness",
+      "probability": 0.8533,
+      "probabilities": {
+        "sadness": 0.8533,
+        "joy": 0.1159,
+        "love": 0.0042,
+        "anger": 0.0128,
+        "fear": 0.0063,
+        "surprise": 0.0075
+      },
+      "latencyMs": 306,
+      "inputTokens": 222,
+      "outputTokens": 0,
+      "costUsd": 0.00001998,
+      "error": null
+    },
+    {
+      "id": "emotion-1693",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.8287,
+      "probabilities": {
+        "sadness": 0.0172,
+        "joy": 0.8287,
+        "love": 0.0206,
+        "anger": 0.1091,
+        "fear": 0.0122,
+        "surprise": 0.0122
+      },
+      "latencyMs": 369,
+      "inputTokens": 207,
+      "outputTokens": 0,
+      "costUsd": 0.00001863,
+      "error": null
+    },
+    {
+      "id": "emotion-1700",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.7376,
+      "probabilities": {
+        "sadness": 0.0027,
+        "joy": 0.7376,
+        "love": 0.2529,
+        "anger": 0.0021,
+        "fear": 0.0024,
+        "surprise": 0.0023
+      },
+      "latencyMs": 690,
+      "inputTokens": 221,
+      "outputTokens": 0,
+      "costUsd": 0.00001989,
+      "error": null
+    },
+    {
+      "id": "emotion-1706",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.8774,
+      "probabilities": {
+        "sadness": 0.8774,
+        "joy": 0.005,
+        "love": 0.0588,
+        "anger": 0.0327,
+        "fear": 0.0209,
+        "surprise": 0.0052
+      },
+      "latencyMs": 510,
+      "inputTokens": 231,
+      "outputTokens": 0,
+      "costUsd": 0.00002079,
+      "error": null
+    },
+    {
+      "id": "emotion-1713",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.9709,
+      "probabilities": {
+        "sadness": 0.9709,
+        "joy": 0.0043,
+        "love": 0.0035,
+        "anger": 0.0036,
+        "fear": 0.0146,
+        "surprise": 0.0031
+      },
+      "latencyMs": 302,
+      "inputTokens": 209,
+      "outputTokens": 0,
+      "costUsd": 0.00001881,
+      "error": null
+    },
+    {
+      "id": "emotion-1720",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.8111,
+      "probabilities": {
+        "sadness": 0.8111,
+        "joy": 0.0108,
+        "love": 0.0092,
+        "anger": 0.1013,
+        "fear": 0.0557,
+        "surprise": 0.0119
+      },
+      "latencyMs": 307,
+      "inputTokens": 220,
+      "outputTokens": 0,
+      "costUsd": 0.0000198,
+      "error": null
+    },
+    {
+      "id": "emotion-1726",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9685,
+      "probabilities": {
+        "sadness": 0.0031,
+        "joy": 0.9685,
+        "love": 0.0058,
+        "anger": 0.0037,
+        "fear": 0.0152,
+        "surprise": 0.0037
+      },
+      "latencyMs": 258,
+      "inputTokens": 211,
+      "outputTokens": 0,
+      "costUsd": 0.00001899,
+      "error": null
+    },
+    {
+      "id": "emotion-1733",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.8421,
+      "probabilities": {
+        "sadness": 0.0212,
+        "joy": 0.8421,
+        "love": 0.0406,
+        "anger": 0.0225,
+        "fear": 0.0464,
+        "surprise": 0.0272
+      },
+      "latencyMs": 331,
+      "inputTokens": 223,
+      "outputTokens": 0,
+      "costUsd": 0.00002007,
+      "error": null
+    },
+    {
+      "id": "emotion-1740",
+      "truth": "fear",
+      "predicted": "fear",
+      "probability": 0.5916,
+      "probabilities": {
+        "sadness": 0.3673,
+        "joy": 0.0035,
+        "love": 0.0027,
+        "anger": 0.0322,
+        "fear": 0.5916,
+        "surprise": 0.0027
+      },
+      "latencyMs": 328,
+      "inputTokens": 220,
+      "outputTokens": 0,
+      "costUsd": 0.0000198,
+      "error": null
+    },
+    {
+      "id": "emotion-1746",
+      "truth": "joy",
+      "predicted": "love",
+      "probability": 0.7528,
+      "probabilities": {
+        "sadness": 0.0441,
+        "joy": 0.0069,
+        "love": 0.7528,
+        "anger": 0.0153,
+        "fear": 0.178,
+        "surprise": 0.0029
+      },
+      "latencyMs": 478,
+      "inputTokens": 219,
+      "outputTokens": 0,
+      "costUsd": 0.00001971,
+      "error": null
+    },
+    {
+      "id": "emotion-1753",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9718,
+      "probabilities": {
+        "sadness": 0.0032,
+        "joy": 0.9718,
+        "love": 0.0088,
+        "anger": 0.004,
+        "fear": 0.007,
+        "surprise": 0.0052
+      },
+      "latencyMs": 348,
+      "inputTokens": 215,
+      "outputTokens": 0,
+      "costUsd": 0.00001935,
+      "error": null
+    },
+    {
+      "id": "emotion-1760",
+      "truth": "fear",
+      "predicted": "fear",
+      "probability": 0.9163,
+      "probabilities": {
+        "sadness": 0.0268,
+        "joy": 0.0203,
+        "love": 0.0154,
+        "anger": 0.012,
+        "fear": 0.9163,
+        "surprise": 0.0092
+      },
+      "latencyMs": 337,
+      "inputTokens": 219,
+      "outputTokens": 0,
+      "costUsd": 0.00001971,
+      "error": null
+    },
+    {
+      "id": "emotion-1766",
+      "truth": "joy",
+      "predicted": "love",
+      "probability": 0.7727,
+      "probabilities": {
+        "sadness": 0.039,
+        "joy": 0.1609,
+        "love": 0.7727,
+        "anger": 0.0092,
+        "fear": 0.0159,
+        "surprise": 0.0023
+      },
+      "latencyMs": 305,
+      "inputTokens": 222,
+      "outputTokens": 0,
+      "costUsd": 0.00001998,
+      "error": null
+    },
+    {
+      "id": "emotion-1773",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9146,
+      "probabilities": {
+        "sadness": 0.0036,
+        "joy": 0.9146,
+        "love": 0.0649,
+        "anger": 0.0033,
+        "fear": 0.0035,
+        "surprise": 0.0101
+      },
+      "latencyMs": 239,
+      "inputTokens": 232,
+      "outputTokens": 0,
+      "costUsd": 0.00002088,
+      "error": null
+    },
+    {
+      "id": "emotion-1780",
+      "truth": "anger",
+      "predicted": "sadness",
+      "probability": 0.9051,
+      "probabilities": {
+        "sadness": 0.9051,
+        "joy": 0.0077,
+        "love": 0.0178,
+        "anger": 0.0151,
+        "fear": 0.0214,
+        "surprise": 0.0329
+      },
+      "latencyMs": 523,
+      "inputTokens": 213,
+      "outputTokens": 0,
+      "costUsd": 0.000019169999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-1786",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.8224,
+      "probabilities": {
+        "sadness": 0.1209,
+        "joy": 0.8224,
+        "love": 0.0229,
+        "anger": 0.0109,
+        "fear": 0.0139,
+        "surprise": 0.009
+      },
+      "latencyMs": 349,
+      "inputTokens": 215,
+      "outputTokens": 0,
+      "costUsd": 0.00001935,
+      "error": null
+    },
+    {
+      "id": "emotion-1793",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.8171,
+      "probabilities": {
+        "sadness": 0.01,
+        "joy": 0.8171,
+        "love": 0.0104,
+        "anger": 0.0097,
+        "fear": 0.1414,
+        "surprise": 0.0114
+      },
+      "latencyMs": 407,
+      "inputTokens": 211,
+      "outputTokens": 0,
+      "costUsd": 0.00001899,
+      "error": null
+    },
+    {
+      "id": "emotion-1800",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.7118,
+      "probabilities": {
+        "sadness": 0.0029,
+        "joy": 0.7118,
+        "love": 0.2782,
+        "anger": 0.0021,
+        "fear": 0.0022,
+        "surprise": 0.0028
+      },
+      "latencyMs": 314,
+      "inputTokens": 217,
+      "outputTokens": 0,
+      "costUsd": 0.000019529999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-1806",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.7715,
+      "probabilities": {
+        "sadness": 0.7715,
+        "joy": 0.0132,
+        "love": 0.1124,
+        "anger": 0.0134,
+        "fear": 0.0804,
+        "surprise": 0.0091
+      },
+      "latencyMs": 284,
+      "inputTokens": 222,
+      "outputTokens": 0,
+      "costUsd": 0.00001998,
+      "error": null
+    },
+    {
+      "id": "emotion-1813",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.9305,
+      "probabilities": {
+        "sadness": 0.9305,
+        "joy": 0.005,
+        "love": 0.004,
+        "anger": 0.0395,
+        "fear": 0.017,
+        "surprise": 0.004
+      },
+      "latencyMs": 247,
+      "inputTokens": 214,
+      "outputTokens": 0,
+      "costUsd": 0.00001926,
+      "error": null
+    },
+    {
+      "id": "emotion-1820",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.8889,
+      "probabilities": {
+        "sadness": 0.8889,
+        "joy": 0.0105,
+        "love": 0.0146,
+        "anger": 0.0224,
+        "fear": 0.0535,
+        "surprise": 0.0101
+      },
+      "latencyMs": 360,
+      "inputTokens": 209,
+      "outputTokens": 0,
+      "costUsd": 0.00001881,
+      "error": null
+    },
+    {
+      "id": "emotion-1826",
+      "truth": "joy",
+      "predicted": "love",
+      "probability": 0.6043,
+      "probabilities": {
+        "sadness": 0.0041,
+        "joy": 0.3858,
+        "love": 0.6043,
+        "anger": 0.0019,
+        "fear": 0.0018,
+        "surprise": 0.0021
+      },
+      "latencyMs": 373,
+      "inputTokens": 243,
+      "outputTokens": 0,
+      "costUsd": 0.00002187,
+      "error": null
+    },
+    {
+      "id": "emotion-1833",
+      "truth": "love",
+      "predicted": "sadness",
+      "probability": 0.8387,
+      "probabilities": {
+        "sadness": 0.8387,
+        "joy": 0.0105,
+        "love": 0.0619,
+        "anger": 0.0154,
+        "fear": 0.0652,
+        "surprise": 0.0083
+      },
+      "latencyMs": 496,
+      "inputTokens": 235,
+      "outputTokens": 0,
+      "costUsd": 0.00002115,
+      "error": null
+    },
+    {
+      "id": "emotion-1840",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.5111,
+      "probabilities": {
+        "sadness": 0.0622,
+        "joy": 0.5111,
+        "love": 0.2199,
+        "anger": 0.0594,
+        "fear": 0.0807,
+        "surprise": 0.0667
+      },
+      "latencyMs": 287,
+      "inputTokens": 218,
+      "outputTokens": 0,
+      "costUsd": 0.000019620000000000002,
+      "error": null
+    },
+    {
+      "id": "emotion-1846",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.8788,
+      "probabilities": {
+        "sadness": 0.8788,
+        "joy": 0.0109,
+        "love": 0.0097,
+        "anger": 0.0682,
+        "fear": 0.0221,
+        "surprise": 0.0103
+      },
+      "latencyMs": 287,
+      "inputTokens": 240,
+      "outputTokens": 0,
+      "costUsd": 0.0000216,
+      "error": null
+    },
+    {
+      "id": "emotion-1853",
+      "truth": "fear",
+      "predicted": "love",
+      "probability": 0.3831,
+      "probabilities": {
+        "sadness": 0.2929,
+        "joy": 0.1427,
+        "love": 0.3831,
+        "anger": 0.0097,
+        "fear": 0.1631,
+        "surprise": 0.0085
+      },
+      "latencyMs": 335,
+      "inputTokens": 214,
+      "outputTokens": 0,
+      "costUsd": 0.00001926,
+      "error": null
+    },
+    {
+      "id": "emotion-1860",
+      "truth": "sadness",
+      "predicted": "joy",
+      "probability": 0.4926,
+      "probabilities": {
+        "sadness": 0.1395,
+        "joy": 0.4926,
+        "love": 0.3478,
+        "anger": 0.0097,
+        "fear": 0.0043,
+        "surprise": 0.0061
+      },
+      "latencyMs": 498,
+      "inputTokens": 255,
+      "outputTokens": 0,
+      "costUsd": 0.000022950000000000002,
+      "error": null
+    },
+    {
+      "id": "emotion-1866",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9603,
+      "probabilities": {
+        "sadness": 0.0074,
+        "joy": 0.9603,
+        "love": 0.0147,
+        "anger": 0.0068,
+        "fear": 0.0063,
+        "surprise": 0.0045
+      },
+      "latencyMs": 444,
+      "inputTokens": 219,
+      "outputTokens": 0,
+      "costUsd": 0.00001971,
+      "error": null
+    },
+    {
+      "id": "emotion-1873",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9524,
+      "probabilities": {
+        "sadness": 0.0191,
+        "joy": 0.9524,
+        "love": 0.0076,
+        "anger": 0.0078,
+        "fear": 0.0069,
+        "surprise": 0.0062
+      },
+      "latencyMs": 403,
+      "inputTokens": 218,
+      "outputTokens": 0,
+      "costUsd": 0.000019620000000000002,
+      "error": null
+    },
+    {
+      "id": "emotion-1880",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9448,
+      "probabilities": {
+        "sadness": 0.0092,
+        "joy": 0.9448,
+        "love": 0.0237,
+        "anger": 0.0081,
+        "fear": 0.0081,
+        "surprise": 0.0061
+      },
+      "latencyMs": 402,
+      "inputTokens": 221,
+      "outputTokens": 0,
+      "costUsd": 0.00001989,
+      "error": null
+    },
+    {
+      "id": "emotion-1886",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.7609,
+      "probabilities": {
+        "sadness": 0.7609,
+        "joy": 0.0172,
+        "love": 0.0231,
+        "anger": 0.0185,
+        "fear": 0.1686,
+        "surprise": 0.0117
+      },
+      "latencyMs": 263,
+      "inputTokens": 217,
+      "outputTokens": 0,
+      "costUsd": 0.000019529999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-1893",
+      "truth": "sadness",
+      "predicted": "fear",
+      "probability": 0.8338,
+      "probabilities": {
+        "sadness": 0.0268,
+        "joy": 0.0617,
+        "love": 0.0579,
+        "anger": 0.0101,
+        "fear": 0.8338,
+        "surprise": 0.0097
+      },
+      "latencyMs": 395,
+      "inputTokens": 257,
+      "outputTokens": 0,
+      "costUsd": 0.00002313,
+      "error": null
+    },
+    {
+      "id": "emotion-1900",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.7693,
+      "probabilities": {
+        "sadness": 0.7693,
+        "joy": 0.008,
+        "love": 0.008,
+        "anger": 0.1816,
+        "fear": 0.0266,
+        "surprise": 0.0065
+      },
+      "latencyMs": 389,
+      "inputTokens": 221,
+      "outputTokens": 0,
+      "costUsd": 0.00001989,
+      "error": null
+    },
+    {
+      "id": "emotion-1906",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.8374,
+      "probabilities": {
+        "sadness": 0.8374,
+        "joy": 0.0146,
+        "love": 0.0218,
+        "anger": 0.0198,
+        "fear": 0.0877,
+        "surprise": 0.0187
+      },
+      "latencyMs": 265,
+      "inputTokens": 229,
+      "outputTokens": 0,
+      "costUsd": 0.00002061,
+      "error": null
+    },
+    {
+      "id": "emotion-1913",
+      "truth": "anger",
+      "predicted": "anger",
+      "probability": 0.9759,
+      "probabilities": {
+        "sadness": 0.0039,
+        "joy": 0.005,
+        "love": 0.006,
+        "anger": 0.9759,
+        "fear": 0.0049,
+        "surprise": 0.0043
+      },
+      "latencyMs": 328,
+      "inputTokens": 226,
+      "outputTokens": 0,
+      "costUsd": 0.00002034,
+      "error": null
+    },
+    {
+      "id": "emotion-1920",
+      "truth": "joy",
+      "predicted": "sadness",
+      "probability": 0.9494,
+      "probabilities": {
+        "sadness": 0.9494,
+        "joy": 0.009,
+        "love": 0.0072,
+        "anger": 0.01,
+        "fear": 0.0161,
+        "surprise": 0.0083
+      },
+      "latencyMs": 316,
+      "inputTokens": 233,
+      "outputTokens": 0,
+      "costUsd": 0.000020969999999999997,
+      "error": null
+    },
+    {
+      "id": "emotion-1926",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.9062,
+      "probabilities": {
+        "sadness": 0.9062,
+        "joy": 0.0113,
+        "love": 0.0115,
+        "anger": 0.0466,
+        "fear": 0.016,
+        "surprise": 0.0084
+      },
+      "latencyMs": 316,
+      "inputTokens": 213,
+      "outputTokens": 0,
+      "costUsd": 0.000019169999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-1933",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.9844,
+      "probabilities": {
+        "sadness": 0.0028,
+        "joy": 0.9844,
+        "love": 0.003,
+        "anger": 0.0029,
+        "fear": 0.003,
+        "surprise": 0.0039
+      },
+      "latencyMs": 310,
+      "inputTokens": 215,
+      "outputTokens": 0,
+      "costUsd": 0.00001935,
+      "error": null
+    },
+    {
+      "id": "emotion-1940",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.649,
+      "probabilities": {
+        "sadness": 0.649,
+        "joy": 0.01,
+        "love": 0.0134,
+        "anger": 0.3066,
+        "fear": 0.0139,
+        "surprise": 0.0071
+      },
+      "latencyMs": 330,
+      "inputTokens": 219,
+      "outputTokens": 0,
+      "costUsd": 0.00001971,
+      "error": null
+    },
+    {
+      "id": "emotion-1946",
+      "truth": "anger",
+      "predicted": "sadness",
+      "probability": 0.8704,
+      "probabilities": {
+        "sadness": 0.8704,
+        "joy": 0.013,
+        "love": 0.014,
+        "anger": 0.0228,
+        "fear": 0.0693,
+        "surprise": 0.0105
+      },
+      "latencyMs": 257,
+      "inputTokens": 215,
+      "outputTokens": 0,
+      "costUsd": 0.00001935,
+      "error": null
+    },
+    {
+      "id": "emotion-1953",
+      "truth": "joy",
+      "predicted": "love",
+      "probability": 0.9794,
+      "probabilities": {
+        "sadness": 0.0027,
+        "joy": 0.009,
+        "love": 0.9794,
+        "anger": 0.0027,
+        "fear": 0.0035,
+        "surprise": 0.0027
+      },
+      "latencyMs": 366,
+      "inputTokens": 214,
+      "outputTokens": 0,
+      "costUsd": 0.00001926,
+      "error": null
+    },
+    {
+      "id": "emotion-1960",
+      "truth": "sadness",
+      "predicted": "anger",
+      "probability": 0.7951,
+      "probabilities": {
+        "sadness": 0.0235,
+        "joy": 0.1466,
+        "love": 0.0124,
+        "anger": 0.7951,
+        "fear": 0.0127,
+        "surprise": 0.0097
+      },
+      "latencyMs": 336,
+      "inputTokens": 225,
+      "outputTokens": 0,
+      "costUsd": 0.000020249999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-1966",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.5,
+      "probabilities": {
+        "sadness": 0.0036,
+        "joy": 0.5,
+        "love": 0.311,
+        "anger": 0.0046,
+        "fear": 0.0716,
+        "surprise": 0.1092
+      },
+      "latencyMs": 287,
+      "inputTokens": 218,
+      "outputTokens": 0,
+      "costUsd": 0.000019620000000000002,
+      "error": null
+    },
+    {
+      "id": "emotion-1973",
+      "truth": "joy",
+      "predicted": "joy",
+      "probability": 0.958,
+      "probabilities": {
+        "sadness": 0.0051,
+        "joy": 0.958,
+        "love": 0.0107,
+        "anger": 0.0052,
+        "fear": 0.0055,
+        "surprise": 0.0155
+      },
+      "latencyMs": 427,
+      "inputTokens": 246,
+      "outputTokens": 0,
+      "costUsd": 0.00002214,
+      "error": null
+    },
+    {
+      "id": "emotion-1980",
+      "truth": "sadness",
+      "predicted": "sadness",
+      "probability": 0.9,
+      "probabilities": {
+        "sadness": 0.9,
+        "joy": 0.0126,
+        "love": 0.0119,
+        "anger": 0.0319,
+        "fear": 0.034,
+        "surprise": 0.0096
+      },
+      "latencyMs": 288,
+      "inputTokens": 232,
+      "outputTokens": 0,
+      "costUsd": 0.00002088,
+      "error": null
+    },
+    {
+      "id": "emotion-1986",
+      "truth": "fear",
+      "predicted": "fear",
+      "probability": 0.849,
+      "probabilities": {
+        "sadness": 0.0094,
+        "joy": 0.0071,
+        "love": 0.0085,
+        "anger": 0.1212,
+        "fear": 0.849,
+        "surprise": 0.0048
+      },
+      "latencyMs": 306,
+      "inputTokens": 213,
+      "outputTokens": 0,
+      "costUsd": 0.000019169999999999998,
+      "error": null
+    },
+    {
+      "id": "emotion-1993",
+      "truth": "anger",
+      "predicted": "anger",
+      "probability": 0.9611,
+      "probabilities": {
+        "sadness": 0.0177,
+        "joy": 0.0063,
+        "love": 0.0046,
+        "anger": 0.9611,
+        "fear": 0.0059,
+        "surprise": 0.0044
+      },
+      "latencyMs": 388,
+      "inputTokens": 214,
+      "outputTokens": 0,
+      "costUsd": 0.00001926,
+      "error": null
+    }
+  ]
+}

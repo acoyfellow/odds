@@ -19,7 +19,9 @@
     "site:build": "cd site && bun build.ts",
     "site:deploy": "cd site && bun build.ts && wrangler deploy",
     "prove:auth": "bun scripts/prove-auth.ts",
-    "prove:docs": "bun scripts/prove-docs.ts"
+    "prove:docs": "bun scripts/prove-docs.ts",
+    "eval": "bun evals/run.ts",
+    "eval:report": "bun evals/report.ts"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.0",
@@ -28,6 +30,7 @@
     "@types/bun": "^1.3.14",
     "esbuild-svelte": "^0.9.5",
     "hono": "^4.12.19",
+    "hyparquet": "^1.31.2",
     "shiki": "^4.5.0",
     "svelte": "^5.45.0",
     "svelte-hono": "0.1.2",

@@ -9,3 +9,5 @@ site/src/bundles.generated.ts
 .guardrail
 proof-runs
 site/src/assets.generated.ts
+.eval-cache/
+site/src/eval-report.generated.ts
