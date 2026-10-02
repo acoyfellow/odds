@@ -1,0 +1,23 @@
+evals/runners.ts
+  s_5f86db03525984::t_76a912eea538dd 5-9,16-19,208-211
+notes/animation-prompt.md
+  s_5f86db03525984::t_274e3d54cb2386 1-93
+test/evals.test.ts
+  s_5f86db03525984::t_225fdbdb0a257d 48-78
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "e9e32cd0de2947c4aee0873e69537c4d6e6de983",
+  "prompts": {},
+  "sessions": {
+    "s_5f86db03525984": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a0f8ed-6d1c-75dc-a1fe-8dce6a49abbc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jordan Coeyman <jcoeyman@cloudflare.com>"
+    }
+  }
+}
