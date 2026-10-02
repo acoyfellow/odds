@@ -8,3 +8,4 @@ site/.guardrail
 site/src/bundles.generated.ts
 .guardrail
 proof-runs
+site/src/assets.generated.ts

@@ -41,7 +41,7 @@ async function main(): Promise<void> {
   const html = await page.text();
   checks.push({
     name: 'docs site serves 200 with the docs content',
-    pass: page.status === 200 && html.includes('Ask for') && html.includes('odds-gateway'),
+    pass: page.status === 200 && html.includes('Ask for odds') && html.includes('odds-gateway'),
     detail: { url: SITE, status: page.status, bytes: html.length },
   });
 
