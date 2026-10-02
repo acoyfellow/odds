@@ -70,13 +70,7 @@
       "question": {
         "type": "score",
         "instructions": "How many stars, from 1 to 5, did the writer give this business?",
-        "criteria": [
-          "1 star",
-          "2 stars",
-          "3 stars",
-          "4 stars",
-          "5 stars"
-        ]
+        "criteria": ["1 star", "2 stars", "3 stars", "4 stars", "5 stars"]
       },
       "chatPrompt": "How many stars, from 1 to 5, did the writer give this business?\nAnswer with exactly one number from 1 to 5.\nDo not explain.\n\nText:\n\"\"\"\n<text>\n\"\"\""
     }

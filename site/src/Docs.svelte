@@ -1,4 +1,5 @@
 <script>
+  import ScoreFilm from './ScoreFilm.svelte';
   import { install, snippet } from './snippets.ts';
 
   let { queue, models, code } = $props();
@@ -89,52 +90,8 @@
     <p class="ink m-0 mt-2.5 text-[1.3rem] tracking-[.14em] [font-variant:small-caps]" style="--d:.45s">Ask for odds, not prose.</p>
   </section>
 
-  <figure class="m-0 mt-4" aria-label="Sixteen support tickets judged by Clef, drawn as notes on a staff">
-    <svg class="score-svg h-auto w-full overflow-visible" viewBox="0 0 1500 330" role="img">
-      <text class="ink fill-ink font-serif text-[22px] font-semibold italic" style="--d:.9s" x="20" y="28">Allegro, {queue.rows.length} tickets in {(queue.elapsedMs / 1000).toFixed(1)}s</text>
-      {#each [0, 1, 2, 3, 4] as line (line)}
-        <line class="staff" style="animation-delay:{line * 60}ms" x1="20" x2="1480" y1={STAFF_TOP + line * LINE_GAP} y2={STAFF_TOP + line * LINE_GAP} />
-      {/each}
-      <line class="bar-line" x1="20" x2="20" y1={STAFF_TOP} y2={STAFF_BOTTOM} />
-      <line class="bar-line" x1="1472" x2="1472" y1={STAFF_TOP} y2={STAFF_BOTTOM} />
-      <line class="bar-line thick" x1="1480" x2="1480" y1={STAFF_TOP} y2={STAFF_BOTTOM} />
-      <text class="ink fill-ink font-music text-[128px]" style="--d:.6s" x="34" y={STAFF_BOTTOM + 14}>𝄞</text>
-      <text class="ink fill-ink font-serif text-[40px] font-bold" style="--d:.75s" x="118" y={STAFF_TOP + LINE_GAP * 2 - 4}>16</text>
-      <text class="ink fill-ink font-serif text-[40px] font-bold" style="--d:.75s" x="118" y={STAFF_BOTTOM - 2}>16</text>
-      <rect class="playhead fill-seal" x={LEFT - 2} y={STAFF_TOP - 70} width="2" height={LINE_GAP * 4 + 140} opacity="0" style="--travel:{RIGHT - LEFT}px" />
-
-      {#each notes as note, index (note.row.id)}
-        <g
-          class="note cursor-default outline-none [transform-box:fill-box]"
-          class:filled={note.tone !== 'none'}
-          class:focus={focus === note.row.id}
-          style="--i:{index}"
-          role="button"
-          tabindex="0"
-          aria-label="{note.row.id} {note.row.title}: urgent {percent(note.urgent)}, tone {note.tone}"
-          onmouseenter={() => (focus = note.row.id)}
-          onmouseleave={() => (focus = null)}
-          onfocus={() => (focus = note.row.id)}
-          onblur={() => (focus = null)}
-        >
-          {#if note.rest}
-            <text class="fill-seal font-music text-[54px]" x={note.x - 9} y={STAFF_TOP + LINE_GAP * 2.6}>𝄽</text>
-            <text class="fill-seal font-serif text-[20px] italic" x={note.x} y={STAFF_TOP - 40} text-anchor="middle">tacet</text>
-          {:else}
-            {#each ledgerLines(note.y) as ledger (ledger)}
-              <line class="ledger" x1={note.x - 18} x2={note.x + 18} y1={ledger} y2={ledger} />
-            {/each}
-            <ellipse class="head" cx={note.x} cy={note.y} rx="12" ry="8.5" transform="rotate(-20 {note.x} {note.y})" />
-            <line class="stem" x1={note.x + 11} x2={note.x + 11} y1={note.y - 3} y2={note.y - 62} />
-            {#if note.tone !== 'none'}
-              <text class="fill-ink font-serif text-[24px] font-bold italic" x={note.x} y={STAFF_BOTTOM + 70} text-anchor="middle">{note.tone === 'high' ? 'ff' : 'mf'}</text>
-            {/if}
-          {/if}
-          <text class="ticket fill-faded font-mono text-[13px]" x={note.x} y={STAFF_BOTTOM + 104} text-anchor="middle">{note.row.id.replace('OD-', '')}</text>
-        </g>
-      {/each}
-    </svg>
-    <figcaption class="mx-auto min-h-[3.2em] max-w-[46rem] text-center italic text-faded">
+  <ScoreFilm {queue} {notes} {returned} bind:focus />
+  <p class="mb-0 mt-4 mx-auto min-h-[3.2em] max-w-[46rem] text-center italic text-faded">
       {#if focus}
         {@const note = notes.find((candidate) => candidate.row.id === focus)}
         <span class="font-mono text-[.8em] not-italic text-seal">{note.row.id}</span> {note.row.title}.
@@ -143,8 +100,8 @@
         Each ticket is a note. Height is the odds it is urgent. Solid notes are angry, open notes are calm.
         The rest is a prompt injection that never reaches the model. Recorded run, {queue.recordedAt.slice(0, 10)}, ${queue.costUsd.toFixed(4)}.
       {/if}
-    </figcaption>
-  </figure>
+    </p>
+
 
   <section class="mx-auto mt-14 max-w-[34rem]">
     <h2 class="mb-5 text-center text-[1.2rem] font-normal tracking-[.1em] [font-variant:small-caps]">Returned to the frontier model</h2>
