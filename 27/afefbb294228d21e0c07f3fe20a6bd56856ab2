@@ -1,0 +1,29 @@
+evals/northstar/receipt.json
+  s_5f86db03525984::t_5964a9386b5c57 4,9-12,19-20
+evals/northstar/run.ts
+  s_5f86db03525984::t_5add3c76d0ed92 49,83
+evals/northstar/runs/2026-10-02T17-20-08/baseline.json
+  s_5f86db03525984::t_69150478049d35 1-53
+evals/northstar/runs/2026-10-02T17-20-08/odds.json
+  s_5f86db03525984::t_f33b73597d1f33 1-149
+evals/northstar/runs/2026-10-02T17-20-08/truth.json
+  s_5f86db03525984::t_45534701c923dd 1-1277
+evals/northstar/spend.json
+  s_5f86db03525984::t_cd19bfc08e7b07 2,33-42
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "27afefbb294228d21e0c07f3fe20a6bd56856ab2",
+  "prompts": {},
+  "sessions": {
+    "s_5f86db03525984": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a0f8ed-6d1c-75dc-a1fe-8dce6a49abbc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jordan Coeyman <jcoeyman@cloudflare.com>"
+    }
+  }
+}
