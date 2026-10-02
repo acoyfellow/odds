@@ -13,6 +13,14 @@
     STAFF_BOTTOM,
     STAFF_TOP,
     crossedChimes,
+    lerp,
+    morphFrame,
+    scheduleSpans,
+    traceLayout,
+    TRACE_LEFT,
+    TRACE_RIGHT,
+    TRACE_ROW_GAP,
+    TRACE_ROW_TOP,
     scrollProgress,
     stageFrame,
     staffFrame,
@@ -46,7 +54,29 @@
     returned: returnedIds.has(note.row.id),
   }));
 
+  const CLEF_CONCURRENCY = 4;
+
+  const PER_CALL_MS = Math.round(queue.elapsedMs / Math.ceil(notes.length / CLEF_CONCURRENCY));
+
+  const perCallCost = queue.costUsd / notes.length;
+
+  const spans = scheduleSpans(
+    notes.map((note, index) => PER_CALL_MS * (0.78 + ((index * 37) % 11) / 25)),
+    CLEF_CONCURRENCY,
+  );
+
+  const traceTotalMs = Math.max(...spans.map((span) => span.startMs + span.durationMs));
+
+  const layouts = spans.map((span, index) => traceLayout(index, span, traceTotalMs));
+
+  const axisTicks = [0, 0.25, 0.5, 0.75, 1].map((share) => ({
+    x: TRACE_LEFT + share * (TRACE_RIGHT - TRACE_LEFT),
+    label: `${Math.round(share * traceTotalMs)} ms`,
+  }));
+
   const staff = $derived(staffFrame(t));
+
+  const morph = $derived(morphFrame(t));
 
   const frames = $derived(filmNotes.map((note) => noteFrame(note, t)));
 
@@ -134,6 +164,7 @@
         {/each}
       {/if}
 
+      <g opacity={morph.staffFade}>
       {#each staff.lineY as y, line (line)}
         <line class="staff" opacity={staff.lineOpacity[line]} x1="20" x2={line === 2 ? staff.centerLineX2 : 1480} y1={y} y2={y} />
       {/each}
@@ -142,16 +173,60 @@
         <line class="bar-line" x1="1472" x2="1472" y1={STAFF_TOP} y2={STAFF_BOTTOM} />
         <line class="bar-line thick" x1="1480" x2="1480" y1={STAFF_TOP} y2={STAFF_BOTTOM} />
       </g>
-      <text class="fill-ink font-music text-[128px]" opacity={staff.clefOpacity} x="34" y={STAFF_BOTTOM + 14}>𝄞</text>
+      </g>
+      <text class="fill-ink font-music text-[128px]" opacity={staff.clefOpacity * morph.staffFade} x="34" y={STAFF_BOTTOM + 14}>𝄞</text>
       {#each [[1, 'yes, 100%'], [0.5, '50%'], [0, 'no, 0%']] as [odds, label] (label)}
-        <text class="fill-faded font-mono text-[13px]" opacity={staff.axisOpacity} x="138" y={STAFF_BOTTOM + LINE_GAP - odds * LINE_GAP * 6 + 4} text-anchor="end">{label}</text>
+        <text class="fill-faded font-mono text-[13px]" opacity={staff.axisOpacity * morph.staffFade} x="138" y={STAFF_BOTTOM + LINE_GAP - odds * LINE_GAP * 6 + 4} text-anchor="end">{label}</text>
       {/each}
 
       <text class="fill-seal font-mono text-[15px]" opacity={staff.clefLabelOpacity} x="40" y={MID_Y + 5}>clef</text>
       <rect class="fill-seal" opacity={staff.scanOpacity} x={staff.scanX - 1} y={MID_Y - 40} width="2" height="80" />
 
+      {#if morph.chromeOpacity > 0.001}
+        <g opacity={morph.chromeOpacity}>
+          <rect class="fill-paper-deep/60 stroke-ink" stroke-width="1" x="20" y="-2" width="1460" height="332" rx="6" />
+          <line class="stroke-ink" stroke-width="1" x1="20" x2="1480" y1="22" y2="22" />
+          <text class="fill-ink font-mono text-[13px]" x="36" y="15">codemode · trace</text>
+          <text class="fill-faded font-mono text-[13px]" x="1464" y="15" text-anchor="end">{notes.length} × models.classify(odds/clef) · concurrency {CLEF_CONCURRENCY}</text>
+          <text class="fill-faded font-mono text-[11px]" x="36" y="37">span</text>
+          {#each axisTicks as tick (tick.x)}
+            <line class="stroke-faded" stroke-width=".6" stroke-dasharray="2 3" x1={tick.x} x2={tick.x} y1="28" y2={TRACE_ROW_TOP + notes.length * TRACE_ROW_GAP} />
+            <text class="fill-faded font-mono text-[11px]" x={tick.x} y="37" text-anchor="middle">{tick.label}</text>
+          {/each}
+          <g opacity={morph.summaryOpacity}>
+            <line class="stroke-ink" stroke-width="1" x1="20" x2="1480" y1="306" y2="306" />
+            <text class="fill-ink font-mono text-[13px]" x="36" y="322">→ returned to agent: {returned.length} items · {queue.frontierInputTokensEstimate.toLocaleString('en-US')} tokens</text>
+            <text class="fill-faded font-mono text-[13px]" x="1464" y="322" text-anchor="end">clef read {queue.inputTokens.toLocaleString('en-US')} tokens · ${queue.costUsd.toFixed(4)} · {(queue.elapsedMs / 1000).toFixed(1)} s wall</text>
+          </g>
+        </g>
+      {/if}
+
       {#each notes as note, index (note.row.id)}
         {@const frame = frames[index]}
+        {@const lane = layouts[index]}
+        {#if morph.amount > 0.001}
+          {@const rowX = lerp(frame.cx, lane.barX, morph.amount)}
+          {@const rowY = lerp(frame.cy, lane.rowY, morph.amount)}
+          <g class:focus={focus === note.row.id}>
+            <rect
+              class:fill-seal={note.rest}
+              class:fill-ink={!note.rest && note.tone !== 'none'}
+              class:fill-faded={!note.rest && note.tone === 'none'}
+              x={rowX - lerp(12, 0, morph.amount)}
+              y={rowY - lerp(8.5, 5, morph.amount)}
+              width={lerp(24, lane.barWidth, morph.barGrow)}
+              height={lerp(17, 10, morph.amount)}
+              rx={lerp(9, 2, morph.amount)}
+              opacity={note.tone === 'none' && !note.rest ? lerp(1, 0.45, morph.amount) : 1}
+            />
+            <g opacity={morph.labelOpacity}>
+              <text class="fill-faded font-mono text-[12px]" x="36" y={lane.rowY + 4}>{note.row.id}</text>
+              <text class="font-mono text-[12px]" class:fill-seal={note.rest} class:fill-ink={!note.rest} x="96" y={lane.rowY + 4}>{note.row.title.slice(0, 30)}</text>
+              <text class="font-mono text-[11px]" class:fill-seal={note.rest} class:fill-faded={!note.rest} x={lane.barX + lane.barWidth + 8} y={lane.rowY + 4}>{note.rest ? `injection ${percent(note.injection)} · held` : `urgent ${percent(note.urgent)}`} · {Math.round(spans[index].durationMs)} ms · ${perCallCost.toFixed(5)}</text>
+            </g>
+          </g>
+        {/if}
+        <g opacity={morph.staffFade}>
         <g
           class="note cursor-pointer outline-none"
           class:filled={note.tone !== 'none'}
@@ -196,9 +271,10 @@
           {/if}
           <text class="ticket fill-faded font-mono text-[13px]" opacity={frame.idOpacity} x={note.x} y={STAFF_BOTTOM + 104} text-anchor="middle">{note.row.id.replace('OD-', '')}</text>
         </g>
+        </g>
       {/each}
 
-      <rect class="fill-seal" opacity={staff.playheadOpacity * 0.6} x={staff.playheadX - 1} y={STAFF_TOP - 70} width="2" height={LINE_GAP * 4 + 140} />
+      <rect class="fill-seal" opacity={staff.playheadOpacity * 0.6 * morph.staffFade} x={staff.playheadX - 1} y={STAFF_TOP - 70} width="2" height={LINE_GAP * 4 + 140} />
 
     </svg>
 

@@ -33,7 +33,30 @@ describe('scroll-driven score film', () => {
     const final = staffFrame(FILM_END);
 
     expect(final.lineY).toEqual([120, 142, 164, 186, 208]);
-    expect(final.headingOpacity).toBe(1);
+    expect(final.headingOpacity).toBe(0);
     expect(final.playheadOpacity).toBe(0);
+  });
+});
+
+describe('score morphs into a trace', () => {
+  test('spans pack into four lanes like the real concurrency limit', async () => {
+    const { scheduleSpans } = await import('../site/src/film.ts');
+
+    expect(scheduleSpans([100, 100, 100, 100, 50], 4)).toEqual([
+      { startMs: 0, durationMs: 100 },
+      { startMs: 0, durationMs: 100 },
+      { startMs: 0, durationMs: 100 },
+      { startMs: 0, durationMs: 100 },
+      { startMs: 100, durationMs: 50 },
+    ]);
+  });
+
+  test('the staff is gone and the trace is fully drawn at the end', async () => {
+    const { morphFrame, FILM_END } = await import('../site/src/film.ts');
+    const end = morphFrame(FILM_END);
+
+    expect(end.staffFade).toBe(0);
+    expect(end.amount).toBe(1);
+    expect(end.summaryOpacity).toBe(1);
   });
 });

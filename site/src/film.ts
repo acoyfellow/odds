@@ -1,4 +1,4 @@
-export const FILM_END = 18_000;
+export const FILM_END = 23_000;
 
 export const STAFF_TOP = 120;
 
@@ -198,7 +198,7 @@ export function staffFrame(t: number): StaffFrame {
     clefLabelOpacity: visibleWindow(t, 4_500, 6_000),
     playheadX: lerp(LEFT, RIGHT, segment(t, PLAYHEAD_START, PLAYHEAD_END, linear)),
     playheadOpacity: visibleWindow(t, PLAYHEAD_START - 50, PLAYHEAD_END + 50, 120),
-    headingOpacity: segment(t, 16_400, 17_200),
+    headingOpacity: segment(t, 15_400, 16_000) - segment(t, 16_400, 17_000),
   };
 }
 
@@ -251,6 +251,12 @@ export const FILM_CAPTIONS: readonly FilmCaption[] = [
   },
   { text: 'This message tries to give orders. Clef marks it as a rest.', from: 12_600, to: 13_800 },
   { text: 'The large model reads only these few notes.', from: 14_000, to: 16_300 },
+  { text: 'Now the same run as a trace. Each note was one Clef call.', from: 16_600, to: 19_600 },
+  {
+    text: 'Sixteen calls, four at a time. One short answer goes back to the agent.',
+    from: 19_800,
+    to: 23_300,
+  },
 ];
 
 export function captionOpacity(caption: FilmCaption, t: number): number {
@@ -321,4 +327,77 @@ export function crossedChimes(count: number, from: number, to: number): number[]
   }
 
   return to >= from ? crossed : crossed.reverse();
+}
+
+export const MORPH_START = 16_400;
+
+export const MORPH_END = 19_400;
+
+export const TRACE_END = 23_000;
+
+export const TRACE_ROW_TOP = 46;
+
+export const TRACE_ROW_GAP = 16.5;
+
+export const TRACE_LEFT = 360;
+
+export const TRACE_RIGHT = 1440;
+
+export interface TraceSpan {
+  startMs: number;
+  durationMs: number;
+}
+
+export interface TraceLayout {
+  rowY: number;
+  barX: number;
+  barWidth: number;
+}
+
+export function traceLayout(index: number, span: TraceSpan, totalMs: number): TraceLayout {
+  const scale = (TRACE_RIGHT - TRACE_LEFT) / totalMs;
+
+  return {
+    rowY: TRACE_ROW_TOP + index * TRACE_ROW_GAP,
+    barX: TRACE_LEFT + span.startMs * scale,
+    barWidth: Math.max(3, span.durationMs * scale),
+  };
+}
+
+export function scheduleSpans(durations: readonly number[], concurrency: number): TraceSpan[] {
+  const lanes = Array.from({ length: concurrency }, () => 0);
+
+  return durations.map((durationMs) => {
+    let lane = 0;
+
+    for (let candidate = 1; candidate < lanes.length; candidate += 1) {
+      if (lanes[candidate] < lanes[lane]) lane = candidate;
+    }
+
+    const startMs = lanes[lane];
+
+    lanes[lane] = startMs + durationMs;
+
+    return { startMs, durationMs };
+  });
+}
+
+export interface MorphFrame {
+  amount: number;
+  staffFade: number;
+  chromeOpacity: number;
+  barGrow: number;
+  labelOpacity: number;
+  summaryOpacity: number;
+}
+
+export function morphFrame(t: number): MorphFrame {
+  return {
+    amount: segment(t, MORPH_START, MORPH_END, easeInOut),
+    staffFade: 1 - segment(t, MORPH_START, MORPH_START + 900),
+    chromeOpacity: segment(t, MORPH_START + 600, MORPH_START + 1_400),
+    barGrow: segment(t, MORPH_START + 1_400, MORPH_END + 400),
+    labelOpacity: segment(t, MORPH_END - 400, MORPH_END + 400),
+    summaryOpacity: segment(t, MORPH_END + 300, MORPH_END + 1_200),
+  };
 }

@@ -1,0 +1,16 @@
+{
+  "kind": "odds.receipt/v0",
+  "question": "Can Pi 1.0.0 call Clef with its built-in Workers AI classifier and no odds extension?",
+  "verdict": "observed",
+  "observed": {
+    "piVersion": "1.0.0",
+    "builtinApi": "cloudflare-workers-ai-system-one",
+    "builtinExpects": "{ success, result: { state: 'Completed', result: { answers, usage } } }",
+    "clefReturns": "{ success, result: { model, answers, usage } }",
+    "builtinResult": { "stopReason": "error", "errorMessage": "Cloudflare Workers AI run did not complete (state: undefined)" },
+    "directRestCall": { "status": 200, "answers": { "u": { "type": "noul", "noul": 0.9796 } } }
+  },
+  "inference": "Clef works over plain REST. Pi's built-in System One transport rejects Clef's envelope because Clef does not return the async run record that Jev returns.",
+  "limit": "Pi 1.0.0 only. A small Pi patch that accepts both envelopes would remove the need for odds' transport.",
+  "reproduce": "bun /tmp/proveit/probe.ts (calls Pi's built-in classify with model @cf/cloudflare/clef and a scoped token)"
+}
