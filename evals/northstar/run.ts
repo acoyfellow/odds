@@ -32,7 +32,8 @@ function charge(arm: string, usd: number): void {
   writeFileSync(LEDGER, `${JSON.stringify(ledger, null, 2)}\n`);
 }
 
-export const URGENT_QUESTION = 'Is this a critical bug that a Kubernetes maintainer must fix urgently, before the next release?';
+export const URGENT_QUESTION =
+  'Is this a critical bug that a Kubernetes maintainer must fix urgently, before the next release?';
 
 const ANSWER_RULES =
   'End your reply with one line that starts with URGENT: followed by a comma-separated list of the ids of every issue where the answer to the urgency question is yes, most urgent first. Use the ids exactly as given, for example #123456. Write URGENT: none if there are none.';
