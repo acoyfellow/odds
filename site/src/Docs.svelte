@@ -4,18 +4,25 @@
   let { queue, models, code } = $props();
 
   let copied = $state('');
+
   let focus = $state(null);
 
   const STAFF_TOP = 120;
+
   const LINE_GAP = 22;
+
   const STAFF_BOTTOM = STAFF_TOP + LINE_GAP * 4;
+
   const LEFT = 150;
+
   const RIGHT = 1440;
+
   const step = (RIGHT - LEFT) / queue.rows.length;
 
   const notes = queue.rows.map((row, index) => {
     const urgent = row.answers.urgent.probability;
     const injection = row.answers.injection.probability;
+
     return {
       row,
       x: LEFT + step * (index + 0.5),
@@ -38,8 +45,11 @@
 
   function ledgerLines(y) {
     const lines = [];
+
     for (let line = STAFF_TOP - LINE_GAP; line >= y - 2; line -= LINE_GAP) lines.push(line);
+
     for (let line = STAFF_BOTTOM + LINE_GAP; line <= y + 2; line += LINE_GAP) lines.push(line);
+
     return lines;
   }
 

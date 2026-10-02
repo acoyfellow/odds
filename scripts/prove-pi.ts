@@ -45,30 +45,40 @@ async function main(): Promise<void> {
     noPromptTemplates: true,
     extensionFactories: [odds],
   });
+
   await loader.reload();
+
   const { session } = await createAgentSession({
     resourceLoader: loader,
     sessionManager: SessionManager.inMemory(),
   });
+
   try {
     const models = session.modelRuntime;
     const clef = models.getModelOfType('classifier', ODDS_PROVIDER, 'clef');
+
     if (!clef) throw new Error('odds/clef is not registered in Pi');
     const started = Date.now();
+
     const results = await Promise.all(
       issues.map((issue) => models.classify(clef, { state: issue, questions })),
     );
+
     const failures = results.filter((result) => result.stopReason !== 'stop');
+
     const answers = results.map((result, index) => ({
       id: issues[index].id,
       answers: result.answers,
     }));
+
     const costUsd = results.reduce((sum, result) => sum + (result.usage?.cost.total ?? 0), 0);
     const ordered = answers.map((entry) => entry.answers.frustration);
+
     const expectHighFirst =
       ordered[0]?.type === 'choice' && ordered[0].choice !== 'none' && ordered[2]?.type === 'choice'
         ? ordered[2].choice === 'none'
         : false;
+
     const receipt = {
       kind: 'odds.receipt/v0',
       claim: 'Pi codemode models.classify reaches odds/clef through the default AI Gateway',
@@ -86,10 +96,12 @@ async function main(): Promise<void> {
       },
       at: new Date().toISOString(),
     };
+
     mkdirSync(PROOF_RUNS_DIR, { recursive: true });
     const path = join(PROOF_RUNS_DIR, 'pi-classify-clef.json');
     writeFileSync(path, `${JSON.stringify(receipt, null, 2)}\n`);
     console.log(JSON.stringify(receipt, null, 2));
+
     if (receipt.verdict !== 'observed') process.exit(1);
   } finally {
     session.dispose();

@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { parquetMetadata, parquetReadObjects } from 'hyparquet';
+import { z } from 'zod';
 import type { OddsQuestion } from '../src/client.ts';
 
 export interface EvalItem {
@@ -22,10 +23,15 @@ export interface EvalTask {
   questionId: string;
   question: OddsQuestion;
   labels: readonly string[];
-  toItem(row: Record<string, unknown>, rowIndex: number): EvalItem;
+  toItem(row: DatasetRow, rowIndex: number): EvalItem;
 }
 
+const datasetRow = z.object({ text: z.string(), label: z.coerce.number().int().nonnegative() });
+
+export type DatasetRow = z.infer<typeof datasetRow>;
+
 const EMOTION_LABELS = ['sadness', 'joy', 'love', 'anger', 'fear', 'surprise'] as const;
+
 const STAR_LABELS = ['1', '2', '3', '4', '5'] as const;
 
 export const TASKS: readonly EvalTask[] = [
@@ -50,8 +56,8 @@ export const TASKS: readonly EvalTask[] = [
     labels: ['false', 'true'],
     toItem: (row, rowIndex) => ({
       id: `injection-${rowIndex}`,
-      text: String(row.text),
-      truth: Number(row.label) === 1 ? 'true' : 'false',
+      text: row.text,
+      truth: row.label === 1 ? 'true' : 'false',
     }),
   },
   {
@@ -78,8 +84,8 @@ export const TASKS: readonly EvalTask[] = [
     labels: EMOTION_LABELS,
     toItem: (row, rowIndex) => ({
       id: `emotion-${rowIndex}`,
-      text: String(row.text),
-      truth: EMOTION_LABELS[Number(row.label)],
+      text: row.text,
+      truth: EMOTION_LABELS[row.label],
     }),
   },
   {
@@ -100,8 +106,8 @@ export const TASKS: readonly EvalTask[] = [
     labels: STAR_LABELS,
     toItem: (row, rowIndex) => ({
       id: `stars-${rowIndex}`,
-      text: String(row.text),
-      truth: STAR_LABELS[Number(row.label)],
+      text: row.text,
+      truth: STAR_LABELS[row.label],
     }),
   },
 ];
@@ -110,12 +116,15 @@ const CACHE_DIR = join(import.meta.dir, '..', '.eval-cache');
 
 export function evenlySpacedIndexes(total: number, count: number): number[] {
   if (count >= total) return Array.from({ length: total }, (_, index) => index);
+
   return Array.from({ length: count }, (_, index) => Math.floor((index * total) / count));
 }
 
 export function rowsHash(items: readonly EvalItem[]): string {
   const hash = createHash('sha256');
+
   for (const item of items) hash.update(`${item.id}\u0000${item.truth}\u0000${item.text}\u0000`);
+
   return hash.digest('hex');
 }
 
@@ -125,13 +134,17 @@ export function parquetUrl(task: EvalTask): string {
 
 async function pinnedParquet(task: EvalTask): Promise<ArrayBuffer> {
   const path = join(CACHE_DIR, `${task.id}-${task.revision}.parquet`);
+
   if (!existsSync(path)) {
     const response = await fetch(parquetUrl(task));
+
     if (!response.ok) throw new Error(`${parquetUrl(task)} returned ${response.status}`);
     mkdirSync(CACHE_DIR, { recursive: true });
     writeFileSync(path, new Uint8Array(await response.arrayBuffer()));
   }
+
   const bytes = readFileSync(path);
+
   return bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength);
 }
 
@@ -139,13 +152,18 @@ export async function loadTaskItems(task: EvalTask): Promise<{ items: EvalItem[]
   const file = await pinnedParquet(task);
   const metadata = parquetMetadata(file);
   const total = Number(metadata.num_rows);
-  const rows = (await parquetReadObjects({
-    file,
-    rowStart: 0,
-    rowEnd: Math.min(total, task.window ?? total),
-  })) as Record<string, unknown>[];
+
+  const rows = z.array(datasetRow).parse(
+    await parquetReadObjects({
+      file,
+      rowStart: 0,
+      rowEnd: Math.min(total, task.window ?? total),
+    }),
+  );
+
   const items = evenlySpacedIndexes(rows.length, task.sample).map((index) =>
     task.toItem(rows[index], index),
   );
+
   return { items, total };
 }

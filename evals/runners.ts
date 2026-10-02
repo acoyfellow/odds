@@ -1,5 +1,20 @@
+import { z } from 'zod';
 import { askOdds, type GatewayTarget, type OddsAnswer } from '../src/client.ts';
 import type { EvalItem, EvalTask } from './datasets.ts';
+
+const chatReply = z
+  .object({
+    result: z
+      .object({
+        choices: z.array(
+          z.object({ message: z.object({ content: z.string().nullish() }).partial() }),
+        ),
+        response: z.string(),
+        usage: z.object({ prompt_tokens: z.number(), completion_tokens: z.number() }).partial(),
+      })
+      .partial(),
+  })
+  .partial();
 
 export interface Prediction {
   id: string;
@@ -21,6 +36,16 @@ export interface EvalRunner {
   usdPerMillionInput: number;
   usdPerMillionOutput: number;
   run(task: EvalTask, item: EvalItem): Promise<Prediction>;
+}
+
+const MAX_RETRIES = 4;
+
+const RETRY_BASE_MS = 500;
+
+export function isTransient(error: string): boolean {
+  return /Capacity temporarily exceeded|TimeoutError|gateway returned 5\d\d|gateway returned 429/.test(
+    error,
+  );
 }
 
 function emptyPrediction(item: EvalItem, latencyMs: number, error: string): Prediction {
@@ -46,6 +71,7 @@ function readAnswer(task: EvalTask, answer: OddsAnswer) {
       probabilities: { true: answer.probability, false: 1 - answer.probability },
     };
   }
+
   if (answer.type === 'choice') {
     return {
       predicted: answer.choice,
@@ -53,6 +79,7 @@ function readAnswer(task: EvalTask, answer: OddsAnswer) {
       probabilities: answer.probabilities,
     };
   }
+
   return {
     predicted: task.labels[Math.round(answer.score)],
     probability: answer.confidence,
@@ -73,13 +100,30 @@ export function decisionRunner(
     usdPerMillionInput,
     usdPerMillionOutput: 0,
     async run(task, item) {
-      const started = performance.now();
-      const result = await askOdds(target, modelId, {
+      let started = performance.now();
+
+      let result = await askOdds(target, modelId, {
         state: item.text,
         questions: { [task.questionId]: task.question },
       });
+
+      for (
+        let attempt = 1;
+        !result.ok && isTransient(result.error) && attempt <= MAX_RETRIES;
+        attempt += 1
+      ) {
+        await Bun.sleep(RETRY_BASE_MS * 2 ** attempt);
+        started = performance.now();
+        result = await askOdds(target, modelId, {
+          state: item.text,
+          questions: { [task.questionId]: task.question },
+        });
+      }
+
       const latencyMs = Math.round(performance.now() - started);
+
       if (!result.ok) return emptyPrediction(item, latencyMs, result.error);
+
       return {
         id: item.id,
         truth: item.truth,
@@ -96,12 +140,14 @@ export function decisionRunner(
 
 export function promptFor(task: EvalTask, text: string): string {
   const question = task.question;
+
   const options =
     question.type === 'bool'
       ? 'Answer with exactly one word: true or false.'
       : question.type === 'choice'
         ? `Answer with exactly one of these labels: ${Object.keys(question.criteria).join(', ')}.`
         : `Answer with exactly one number from 1 to ${question.criteria.length}.`;
+
   return `${question.instructions}\n${options}\nDo not explain.\n\nText:\n"""\n${text}\n"""`;
 }
 
@@ -110,8 +156,10 @@ export function parseLabel(task: EvalTask, reply: string): string | null {
     .trim()
     .toLowerCase()
     .replace(/[^a-z0-9 ]/g, ' ');
+
   const words = cleaned.split(/\s+/).filter(Boolean);
   const first = words.find((word) => task.labels.includes(word));
+
   return first ?? null;
 }
 
@@ -123,6 +171,7 @@ export function chatRunner(
   usdPerMillionOutput: number,
 ): EvalRunner {
   const url = `https://gateway.ai.cloudflare.com/v1/${target.accountId}/${target.gateway}/workers-ai/${workersAiId}`;
+
   return {
     id,
     kind: 'chat-model',
@@ -131,6 +180,7 @@ export function chatRunner(
     usdPerMillionOutput,
     async run(task, item) {
       const started = performance.now();
+
       try {
         const response = await fetch(url, {
           method: 'POST',
@@ -142,20 +192,18 @@ export function chatRunner(
           }),
           signal: AbortSignal.timeout(60_000),
         });
+
         const latencyMs = Math.round(performance.now() - started);
-        const body = (await response.json().catch(() => ({}))) as {
-          result?: {
-            choices?: { message?: { content?: string } }[];
-            response?: string;
-            usage?: { prompt_tokens?: number; completion_tokens?: number };
-          };
-        };
+
+        const body = chatReply.safeParse(await response.json().catch(() => undefined)).data ?? {};
+
         if (!response.ok)
           return emptyPrediction(item, latencyMs, `gateway returned ${response.status}`);
         const reply = body.result?.choices?.[0]?.message?.content ?? body.result?.response ?? '';
         const inputTokens = body.result?.usage?.prompt_tokens ?? 0;
         const outputTokens = body.result?.usage?.completion_tokens ?? 0;
         const predicted = parseLabel(task, reply);
+
         return {
           id: item.id,
           truth: item.truth,
@@ -173,7 +221,7 @@ export function chatRunner(
         return emptyPrediction(
           item,
           Math.round(performance.now() - started),
-          `request failed: ${(error as Error).name}`,
+          `request failed: ${error instanceof Error ? error.name : 'Error'}`,
         );
       }
     },

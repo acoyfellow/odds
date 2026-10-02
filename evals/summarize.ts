@@ -34,10 +34,13 @@ export interface Summary {
 
 function confusion(task: EvalTask, predictions: readonly Prediction[]) {
   const table: Record<string, Record<string, number>> = {};
+
   for (const truth of task.labels) {
     table[truth] = Object.fromEntries([...task.labels, 'none'].map((label) => [label, 0]));
   }
+
   for (const p of predictions) table[p.truth][p.predicted ?? 'none'] += 1;
+
   return table;
 }
 
@@ -51,6 +54,7 @@ export function summarize(
   const answered = predictions.filter((p) => p.predicted !== null).length;
   const latencies = predictions.map((p) => p.latencyMs);
   const costUsd = predictions.reduce((sum, p) => sum + p.costUsd, 0);
+
   const base: Summary = {
     n: predictions.length,
     answered,
@@ -64,27 +68,33 @@ export function summarize(
     costUsd,
     costPer1kUsd: predictions.length ? (costUsd / predictions.length) * 1000 : 0,
   };
+
   if (task.question.type === 'choice') {
     base.macroF1 = macroF1(pairs, task.labels);
     base.headline = { name: 'macroF1', value: base.macroF1 };
   }
+
   if (task.question.type === 'score') {
-    const numeric = predictions
-      .filter((p) => p.predicted !== null)
-      .map((p) => ({ predicted: Number(p.predicted), truth: Number(p.truth) }));
+    const numeric = predictions.flatMap((p) =>
+      p.predicted === null ? [] : [{ predicted: Number(p.predicted), truth: Number(p.truth) }],
+    );
+
     base.maeStars = meanAbsoluteError(numeric);
     base.withinOneStar =
       numeric.filter((p) => Math.abs(p.predicted - p.truth) <= 1).length / predictions.length;
     base.headline = { name: 'accuracy', value: base.accuracy };
   }
+
   if (task.question.type === 'bool' && runner.kind === 'decision-model') {
-    const points = predictions
-      .filter((p) => p.probability !== null)
-      .map((p) => ({ probability: p.probability as number, truth: p.truth === 'true' }));
+    const points = predictions.flatMap((p) =>
+      p.probability === null ? [] : [{ probability: p.probability, truth: p.truth === 'true' }],
+    );
+
     base.auroc = auroc(points);
     base.brier = brier(points);
     base.ece = expectedCalibrationError(points);
     base.reliability = reliability(points);
   }
+
   return base;
 }

@@ -1,26 +1,12 @@
+import type { ClassifierFunction, ClassifierResult } from '@earendil-works/pi-ai';
 import type { ExtensionAPI } from '@earendil-works/pi-coding-agent';
-import { askOdds, type OddsQuestion } from '../src/client.ts';
+import { askOdds } from '../src/client.ts';
 import { readConfig, readToken, redact } from '../src/credentials.ts';
 import { ODDS_MODELS } from '../src/models.ts';
 
 export const ODDS_PROVIDER = 'odds';
+
 export const ODDS_API = 'odds-gateway-system-one';
-
-interface ClassifierModelRef {
-  id: string;
-  provider: string;
-  api: string;
-}
-
-interface ClassifierContextLike {
-  state: unknown;
-  questions: Record<string, OddsQuestion>;
-}
-
-interface ClassifierOptionsLike {
-  signal?: AbortSignal;
-  timeoutMs?: number;
-}
 
 function piUsage(inputTokens: number, costUsd: number) {
   return {
@@ -33,46 +19,54 @@ function piUsage(inputTokens: number, costUsd: number) {
   };
 }
 
-export async function classifyThroughGateway(
-  model: ClassifierModelRef,
-  context: ClassifierContextLike,
-  options?: ClassifierOptionsLike,
-) {
-  const base = {
-    api: model.api,
-    provider: model.provider,
-    model: model.id,
-    answers: {},
-    timestamp: Date.now(),
+export type GatewayFetch = (url: string, init: RequestInit) => Promise<Response>;
+
+export function gatewayClassifier(gatewayFetch: GatewayFetch = fetch): ClassifierFunction {
+  return async (model, context, options) => {
+    const base: Omit<ClassifierResult, 'stopReason'> = {
+      api: model.api,
+      provider: model.provider,
+      model: model.id,
+      answers: {},
+      timestamp: Date.now(),
+    };
+
+    let token = '';
+
+    try {
+      const { accountId, gateway } = readConfig();
+      token = readToken();
+
+      const result = await askOdds(
+        { accountId, gateway, token, fetch: gatewayFetch },
+        model.id,
+        { state: context.state, questions: context.questions },
+        options?.signal,
+      );
+
+      const usage = result.usage
+        ? piUsage(result.usage.inputTokens, result.usage.costUsd)
+        : undefined;
+
+      if (result.ok) return { ...base, answers: result.answers, usage, stopReason: 'stop' };
+
+      return {
+        ...base,
+        usage,
+        stopReason: 'error',
+        errorMessage: redact(result.error, token),
+      };
+    } catch (error) {
+      return {
+        ...base,
+        stopReason: options?.signal?.aborted ? 'aborted' : 'error',
+        errorMessage: redact(error instanceof Error ? error.message : String(error), token),
+      };
+    }
   };
-  let token = '';
-  try {
-    const { accountId, gateway } = readConfig();
-    token = readToken();
-    const result = await askOdds(
-      { accountId, gateway, token, timeoutMs: options?.timeoutMs },
-      model.id,
-      { state: context.state, questions: context.questions },
-      options?.signal,
-    );
-    const usage = result.usage
-      ? piUsage(result.usage.inputTokens, result.usage.costUsd)
-      : undefined;
-    if (result.ok) return { ...base, answers: result.answers, usage, stopReason: 'stop' as const };
-    return {
-      ...base,
-      usage,
-      stopReason: 'error' as const,
-      errorMessage: redact(result.error, token),
-    };
-  } catch (error) {
-    return {
-      ...base,
-      stopReason: options?.signal?.aborted ? ('aborted' as const) : ('error' as const),
-      errorMessage: redact((error as Error).message, token),
-    };
-  }
 }
+
+export const classifyThroughGateway = gatewayClassifier();
 
 export default function odds(pi: ExtensionAPI): void {
   pi.registerProvider(ODDS_PROVIDER, {
@@ -89,7 +83,7 @@ export default function odds(pi: ExtensionAPI): void {
     })),
     classifiers: {
       [ODDS_API]: {
-        classify: classifyThroughGateway as never,
+        classify: classifyThroughGateway,
       },
     },
   });

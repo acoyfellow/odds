@@ -1,0 +1,3 @@
+[submodule "tools/anti-slop"]
+	path = tools/anti-slop
+	url = https://github.com/dmmulroy/anti-slop

@@ -30,7 +30,9 @@ export async function highlightSnippets(): Promise<{ snippet: string; install: s
     themes: [engraving],
     langs: ['javascript', 'shellscript'],
   });
+
   const render = (code: string, lang: string) =>
     highlighter.codeToHtml(code, { lang, theme: 'engraving' });
+
   return { snippet: render(snippet, 'javascript'), install: render(install, 'shellscript') };
 }

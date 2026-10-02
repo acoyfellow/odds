@@ -1,10 +1,13 @@
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { z } from 'zod';
 
 const PROOF_RUNS_DIR = join(import.meta.dir, '..', 'proof-runs');
 
 const SITE = process.env.ODDS_DOCS_URL ?? 'https://odds.coey.dev';
+
 const ROOT = join(import.meta.dir, '..');
+
 const FORBIDDEN_BINDINGS = [
   'ai',
   'kv_namespaces',
@@ -14,6 +17,7 @@ const FORBIDDEN_BINDINGS = [
   'services',
   'vars',
 ];
+
 const RETIRED_WORKERS = ['odds', 'odds-capcheck'];
 
 interface Check {
@@ -22,14 +26,26 @@ interface Check {
   detail: unknown;
 }
 
-function wranglerConfig(): Record<string, unknown> {
+const wranglerFile = z.looseObject({
+  ai: z.json().optional(),
+  kv_namespaces: z.json().optional(),
+  durable_objects: z.json().optional(),
+  d1_databases: z.json().optional(),
+  r2_buckets: z.json().optional(),
+  services: z.json().optional(),
+  vars: z.json().optional(),
+});
+
+function wranglerConfig(): z.infer<typeof wranglerFile> {
   const raw = readFileSync(join(ROOT, 'site', 'wrangler.jsonc'), 'utf8');
-  return JSON.parse(raw.replace(/^\s*\/\/.*$/gm, ''));
+
+  return wranglerFile.parse(JSON.parse(raw.replace(/^\s*\/\/.*$/gm, '')));
 }
 
 async function workerExists(name: string): Promise<boolean> {
   const response = await fetch(`https://${name}.coy.workers.dev/`, { redirect: 'manual' });
   const text = await response.text();
+
   return response.status !== 404 || !text.includes('There is nothing here yet');
 }
 
@@ -69,6 +85,7 @@ async function main(): Promise<void> {
   const retired = await Promise.all(
     RETIRED_WORKERS.map(async (name) => ({ name, live: await workerExists(name) })),
   );
+
   checks.push({
     name: 'retired public playground workers are gone',
     pass: retired.every((worker) => !worker.live),
@@ -76,6 +93,7 @@ async function main(): Promise<void> {
   });
 
   const passed = checks.every((check) => check.pass);
+
   const receipt = {
     kind: 'odds.receipt/v0',
     claim: 'odds.coey.dev is static documentation with no bindings and no model access',
@@ -83,9 +101,12 @@ async function main(): Promise<void> {
     observed: { checks },
     at: new Date().toISOString(),
   };
+
   mkdirSync(PROOF_RUNS_DIR, { recursive: true });
   writeFileSync(join(PROOF_RUNS_DIR, 'docs-static.json'), `${JSON.stringify(receipt, null, 2)}\n`);
+
   for (const check of checks) console.log(`${check.pass ? 'PASS' : 'FAIL'} ${check.name}`);
+
   if (!passed) process.exit(1);
 }
 

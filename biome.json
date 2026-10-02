@@ -11,7 +11,9 @@
       "!receipts",
       "!site/.guardrail",
       "!.guardrail",
-      "!site/src/assets.generated.ts"
+      "!site/src/assets.generated.ts",
+      "!.eval-cache",
+      "!tools/anti-slop"
     ]
   },
   "formatter": {

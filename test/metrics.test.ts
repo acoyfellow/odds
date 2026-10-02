@@ -17,6 +17,7 @@ describe('eval metrics', () => {
       { predicted: 'b', truth: 'b' },
       { predicted: 'b', truth: 'b' },
     ];
+
     expect(accuracy(pairs)).toBe(0.75);
     expect(macroF1(pairs, ['a', 'b'])).toBeCloseTo((2 / 3 + 0.8) / 2, 10);
   });
@@ -47,6 +48,7 @@ describe('eval metrics', () => {
       { probability: 1, truth: true },
       { probability: 0, truth: false },
     ];
+
     expect(brier(perfect)).toBe(0);
     expect(expectedCalibrationError(perfect)).toBe(0);
   });
@@ -60,6 +62,7 @@ describe('eval metrics', () => {
       ],
       10,
     );
+
     expect(bins).toEqual([
       { lower: 0, upper: 0.1, count: 1, meanPredicted: 0.05, observedRate: 0 },
       { lower: 0.8, upper: 0.9, count: 2, meanPredicted: 0.85, observedRate: 0.5 },

@@ -14,6 +14,23 @@ import {
 import { summarize } from './summarize.ts';
 
 const CONCURRENCY = 4;
+
+interface EvalManifest {
+  kind: 'odds.eval/v0';
+  startedAt: string;
+  finishedAt?: string;
+  commit: string;
+  command: string;
+  concurrency: number;
+  pricesSource: string;
+  gateway: string;
+  tasks: ReturnType<typeof describeTask>[];
+  models: Pick<
+    EvalRunner,
+    'id' | 'kind' | 'workersAiId' | 'usdPerMillionInput' | 'usdPerMillionOutput'
+  >[];
+}
+
 const PRICES_SOURCE = 'https://developers.cloudflare.com/workers-ai/platform/pricing/';
 
 function runners(target: Parameters<typeof decisionRunner>[0]): EvalRunner[] {
@@ -30,7 +47,7 @@ async function pool<T, R>(
   limit: number,
   work: (item: T) => Promise<R>,
 ): Promise<R[]> {
-  const results: R[] = new Array(items.length);
+  const results: R[] = Array.from({ length: items.length });
   let next = 0;
   await Promise.all(
     Array.from({ length: limit }, async () => {
@@ -40,11 +57,13 @@ async function pool<T, R>(
       }
     }),
   );
+
   return results;
 }
 
 function argument(name: string): string | undefined {
   const flag = process.argv.find((value) => value.startsWith(`--${name}=`));
+
   return flag?.slice(name.length + 3);
 }
 
@@ -62,7 +81,8 @@ async function main(): Promise<void> {
 
   const tasks = TASKS.filter((task) => !onlyTask || task.id === onlyTask);
   const models = runners(target).filter((runner) => !onlyModel || runner.id === onlyModel);
-  const manifest: Record<string, unknown> & { tasks: unknown[] } = {
+
+  const manifest: EvalManifest = {
     kind: 'odds.eval/v0',
     startedAt,
     commit,
@@ -73,7 +93,7 @@ async function main(): Promise<void> {
     concurrency: CONCURRENCY,
     pricesSource: PRICES_SOURCE,
     gateway: 'Cloudflare AI Gateway, Workers AI provider',
-    tasks: [] as unknown[],
+    tasks: [],
     models: models.map(({ id, kind, workersAiId, usdPerMillionInput, usdPerMillionOutput }) => ({
       id,
       kind,
@@ -87,11 +107,14 @@ async function main(): Promise<void> {
     const loaded = await loadTaskItems(task);
     const items = limit ? loaded.items.slice(0, limit) : loaded.items;
     manifest.tasks.push(describeTask(task, items.length, loaded.total, rowsHash(items)));
+
     for (const runner of models) {
       const started = performance.now();
+
       const predictions: Prediction[] = await pool(items, CONCURRENCY, (item) =>
         runner.run(task, item),
       );
+
       const wallMs = Math.round(performance.now() - started);
       const summary = summarize(task, runner, predictions, wallMs);
       writeFileSync(
@@ -106,6 +129,7 @@ async function main(): Promise<void> {
       );
     }
   }
+
   manifest.finishedAt = new Date().toISOString();
   writeFileSync(join(runDir, 'manifest.json'), `${JSON.stringify(manifest, null, 2)}\n`);
   console.log(`wrote ${runDir}`);

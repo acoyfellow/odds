@@ -7,6 +7,7 @@ import Docs from './Docs.svelte';
 import { DEMO_QUEUE } from './demo-data.ts';
 
 const app = new Hono();
+
 attachSvelteRoutes(app, { bundles });
 
 const head = `
@@ -28,6 +29,7 @@ const staticHeaders = {
 
 app.use('*', async (c, next) => {
   await next();
+
   for (const [name, value] of Object.entries(staticHeaders)) c.res.headers.set(name, value);
 });
 

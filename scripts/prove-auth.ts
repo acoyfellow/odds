@@ -1,10 +1,17 @@
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { z } from 'zod';
 import { askOdds, gatewayUrl } from '../src/client.ts';
 import { readConfig, redact, resolveToken } from '../src/credentials.ts';
 import { findOddsModel } from '../src/models.ts';
 
 const PROOF_RUNS_DIR = join(import.meta.dir, '..', 'proof-runs');
+
+const gatewayEnvelope = z.object({ success: z.boolean() }).partial();
+
+const tokenVerification = z.object({
+  result: z.object({ status: z.string(), expires_on: z.string().nullish() }).partial().optional(),
+});
 
 const probe = {
   state: 'Hello there!',
@@ -29,14 +36,17 @@ async function rawStatus(url: string, headers: Record<string, string>) {
       },
     }),
   });
-  const body = (await response.json().catch(() => ({}))) as { success?: boolean };
-  return { status: response.status, success: body.success === true };
+
+  const body = gatewayEnvelope.safeParse(await response.json().catch(() => undefined));
+
+  return { status: response.status, success: body.data?.success === true };
 }
 
 async function main(): Promise<void> {
   const config = readConfig();
   const { token, source } = resolveToken();
   const model = findOddsModel('clef');
+
   if (!model) throw new Error('clef model missing');
   const url = gatewayUrl({ ...config, token }, model);
   const checks: Check[] = [];
@@ -76,6 +86,7 @@ async function main(): Promise<void> {
     join(import.meta.dir, '..', 'src', 'credentials.ts'),
     'utf8',
   );
+
   checks.push({
     name: 'no wrangler OAuth fallback in the credential path',
     pass: !credentialsSource.includes('wrangler'),
@@ -85,7 +96,8 @@ async function main(): Promise<void> {
   const verify = await fetch('https://api.cloudflare.com/client/v4/user/tokens/verify', {
     headers: { authorization: `Bearer ${token}` },
   });
-  const verifyBody = (await verify.json()) as { result?: { status?: string; expires_on?: string } };
+
+  const verifyBody = tokenVerification.parse(await verify.json());
   checks.push({
     name: 'token is an active, dedicated API token',
     pass: verifyBody.result?.status === 'active',
@@ -93,6 +105,7 @@ async function main(): Promise<void> {
   });
 
   const passed = checks.every((check) => check.pass);
+
   const receipt = {
     kind: 'odds.receipt/v0',
     claim: 'odds reaches Clef only with a scoped keychain token; anonymous and forged calls fail',
@@ -100,12 +113,16 @@ async function main(): Promise<void> {
     observed: { gateway: config.gateway, checks },
     at: new Date().toISOString(),
   };
+
   const serialized = `${JSON.stringify(receipt, null, 2)}\n`;
+
   if (serialized.includes(token))
     throw new Error('refusing to write a receipt that contains the token');
   mkdirSync(PROOF_RUNS_DIR, { recursive: true });
   writeFileSync(join(PROOF_RUNS_DIR, 'auth-scoped-token.json'), serialized);
+
   for (const check of checks) console.log(`${check.pass ? 'PASS' : 'FAIL'} ${check.name}`);
+
   if (!passed) process.exit(1);
 }
 

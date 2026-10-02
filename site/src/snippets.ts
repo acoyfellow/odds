@@ -15,10 +15,23 @@ const judged = await Promise.all(issues.map(async (issue) => {
   const r = await models.classify(clef, {
     state: issue,
     questions: {
-      frustration: { type: 'choice', instructions: 'Tone of the writer only.',
-        criteria: { none: 'Calm', mild: 'Irritated', high: 'Angry' } },
-      urgent: { type: 'bool', instructions: 'Needs an engineer today?',
-        criteria: { true: 'Yes', false: 'No' } },
+      frustration: {
+        type: 'choice',
+        instructions: 'Tone of the writer only.',
+        criteria: {
+          none: 'Calm',
+          mild: 'Irritated',
+          high: 'Angry'
+        }
+      },
+      urgent: {
+        type: 'bool',
+        instructions: 'Needs an engineer today?',
+        criteria: {
+          true: 'Yes',
+          false: 'No'
+        }
+      },
     },
   });
   return { issue, ...r.answers };

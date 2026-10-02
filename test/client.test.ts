@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+import type { JsonValue } from '@earendil-works/pi-ai';
 import { askOdds, type GatewayTarget, type OddsRequest, toWireQuestions } from '../src/client.ts';
 
 const request: OddsRequest = {
@@ -25,27 +26,34 @@ const goodAnswers = {
   urgent: { type: 'noul', noul: 0.93 },
 };
 
-function stubTarget(body: unknown, status = 200, calls: unknown[] = []): GatewayTarget {
+interface RecordedCall {
+  url: string;
+  init: RequestInit;
+}
+
+function stubTarget(body: JsonValue, status = 200, calls: RecordedCall[] = []): GatewayTarget {
   return {
     accountId: 'acct',
     gateway: 'default',
     token: 'secret-token',
-    fetch: (async (url: string, init: RequestInit) => {
+    fetch: async (url, init) => {
       calls.push({ url, init });
+
       return new Response(JSON.stringify(body), { status });
-    }) as unknown as typeof fetch,
+    },
   };
 }
 
-function success(answers: unknown) {
+function success(answers: JsonValue) {
   return { success: true, result: { model: 'clef', answers, usage: { input_tokens: 1000 } } };
 }
 
 describe('askOdds', () => {
   test('maps a valid gateway answer and prices usage', async () => {
-    const calls: { url: string; init: RequestInit }[] = [];
+    const calls: RecordedCall[] = [];
     const result = await askOdds(stubTarget(success(goodAnswers), 200, calls), 'clef', request);
     expect(result.ok).toBe(true);
+
     if (!result.ok) return;
     expect(result.answers.urgent).toEqual({ type: 'bool', probability: 0.93 });
     expect(result.answers.team).toMatchObject({ type: 'choice', choice: 'tech' });
@@ -59,23 +67,25 @@ describe('askOdds', () => {
   });
 
   test('rejects invalid input before any network call', async () => {
-    const calls: unknown[] = [];
+    const calls: RecordedCall[] = [];
+
     const result = await askOdds(stubTarget(success(goodAnswers), 200, calls), 'clef', {
       state: 'x',
       questions: { only: { type: 'choice', instructions: 'Pick', criteria: { a: 'A' } } },
     });
+
     expect(result).toMatchObject({ ok: false, status: 400 });
     expect(calls).toHaveLength(0);
   });
 
   test('rejects unknown models before any network call', async () => {
-    const calls: unknown[] = [];
+    const calls: RecordedCall[] = [];
     const result = await askOdds(stubTarget({}, 200, calls), 'gpt-7', request);
     expect(result.ok).toBe(false);
     expect(calls).toHaveLength(0);
   });
 
-  const malformed: [string, unknown][] = [
+  const malformed: [string, JsonValue][] = [
     ['unknown choice label', { ...goodAnswers, team: { ...goodAnswers.team, choice: 'sales' } }],
     [
       'choice that is not the argmax',
@@ -97,6 +107,7 @@ describe('askOdds', () => {
     test(`fails closed on ${name}`, async () => {
       const result = await askOdds(stubTarget(success(answers)), 'clef', request);
       expect(result.ok).toBe(false);
+
       if (result.ok) return;
       expect(result.error).toStartWith('invalid_response');
       expect(result.usage?.inputTokens).toBe(1000);
@@ -109,6 +120,7 @@ describe('askOdds', () => {
       'clef',
       request,
     );
+
     expect(result).toMatchObject({ ok: false, status: 401, error: 'Authentication error' });
     expect(JSON.stringify(result)).not.toContain('secret-token');
   });

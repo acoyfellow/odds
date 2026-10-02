@@ -3,7 +3,9 @@ import { evenlySpacedIndexes, TASKS } from '../evals/datasets.ts';
 import { parseLabel, promptFor } from '../evals/runners.ts';
 
 const emotion = TASKS.find((task) => task.id === 'emotion');
+
 const stars = TASKS.find((task) => task.id === 'stars');
+
 const injection = TASKS.find((task) => task.id === 'injection');
 
 describe('eval sampling', () => {
@@ -29,5 +31,17 @@ describe('chat baseline parsing', () => {
   test('the chat prompt lists exactly the allowed labels', () => {
     if (!emotion) throw new Error('emotion task missing');
     expect(promptFor(emotion, 'x')).toContain('sadness, joy, love, anger, fear, surprise');
+  });
+});
+
+describe('transient gateway errors', () => {
+  test('capacity, timeout, 429 and 5xx are retried; validation failures are not', async () => {
+    const { isTransient } = await import('../evals/runners.ts');
+    expect(isTransient('AiError: AiError: Capacity temporarily exceeded, please try again.')).toBe(
+      true,
+    );
+    expect(isTransient('request failed: TimeoutError')).toBe(true);
+    expect(isTransient('gateway returned 503')).toBe(true);
+    expect(isTransient('invalid_response: answer x chose an unknown label')).toBe(false);
   });
 });
