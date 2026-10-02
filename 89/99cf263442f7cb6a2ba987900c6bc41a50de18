@@ -1,0 +1,37 @@
+.gitignore
+  s_5f86db03525984::t_993505b1d01eb2 11
+bun.lock
+  s_5f86db03525984::t_d9b33c697a2366 10,14,17,163-190,209-224,243-272,277-280,285-288,307-308,313-314,317-320,323-324,331-334,337-338,343-344,359-360,377-380,387-388,395-400,415-438,449-462,465-466,469-470,475-478,487-490,493-494,501-506,517-518,521-524,527-528,533-540,553-566,577-578,583-594,597-598
+package.json
+  s_5f86db03525984::t_a88821f9db6b82 27,31,34
+scripts/prove-docs.ts
+  s_5f86db03525984::t_7a6f3ee3292484 44
+site/build.ts
+  s_5f86db03525984::t_ecc8233ef8e812 1,3-11,19,22
+site/highlight.ts
+  s_5f86db03525984::t_37549c92c50085 1-23
+site/src/Docs.svelte
+  s_5f86db03525984::t_85146562ec6b42 2,4,7-28,30-33,39-43,63,65-72,76-80,82-134,136-148,151-161,163-176,179-181,183,186,189-193,196-197,199
+site/src/app.css
+  s_5f86db03525984::t_631c2f481a5552 1-60
+site/src/snippets.ts
+  s_5f86db03525984::t_1e92e109a1ca0e 1-30
+site/src/worker.ts
+  s_5f86db03525984::t_5e8954a92c19a4 7,17-19,40
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "8999cf263442f7cb6a2ba987900c6bc41a50de18",
+  "prompts": {},
+  "sessions": {
+    "s_5f86db03525984": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a0f8ed-6d1c-75dc-a1fe-8dce6a49abbc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jordan Coeyman <jcoeyman@cloudflare.com>"
+    }
+  }
+}
