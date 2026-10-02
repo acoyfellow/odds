@@ -1,0 +1,25 @@
+receipts/008-pi-builtin-cannot-read-clef.json
+  s_5f86db03525984::t_935a1494e9053e 1-16
+site/src/ScoreFilm.svelte
+  s_5f86db03525984::t_8ffcfd90dc6f20 16-23,57-76,79-80,167,176-177,179,185-203,206-229,274,277
+site/src/film.ts
+  s_5f86db03525984::t_1d01766c4e1853 1,201,254-259,331-403
+test/film.test.ts
+  s_5f86db03525984::t_27f66d75b9ed9e 36,40-62
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "b5c35b98c306f1e717bf697caccc03bf554b1f02",
+  "prompts": {},
+  "sessions": {
+    "s_5f86db03525984": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a0f8ed-6d1c-75dc-a1fe-8dce6a49abbc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jordan Coeyman <jcoeyman@cloudflare.com>"
+    }
+  }
+}
