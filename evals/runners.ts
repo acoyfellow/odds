@@ -2,15 +2,21 @@ import { z } from 'zod';
 import { askOdds, type GatewayTarget, type OddsAnswer } from '../src/client.ts';
 import type { EvalItem, EvalTask } from './datasets.ts';
 
-const chatReply = z
+function stringOrEmpty(value: z.core.util.JSONType | undefined): string {
+  return value === undefined || value === null ? '' : String(value);
+}
+
+export const chatReply = z
   .object({
     result: z
       .object({
         choices: z.array(
           z.object({ message: z.object({ content: z.string().nullish() }).partial() }),
         ),
-        response: z.string(),
-        usage: z.object({ prompt_tokens: z.number(), completion_tokens: z.number() }).partial(),
+        response: z.json(),
+        usage: z
+          .looseObject({ prompt_tokens: z.number(), completion_tokens: z.number() })
+          .partial(),
       })
       .partial(),
   })
@@ -199,7 +205,10 @@ export function chatRunner(
 
         if (!response.ok)
           return emptyPrediction(item, latencyMs, `gateway returned ${response.status}`);
-        const reply = body.result?.choices?.[0]?.message?.content ?? body.result?.response ?? '';
+
+        const reply =
+          body.result?.choices?.[0]?.message?.content ?? stringOrEmpty(body.result?.response);
+
         const inputTokens = body.result?.usage?.prompt_tokens ?? 0;
         const outputTokens = body.result?.usage?.completion_tokens ?? 0;
         const predicted = parseLabel(task, reply);

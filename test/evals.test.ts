@@ -45,3 +45,34 @@ describe('transient gateway errors', () => {
     expect(isTransient('invalid_response: answer x chose an unknown label')).toBe(false);
   });
 });
+
+describe('chat reply parsing', () => {
+  test('accepts the Workers AI OpenAI-style envelope with response: null', async () => {
+    const { chatReply } = await import('../evals/runners.ts');
+
+    const parsed = chatReply.safeParse({
+      result: {
+        choices: [{ message: { content: 'True.', role: 'assistant', refusal: null } }],
+        response: null,
+        usage: { prompt_tokens: 50, completion_tokens: 3, total_tokens: 53, neurons: 1.9 },
+      },
+    });
+
+    expect(parsed.success).toBe(true);
+    expect(parsed.data?.result?.choices?.[0]?.message?.content).toBe('True.');
+  });
+
+  test('accepts response as a parsed boolean, as Workers AI returns for one-word replies', async () => {
+    const { chatReply } = await import('../evals/runners.ts');
+
+    const parsed = chatReply.safeParse({
+      result: {
+        choices: [{ message: { content: 'false' } }],
+        response: false,
+        usage: { prompt_tokens: 9 },
+      },
+    });
+
+    expect(parsed.success).toBe(true);
+  });
+});
