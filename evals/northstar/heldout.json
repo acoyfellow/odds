@@ -1,0 +1,411 @@
+{
+  "heldoutBefore": "2023-06-01",
+  "perClass": 40,
+  "n": 80,
+  "best": {
+    "threshold": 0.06,
+    "f1": 0.8717948717948718
+  },
+  "scored": [
+    {
+      "number": 106772,
+      "truth": true,
+      "probability": 0.9794
+    },
+    {
+      "number": 106694,
+      "truth": true,
+      "probability": 0.8468
+    },
+    {
+      "number": 106656,
+      "truth": true,
+      "probability": 0.3689
+    },
+    {
+      "number": 106589,
+      "truth": true,
+      "probability": 0.0333
+    },
+    {
+      "number": 106573,
+      "truth": true,
+      "probability": 0.8684
+    },
+    {
+      "number": 106529,
+      "truth": true,
+      "probability": 0.506
+    },
+    {
+      "number": 106478,
+      "truth": true,
+      "probability": 0.9261
+    },
+    {
+      "number": 126811,
+      "truth": true,
+      "probability": 0.9336
+    },
+    {
+      "number": 105523,
+      "truth": true,
+      "probability": 0.1361
+    },
+    {
+      "number": 105436,
+      "truth": true,
+      "probability": 0.1115
+    },
+    {
+      "number": 105358,
+      "truth": true,
+      "probability": 0.0744
+    },
+    {
+      "number": 105179,
+      "truth": true,
+      "probability": 0.1116
+    },
+    {
+      "number": 104730,
+      "truth": true,
+      "probability": 0.0085
+    },
+    {
+      "number": 104648,
+      "truth": true,
+      "probability": 0.6633
+    },
+    {
+      "number": 104560,
+      "truth": true,
+      "probability": 0.7839
+    },
+    {
+      "number": 104452,
+      "truth": true,
+      "probability": 0.95
+    },
+    {
+      "number": 104280,
+      "truth": true,
+      "probability": 0.2251
+    },
+    {
+      "number": 103952,
+      "truth": true,
+      "probability": 0.7605
+    },
+    {
+      "number": 103879,
+      "truth": true,
+      "probability": 0.414
+    },
+    {
+      "number": 103682,
+      "truth": true,
+      "probability": 0.6604
+    },
+    {
+      "number": 103651,
+      "truth": true,
+      "probability": 0.0942
+    },
+    {
+      "number": 103647,
+      "truth": true,
+      "probability": 0.9625
+    },
+    {
+      "number": 103623,
+      "truth": true,
+      "probability": 0.1589
+    },
+    {
+      "number": 103606,
+      "truth": true,
+      "probability": 0.9098
+    },
+    {
+      "number": 103578,
+      "truth": true,
+      "probability": 0.0223
+    },
+    {
+      "number": 102988,
+      "truth": true,
+      "probability": 0.9273
+    },
+    {
+      "number": 102887,
+      "truth": true,
+      "probability": 0.6533
+    },
+    {
+      "number": 102806,
+      "truth": true,
+      "probability": 0.778
+    },
+    {
+      "number": 102784,
+      "truth": true,
+      "probability": 0.7243
+    },
+    {
+      "number": 102676,
+      "truth": true,
+      "probability": 0.8702
+    },
+    {
+      "number": 102006,
+      "truth": true,
+      "probability": 0.8331
+    },
+    {
+      "number": 101894,
+      "truth": true,
+      "probability": 0.0097
+    },
+    {
+      "number": 101471,
+      "truth": true,
+      "probability": 0.8554
+    },
+    {
+      "number": 101062,
+      "truth": true,
+      "probability": 0.009
+    },
+    {
+      "number": 101019,
+      "truth": true,
+      "probability": 0.0908
+    },
+    {
+      "number": 100966,
+      "truth": true,
+      "probability": 0.6919
+    },
+    {
+      "number": 100705,
+      "truth": true,
+      "probability": 0.9618
+    },
+    {
+      "number": 100674,
+      "truth": true,
+      "probability": 0.0221
+    },
+    {
+      "number": 100621,
+      "truth": true,
+      "probability": 0.9708
+    },
+    {
+      "number": 100560,
+      "truth": true,
+      "probability": 0.9435
+    },
+    {
+      "number": 118172,
+      "truth": false,
+      "probability": 0.017
+    },
+    {
+      "number": 118028,
+      "truth": false,
+      "probability": 0.0071
+    },
+    {
+      "number": 117955,
+      "truth": false,
+      "probability": 0.1401
+    },
+    {
+      "number": 117809,
+      "truth": false,
+      "probability": 0.0575
+    },
+    {
+      "number": 117405,
+      "truth": false,
+      "probability": 0.0152
+    },
+    {
+      "number": 117385,
+      "truth": false,
+      "probability": 0.0061
+    },
+    {
+      "number": 117101,
+      "truth": false,
+      "probability": 0.01
+    },
+    {
+      "number": 116766,
+      "truth": false,
+      "probability": 0.1436
+    },
+    {
+      "number": 116625,
+      "truth": false,
+      "probability": 0.0117
+    },
+    {
+      "number": 116617,
+      "truth": false,
+      "probability": 0.0117
+    },
+    {
+      "number": 116597,
+      "truth": false,
+      "probability": 0.0314
+    },
+    {
+      "number": 116505,
+      "truth": false,
+      "probability": 0.0119
+    },
+    {
+      "number": 116499,
+      "truth": false,
+      "probability": 0.0082
+    },
+    {
+      "number": 116485,
+      "truth": false,
+      "probability": 0.037
+    },
+    {
+      "number": 116411,
+      "truth": false,
+      "probability": 0.0391
+    },
+    {
+      "number": 116391,
+      "truth": false,
+      "probability": 0.0048
+    },
+    {
+      "number": 116245,
+      "truth": false,
+      "probability": 0.0153
+    },
+    {
+      "number": 116210,
+      "truth": false,
+      "probability": 0.005
+    },
+    {
+      "number": 116117,
+      "truth": false,
+      "probability": 0.0045
+    },
+    {
+      "number": 116032,
+      "truth": false,
+      "probability": 0.4883
+    },
+    {
+      "number": 116026,
+      "truth": false,
+      "probability": 0.0051
+    },
+    {
+      "number": 115823,
+      "truth": false,
+      "probability": 0.0071
+    },
+    {
+      "number": 115782,
+      "truth": false,
+      "probability": 0.0103
+    },
+    {
+      "number": 115553,
+      "truth": false,
+      "probability": 0.0058
+    },
+    {
+      "number": 115201,
+      "truth": false,
+      "probability": 0.0208
+    },
+    {
+      "number": 115199,
+      "truth": false,
+      "probability": 0.0087
+    },
+    {
+      "number": 115175,
+      "truth": false,
+      "probability": 0.009
+    },
+    {
+      "number": 114465,
+      "truth": false,
+      "probability": 0.0046
+    },
+    {
+      "number": 114437,
+      "truth": false,
+      "probability": 0.006
+    },
+    {
+      "number": 114436,
+      "truth": false,
+      "probability": 0.0076
+    },
+    {
+      "number": 114402,
+      "truth": false,
+      "probability": 0.0122
+    },
+    {
+      "number": 114369,
+      "truth": false,
+      "probability": 0.0193
+    },
+    {
+      "number": 114332,
+      "truth": false,
+      "probability": 0.1131
+    },
+    {
+      "number": 114210,
+      "truth": false,
+      "probability": 0.005
+    },
+    {
+      "number": 114057,
+      "truth": false,
+      "probability": 0.0363
+    },
+    {
+      "number": 114008,
+      "truth": false,
+      "probability": 0.0097
+    },
+    {
+      "number": 114005,
+      "truth": false,
+      "probability": 0.0433
+    },
+    {
+      "number": 113867,
+      "truth": false,
+      "probability": 0.0247
+    },
+    {
+      "number": 113855,
+      "truth": false,
+      "probability": 0.0099
+    },
+    {
+      "number": 113722,
+      "truth": false,
+      "probability": 0.0051
+    }
+  ]
+}
