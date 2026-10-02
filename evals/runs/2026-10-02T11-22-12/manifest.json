@@ -1,7 +1,7 @@
 {
   "kind": "odds.eval/v0",
-  "startedAt": "2026-10-02T10:46:05.831Z",
-  "commit": "581cf8272d7177c36ac0427d8d05f4a687a301ab",
+  "startedAt": "2026-10-02T11:22:12.068Z",
+  "commit": "e9e32cd0de2947c4aee0873e69537c4d6e6de983",
   "command": "bun run eval",
   "concurrency": 4,
   "pricesSource": "https://developers.cloudflare.com/workers-ai/platform/pricing/",
@@ -70,7 +70,13 @@
       "question": {
         "type": "score",
         "instructions": "How many stars, from 1 to 5, did the writer give this business?",
-        "criteria": ["1 star", "2 stars", "3 stars", "4 stars", "5 stars"]
+        "criteria": [
+          "1 star",
+          "2 stars",
+          "3 stars",
+          "4 stars",
+          "5 stars"
+        ]
       },
       "chatPrompt": "How many stars, from 1 to 5, did the writer give this business?\nAnswer with exactly one number from 1 to 5.\nDo not explain.\n\nText:\n\"\"\"\n<text>\n\"\"\""
     }
@@ -98,5 +104,5 @@
       "usdPerMillionOutput": 2.253
     }
   ],
-  "finishedAt": "2026-10-02T10:50:40.692Z"
+  "finishedAt": "2026-10-02T11:51:58.261Z"
 }

@@ -67,9 +67,9 @@
       }
     },
     "latency": {
-      "p50Ms": 515,
-      "p95Ms": 819,
-      "wallMs": 40576
+      "p50Ms": 569,
+      "p95Ms": 1006,
+      "wallMs": 47165
     },
     "inputTokens": 66795,
     "outputTokens": 0,
@@ -91,7 +91,7 @@
         "fear": 0.0336,
         "surprise": 0.0079
       },
-      "latencyMs": 438,
+      "latencyMs": 520,
       "inputTokens": 213,
       "outputTokens": 0,
       "costUsd": 0.00005112,
@@ -110,7 +110,7 @@
         "fear": 0.0023,
         "surprise": 0.0021
       },
-      "latencyMs": 481,
+      "latencyMs": 520,
       "inputTokens": 213,
       "outputTokens": 0,
       "costUsd": 0.00005112,
@@ -129,7 +129,7 @@
         "fear": 0.0125,
         "surprise": 0.0121
       },
-      "latencyMs": 438,
+      "latencyMs": 695,
       "inputTokens": 220,
       "outputTokens": 0,
       "costUsd": 0.0000528,
@@ -148,7 +148,7 @@
         "fear": 0.0116,
         "surprise": 0.0064
       },
-      "latencyMs": 752,
+      "latencyMs": 672,
       "inputTokens": 244,
       "outputTokens": 0,
       "costUsd": 0.000058559999999999995,
@@ -167,7 +167,7 @@
         "fear": 0.0044,
         "surprise": 0.0078
       },
-      "latencyMs": 534,
+      "latencyMs": 573,
       "inputTokens": 209,
       "outputTokens": 0,
       "costUsd": 0.00005016,
@@ -186,7 +186,7 @@
         "fear": 0.0887,
         "surprise": 0.0171
       },
-      "latencyMs": 501,
+      "latencyMs": 788,
       "inputTokens": 211,
       "outputTokens": 0,
       "costUsd": 0.000050639999999999996,
@@ -205,7 +205,7 @@
         "fear": 0.0086,
         "surprise": 0.0033
       },
-      "latencyMs": 485,
+      "latencyMs": 865,
       "inputTokens": 229,
       "outputTokens": 0,
       "costUsd": 0.00005496,
@@ -224,7 +224,7 @@
         "fear": 0.002,
         "surprise": 0.0016
       },
-      "latencyMs": 463,
+      "latencyMs": 726,
       "inputTokens": 216,
       "outputTokens": 0,
       "costUsd": 0.00005184,
@@ -243,7 +243,7 @@
         "fear": 0.9625,
         "surprise": 0.0032
       },
-      "latencyMs": 552,
+      "latencyMs": 558,
       "inputTokens": 220,
       "outputTokens": 0,
       "costUsd": 0.0000528,
@@ -262,7 +262,7 @@
         "fear": 0.0089,
         "surprise": 0.006
       },
-      "latencyMs": 526,
+      "latencyMs": 878,
       "inputTokens": 212,
       "outputTokens": 0,
       "costUsd": 0.00005088,
@@ -281,7 +281,7 @@
         "fear": 0.0076,
         "surprise": 0.005
       },
-      "latencyMs": 520,
+      "latencyMs": 764,
       "inputTokens": 215,
       "outputTokens": 0,
       "costUsd": 0.000051599999999999994,
@@ -300,7 +300,7 @@
         "fear": 0.0081,
         "surprise": 0.005
       },
-      "latencyMs": 412,
+      "latencyMs": 1069,
       "inputTokens": 215,
       "outputTokens": 0,
       "costUsd": 0.000051599999999999994,
@@ -319,7 +319,7 @@
         "fear": 0.0128,
         "surprise": 0.0218
       },
-      "latencyMs": 559,
+      "latencyMs": 955,
       "inputTokens": 208,
       "outputTokens": 0,
       "costUsd": 0.000049919999999999996,
@@ -338,7 +338,7 @@
         "fear": 0.0014,
         "surprise": 0.0014
       },
-      "latencyMs": 580,
+      "latencyMs": 630,
       "inputTokens": 225,
       "outputTokens": 0,
       "costUsd": 0.000054,
@@ -357,7 +357,7 @@
         "fear": 0.2864,
         "surprise": 0.3663
       },
-      "latencyMs": 810,
+      "latencyMs": 630,
       "inputTokens": 222,
       "outputTokens": 0,
       "costUsd": 0.00005328,
@@ -376,7 +376,7 @@
         "fear": 0.121,
         "surprise": 0.02
       },
-      "latencyMs": 497,
+      "latencyMs": 719,
       "inputTokens": 226,
       "outputTokens": 0,
       "costUsd": 0.000054239999999999996,
@@ -395,7 +395,7 @@
         "fear": 0.0047,
         "surprise": 0.0018
       },
-      "latencyMs": 349,
+      "latencyMs": 718,
       "inputTokens": 234,
       "outputTokens": 0,
       "costUsd": 0.00005616,
@@ -414,7 +414,7 @@
         "fear": 0.0068,
         "surprise": 0.0058
       },
-      "latencyMs": 509,
+      "latencyMs": 634,
       "inputTokens": 211,
       "outputTokens": 0,
       "costUsd": 0.000050639999999999996,
@@ -433,7 +433,7 @@
         "fear": 0.0063,
         "surprise": 0.0063
       },
-      "latencyMs": 511,
+      "latencyMs": 717,
       "inputTokens": 218,
       "outputTokens": 0,
       "costUsd": 0.00005232,
@@ -452,7 +452,7 @@
         "fear": 0.5631,
         "surprise": 0.0082
       },
-      "latencyMs": 425,
+      "latencyMs": 419,
       "inputTokens": 210,
       "outputTokens": 0,
       "costUsd": 0.0000504,
@@ -471,7 +471,7 @@
         "fear": 0.0267,
         "surprise": 0.013
       },
-      "latencyMs": 521,
+      "latencyMs": 541,
       "inputTokens": 226,
       "outputTokens": 0,
       "costUsd": 0.000054239999999999996,
@@ -490,7 +490,7 @@
         "fear": 0.0291,
         "surprise": 0.0849
       },
-      "latencyMs": 535,
+      "latencyMs": 505,
       "inputTokens": 214,
       "outputTokens": 0,
       "costUsd": 0.000051359999999999996,
@@ -509,7 +509,7 @@
         "fear": 0.0391,
         "surprise": 0.0806
       },
-      "latencyMs": 428,
+      "latencyMs": 758,
       "inputTokens": 237,
       "outputTokens": 0,
       "costUsd": 0.00005688,
@@ -528,7 +528,7 @@
         "fear": 0.011,
         "surprise": 0.0047
       },
-      "latencyMs": 543,
+      "latencyMs": 547,
       "inputTokens": 208,
       "outputTokens": 0,
       "costUsd": 0.000049919999999999996,
@@ -547,7 +547,7 @@
         "fear": 0.0937,
         "surprise": 0.0379
       },
-      "latencyMs": 520,
+      "latencyMs": 629,
       "inputTokens": 208,
       "outputTokens": 0,
       "costUsd": 0.000049919999999999996,
@@ -566,7 +566,7 @@
         "fear": 0.0043,
         "surprise": 0.0027
       },
-      "latencyMs": 526,
+      "latencyMs": 514,
       "inputTokens": 210,
       "outputTokens": 0,
       "costUsd": 0.0000504,
@@ -585,7 +585,7 @@
         "fear": 0.0085,
         "surprise": 0.0464
       },
-      "latencyMs": 575,
+      "latencyMs": 798,
       "inputTokens": 251,
       "outputTokens": 0,
       "costUsd": 0.00006023999999999999,
@@ -604,7 +604,7 @@
         "fear": 0.0974,
         "surprise": 0.3505
       },
-      "latencyMs": 471,
+      "latencyMs": 714,
       "inputTokens": 231,
       "outputTokens": 0,
       "costUsd": 0.00005544,
@@ -623,7 +623,7 @@
         "fear": 0.0184,
         "surprise": 0.0088
       },
-      "latencyMs": 390,
+      "latencyMs": 436,
       "inputTokens": 213,
       "outputTokens": 0,
       "costUsd": 0.00005112,
@@ -642,7 +642,7 @@
         "fear": 0.0096,
         "surprise": 0.0019
       },
-      "latencyMs": 624,
+      "latencyMs": 510,
       "inputTokens": 228,
       "outputTokens": 0,
       "costUsd": 0.00005472,
@@ -661,7 +661,7 @@
         "fear": 0.0319,
         "surprise": 0.0191
       },
-      "latencyMs": 541,
+      "latencyMs": 496,
       "inputTokens": 221,
       "outputTokens": 0,
       "costUsd": 0.00005304,
@@ -680,7 +680,7 @@
         "fear": 0.0289,
         "surprise": 0.0108
       },
-      "latencyMs": 396,
+      "latencyMs": 1714,
       "inputTokens": 250,
       "outputTokens": 0,
       "costUsd": 0.00006,
@@ -699,7 +699,7 @@
         "fear": 0.3072,
         "surprise": 0.1951
       },
-      "latencyMs": 475,
+      "latencyMs": 847,
       "inputTokens": 210,
       "outputTokens": 0,
       "costUsd": 0.0000504,
@@ -718,7 +718,7 @@
         "fear": 0.1095,
         "surprise": 0.059
       },
-      "latencyMs": 555,
+      "latencyMs": 940,
       "inputTokens": 219,
       "outputTokens": 0,
       "costUsd": 0.00005256,
@@ -737,7 +737,7 @@
         "fear": 0.0038,
         "surprise": 0.0033
       },
-      "latencyMs": 422,
+      "latencyMs": 809,
       "inputTokens": 222,
       "outputTokens": 0,
       "costUsd": 0.00005328,
@@ -756,7 +756,7 @@
         "fear": 0.0196,
         "surprise": 0.0471
       },
-      "latencyMs": 448,
+      "latencyMs": 718,
       "inputTokens": 215,
       "outputTokens": 0,
       "costUsd": 0.000051599999999999994,
@@ -775,7 +775,7 @@
         "fear": 0.2044,
         "surprise": 0.0117
       },
-      "latencyMs": 512,
+      "latencyMs": 541,
       "inputTokens": 211,
       "outputTokens": 0,
       "costUsd": 0.000050639999999999996,
@@ -794,7 +794,7 @@
         "fear": 0.0406,
         "surprise": 0.0095
       },
-      "latencyMs": 616,
+      "latencyMs": 540,
       "inputTokens": 222,
       "outputTokens": 0,
       "costUsd": 0.00005328,
@@ -813,7 +813,7 @@
         "fear": 0.043,
         "surprise": 0.0042
       },
-      "latencyMs": 531,
+      "latencyMs": 895,
       "inputTokens": 234,
       "outputTokens": 0,
       "costUsd": 0.00005616,
@@ -832,7 +832,7 @@
         "fear": 0.3151,
         "surprise": 0.0351
       },
-      "latencyMs": 508,
+      "latencyMs": 535,
       "inputTokens": 244,
       "outputTokens": 0,
       "costUsd": 0.000058559999999999995,
@@ -851,7 +851,7 @@
         "fear": 0.0981,
         "surprise": 0.282
       },
-      "latencyMs": 633,
+      "latencyMs": 918,
       "inputTokens": 212,
       "outputTokens": 0,
       "costUsd": 0.00005088,
@@ -870,7 +870,7 @@
         "fear": 0.0147,
         "surprise": 0.0047
       },
-      "latencyMs": 487,
+      "latencyMs": 717,
       "inputTokens": 207,
       "outputTokens": 0,
       "costUsd": 0.00004968,
@@ -889,7 +889,7 @@
         "fear": 0.7238,
         "surprise": 0.0438
       },
-      "latencyMs": 477,
+      "latencyMs": 1074,
       "inputTokens": 238,
       "outputTokens": 0,
       "costUsd": 0.00005712,
@@ -908,7 +908,7 @@
         "fear": 0.0275,
         "surprise": 0.0082
       },
-      "latencyMs": 408,
+      "latencyMs": 536,
       "inputTokens": 222,
       "outputTokens": 0,
       "costUsd": 0.00005328,
@@ -927,7 +927,7 @@
         "fear": 0.012,
         "surprise": 0.0059
       },
-      "latencyMs": 552,
+      "latencyMs": 536,
       "inputTokens": 214,
       "outputTokens": 0,
       "costUsd": 0.000051359999999999996,
@@ -946,7 +946,7 @@
         "fear": 0.0062,
         "surprise": 0.0053
       },
-      "latencyMs": 699,
+      "latencyMs": 364,
       "inputTokens": 228,
       "outputTokens": 0,
       "costUsd": 0.00005472,
@@ -965,7 +965,7 @@
         "fear": 0.0181,
         "surprise": 0.0213
       },
-      "latencyMs": 612,
+      "latencyMs": 351,
       "inputTokens": 222,
       "outputTokens": 0,
       "costUsd": 0.00005328,
@@ -984,7 +984,7 @@
         "fear": 0.0061,
         "surprise": 0.007
       },
-      "latencyMs": 494,
+      "latencyMs": 900,
       "inputTokens": 216,
       "outputTokens": 0,
       "costUsd": 0.00005184,
@@ -1003,7 +1003,7 @@
         "fear": 0.1279,
         "surprise": 0.07
       },
-      "latencyMs": 589,
+      "latencyMs": 498,
       "inputTokens": 228,
       "outputTokens": 0,
       "costUsd": 0.00005472,
@@ -1022,7 +1022,7 @@
         "fear": 0.0234,
         "surprise": 0.0057
       },
-      "latencyMs": 598,
+      "latencyMs": 901,
       "inputTokens": 208,
       "outputTokens": 0,
       "costUsd": 0.000049919999999999996,
@@ -1041,7 +1041,7 @@
         "fear": 0.002,
         "surprise": 0.0152
       },
-      "latencyMs": 612,
+      "latencyMs": 746,
       "inputTokens": 220,
       "outputTokens": 0,
       "costUsd": 0.0000528,
@@ -1060,7 +1060,7 @@
         "fear": 0.1329,
         "surprise": 0.1203
       },
-      "latencyMs": 422,
+      "latencyMs": 529,
       "inputTokens": 214,
       "outputTokens": 0,
       "costUsd": 0.000051359999999999996,
@@ -1079,7 +1079,7 @@
         "fear": 0.0278,
         "surprise": 0.0115
       },
-      "latencyMs": 513,
+      "latencyMs": 896,
       "inputTokens": 216,
       "outputTokens": 0,
       "costUsd": 0.00005184,
@@ -1098,7 +1098,7 @@
         "fear": 0.0039,
         "surprise": 0.0029
       },
-      "latencyMs": 590,
+      "latencyMs": 645,
       "inputTokens": 216,
       "outputTokens": 0,
       "costUsd": 0.00005184,
@@ -1117,7 +1117,7 @@
         "fear": 0.1421,
         "surprise": 0.2036
       },
-      "latencyMs": 484,
+      "latencyMs": 797,
       "inputTokens": 222,
       "outputTokens": 0,
       "costUsd": 0.00005328,
@@ -1136,7 +1136,7 @@
         "fear": 0.0602,
         "surprise": 0.0146
       },
-      "latencyMs": 492,
+      "latencyMs": 1180,
       "inputTokens": 231,
       "outputTokens": 0,
       "costUsd": 0.00005544,
@@ -1155,7 +1155,7 @@
         "fear": 0.0154,
         "surprise": 0.069
       },
-      "latencyMs": 546,
+      "latencyMs": 547,
       "inputTokens": 229,
       "outputTokens": 0,
       "costUsd": 0.00005496,
@@ -1174,7 +1174,7 @@
         "fear": 0.9901,
         "surprise": 0.0029
       },
-      "latencyMs": 644,
+      "latencyMs": 344,
       "inputTokens": 210,
       "outputTokens": 0,
       "costUsd": 0.0000504,
@@ -1193,7 +1193,7 @@
         "fear": 0.0608,
         "surprise": 0.0093
       },
-      "latencyMs": 538,
+      "latencyMs": 574,
       "inputTokens": 211,
       "outputTokens": 0,
       "costUsd": 0.000050639999999999996,
@@ -1212,7 +1212,7 @@
         "fear": 0.0645,
         "surprise": 0.0143
       },
-      "latencyMs": 597,
+      "latencyMs": 705,
       "inputTokens": 208,
       "outputTokens": 0,
       "costUsd": 0.000049919999999999996,
@@ -1231,7 +1231,7 @@
         "fear": 0.0626,
         "surprise": 0.1453
       },
-      "latencyMs": 502,
+      "latencyMs": 424,
       "inputTokens": 218,
       "outputTokens": 0,
       "costUsd": 0.00005232,
@@ -1250,7 +1250,7 @@
         "fear": 0.0062,
         "surprise": 0.0341
       },
-      "latencyMs": 525,
+      "latencyMs": 834,
       "inputTokens": 232,
       "outputTokens": 0,
       "costUsd": 0.000055679999999999995,
@@ -1269,7 +1269,7 @@
         "fear": 0.0075,
         "surprise": 0.0073
       },
-      "latencyMs": 504,
+      "latencyMs": 740,
       "inputTokens": 218,
       "outputTokens": 0,
       "costUsd": 0.00005232,
@@ -1288,7 +1288,7 @@
         "fear": 0.0076,
         "surprise": 0.0142
       },
-      "latencyMs": 411,
+      "latencyMs": 698,
       "inputTokens": 218,
       "outputTokens": 0,
       "costUsd": 0.00005232,
@@ -1307,7 +1307,7 @@
         "fear": 0.9147,
         "surprise": 0.0034
       },
-      "latencyMs": 758,
+      "latencyMs": 670,
       "inputTokens": 216,
       "outputTokens": 0,
       "costUsd": 0.00005184,
@@ -1326,7 +1326,7 @@
         "fear": 0.2565,
         "surprise": 0.0139
       },
-      "latencyMs": 448,
+      "latencyMs": 838,
       "inputTokens": 229,
       "outputTokens": 0,
       "costUsd": 0.00005496,
@@ -1345,7 +1345,7 @@
         "fear": 0.0057,
         "surprise": 0.0025
       },
-      "latencyMs": 682,
+      "latencyMs": 684,
       "inputTokens": 248,
       "outputTokens": 0,
       "costUsd": 0.00005952,
@@ -1364,7 +1364,7 @@
         "fear": 0.0544,
         "surprise": 0.0112
       },
-      "latencyMs": 598,
+      "latencyMs": 549,
       "inputTokens": 230,
       "outputTokens": 0,
       "costUsd": 0.0000552,
@@ -1383,7 +1383,7 @@
         "fear": 0.0042,
         "surprise": 0.9394
       },
-      "latencyMs": 497,
+      "latencyMs": 534,
       "inputTokens": 226,
       "outputTokens": 0,
       "costUsd": 0.000054239999999999996,
@@ -1402,7 +1402,7 @@
         "fear": 0.087,
         "surprise": 0.0184
       },
-      "latencyMs": 447,
+      "latencyMs": 495,
       "inputTokens": 218,
       "outputTokens": 0,
       "costUsd": 0.00005232,
@@ -1421,7 +1421,7 @@
         "fear": 0.0173,
         "surprise": 0.0044
       },
-      "latencyMs": 560,
+      "latencyMs": 733,
       "inputTokens": 211,
       "outputTokens": 0,
       "costUsd": 0.000050639999999999996,
@@ -1440,7 +1440,7 @@
         "fear": 0.1372,
         "surprise": 0.0073
       },
-      "latencyMs": 578,
+      "latencyMs": 407,
       "inputTokens": 213,
       "outputTokens": 0,
       "costUsd": 0.00005112,
@@ -1459,7 +1459,7 @@
         "fear": 0.0071,
         "surprise": 0.0069
       },
-      "latencyMs": 558,
+      "latencyMs": 574,
       "inputTokens": 228,
       "outputTokens": 0,
       "costUsd": 0.00005472,
@@ -1478,7 +1478,7 @@
         "fear": 0.1453,
         "surprise": 0.0106
       },
-      "latencyMs": 495,
+      "latencyMs": 402,
       "inputTokens": 234,
       "outputTokens": 0,
       "costUsd": 0.00005616,
@@ -1497,7 +1497,7 @@
         "fear": 0.9855,
         "surprise": 0.0018
       },
-      "latencyMs": 818,
+      "latencyMs": 967,
       "inputTokens": 242,
       "outputTokens": 0,
       "costUsd": 0.00005808,
@@ -1516,7 +1516,7 @@
         "fear": 0.9816,
         "surprise": 0.0023
       },
-      "latencyMs": 548,
+      "latencyMs": 525,
       "inputTokens": 221,
       "outputTokens": 0,
       "costUsd": 0.00005304,
@@ -1535,7 +1535,7 @@
         "fear": 0.1583,
         "surprise": 0.02
       },
-      "latencyMs": 524,
+      "latencyMs": 983,
       "inputTokens": 209,
       "outputTokens": 0,
       "costUsd": 0.00005016,
@@ -1554,7 +1554,7 @@
         "fear": 0.009,
         "surprise": 0.0024
       },
-      "latencyMs": 804,
+      "latencyMs": 741,
       "inputTokens": 208,
       "outputTokens": 0,
       "costUsd": 0.000049919999999999996,
@@ -1573,7 +1573,7 @@
         "fear": 0.0526,
         "surprise": 0.0181
       },
-      "latencyMs": 487,
+      "latencyMs": 391,
       "inputTokens": 224,
       "outputTokens": 0,
       "costUsd": 0.00005376,
@@ -1592,7 +1592,7 @@
         "fear": 0.2569,
         "surprise": 0.0571
       },
-      "latencyMs": 524,
+      "latencyMs": 534,
       "inputTokens": 236,
       "outputTokens": 0,
       "costUsd": 0.00005663999999999999,
@@ -1611,7 +1611,7 @@
         "fear": 0.0239,
         "surprise": 0.1333
       },
-      "latencyMs": 824,
+      "latencyMs": 760,
       "inputTokens": 215,
       "outputTokens": 0,
       "costUsd": 0.000051599999999999994,
@@ -1630,7 +1630,7 @@
         "fear": 0.0858,
         "surprise": 0.0453
       },
-      "latencyMs": 440,
+      "latencyMs": 431,
       "inputTokens": 219,
       "outputTokens": 0,
       "costUsd": 0.00005256,
@@ -1649,7 +1649,7 @@
         "fear": 0.0037,
         "surprise": 0.0057
       },
-      "latencyMs": 434,
+      "latencyMs": 705,
       "inputTokens": 215,
       "outputTokens": 0,
       "costUsd": 0.000051599999999999994,
@@ -1668,7 +1668,7 @@
         "fear": 0.0385,
         "surprise": 0.0177
       },
-      "latencyMs": 326,
+      "latencyMs": 1040,
       "inputTokens": 210,
       "outputTokens": 0,
       "costUsd": 0.0000504,
@@ -1687,7 +1687,7 @@
         "fear": 0.0529,
         "surprise": 0.0199
       },
-      "latencyMs": 465,
+      "latencyMs": 1362,
       "inputTokens": 223,
       "outputTokens": 0,
       "costUsd": 0.000053519999999999996,
@@ -1706,7 +1706,7 @@
         "fear": 0.0331,
         "surprise": 0.0124
       },
-      "latencyMs": 819,
+      "latencyMs": 683,
       "inputTokens": 231,
       "outputTokens": 0,
       "costUsd": 0.00005544,
@@ -1725,7 +1725,7 @@
         "fear": 0.0215,
         "surprise": 0.0469
       },
-      "latencyMs": 541,
+      "latencyMs": 1140,
       "inputTokens": 214,
       "outputTokens": 0,
       "costUsd": 0.000051359999999999996,
@@ -1744,7 +1744,7 @@
         "fear": 0.0135,
         "surprise": 0.0313
       },
-      "latencyMs": 741,
+      "latencyMs": 642,
       "inputTokens": 210,
       "outputTokens": 0,
       "costUsd": 0.0000504,
@@ -1763,7 +1763,7 @@
         "fear": 0.2537,
         "surprise": 0.0304
       },
-      "latencyMs": 531,
+      "latencyMs": 579,
       "inputTokens": 214,
       "outputTokens": 0,
       "costUsd": 0.000051359999999999996,
@@ -1782,7 +1782,7 @@
         "fear": 0.0634,
         "surprise": 0.0254
       },
-      "latencyMs": 386,
+      "latencyMs": 483,
       "inputTokens": 238,
       "outputTokens": 0,
       "costUsd": 0.00005712,
@@ -1801,7 +1801,7 @@
         "fear": 0.1344,
         "surprise": 0.03
       },
-      "latencyMs": 562,
+      "latencyMs": 671,
       "inputTokens": 250,
       "outputTokens": 0,
       "costUsd": 0.00006,
@@ -1820,7 +1820,7 @@
         "fear": 0.3079,
         "surprise": 0.0208
       },
-      "latencyMs": 526,
+      "latencyMs": 664,
       "inputTokens": 224,
       "outputTokens": 0,
       "costUsd": 0.00005376,
@@ -1839,7 +1839,7 @@
         "fear": 0.0221,
         "surprise": 0.8213
       },
-      "latencyMs": 500,
+      "latencyMs": 729,
       "inputTokens": 224,
       "outputTokens": 0,
       "costUsd": 0.00005376,
@@ -1858,7 +1858,7 @@
         "fear": 0.0073,
         "surprise": 0.0042
       },
-      "latencyMs": 428,
+      "latencyMs": 530,
       "inputTokens": 212,
       "outputTokens": 0,
       "costUsd": 0.00005088,
@@ -1877,7 +1877,7 @@
         "fear": 0.9897,
         "surprise": 0.0024
       },
-      "latencyMs": 519,
+      "latencyMs": 354,
       "inputTokens": 217,
       "outputTokens": 0,
       "costUsd": 0.000052079999999999996,
@@ -1896,7 +1896,7 @@
         "fear": 0.0024,
         "surprise": 0.002
       },
-      "latencyMs": 483,
+      "latencyMs": 459,
       "inputTokens": 217,
       "outputTokens": 0,
       "costUsd": 0.000052079999999999996,
@@ -1915,7 +1915,7 @@
         "fear": 0.0114,
         "surprise": 0.011
       },
-      "latencyMs": 605,
+      "latencyMs": 365,
       "inputTokens": 210,
       "outputTokens": 0,
       "costUsd": 0.0000504,
@@ -1934,7 +1934,7 @@
         "fear": 0.0053,
         "surprise": 0.0097
       },
-      "latencyMs": 546,
+      "latencyMs": 529,
       "inputTokens": 252,
       "outputTokens": 0,
       "costUsd": 0.00006048,
@@ -1953,7 +1953,7 @@
         "fear": 0.0119,
         "surprise": 0.0286
       },
-      "latencyMs": 531,
+      "latencyMs": 601,
       "inputTokens": 233,
       "outputTokens": 0,
       "costUsd": 0.00005592,
@@ -1972,7 +1972,7 @@
         "fear": 0.044,
         "surprise": 0.1356
       },
-      "latencyMs": 520,
+      "latencyMs": 481,
       "inputTokens": 220,
       "outputTokens": 0,
       "costUsd": 0.0000528,
@@ -1991,7 +1991,7 @@
         "fear": 0.8438,
         "surprise": 0.0138
       },
-      "latencyMs": 698,
+      "latencyMs": 408,
       "inputTokens": 223,
       "outputTokens": 0,
       "costUsd": 0.000053519999999999996,
@@ -2010,7 +2010,7 @@
         "fear": 0.0164,
         "surprise": 0.0087
       },
-      "latencyMs": 622,
+      "latencyMs": 370,
       "inputTokens": 215,
       "outputTokens": 0,
       "costUsd": 0.000051599999999999994,
@@ -2029,7 +2029,7 @@
         "fear": 0.0379,
         "surprise": 0.0078
       },
-      "latencyMs": 918,
+      "latencyMs": 499,
       "inputTokens": 232,
       "outputTokens": 0,
       "costUsd": 0.000055679999999999995,
@@ -2048,7 +2048,7 @@
         "fear": 0.0194,
         "surprise": 0.0072
       },
-      "latencyMs": 349,
+      "latencyMs": 427,
       "inputTokens": 212,
       "outputTokens": 0,
       "costUsd": 0.00005088,
@@ -2067,7 +2067,7 @@
         "fear": 0.0026,
         "surprise": 0.0023
       },
-      "latencyMs": 494,
+      "latencyMs": 848,
       "inputTokens": 240,
       "outputTokens": 0,
       "costUsd": 0.0000576,
@@ -2086,7 +2086,7 @@
         "fear": 0.2134,
         "surprise": 0.041
       },
-      "latencyMs": 494,
+      "latencyMs": 560,
       "inputTokens": 235,
       "outputTokens": 0,
       "costUsd": 0.000056399999999999995,
@@ -2105,7 +2105,7 @@
         "fear": 0.0539,
         "surprise": 0.0055
       },
-      "latencyMs": 529,
+      "latencyMs": 389,
       "inputTokens": 210,
       "outputTokens": 0,
       "costUsd": 0.0000504,
@@ -2124,7 +2124,7 @@
         "fear": 0.0022,
         "surprise": 0.0021
       },
-      "latencyMs": 444,
+      "latencyMs": 802,
       "inputTokens": 252,
       "outputTokens": 0,
       "costUsd": 0.00006048,
@@ -2143,7 +2143,7 @@
         "fear": 0.0036,
         "surprise": 0.0031
       },
-      "latencyMs": 740,
+      "latencyMs": 486,
       "inputTokens": 252,
       "outputTokens": 0,
       "costUsd": 0.00006048,
@@ -2162,7 +2162,7 @@
         "fear": 0.6565,
         "surprise": 0.0057
       },
-      "latencyMs": 406,
+      "latencyMs": 960,
       "inputTokens": 233,
       "outputTokens": 0,
       "costUsd": 0.00005592,
@@ -2181,7 +2181,7 @@
         "fear": 0.0111,
         "surprise": 0.0158
       },
-      "latencyMs": 505,
+      "latencyMs": 447,
       "inputTokens": 211,
       "outputTokens": 0,
       "costUsd": 0.000050639999999999996,
@@ -2200,7 +2200,7 @@
         "fear": 0.0036,
         "surprise": 0.0087
       },
-      "latencyMs": 899,
+      "latencyMs": 1003,
       "inputTokens": 207,
       "outputTokens": 0,
       "costUsd": 0.00004968,
@@ -2219,7 +2219,7 @@
         "fear": 0.0536,
         "surprise": 0.0225
       },
-      "latencyMs": 429,
+      "latencyMs": 637,
       "inputTokens": 226,
       "outputTokens": 0,
       "costUsd": 0.000054239999999999996,
@@ -2238,7 +2238,7 @@
         "fear": 0.038,
         "surprise": 0.0182
       },
-      "latencyMs": 536,
+      "latencyMs": 604,
       "inputTokens": 215,
       "outputTokens": 0,
       "costUsd": 0.000051599999999999994,
@@ -2257,7 +2257,7 @@
         "fear": 0.0181,
         "surprise": 0.0154
       },
-      "latencyMs": 532,
+      "latencyMs": 566,
       "inputTokens": 235,
       "outputTokens": 0,
       "costUsd": 0.000056399999999999995,
@@ -2276,7 +2276,7 @@
         "fear": 0.0019,
         "surprise": 0.0016
       },
-      "latencyMs": 503,
+      "latencyMs": 878,
       "inputTokens": 221,
       "outputTokens": 0,
       "costUsd": 0.00005304,
@@ -2295,7 +2295,7 @@
         "fear": 0.0097,
         "surprise": 0.0442
       },
-      "latencyMs": 669,
+      "latencyMs": 946,
       "inputTokens": 241,
       "outputTokens": 0,
       "costUsd": 0.00005784,
@@ -2314,7 +2314,7 @@
         "fear": 0.7764,
         "surprise": 0.0464
       },
-      "latencyMs": 515,
+      "latencyMs": 558,
       "inputTokens": 224,
       "outputTokens": 0,
       "costUsd": 0.00005376,
@@ -2333,7 +2333,7 @@
         "fear": 0.8313,
         "surprise": 0.0047
       },
-      "latencyMs": 515,
+      "latencyMs": 879,
       "inputTokens": 207,
       "outputTokens": 0,
       "costUsd": 0.00004968,
@@ -2352,7 +2352,7 @@
         "fear": 0.3263,
         "surprise": 0.0534
       },
-      "latencyMs": 498,
+      "latencyMs": 336,
       "inputTokens": 246,
       "outputTokens": 0,
       "costUsd": 0.000059040000000000004,
@@ -2371,7 +2371,7 @@
         "fear": 0.1544,
         "surprise": 0.0242
       },
-      "latencyMs": 396,
+      "latencyMs": 507,
       "inputTokens": 233,
       "outputTokens": 0,
       "costUsd": 0.00005592,
@@ -2390,7 +2390,7 @@
         "fear": 0.1078,
         "surprise": 0.0756
       },
-      "latencyMs": 527,
+      "latencyMs": 632,
       "inputTokens": 229,
       "outputTokens": 0,
       "costUsd": 0.00005496,
@@ -2409,7 +2409,7 @@
         "fear": 0.0462,
         "surprise": 0.9011
       },
-      "latencyMs": 527,
+      "latencyMs": 457,
       "inputTokens": 211,
       "outputTokens": 0,
       "costUsd": 0.000050639999999999996,
@@ -2428,7 +2428,7 @@
         "fear": 0.7759,
         "surprise": 0.039
       },
-      "latencyMs": 431,
+      "latencyMs": 650,
       "inputTokens": 209,
       "outputTokens": 0,
       "costUsd": 0.00005016,
@@ -2447,7 +2447,7 @@
         "fear": 0.5582,
         "surprise": 0.011
       },
-      "latencyMs": 493,
+      "latencyMs": 315,
       "inputTokens": 212,
       "outputTokens": 0,
       "costUsd": 0.00005088,
@@ -2466,7 +2466,7 @@
         "fear": 0.0134,
         "surprise": 0.0073
       },
-      "latencyMs": 354,
+      "latencyMs": 358,
       "inputTokens": 213,
       "outputTokens": 0,
       "costUsd": 0.00005112,
@@ -2485,7 +2485,7 @@
         "fear": 0.0282,
         "surprise": 0.773
       },
-      "latencyMs": 814,
+      "latencyMs": 309,
       "inputTokens": 231,
       "outputTokens": 0,
       "costUsd": 0.00005544,
@@ -2504,7 +2504,7 @@
         "fear": 0.0808,
         "surprise": 0.0239
       },
-      "latencyMs": 521,
+      "latencyMs": 621,
       "inputTokens": 216,
       "outputTokens": 0,
       "costUsd": 0.00005184,
@@ -2523,7 +2523,7 @@
         "fear": 0.0093,
         "surprise": 0.0387
       },
-      "latencyMs": 464,
+      "latencyMs": 509,
       "inputTokens": 210,
       "outputTokens": 0,
       "costUsd": 0.0000504,
@@ -2542,7 +2542,7 @@
         "fear": 0.0249,
         "surprise": 0.0033
       },
-      "latencyMs": 490,
+      "latencyMs": 588,
       "inputTokens": 235,
       "outputTokens": 0,
       "costUsd": 0.000056399999999999995,
@@ -2561,7 +2561,7 @@
         "fear": 0.0357,
         "surprise": 0.019
       },
-      "latencyMs": 530,
+      "latencyMs": 438,
       "inputTokens": 230,
       "outputTokens": 0,
       "costUsd": 0.0000552,
@@ -2580,7 +2580,7 @@
         "fear": 0.0071,
         "surprise": 0.0052
       },
-      "latencyMs": 491,
+      "latencyMs": 480,
       "inputTokens": 206,
       "outputTokens": 0,
       "costUsd": 0.000049439999999999994,
@@ -2599,7 +2599,7 @@
         "fear": 0.9284,
         "surprise": 0.0061
       },
-      "latencyMs": 491,
+      "latencyMs": 422,
       "inputTokens": 220,
       "outputTokens": 0,
       "costUsd": 0.0000528,
@@ -2618,7 +2618,7 @@
         "fear": 0.0036,
         "surprise": 0.0024
       },
-      "latencyMs": 458,
+      "latencyMs": 423,
       "inputTokens": 217,
       "outputTokens": 0,
       "costUsd": 0.000052079999999999996,
@@ -2637,7 +2637,7 @@
         "fear": 0.0125,
         "surprise": 0.0123
       },
-      "latencyMs": 517,
+      "latencyMs": 870,
       "inputTokens": 214,
       "outputTokens": 0,
       "costUsd": 0.000051359999999999996,
@@ -2656,7 +2656,7 @@
         "fear": 0.0211,
         "surprise": 0.1147
       },
-      "latencyMs": 379,
+      "latencyMs": 477,
       "inputTokens": 222,
       "outputTokens": 0,
       "costUsd": 0.00005328,
@@ -2675,7 +2675,7 @@
         "fear": 0.042,
         "surprise": 0.0125
       },
-      "latencyMs": 363,
+      "latencyMs": 799,
       "inputTokens": 209,
       "outputTokens": 0,
       "costUsd": 0.00005016,
@@ -2694,7 +2694,7 @@
         "fear": 0.002,
         "surprise": 0.0023
       },
-      "latencyMs": 400,
+      "latencyMs": 366,
       "inputTokens": 208,
       "outputTokens": 0,
       "costUsd": 0.000049919999999999996,
@@ -2713,7 +2713,7 @@
         "fear": 0.0057,
         "surprise": 0.2739
       },
-      "latencyMs": 589,
+      "latencyMs": 346,
       "inputTokens": 214,
       "outputTokens": 0,
       "costUsd": 0.000051359999999999996,
@@ -2732,7 +2732,7 @@
         "fear": 0.2581,
         "surprise": 0.099
       },
-      "latencyMs": 424,
+      "latencyMs": 533,
       "inputTokens": 236,
       "outputTokens": 0,
       "costUsd": 0.00005663999999999999,
@@ -2751,7 +2751,7 @@
         "fear": 0.0215,
         "surprise": 0.0089
       },
-      "latencyMs": 470,
+      "latencyMs": 694,
       "inputTokens": 227,
       "outputTokens": 0,
       "costUsd": 0.00005447999999999999,
@@ -2770,7 +2770,7 @@
         "fear": 0.1447,
         "surprise": 0.1013
       },
-      "latencyMs": 387,
+      "latencyMs": 503,
       "inputTokens": 217,
       "outputTokens": 0,
       "costUsd": 0.000052079999999999996,
@@ -2789,7 +2789,7 @@
         "fear": 0.0234,
         "surprise": 0.0074
       },
-      "latencyMs": 523,
+      "latencyMs": 503,
       "inputTokens": 213,
       "outputTokens": 0,
       "costUsd": 0.00005112,
@@ -2808,7 +2808,7 @@
         "fear": 0.2208,
         "surprise": 0.0159
       },
-      "latencyMs": 523,
+      "latencyMs": 1390,
       "inputTokens": 256,
       "outputTokens": 0,
       "costUsd": 0.00006144,
@@ -2827,7 +2827,7 @@
         "fear": 0.0039,
         "surprise": 0.8806
       },
-      "latencyMs": 510,
+      "latencyMs": 453,
       "inputTokens": 229,
       "outputTokens": 0,
       "costUsd": 0.00005496,
@@ -2846,7 +2846,7 @@
         "fear": 0.0022,
         "surprise": 0.0027
       },
-      "latencyMs": 504,
+      "latencyMs": 685,
       "inputTokens": 261,
       "outputTokens": 0,
       "costUsd": 0.00006264,
@@ -2865,7 +2865,7 @@
         "fear": 0.0406,
         "surprise": 0.0102
       },
-      "latencyMs": 527,
+      "latencyMs": 496,
       "inputTokens": 228,
       "outputTokens": 0,
       "costUsd": 0.00005472,
@@ -2884,7 +2884,7 @@
         "fear": 0.2246,
         "surprise": 0.0323
       },
-      "latencyMs": 406,
+      "latencyMs": 750,
       "inputTokens": 234,
       "outputTokens": 0,
       "costUsd": 0.00005616,
@@ -2903,7 +2903,7 @@
         "fear": 0.0185,
         "surprise": 0.0219
       },
-      "latencyMs": 699,
+      "latencyMs": 630,
       "inputTokens": 207,
       "outputTokens": 0,
       "costUsd": 0.00004968,
@@ -2922,7 +2922,7 @@
         "fear": 0.0111,
         "surprise": 0.036
       },
-      "latencyMs": 577,
+      "latencyMs": 566,
       "inputTokens": 219,
       "outputTokens": 0,
       "costUsd": 0.00005256,
@@ -2941,7 +2941,7 @@
         "fear": 0.0027,
         "surprise": 0.0394
       },
-      "latencyMs": 452,
+      "latencyMs": 549,
       "inputTokens": 231,
       "outputTokens": 0,
       "costUsd": 0.00005544,
@@ -2960,7 +2960,7 @@
         "fear": 0.4771,
         "surprise": 0.0114
       },
-      "latencyMs": 319,
+      "latencyMs": 420,
       "inputTokens": 234,
       "outputTokens": 0,
       "costUsd": 0.00005616,
@@ -2979,7 +2979,7 @@
         "fear": 0.0934,
         "surprise": 0.0801
       },
-      "latencyMs": 438,
+      "latencyMs": 492,
       "inputTokens": 229,
       "outputTokens": 0,
       "costUsd": 0.00005496,
@@ -2998,7 +2998,7 @@
         "fear": 0.0051,
         "surprise": 0.0043
       },
-      "latencyMs": 452,
+      "latencyMs": 399,
       "inputTokens": 234,
       "outputTokens": 0,
       "costUsd": 0.00005616,
@@ -3017,7 +3017,7 @@
         "fear": 0.2053,
         "surprise": 0.0445
       },
-      "latencyMs": 476,
+      "latencyMs": 926,
       "inputTokens": 247,
       "outputTokens": 0,
       "costUsd": 0.000059279999999999995,
@@ -3036,7 +3036,7 @@
         "fear": 0.0058,
         "surprise": 0.0041
       },
-      "latencyMs": 513,
+      "latencyMs": 403,
       "inputTokens": 211,
       "outputTokens": 0,
       "costUsd": 0.000050639999999999996,
@@ -3055,7 +3055,7 @@
         "fear": 0.9845,
         "surprise": 0.0032
       },
-      "latencyMs": 1041,
+      "latencyMs": 665,
       "inputTokens": 214,
       "outputTokens": 0,
       "costUsd": 0.000051359999999999996,
@@ -3074,7 +3074,7 @@
         "fear": 0.0096,
         "surprise": 0.0068
       },
-      "latencyMs": 909,
+      "latencyMs": 509,
       "inputTokens": 228,
       "outputTokens": 0,
       "costUsd": 0.00005472,
@@ -3093,7 +3093,7 @@
         "fear": 0.005,
         "surprise": 0.003
       },
-      "latencyMs": 968,
+      "latencyMs": 543,
       "inputTokens": 207,
       "outputTokens": 0,
       "costUsd": 0.00004968,
@@ -3112,7 +3112,7 @@
         "fear": 0.0688,
         "surprise": 0.0133
       },
-      "latencyMs": 1255,
+      "latencyMs": 698,
       "inputTokens": 229,
       "outputTokens": 0,
       "costUsd": 0.00005496,
@@ -3131,7 +3131,7 @@
         "fear": 0.0017,
         "surprise": 0.0019
       },
-      "latencyMs": 499,
+      "latencyMs": 545,
       "inputTokens": 244,
       "outputTokens": 0,
       "costUsd": 0.000058559999999999995,
@@ -3150,7 +3150,7 @@
         "fear": 0.0051,
         "surprise": 0.0047
       },
-      "latencyMs": 368,
+      "latencyMs": 444,
       "inputTokens": 228,
       "outputTokens": 0,
       "costUsd": 0.00005472,
@@ -3169,7 +3169,7 @@
         "fear": 0.0908,
         "surprise": 0.0311
       },
-      "latencyMs": 858,
+      "latencyMs": 450,
       "inputTokens": 212,
       "outputTokens": 0,
       "costUsd": 0.00005088,
@@ -3188,7 +3188,7 @@
         "fear": 0.0163,
         "surprise": 0.0076
       },
-      "latencyMs": 679,
+      "latencyMs": 444,
       "inputTokens": 230,
       "outputTokens": 0,
       "costUsd": 0.0000552,
@@ -3207,7 +3207,7 @@
         "fear": 0.4263,
         "surprise": 0.0163
       },
-      "latencyMs": 524,
+      "latencyMs": 491,
       "inputTokens": 238,
       "outputTokens": 0,
       "costUsd": 0.00005712,
@@ -3226,7 +3226,7 @@
         "fear": 0.012,
         "surprise": 0.7239
       },
-      "latencyMs": 522,
+      "latencyMs": 838,
       "inputTokens": 223,
       "outputTokens": 0,
       "costUsd": 0.000053519999999999996,
@@ -3245,7 +3245,7 @@
         "fear": 0.3529,
         "surprise": 0.0081
       },
-      "latencyMs": 427,
+      "latencyMs": 408,
       "inputTokens": 223,
       "outputTokens": 0,
       "costUsd": 0.000053519999999999996,
@@ -3264,7 +3264,7 @@
         "fear": 0.2409,
         "surprise": 0.0061
       },
-      "latencyMs": 399,
+      "latencyMs": 419,
       "inputTokens": 210,
       "outputTokens": 0,
       "costUsd": 0.0000504,
@@ -3283,7 +3283,7 @@
         "fear": 0.061,
         "surprise": 0.073
       },
-      "latencyMs": 373,
+      "latencyMs": 637,
       "inputTokens": 231,
       "outputTokens": 0,
       "costUsd": 0.00005544,
@@ -3302,7 +3302,7 @@
         "fear": 0.002,
         "surprise": 0.0013
       },
-      "latencyMs": 594,
+      "latencyMs": 562,
       "inputTokens": 253,
       "outputTokens": 0,
       "costUsd": 0.00006072,
@@ -3321,7 +3321,7 @@
         "fear": 0.8947,
         "surprise": 0.0012
       },
-      "latencyMs": 453,
+      "latencyMs": 464,
       "inputTokens": 228,
       "outputTokens": 0,
       "costUsd": 0.00005472,
@@ -3340,7 +3340,7 @@
         "fear": 0.0051,
         "surprise": 0.0136
       },
-      "latencyMs": 652,
+      "latencyMs": 470,
       "inputTokens": 221,
       "outputTokens": 0,
       "costUsd": 0.00005304,
@@ -3359,7 +3359,7 @@
         "fear": 0.015,
         "surprise": 0.007
       },
-      "latencyMs": 461,
+      "latencyMs": 411,
       "inputTokens": 219,
       "outputTokens": 0,
       "costUsd": 0.00005256,
@@ -3378,7 +3378,7 @@
         "fear": 0.0236,
         "surprise": 0.0071
       },
-      "latencyMs": 480,
+      "latencyMs": 479,
       "inputTokens": 209,
       "outputTokens": 0,
       "costUsd": 0.00005016,
@@ -3397,7 +3397,7 @@
         "fear": 0.0224,
         "surprise": 0.0216
       },
-      "latencyMs": 477,
+      "latencyMs": 632,
       "inputTokens": 228,
       "outputTokens": 0,
       "costUsd": 0.00005472,
@@ -3416,7 +3416,7 @@
         "fear": 0.0028,
         "surprise": 0.0026
       },
-      "latencyMs": 384,
+      "latencyMs": 905,
       "inputTokens": 210,
       "outputTokens": 0,
       "costUsd": 0.0000504,
@@ -3435,7 +3435,7 @@
         "fear": 0.5745,
         "surprise": 0.0115
       },
-      "latencyMs": 559,
+      "latencyMs": 814,
       "inputTokens": 206,
       "outputTokens": 0,
       "costUsd": 0.000049439999999999994,
@@ -3454,7 +3454,7 @@
         "fear": 0.5047,
         "surprise": 0.0213
       },
-      "latencyMs": 500,
+      "latencyMs": 455,
       "inputTokens": 210,
       "outputTokens": 0,
       "costUsd": 0.0000504,
@@ -3473,7 +3473,7 @@
         "fear": 0.2863,
         "surprise": 0.0129
       },
-      "latencyMs": 729,
+      "latencyMs": 632,
       "inputTokens": 221,
       "outputTokens": 0,
       "costUsd": 0.00005304,
@@ -3492,7 +3492,7 @@
         "fear": 0.0774,
         "surprise": 0.0313
       },
-      "latencyMs": 794,
+      "latencyMs": 763,
       "inputTokens": 226,
       "outputTokens": 0,
       "costUsd": 0.000054239999999999996,
@@ -3511,7 +3511,7 @@
         "fear": 0.0085,
         "surprise": 0.0051
       },
-      "latencyMs": 366,
+      "latencyMs": 680,
       "inputTokens": 211,
       "outputTokens": 0,
       "costUsd": 0.000050639999999999996,
@@ -3530,7 +3530,7 @@
         "fear": 0.003,
         "surprise": 0.0033
       },
-      "latencyMs": 486,
+      "latencyMs": 492,
       "inputTokens": 219,
       "outputTokens": 0,
       "costUsd": 0.00005256,
@@ -3549,7 +3549,7 @@
         "fear": 0.443,
         "surprise": 0.0091
       },
-      "latencyMs": 991,
+      "latencyMs": 474,
       "inputTokens": 249,
       "outputTokens": 0,
       "costUsd": 0.00005975999999999999,
@@ -3568,7 +3568,7 @@
         "fear": 0.0082,
         "surprise": 0.026
       },
-      "latencyMs": 509,
+      "latencyMs": 427,
       "inputTokens": 223,
       "outputTokens": 0,
       "costUsd": 0.000053519999999999996,
@@ -3587,7 +3587,7 @@
         "fear": 0.0029,
         "surprise": 0.0062
       },
-      "latencyMs": 627,
+      "latencyMs": 513,
       "inputTokens": 214,
       "outputTokens": 0,
       "costUsd": 0.000051359999999999996,
@@ -3606,7 +3606,7 @@
         "fear": 0.0063,
         "surprise": 0.0205
       },
-      "latencyMs": 563,
+      "latencyMs": 841,
       "inputTokens": 217,
       "outputTokens": 0,
       "costUsd": 0.000052079999999999996,
@@ -3625,7 +3625,7 @@
         "fear": 0.0203,
         "surprise": 0.009
       },
-      "latencyMs": 410,
+      "latencyMs": 1678,
       "inputTokens": 235,
       "outputTokens": 0,
       "costUsd": 0.000056399999999999995,
@@ -3644,7 +3644,7 @@
         "fear": 0.6719,
         "surprise": 0.0197
       },
-      "latencyMs": 479,
+      "latencyMs": 502,
       "inputTokens": 216,
       "outputTokens": 0,
       "costUsd": 0.00005184,
@@ -3663,7 +3663,7 @@
         "fear": 0.0055,
         "surprise": 0.9202
       },
-      "latencyMs": 487,
+      "latencyMs": 484,
       "inputTokens": 232,
       "outputTokens": 0,
       "costUsd": 0.000055679999999999995,
@@ -3682,7 +3682,7 @@
         "fear": 0.8736,
         "surprise": 0.0123
       },
-      "latencyMs": 634,
+      "latencyMs": 827,
       "inputTokens": 237,
       "outputTokens": 0,
       "costUsd": 0.00005688,
@@ -3701,7 +3701,7 @@
         "fear": 0.8896,
         "surprise": 0.0055
       },
-      "latencyMs": 416,
+      "latencyMs": 364,
       "inputTokens": 209,
       "outputTokens": 0,
       "costUsd": 0.00005016,
@@ -3720,7 +3720,7 @@
         "fear": 0.0141,
         "surprise": 0.0991
       },
-      "latencyMs": 365,
+      "latencyMs": 913,
       "inputTokens": 209,
       "outputTokens": 0,
       "costUsd": 0.00005016,
@@ -3739,7 +3739,7 @@
         "fear": 0.8873,
         "surprise": 0.0164
       },
-      "latencyMs": 347,
+      "latencyMs": 446,
       "inputTokens": 230,
       "outputTokens": 0,
       "costUsd": 0.0000552,
@@ -3758,7 +3758,7 @@
         "fear": 0.0118,
         "surprise": 0.0136
       },
-      "latencyMs": 384,
+      "latencyMs": 1113,
       "inputTokens": 233,
       "outputTokens": 0,
       "costUsd": 0.00005592,
@@ -3777,7 +3777,7 @@
         "fear": 0.2165,
         "surprise": 0.0668
       },
-      "latencyMs": 498,
+      "latencyMs": 359,
       "inputTokens": 210,
       "outputTokens": 0,
       "costUsd": 0.0000504,
@@ -3796,7 +3796,7 @@
         "fear": 0.0387,
         "surprise": 0.0034
       },
-      "latencyMs": 402,
+      "latencyMs": 436,
       "inputTokens": 215,
       "outputTokens": 0,
       "costUsd": 0.000051599999999999994,
@@ -3815,7 +3815,7 @@
         "fear": 0.0353,
         "surprise": 0.0653
       },
-      "latencyMs": 817,
+      "latencyMs": 582,
       "inputTokens": 229,
       "outputTokens": 0,
       "costUsd": 0.00005496,
@@ -3834,7 +3834,7 @@
         "fear": 0.0112,
         "surprise": 0.0101
       },
-      "latencyMs": 464,
+      "latencyMs": 670,
       "inputTokens": 228,
       "outputTokens": 0,
       "costUsd": 0.00005472,
@@ -3853,7 +3853,7 @@
         "fear": 0.0037,
         "surprise": 0.0064
       },
-      "latencyMs": 479,
+      "latencyMs": 569,
       "inputTokens": 236,
       "outputTokens": 0,
       "costUsd": 0.00005663999999999999,
@@ -3872,7 +3872,7 @@
         "fear": 0.0241,
         "surprise": 0.0081
       },
-      "latencyMs": 443,
+      "latencyMs": 399,
       "inputTokens": 218,
       "outputTokens": 0,
       "costUsd": 0.00005232,
@@ -3891,7 +3891,7 @@
         "fear": 0.0018,
         "surprise": 0.0014
       },
-      "latencyMs": 525,
+      "latencyMs": 559,
       "inputTokens": 210,
       "outputTokens": 0,
       "costUsd": 0.0000504,
@@ -3910,7 +3910,7 @@
         "fear": 0.2589,
         "surprise": 0.1651
       },
-      "latencyMs": 400,
+      "latencyMs": 546,
       "inputTokens": 227,
       "outputTokens": 0,
       "costUsd": 0.00005447999999999999,
@@ -3929,7 +3929,7 @@
         "fear": 0.0515,
         "surprise": 0.0122
       },
-      "latencyMs": 406,
+      "latencyMs": 685,
       "inputTokens": 214,
       "outputTokens": 0,
       "costUsd": 0.000051359999999999996,
@@ -3948,7 +3948,7 @@
         "fear": 0.0476,
         "surprise": 0.0146
       },
-      "latencyMs": 508,
+      "latencyMs": 550,
       "inputTokens": 264,
       "outputTokens": 0,
       "costUsd": 0.00006336,
@@ -3967,7 +3967,7 @@
         "fear": 0.0049,
         "surprise": 0.0036
       },
-      "latencyMs": 504,
+      "latencyMs": 516,
       "inputTokens": 215,
       "outputTokens": 0,
       "costUsd": 0.000051599999999999994,
@@ -3986,7 +3986,7 @@
         "fear": 0.0951,
         "surprise": 0.0592
       },
-      "latencyMs": 472,
+      "latencyMs": 730,
       "inputTokens": 211,
       "outputTokens": 0,
       "costUsd": 0.000050639999999999996,
@@ -4005,7 +4005,7 @@
         "fear": 0.3411,
         "surprise": 0.2156
       },
-      "latencyMs": 428,
+      "latencyMs": 731,
       "inputTokens": 235,
       "outputTokens": 0,
       "costUsd": 0.000056399999999999995,
@@ -4024,7 +4024,7 @@
         "fear": 0.013,
         "surprise": 0.0128
       },
-      "latencyMs": 675,
+      "latencyMs": 631,
       "inputTokens": 209,
       "outputTokens": 0,
       "costUsd": 0.00005016,
@@ -4043,7 +4043,7 @@
         "fear": 0.942,
         "surprise": 0.0027
       },
-      "latencyMs": 520,
+      "latencyMs": 781,
       "inputTokens": 222,
       "outputTokens": 0,
       "costUsd": 0.00005328,
@@ -4062,7 +4062,7 @@
         "fear": 0.0104,
         "surprise": 0.0092
       },
-      "latencyMs": 524,
+      "latencyMs": 404,
       "inputTokens": 215,
       "outputTokens": 0,
       "costUsd": 0.000051599999999999994,
@@ -4081,7 +4081,7 @@
         "fear": 0.062,
         "surprise": 0.0701
       },
-      "latencyMs": 396,
+      "latencyMs": 583,
       "inputTokens": 230,
       "outputTokens": 0,
       "costUsd": 0.0000552,
@@ -4100,7 +4100,7 @@
         "fear": 0.0083,
         "surprise": 0.0272
       },
-      "latencyMs": 666,
+      "latencyMs": 459,
       "inputTokens": 212,
       "outputTokens": 0,
       "costUsd": 0.00005088,
@@ -4119,7 +4119,7 @@
         "fear": 0.0702,
         "surprise": 0.0383
       },
-      "latencyMs": 625,
+      "latencyMs": 463,
       "inputTokens": 211,
       "outputTokens": 0,
       "costUsd": 0.000050639999999999996,
@@ -4138,7 +4138,7 @@
         "fear": 0.1736,
         "surprise": 0.0082
       },
-      "latencyMs": 550,
+      "latencyMs": 711,
       "inputTokens": 233,
       "outputTokens": 0,
       "costUsd": 0.00005592,
@@ -4157,7 +4157,7 @@
         "fear": 0.9782,
         "surprise": 0.0035
       },
-      "latencyMs": 523,
+      "latencyMs": 682,
       "inputTokens": 211,
       "outputTokens": 0,
       "costUsd": 0.000050639999999999996,
@@ -4176,7 +4176,7 @@
         "fear": 0.0629,
         "surprise": 0.0368
       },
-      "latencyMs": 553,
+      "latencyMs": 444,
       "inputTokens": 216,
       "outputTokens": 0,
       "costUsd": 0.00005184,
@@ -4195,7 +4195,7 @@
         "fear": 0.9617,
         "surprise": 0.0063
       },
-      "latencyMs": 526,
+      "latencyMs": 466,
       "inputTokens": 232,
       "outputTokens": 0,
       "costUsd": 0.000055679999999999995,
@@ -4214,7 +4214,7 @@
         "fear": 0.0106,
         "surprise": 0.0049
       },
-      "latencyMs": 498,
+      "latencyMs": 848,
       "inputTokens": 213,
       "outputTokens": 0,
       "costUsd": 0.00005112,
@@ -4233,7 +4233,7 @@
         "fear": 0.0011,
         "surprise": 0.0011
       },
-      "latencyMs": 498,
+      "latencyMs": 1148,
       "inputTokens": 225,
       "outputTokens": 0,
       "costUsd": 0.000054,
@@ -4252,7 +4252,7 @@
         "fear": 0.0349,
         "surprise": 0.0099
       },
-      "latencyMs": 418,
+      "latencyMs": 685,
       "inputTokens": 246,
       "outputTokens": 0,
       "costUsd": 0.000059040000000000004,
@@ -4271,7 +4271,7 @@
         "fear": 0.4908,
         "surprise": 0.0589
       },
-      "latencyMs": 603,
+      "latencyMs": 841,
       "inputTokens": 220,
       "outputTokens": 0,
       "costUsd": 0.0000528,
@@ -4290,7 +4290,7 @@
         "fear": 0.0123,
         "surprise": 0.0165
       },
-      "latencyMs": 315,
+      "latencyMs": 366,
       "inputTokens": 215,
       "outputTokens": 0,
       "costUsd": 0.000051599999999999994,
@@ -4309,7 +4309,7 @@
         "fear": 0.0126,
         "surprise": 0.0139
       },
-      "latencyMs": 374,
+      "latencyMs": 725,
       "inputTokens": 220,
       "outputTokens": 0,
       "costUsd": 0.0000528,
@@ -4328,7 +4328,7 @@
         "fear": 0.07,
         "surprise": 0.033
       },
-      "latencyMs": 771,
+      "latencyMs": 843,
       "inputTokens": 222,
       "outputTokens": 0,
       "costUsd": 0.00005328,
@@ -4347,7 +4347,7 @@
         "fear": 0.0708,
         "surprise": 0.0091
       },
-      "latencyMs": 354,
+      "latencyMs": 957,
       "inputTokens": 211,
       "outputTokens": 0,
       "costUsd": 0.000050639999999999996,
@@ -4366,7 +4366,7 @@
         "fear": 0.0044,
         "surprise": 0.0054
       },
-      "latencyMs": 653,
+      "latencyMs": 852,
       "inputTokens": 208,
       "outputTokens": 0,
       "costUsd": 0.000049919999999999996,
@@ -4385,7 +4385,7 @@
         "fear": 0.3552,
         "surprise": 0.0346
       },
-      "latencyMs": 729,
+      "latencyMs": 448,
       "inputTokens": 225,
       "outputTokens": 0,
       "costUsd": 0.000054,
@@ -4404,7 +4404,7 @@
         "fear": 0.0611,
         "surprise": 0.0381
       },
-      "latencyMs": 398,
+      "latencyMs": 552,
       "inputTokens": 233,
       "outputTokens": 0,
       "costUsd": 0.00005592,
@@ -4423,7 +4423,7 @@
         "fear": 0.0098,
         "surprise": 0.0248
       },
-      "latencyMs": 527,
+      "latencyMs": 418,
       "inputTokens": 210,
       "outputTokens": 0,
       "costUsd": 0.0000504,
@@ -4442,7 +4442,7 @@
         "fear": 0.0638,
         "surprise": 0.0207
       },
-      "latencyMs": 474,
+      "latencyMs": 451,
       "inputTokens": 218,
       "outputTokens": 0,
       "costUsd": 0.00005232,
@@ -4461,7 +4461,7 @@
         "fear": 0.359,
         "surprise": 0.0073
       },
-      "latencyMs": 496,
+      "latencyMs": 428,
       "inputTokens": 254,
       "outputTokens": 0,
       "costUsd": 0.00006096,
@@ -4480,7 +4480,7 @@
         "fear": 0.0556,
         "surprise": 0.0104
       },
-      "latencyMs": 396,
+      "latencyMs": 629,
       "inputTokens": 234,
       "outputTokens": 0,
       "costUsd": 0.00005616,
@@ -4499,7 +4499,7 @@
         "fear": 0.0498,
         "surprise": 0.0145
       },
-      "latencyMs": 535,
+      "latencyMs": 655,
       "inputTokens": 214,
       "outputTokens": 0,
       "costUsd": 0.000051359999999999996,
@@ -4518,7 +4518,7 @@
         "fear": 0.023,
         "surprise": 0.0078
       },
-      "latencyMs": 783,
+      "latencyMs": 972,
       "inputTokens": 221,
       "outputTokens": 0,
       "costUsd": 0.00005304,
@@ -4537,7 +4537,7 @@
         "fear": 0.5882,
         "surprise": 0.0052
       },
-      "latencyMs": 630,
+      "latencyMs": 405,
       "inputTokens": 210,
       "outputTokens": 0,
       "costUsd": 0.0000504,
@@ -4556,7 +4556,7 @@
         "fear": 0.011,
         "surprise": 0.0244
       },
-      "latencyMs": 494,
+      "latencyMs": 609,
       "inputTokens": 246,
       "outputTokens": 0,
       "costUsd": 0.000059040000000000004,
@@ -4575,7 +4575,7 @@
         "fear": 0.0087,
         "surprise": 0.0295
       },
-      "latencyMs": 498,
+      "latencyMs": 1283,
       "inputTokens": 215,
       "outputTokens": 0,
       "costUsd": 0.000051599999999999994,
@@ -4594,7 +4594,7 @@
         "fear": 0.3274,
         "surprise": 0.1643
       },
-      "latencyMs": 618,
+      "latencyMs": 530,
       "inputTokens": 239,
       "outputTokens": 0,
       "costUsd": 0.00005736,
@@ -4613,7 +4613,7 @@
         "fear": 0.0993,
         "surprise": 0.01
       },
-      "latencyMs": 450,
+      "latencyMs": 884,
       "inputTokens": 219,
       "outputTokens": 0,
       "costUsd": 0.00005256,
@@ -4632,7 +4632,7 @@
         "fear": 0.3362,
         "surprise": 0.0287
       },
-      "latencyMs": 641,
+      "latencyMs": 577,
       "inputTokens": 228,
       "outputTokens": 0,
       "costUsd": 0.00005472,
@@ -4651,7 +4651,7 @@
         "fear": 0.5355,
         "surprise": 0.0134
       },
-      "latencyMs": 544,
+      "latencyMs": 744,
       "inputTokens": 226,
       "outputTokens": 0,
       "costUsd": 0.000054239999999999996,
@@ -4670,7 +4670,7 @@
         "fear": 0.1837,
         "surprise": 0.0277
       },
-      "latencyMs": 494,
+      "latencyMs": 401,
       "inputTokens": 209,
       "outputTokens": 0,
       "costUsd": 0.00005016,
@@ -4689,7 +4689,7 @@
         "fear": 0.0113,
         "surprise": 0.0085
       },
-      "latencyMs": 613,
+      "latencyMs": 497,
       "inputTokens": 225,
       "outputTokens": 0,
       "costUsd": 0.000054,
@@ -4708,7 +4708,7 @@
         "fear": 0.0168,
         "surprise": 0.0154
       },
-      "latencyMs": 672,
+      "latencyMs": 439,
       "inputTokens": 228,
       "outputTokens": 0,
       "costUsd": 0.00005472,
@@ -4727,7 +4727,7 @@
         "fear": 0.0175,
         "surprise": 0.0269
       },
-      "latencyMs": 528,
+      "latencyMs": 837,
       "inputTokens": 224,
       "outputTokens": 0,
       "costUsd": 0.00005376,
@@ -4746,7 +4746,7 @@
         "fear": 0.1846,
         "surprise": 0.0161
       },
-      "latencyMs": 469,
+      "latencyMs": 419,
       "inputTokens": 216,
       "outputTokens": 0,
       "costUsd": 0.00005184,
@@ -4765,7 +4765,7 @@
         "fear": 0.0108,
         "surprise": 0.0192
       },
-      "latencyMs": 760,
+      "latencyMs": 336,
       "inputTokens": 213,
       "outputTokens": 0,
       "costUsd": 0.00005112,
@@ -4784,7 +4784,7 @@
         "fear": 0.0116,
         "surprise": 0.0222
       },
-      "latencyMs": 408,
+      "latencyMs": 326,
       "inputTokens": 212,
       "outputTokens": 0,
       "costUsd": 0.00005088,
@@ -4803,7 +4803,7 @@
         "fear": 0.1003,
         "surprise": 0.0244
       },
-      "latencyMs": 540,
+      "latencyMs": 1006,
       "inputTokens": 209,
       "outputTokens": 0,
       "costUsd": 0.00005016,
@@ -4822,7 +4822,7 @@
         "fear": 0.0109,
         "surprise": 0.0022
       },
-      "latencyMs": 378,
+      "latencyMs": 899,
       "inputTokens": 236,
       "outputTokens": 0,
       "costUsd": 0.00005663999999999999,
@@ -4841,7 +4841,7 @@
         "fear": 0.0098,
         "surprise": 0.0046
       },
-      "latencyMs": 316,
+      "latencyMs": 1029,
       "inputTokens": 227,
       "outputTokens": 0,
       "costUsd": 0.00005447999999999999,
@@ -4860,7 +4860,7 @@
         "fear": 0.6992,
         "surprise": 0.0066
       },
-      "latencyMs": 636,
+      "latencyMs": 776,
       "inputTokens": 249,
       "outputTokens": 0,
       "costUsd": 0.00005975999999999999,
@@ -4879,7 +4879,7 @@
         "fear": 0.0035,
         "surprise": 0.0044
       },
-      "latencyMs": 524,
+      "latencyMs": 480,
       "inputTokens": 215,
       "outputTokens": 0,
       "costUsd": 0.000051599999999999994,
@@ -4898,7 +4898,7 @@
         "fear": 0.0291,
         "surprise": 0.0322
       },
-      "latencyMs": 331,
+      "latencyMs": 658,
       "inputTokens": 222,
       "outputTokens": 0,
       "costUsd": 0.00005328,
@@ -4917,7 +4917,7 @@
         "fear": 0.0207,
         "surprise": 0.0187
       },
-      "latencyMs": 878,
+      "latencyMs": 539,
       "inputTokens": 207,
       "outputTokens": 0,
       "costUsd": 0.00004968,
@@ -4936,7 +4936,7 @@
         "fear": 0.0104,
         "surprise": 0.0126
       },
-      "latencyMs": 369,
+      "latencyMs": 615,
       "inputTokens": 221,
       "outputTokens": 0,
       "costUsd": 0.00005304,
@@ -4955,7 +4955,7 @@
         "fear": 0.0619,
         "surprise": 0.0198
       },
-      "latencyMs": 505,
+      "latencyMs": 909,
       "inputTokens": 231,
       "outputTokens": 0,
       "costUsd": 0.00005544,
@@ -4974,7 +4974,7 @@
         "fear": 0.0256,
         "surprise": 0.0122
       },
-      "latencyMs": 528,
+      "latencyMs": 317,
       "inputTokens": 209,
       "outputTokens": 0,
       "costUsd": 0.00005016,
@@ -4993,7 +4993,7 @@
         "fear": 0.0309,
         "surprise": 0.0086
       },
-      "latencyMs": 487,
+      "latencyMs": 472,
       "inputTokens": 220,
       "outputTokens": 0,
       "costUsd": 0.0000528,
@@ -5012,7 +5012,7 @@
         "fear": 0.0201,
         "surprise": 0.0092
       },
-      "latencyMs": 333,
+      "latencyMs": 437,
       "inputTokens": 211,
       "outputTokens": 0,
       "costUsd": 0.000050639999999999996,
@@ -5031,7 +5031,7 @@
         "fear": 0.0713,
         "surprise": 0.0328
       },
-      "latencyMs": 824,
+      "latencyMs": 533,
       "inputTokens": 223,
       "outputTokens": 0,
       "costUsd": 0.000053519999999999996,
@@ -5050,7 +5050,7 @@
         "fear": 0.545,
         "surprise": 0.0125
       },
-      "latencyMs": 528,
+      "latencyMs": 811,
       "inputTokens": 220,
       "outputTokens": 0,
       "costUsd": 0.0000528,
@@ -5069,7 +5069,7 @@
         "fear": 0.1958,
         "surprise": 0.0212
       },
-      "latencyMs": 582,
+      "latencyMs": 599,
       "inputTokens": 219,
       "outputTokens": 0,
       "costUsd": 0.00005256,
@@ -5088,7 +5088,7 @@
         "fear": 0.007,
         "surprise": 0.0077
       },
-      "latencyMs": 552,
+      "latencyMs": 629,
       "inputTokens": 215,
       "outputTokens": 0,
       "costUsd": 0.000051599999999999994,
@@ -5107,7 +5107,7 @@
         "fear": 0.9534,
         "surprise": 0.0046
       },
-      "latencyMs": 851,
+      "latencyMs": 728,
       "inputTokens": 219,
       "outputTokens": 0,
       "costUsd": 0.00005256,
@@ -5126,7 +5126,7 @@
         "fear": 0.0229,
         "surprise": 0.0095
       },
-      "latencyMs": 564,
+      "latencyMs": 400,
       "inputTokens": 222,
       "outputTokens": 0,
       "costUsd": 0.00005328,
@@ -5145,7 +5145,7 @@
         "fear": 0.0086,
         "surprise": 0.0413
       },
-      "latencyMs": 752,
+      "latencyMs": 460,
       "inputTokens": 232,
       "outputTokens": 0,
       "costUsd": 0.000055679999999999995,
@@ -5164,7 +5164,7 @@
         "fear": 0.0287,
         "surprise": 0.0897
       },
-      "latencyMs": 290,
+      "latencyMs": 740,
       "inputTokens": 213,
       "outputTokens": 0,
       "costUsd": 0.00005112,
@@ -5183,7 +5183,7 @@
         "fear": 0.0053,
         "surprise": 0.0035
       },
-      "latencyMs": 424,
+      "latencyMs": 579,
       "inputTokens": 215,
       "outputTokens": 0,
       "costUsd": 0.000051599999999999994,
@@ -5202,7 +5202,7 @@
         "fear": 0.1901,
         "surprise": 0.0172
       },
-      "latencyMs": 400,
+      "latencyMs": 484,
       "inputTokens": 211,
       "outputTokens": 0,
       "costUsd": 0.000050639999999999996,
@@ -5221,7 +5221,7 @@
         "fear": 0.0063,
         "surprise": 0.0076
       },
-      "latencyMs": 999,
+      "latencyMs": 801,
       "inputTokens": 217,
       "outputTokens": 0,
       "costUsd": 0.000052079999999999996,
@@ -5240,7 +5240,7 @@
         "fear": 0.101,
         "surprise": 0.0118
       },
-      "latencyMs": 387,
+      "latencyMs": 371,
       "inputTokens": 222,
       "outputTokens": 0,
       "costUsd": 0.00005328,
@@ -5259,7 +5259,7 @@
         "fear": 0.0784,
         "surprise": 0.0133
       },
-      "latencyMs": 523,
+      "latencyMs": 371,
       "inputTokens": 214,
       "outputTokens": 0,
       "costUsd": 0.000051359999999999996,
@@ -5278,7 +5278,7 @@
         "fear": 0.0474,
         "surprise": 0.011
       },
-      "latencyMs": 592,
+      "latencyMs": 607,
       "inputTokens": 209,
       "outputTokens": 0,
       "costUsd": 0.00005016,
@@ -5297,7 +5297,7 @@
         "fear": 0.0367,
         "surprise": 0.0325
       },
-      "latencyMs": 444,
+      "latencyMs": 451,
       "inputTokens": 243,
       "outputTokens": 0,
       "costUsd": 0.00005832,
@@ -5316,7 +5316,7 @@
         "fear": 0.1086,
         "surprise": 0.044
       },
-      "latencyMs": 741,
+      "latencyMs": 455,
       "inputTokens": 235,
       "outputTokens": 0,
       "costUsd": 0.000056399999999999995,
@@ -5335,7 +5335,7 @@
         "fear": 0.1669,
         "surprise": 0.0458
       },
-      "latencyMs": 376,
+      "latencyMs": 615,
       "inputTokens": 218,
       "outputTokens": 0,
       "costUsd": 0.00005232,
@@ -5354,7 +5354,7 @@
         "fear": 0.015,
         "surprise": 0.0119
       },
-      "latencyMs": 805,
+      "latencyMs": 457,
       "inputTokens": 240,
       "outputTokens": 0,
       "costUsd": 0.0000576,
@@ -5373,7 +5373,7 @@
         "fear": 0.196,
         "surprise": 0.1102
       },
-      "latencyMs": 386,
+      "latencyMs": 532,
       "inputTokens": 214,
       "outputTokens": 0,
       "costUsd": 0.000051359999999999996,
@@ -5392,7 +5392,7 @@
         "fear": 0.022,
         "surprise": 0.0487
       },
-      "latencyMs": 515,
+      "latencyMs": 572,
       "inputTokens": 255,
       "outputTokens": 0,
       "costUsd": 0.0000612,
@@ -5411,7 +5411,7 @@
         "fear": 0.0021,
         "surprise": 0.0028
       },
-      "latencyMs": 586,
+      "latencyMs": 491,
       "inputTokens": 219,
       "outputTokens": 0,
       "costUsd": 0.00005256,
@@ -5430,7 +5430,7 @@
         "fear": 0.0037,
         "surprise": 0.0034
       },
-      "latencyMs": 573,
+      "latencyMs": 416,
       "inputTokens": 218,
       "outputTokens": 0,
       "costUsd": 0.00005232,
@@ -5449,7 +5449,7 @@
         "fear": 0.0021,
         "surprise": 0.0025
       },
-      "latencyMs": 490,
+      "latencyMs": 434,
       "inputTokens": 221,
       "outputTokens": 0,
       "costUsd": 0.00005304,
@@ -5468,7 +5468,7 @@
         "fear": 0.0428,
         "surprise": 0.0146
       },
-      "latencyMs": 547,
+      "latencyMs": 363,
       "inputTokens": 217,
       "outputTokens": 0,
       "costUsd": 0.000052079999999999996,
@@ -5487,7 +5487,7 @@
         "fear": 0.7651,
         "surprise": 0.0032
       },
-      "latencyMs": 530,
+      "latencyMs": 770,
       "inputTokens": 257,
       "outputTokens": 0,
       "costUsd": 0.00006168,
@@ -5506,7 +5506,7 @@
         "fear": 0.0345,
         "surprise": 0.0084
       },
-      "latencyMs": 787,
+      "latencyMs": 1152,
       "inputTokens": 221,
       "outputTokens": 0,
       "costUsd": 0.00005304,
@@ -5525,7 +5525,7 @@
         "fear": 0.0658,
         "surprise": 0.014
       },
-      "latencyMs": 527,
+      "latencyMs": 777,
       "inputTokens": 229,
       "outputTokens": 0,
       "costUsd": 0.00005496,
@@ -5544,7 +5544,7 @@
         "fear": 0.003,
         "surprise": 0.0045
       },
-      "latencyMs": 517,
+      "latencyMs": 610,
       "inputTokens": 226,
       "outputTokens": 0,
       "costUsd": 0.000054239999999999996,
@@ -5563,7 +5563,7 @@
         "fear": 0.0228,
         "surprise": 0.011
       },
-      "latencyMs": 494,
+      "latencyMs": 488,
       "inputTokens": 233,
       "outputTokens": 0,
       "costUsd": 0.00005592,
@@ -5582,7 +5582,7 @@
         "fear": 0.0348,
         "surprise": 0.0087
       },
-      "latencyMs": 843,
+      "latencyMs": 744,
       "inputTokens": 213,
       "outputTokens": 0,
       "costUsd": 0.00005112,
@@ -5601,7 +5601,7 @@
         "fear": 0.0047,
         "surprise": 0.0066
       },
-      "latencyMs": 642,
+      "latencyMs": 363,
       "inputTokens": 215,
       "outputTokens": 0,
       "costUsd": 0.000051599999999999994,
@@ -5620,7 +5620,7 @@
         "fear": 0.0138,
         "surprise": 0.0047
       },
-      "latencyMs": 516,
+      "latencyMs": 774,
       "inputTokens": 219,
       "outputTokens": 0,
       "costUsd": 0.00005256,
@@ -5639,7 +5639,7 @@
         "fear": 0.0576,
         "surprise": 0.0103
       },
-      "latencyMs": 400,
+      "latencyMs": 561,
       "inputTokens": 215,
       "outputTokens": 0,
       "costUsd": 0.000051599999999999994,
@@ -5658,7 +5658,7 @@
         "fear": 0.0265,
         "surprise": 0.0218
       },
-      "latencyMs": 457,
+      "latencyMs": 842,
       "inputTokens": 214,
       "outputTokens": 0,
       "costUsd": 0.000051359999999999996,
@@ -5677,7 +5677,7 @@
         "fear": 0.0927,
         "surprise": 0.0149
       },
-      "latencyMs": 472,
+      "latencyMs": 598,
       "inputTokens": 225,
       "outputTokens": 0,
       "costUsd": 0.000054,
@@ -5696,7 +5696,7 @@
         "fear": 0.0413,
         "surprise": 0.1178
       },
-      "latencyMs": 490,
+      "latencyMs": 537,
       "inputTokens": 218,
       "outputTokens": 0,
       "costUsd": 0.00005232,
@@ -5715,7 +5715,7 @@
         "fear": 0.0052,
         "surprise": 0.0092
       },
-      "latencyMs": 727,
+      "latencyMs": 534,
       "inputTokens": 246,
       "outputTokens": 0,
       "costUsd": 0.000059040000000000004,
@@ -5734,7 +5734,7 @@
         "fear": 0.0152,
         "surprise": 0.0079
       },
-      "latencyMs": 397,
+      "latencyMs": 451,
       "inputTokens": 232,
       "outputTokens": 0,
       "costUsd": 0.000055679999999999995,
@@ -5753,7 +5753,7 @@
         "fear": 0.7638,
         "surprise": 0.0021
       },
-      "latencyMs": 786,
+      "latencyMs": 556,
       "inputTokens": 213,
       "outputTokens": 0,
       "costUsd": 0.00005112,
@@ -5772,7 +5772,7 @@
         "fear": 0.0035,
         "surprise": 0.0024
       },
-      "latencyMs": 438,
+      "latencyMs": 494,
       "inputTokens": 214,
       "outputTokens": 0,
       "costUsd": 0.000051359999999999996,
