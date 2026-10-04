@@ -1,5 +1,8 @@
 # odds
 
+> [!CAUTION]
+> **Eval result: the main claim is disproven.** On 255 real issues, `odds` beat Claude Opus on quality (F1 0.81 against 0.45) and let no planted injection through, but it was 3 to 7 times slower and cost 13 to 27% of the baseline, not 10% or less. Read [EVAL.md](EVAL.md) before you use it.
+
 > Ask for odds, not prose.
 
 **Problem:** an agent that triages 250 issues, screens 40 fetched pages, or checks whether a

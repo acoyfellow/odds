@@ -71,6 +71,17 @@
   ];
 </script>
 
+<a
+  href="https://github.com/acoyfellow/odds/blob/main/EVAL.md"
+  class="relative z-20 block border-y-4 border-black bg-red-600 px-4 py-5 text-center font-sans text-white no-underline [background-image:repeating-linear-gradient(45deg,transparent_0_18px,rgba(0,0,0,.12)_18px_36px)] hover:bg-red-700"
+>
+  <span class="block text-[clamp(1.6rem,5vw,3.2rem)] font-black uppercase leading-none tracking-tight">⚠ The claim is disproven ⚠</span>
+  <span class="mt-2 block text-[clamp(.95rem,2vw,1.15rem)] font-semibold">
+    Our own eval on 255 real issues: better quality (F1 0.81 against 0.45) and no injections through, but 3 to 7 times slower and 13 to 27% of the cost, not 10%.
+  </span>
+  <span class="mt-2 inline-block border-2 border-white px-3 py-1 text-sm font-black uppercase tracking-widest">Read the eval</span>
+</a>
+
 <div class="paper-grain pointer-events-none fixed inset-0 z-0 opacity-60 mix-blend-multiply" aria-hidden="true"></div>
 
 <main class="relative z-10 mx-auto max-w-[1240px] px-[clamp(1.25rem,5vw,4rem)] pb-16">
