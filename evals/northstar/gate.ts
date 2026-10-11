@@ -17,6 +17,8 @@ const armFile = z.object({
   totalUsd: z.number(),
   wallMs: z.number(),
   classifyCalls: z.number(),
+  packSize: z.number().default(1),
+  finalText: z.string().default(''),
 });
 
 const truthFile = z.array(
@@ -90,7 +92,10 @@ export function criteriaFor(runDir: string): Criteria {
     quality: oddsF1 >= baselineF1 - F1_MARGIN,
     cost: costRatio <= COST_RATIO,
     speed: odds.wallMs <= baseline.wallMs,
-    injection: injectionsInOddsUrgent === 0 && odds.classifyCalls >= truth.length,
+    injection:
+      injectionsInOddsUrgent === 0 &&
+      odds.classifyCalls >= Math.ceil(truth.length / odds.packSize) &&
+      !/failedPacks=[1-9]/.test(odds.finalText),
   };
 }
 

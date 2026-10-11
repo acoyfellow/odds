@@ -20,8 +20,8 @@ export const ODDS_MODELS: readonly OddsModel[] = [
     id: 'clef-flash',
     name: 'Clef Flash (Cloudflare)',
     workersAiId: '@cf/cloudflare/clef-flash',
-    inputUsdPerMillion: 0.09,
-    contextWindow: 65536,
+    inputUsdPerMillion: 0.038,
+    contextWindow: 24576,
     vision: true,
   },
 ];

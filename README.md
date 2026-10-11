@@ -1,7 +1,7 @@
 # odds
 
-> [!CAUTION]
-> **Eval result: the main claim is disproven.** On 255 real issues, `odds` beat Claude Opus on quality (F1 0.81 against 0.45) and let no planted injection through, but it was 3 to 7 times slower and cost 13 to 27% of the baseline, not 10% or less. Read [EVAL.md](EVAL.md) before you use it.
+> [!NOTE]
+> **Eval result: the main claim passes.** On 255 real Kubernetes issues, `odds` with clef-flash beat Claude Opus reading every issue on quality (F1 0.555 against 0.39 to 0.46), at 8% of the cost, faster on 3 of 3 runs, with no planted injection through. Read [EVAL.md](EVAL.md) for the method and the weak spots.
 
 > Ask for odds, not prose.
 
@@ -49,7 +49,7 @@ r.answers.urgent.probability;
 | Pi id | Workers AI | Price |
 | --- | --- | --- |
 | `odds/clef` | `@cf/cloudflare/clef` | $0.24 / M input, 27B, vision |
-| `odds/clef-flash` | `@cf/cloudflare/clef-flash` | $0.09 / M input |
+| `odds/clef-flash` | `@cf/cloudflare/clef-flash` | $0.038 / M input |
 
 ## Auth
 

@@ -83,3 +83,21 @@ after `/reload`.
 - Against real Clef, the shipped module's key list and prompt classify all six 005/007 cases
   correctly (real at 0.93, forgeries at 0.09 or lower).
 - This is the first realized leverage: another repo now imports the odds pattern.
+
+## Iteration 6: clef-flash and packed calls
+
+- **The northstar claim now passes as stated.** Same 255 issues, same Opus baseline, same four
+  criteria. Three runs, all passing: odds F1 0.555 vs baseline 0.39 to 0.46, cost 8% of the
+  baseline, faster on every run (14 to 20 s vs 17 to 27 s), no injection in the urgent list.
+  Receipt: `evals/northstar/receipt.json`.
+- **Two changes did it.** clef-flash costs $0.038/M, not the $0.09/M odds listed. Packing 32
+  issues per call (64 typed questions, the API maximum) cut 255 calls to 8.
+- **The win cost quality.** Iteration 5's single-call Clef reached F1 0.81 on the same set.
+  Packed clef-flash reaches 0.555. On the 80 held-out issues packing looked better (0.909), so
+  the held-out set does not predict the test set well.
+- **Speed margin is thin.** One run won by 1.2 s. Clef is no longer the slow part; the frontier
+  agent writing its one codemode call is.
+- **Pi 1.1.0 kills itself on long arguments on this machine** (SIGKILL above about 1,000
+  characters). The eval now passes prompts as `@prompt.md`.
+- **Next:** a two-pass design. Packed clef-flash for a shortlist, single-call Clef on the
+  shortlist only. It might recover the quality and stay under 10%.

@@ -1,6 +1,6 @@
 {
   "state": "iterating",
-  "iteration": 5,
+  "iteration": 6,
   "northStar": "Frontier agents delegate per-item judgment to typed decision models inside codemode instead of reading every item.",
   "constraint": "Private: calls go only through the owner's authenticated AI Gateway with a scoped keychain token; no public model surface.",
   "falsifiable": "On real queues, a Clef-in-codemode script reaches the same top-k decisions as the frontier model reading every item, at under 10% of the cost.",
@@ -28,11 +28,15 @@
     {
       "claim": "Clef rejects all 4 forged receipts and accepts both real ones once self-reported pass/verdict/name/claim fields are removed before asking; repeated 3x, identical scores, real >=0.91, forged <=0.07",
       "receipt": "receipts/007-dogfood-receipt-gate-label-blind.json"
+    },
+    {
+      "claim": "On 255 real Kubernetes issues, Clef-flash in codemode at 32 issues per call beats Opus reading every issue on quality (F1 0.555 vs 0.39-0.46), at 8% of the cost, faster on 3 of 3 runs, with 0 injections through",
+      "receipt": "evals/northstar/receipt.json"
     }
   ],
   "unproven": [
-    "Clef's top-k matches a frontier model's top-k on a real 250-item queue",
-    "Label-blind gating holds on a larger, adversarial set of receipts (6 cases is a planted sample, not a benchmark)"
+    "Label-blind gating holds on a larger, adversarial set of receipts (6 cases is a planted sample, not a benchmark)",
+    "Packing keeps single-call quality: packed F1 0.555 is below iteration 5's single-call 0.81, so the speed/cost win currently costs quality"
   ],
   "disproven": [
     {
@@ -52,8 +56,8 @@
     }
   ],
   "openQuestions": [
-    "Is clef-flash accurate enough for screening at 37% of Clef's price?",
-    "Does the gateway's own authentication setting need to be on, given Workers AI already requires the token?"
+    "Does the gateway's own authentication setting need to be on, given Workers AI already requires the token?",
+    "Can a packed first pass plus a single-call second pass on the shortlist recover F1 ~0.8 and stay under 10% cost?"
   ],
   "realized": [
     {

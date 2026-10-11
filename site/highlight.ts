@@ -1,5 +1,5 @@
 import { createHighlighter } from 'shiki';
-import { install, snippet } from './src/snippets.ts';
+import { checkSnippet, install, screenSnippet, snippet } from './src/snippets.ts';
 
 const engraving = {
   name: 'engraving',
@@ -25,7 +25,9 @@ const engraving = {
   ],
 };
 
-export async function highlightSnippets(): Promise<{ snippet: string; install: string }> {
+export async function highlightSnippets(): Promise<
+  Record<'snippet' | 'install' | 'screen' | 'check', string>
+> {
   const highlighter = await createHighlighter({
     themes: [engraving],
     langs: ['javascript', 'shellscript'],
@@ -34,5 +36,10 @@ export async function highlightSnippets(): Promise<{ snippet: string; install: s
   const render = (code: string, lang: string) =>
     highlighter.codeToHtml(code, { lang, theme: 'engraving' });
 
-  return { snippet: render(snippet, 'javascript'), install: render(install, 'shellscript') };
+  return {
+    snippet: render(snippet, 'javascript'),
+    install: render(install, 'shellscript'),
+    screen: render(screenSnippet, 'javascript'),
+    check: render(checkSnippet, 'javascript'),
+  };
 }

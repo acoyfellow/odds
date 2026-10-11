@@ -38,41 +38,6 @@
 }
 
 @layer components {
-  .score-svg .staff,
-  .score-svg .ledger {
-    stroke: var(--color-ink);
-    stroke-width: 1.1;
-  }
-  .score-svg .bar-line {
-    stroke: var(--color-ink);
-    stroke-width: 1.4;
-  }
-  .score-svg .bar-line.thick {
-    stroke-width: 5;
-  }
-  .score-svg .head {
-    stroke: var(--color-ink);
-    stroke-width: 2.4;
-    fill: var(--color-paper);
-  }
-  .score-svg .filled .head {
-    fill: var(--color-ink);
-  }
-  .score-svg .stem {
-    stroke: var(--color-ink);
-    stroke-width: 1.6;
-  }
-  .score-svg .focus .head,
-  .score-svg .focus .stem,
-  .score-svg .focus .ledger {
-    stroke: var(--color-seal);
-  }
-  .score-svg .focus.filled .head {
-    fill: var(--color-seal);
-  }
-  .score-svg .focus .ticket {
-    fill: var(--color-seal);
-  }
   .listing pre {
     margin: 0;
     overflow-x: auto;

@@ -1,4 +1,6 @@
 import { spawn } from 'node:child_process';
+import { writeFileSync } from 'node:fs';
+import { join } from 'node:path';
 import { z } from 'zod';
 
 export const MODEL = {
@@ -111,6 +113,10 @@ export function runPi(
   tools: readonly string[],
   extensions: readonly string[],
 ): Promise<PiRun & { raw: string[] }> {
+  const promptFile = join(cwd, 'prompt.md');
+
+  writeFileSync(promptFile, prompt);
+
   const args = [
     '-p',
     '--no-session',
@@ -124,7 +130,7 @@ export function runPi(
     MODEL.id,
     ...(tools.length > 0 ? ['--tools', tools.join(',')] : ['--no-tools']),
     ...extensions.flatMap((path) => ['-e', path]),
-    prompt,
+    `@${promptFile}`,
   ];
 
   return new Promise((resolve, reject) => {
