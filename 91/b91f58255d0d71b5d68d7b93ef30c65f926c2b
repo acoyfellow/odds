@@ -1,0 +1,81 @@
+EVAL.md
+  s_1edf569f022c1c::t_ac88b4cc8735be 1,5,7,13,17-49,66
+README.md
+  s_1edf569f022c1c::t_6bd38952b3000f 3-4,52
+evals/northstar/gate.ts
+  s_1edf569f022c1c::t_d2d94485843d47 20-21,95-98
+evals/northstar/packed.ts
+  s_1edf569f022c1c::t_26f245a6862a7f 1,3-7,9-13,15-20,23-24,26-27,29,32-54,57-87,90-108
+evals/northstar/pi.ts
+  s_1edf569f022c1c::t_044d2485277531 2-3,116-119,133
+evals/northstar/probe-heldout.ts
+  s_1edf569f022c1c::t_ba5f3150b6ffc9 1-118
+evals/northstar/receipt-iteration5.json
+  s_1edf569f022c1c::t_800063060992e4 1-28
+evals/northstar/receipt.json
+  s_1edf569f022c1c::t_a6acc4d30bc089 3-5,18-21,24,26-31,33
+evals/northstar/run.ts
+  s_1edf569f022c1c::t_5183d0192c095b 49,51-55,88-103,105,155
+evals/northstar/runs/2026-10-11T14-51-53/baseline.json
+  s_1edf569f022c1c::t_58c24664aa64b8 1-50
+evals/northstar/runs/2026-10-11T14-51-53/odds.json
+  s_1edf569f022c1c::t_69184815f60b23 1-152
+evals/northstar/runs/2026-10-11T14-51-53/truth.json
+  s_1edf569f022c1c::t_c388c7093c73ec 1-1277
+evals/northstar/runs/2026-10-11T14-52-36/baseline.json
+  s_aaa885f9224222::t_94258a0d6d66a4 1-49
+evals/northstar/runs/2026-10-11T14-52-36/odds.json
+  s_aaa885f9224222::t_3037d2966c2ab7 1-152
+evals/northstar/runs/2026-10-11T14-52-36/truth.json
+  s_1edf569f022c1c::t_0e6b10d82fa1a8 1-1277
+evals/northstar/runs/2026-10-11T14-53-23/baseline.json
+  s_aaa885f9224222::t_f07561a5d78dd1 1-56
+evals/northstar/runs/2026-10-11T14-53-23/odds.json
+  s_aaa885f9224222::t_586a7ffb75c11d 1-152
+evals/northstar/runs/2026-10-11T14-53-23/truth.json
+  s_aaa885f9224222::t_bed194766af207 1-1277
+evals/northstar/spend.json
+  s_aaa885f9224222::t_9d3bf80d866cd2 2,53-92
+findings.md
+  s_1edf569f022c1c::t_1206e310d273b5 86-103
+scripts/record-hero.ts
+  s_1edf569f022c1c::t_6b9fb583eea942 1-56
+site/highlight.ts
+  s_1edf569f022c1c::t_85daf48c3cb22a 2,28-30,39-44
+site/src/Docs.svelte
+  s_1edf569f022c1c::t_52bd3af4b6aaa4 2-3,5,28,30-33,42-45,51-53,55-64,66-67,70,72,85-114,116-117,119,124,134-157,161
+site/src/HeroFlow.svelte
+  s_1edf569f022c1c::t_809d54649b607f 1-194
+site/src/hero-data.ts
+  s_1edf569f022c1c::t_306a4b50d356b7 1-266
+site/src/snippets.ts
+  s_1edf569f022c1c::t_ae73f0cb236dff 11-32,34-47,49-84
+src/models.ts
+  s_1edf569f022c1c::t_395212e4716a04 23-24
+status.json
+  s_1edf569f022c1c::t_7a28babe667e1c 3,31-34,38-39,59-60
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "91b91f58255d0d71b5d68d7b93ef30c65f926c2b",
+  "prompts": {},
+  "sessions": {
+    "s_1edf569f022c1c": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a0df3d-f9fc-74ea-ae36-1d244e193f8b",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jordan Coeyman <jcoeyman@cloudflare.com>"
+    },
+    "s_aaa885f9224222": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a11c8a-37e4-7010-8e5b-55d3cf7c925a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jordan Coeyman <jcoeyman@cloudflare.com>"
+    }
+  }
+}
