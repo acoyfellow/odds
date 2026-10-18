@@ -1,0 +1,21 @@
+receipts/009-e2e-and-deploy.json
+  s_f38722776a913f::t_dafbef006a31c6 1-16
+scripts/prove-docs.ts
+  s_f38722776a913f::t_4cbf3af5aaa939 60-63
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "f0ee3c64601669b207b0d7ed06f094966e0f51ca",
+  "prompts": {},
+  "sessions": {
+    "s_f38722776a913f": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a13634-235a-7766-a4c2-59095a90e524",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jordan Coeyman <jcoeyman@cloudflare.com>"
+    }
+  }
+}
