@@ -1,0 +1,16 @@
+{
+  "claim": "odds end to end: verify, prove:pi, prove:auth, prove:docs all exit 0; docs site redeployed",
+  "at": "2026-10-18T12:10:49.240748Z",
+  "checks": {
+    "verify": "40 tests pass, typecheck and lint clean",
+    "prove:pi": "exit 0, Clef answer via gateway",
+    "prove:auth": "5/5 PASS",
+    "prove:docs": "5/5 PASS"
+  },
+  "fix": "prove-docs matched 'Ask for odds' case-sensitively; iteration 6 site copy is lowercase 'ask for odds'. Check now case-insensitive.",
+  "deploy": {
+    "worker": "odds-docs",
+    "domain": "odds.coey.dev",
+    "status": 200
+  }
+}
